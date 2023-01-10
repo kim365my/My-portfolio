@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18_레쥬메종합실습</title>
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <!-- <link rel="stylesheet" href="./css/font.css"> -->
+    <style>
+        /* 폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+        .ibmplexsanskr{font-family: 'IBM Plex Sans KR', sans-serif;}
+        .yeonsung{font-family: 'Yeon Sung', cursive;}
+        
+        /* reset.css */
+        /* 브라우저에서 기본적으로 세팅되어있는 css를 리셋하는 것 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5,h6 {
+            font-size: 16px;
+            font-weight: normal;
+
+        }
+        a, a:visited{
+            color: inherit; /* 상속 */
+            text-decoration: none;
+
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            vertical-align: top; /*기본적으로 씌여진 공백을 없애준다*/
+        }
+        /* 리셋 끝 */
+
+        /* 기본설정 */
+        *{
+            box-sizing: border-box;
+            line-height: 1.8;
+            background-color: rgb(235, 236, 238);
+        }
+        body{
+            width: 980px;
+            margin: 0 auto;
+        }
+        /* 헤더 */
+        header{
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .logo_color{
+            color: rgb(0, 107, 71);
+            font-weight: 600;
+        }
+    
+        header > h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        header > p {
+            padding-bottom: 20px;
+        }
+        footer{
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* 메인 */
+        main h2{
+            color: goldenrod;
+            font-size: 1.25rem;
+            font-weight: 600;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
+        }
+        main > div { 
+            margin-bottom: 25px;
+        }
+        table{
+            text-align: left;
+        }
+        th{
+            width: 150px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo_color ibmplexsanskr">이젠컴</h1>
+            <sub class="logo_color">EzenC</sub>
+            <p class="yeonsung">
+                "지금 아니면 어디에도 없을 이젠컴"
+            </p>
+            <img src="./images/resume.png" alt="">
+        </header>
+
+        <main>
+            <div class="content1">
+                <h2>상세정보</h2>
+                <table>
+                    <tr>
+                        <th>이름</th>
+                        <td>김령경</td>
+                    </tr>
+                    <tr>
+                        <th>생일</th>
+                        <td>2000 - 01 - 01</td>
+                    </tr>
+                    <tr>
+                        <th>핸드폰</th>
+                        <td>010 1234 5678</td>
+                    </tr>
+                    <tr>
+                        <th>이메일</th>
+                        <td>indopop@1234.com</td>
+                    </tr>
+                    <tr>
+                        <th>블로그</th>
+                        <td>ezen.blog.me</td>
+                    </tr>
+                    <tr>
+                        <th>주소</th>
+                        <td>서울시 성동구 성수동</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content2">
+                <h2>자격정보</h2>
+                <table>
+                    <tr>
+                        <th>DESIGN</th>
+                        <td>GTQ 포토샵 2급</td>
+                    </tr>
+                    <tr>
+                        <th>O.A</th>
+                        <td>ITQ 엑셀 A</td>
+                    </tr>
+                    <tr>
+                        <th>O.A</th>
+                        <td>ITQ 워드프로세서</td>
+                    </tr>
+                    <tr>
+                        <th>O.A</th>
+                        <td>GTQ 전산회계 2급</td>
+                    </tr>
+                    <tr>
+                        <th>WEB</th>
+                        <td>웹디자인 기능사</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content3">
+                <h2>학력사항</h2>
+                <table>
+                    <tr>
+                        <th>2010 ~ 2014</th>
+                        <td>한국대학교 컴퓨터공학과 졸업</td>
+                    </tr>
+                    <tr>
+                        <th>2016 ~ 2017</th>
+                        <td>NCS UXUI 디지털디자인 과정 수료</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content4">
+                <h2>능력치</h2>
+                <figure>
+                    <img src="./images/ps_ability.png" alt="포토샵">
+                    <img src="./images/ai_ability.png" alt="일러스트레이터">
+                    <img src="./images/id_ability.png" alt="디자인">
+                    <img src="./images/pr_ability.png" alt="프리미어">    
+                </figure>
+            </div>
+            <div class="content4">
+                <h2>취미활동</h2>
+                <figure>
+                    <img src="./images/hobby_01.png" alt="취미활동_사진찍기">
+                    <img src="./images/hobby_02.png" alt="취미활동_요리하기">
+                    <img src="./images/hobby_03.png" alt="취미활동_볼링치기">
+                    <img src="./images/hobby_04.png" alt="취미활동_영화보기">
+                    <img src="./images/hobby_05.png" alt="취미활동_손글씨쓰기">    
+                </figure>
+            </div>
+        </main>
+
+        <footer>
+            <span>Copyright All Right Reserved.</span>
+            <span class="logo_color">MCSSAM</span>
+        </footer>
+    </div>
+</body>
+</html>
