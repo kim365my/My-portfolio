@@ -1,0 +1,61 @@
+@import url(./reset.css);
+@import url(./font.css);
+
+/* 기본설정 */
+*{
+    box-sizing: border-box;
+    line-height: 1.8;
+    background-color: rgb(235, 236, 238);
+}
+body{
+    width: 980px;
+    margin: 0 auto;
+}
+/* 헤더 */
+header{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.logo_color{
+    color: rgb(39, 84, 89);
+}
+
+header > h1 {
+    font-size: 2em;
+    font-weight: 800;
+    line-height: 1;
+}
+
+header > p {
+    padding-bottom: 20px;
+}
+footer{
+    text-align: center;
+    padding: 30px;
+}
+footer > span:last-child{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* 메인 */
+main h2{
+    color: rgb(178,139,142);
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 15px 0;
+    border-bottom: 1px solid rgb(218,219,241);
+    margin: 20px 0;
+}
+main > div { 
+    margin-bottom: 25px;
+}
+table{
+    text-align: left;
+}
+th{
+    width: 150px;
+    font-weight: 600;
+}
