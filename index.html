@@ -4,112 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>18_레쥬메종합실습</title>
+    <title>20_전체실습</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div id="wrap">
         <header>
-            <h1 class="logo_color ibmplexsanskr">이젠컴</h1>
-            <sub class="logo_color">EzenC</sub>
-            <p class="yeonsung">
-                "지금 아니면 어디에도 없을 이젠컴"
-            </p>
-            <img src="./images/resume.png" alt="거울이미지">
+            <h1>
+                <img src="./images/christmas-balls-g863d4c2bb_640.jpg" alt="로고 이미지">
+            </h1>
+            <nav id="gnb">
+                <ul>
+                    <li><a href="#">MENU1</a></li>
+                    <li><a href="#">MENU2</a></li>
+                    <li><a href="#">MENU3</a></li>
+                    <li><a href="#">MENU4</a></li>
+                    <li><a href="#">MENU5</a></li>
+                </ul>
+
+            </nav>
         </header>
-
         <main>
-            <div class="content1">
-                <h2>상세정보</h2>
-                <table>
-                    <tr>
-                        <th>이름</th>
-                        <td>김령경</td>
-                    </tr>
-                    <tr>
-                        <th>생일</th>
-                        <td>2000 - 01 - 01</td>
-                    </tr>
-                    <tr>
-                        <th>핸드폰</th>
-                        <td>010 1234 5678</td>
-                    </tr>
-                    <tr>
-                        <th>이메일</th>
-                        <td>indopop@1234.com</td>
-                    </tr>
-                    <tr>
-                        <th>블로그</th>
-                        <td>ezen.blog.me</td>
-                    </tr>
-                    <tr>
-                        <th>주소</th>
-                        <td>서울시 성동구 성수동</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="content2">
-                <h2>자격정보</h2>
-                <table>
-                    <tr>
-                        <th>DESIGN</th>
-                        <td>GTQ 포토샵 2급</td>
-                    </tr>
-                    <tr>
-                        <th>O.A</th>
-                        <td>ITQ 엑셀 A</td>
-                    </tr>
-                    <tr>
-                        <th>O.A</th>
-                        <td>ITQ 워드프로세서</td>
-                    </tr>
-                    <tr>
-                        <th>O.A</th>
-                        <td>GTQ 전산회계 2급</td>
-                    </tr>
-                    <tr>
-                        <th>WEB</th>
-                        <td>웹디자인 기능사</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="content3">
-                <h2>학력사항</h2>
-                <table>
-                    <tr>
-                        <th>2010 ~ 2014</th>
-                        <td>한국대학교 컴퓨터공학과 졸업</td>
-                    </tr>
-                    <tr>
-                        <th>2016 ~ 2017</th>
-                        <td>NCS UXUI 디지털디자인 과정 수료</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="content4">
-                <h2>능력치</h2>
-                <figure>
-                    <img src="./images/ps_ability.png" alt="포토샵">
-                    <img src="./images/ai_ability.png" alt="일러스트레이터">
-                    <img src="./images/id_ability.png" alt="디자인">
-                    <img src="./images/pr_ability.png" alt="프리미어">    
-                </figure>
-            </div>
-            <div class="content5">
-                <h2>취미활동</h2>
-                <figure>
-                    <img src="./images/hobby_01.png" alt="취미활동_사진찍기">
-                    <img src="./images/hobby_02.png" alt="취미활동_요리하기">
-                    <img src="./images/hobby_03.png" alt="취미활동_볼링치기">
-                    <img src="./images/hobby_04.png" alt="취미활동_영화보기">
-                    <img src="./images/hobby_05.png" alt="취미활동_손글씨쓰기">    
-                </figure>
-            </div>
+            <section>
+                <h2>TITLE</h2>
+                <div class="content">
+                    <p>2022/03/21</p>
+                    <span>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, doloribus non cumque temporibus deleniti qui reprehenderit voluptate delectus dicta eum accusantium? Beatae voluptatibus quidem iusto dolor dolore inventore cum dolorem?
+                    </span>
+                </div>
+            </section>
+            <section>
+                <h2>FORM LIST</h2>
+                <form>
+                    <fieldset>
+                        <legend>Log in infotmaiton</legend>
+                        <ul>
+                            <li>
+                                <label for="user_ID">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID : </label>
+                                <input type="text" id="user_ID" autofocus maxlength="10" required autocomplete="off">        
+                            </li>
+                            <li>
+                                <label for="user_ID">PASSWORD : </label>
+                                <input type="password" id="user_pass" autofocus required>        
+                            </li>
+                            <li>
+                                <label for="user_passcheck">PASSCHECK : </label>
+                                <input type="password" id="user_passcheck" autofocus required>
+        
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Department</legend>
+                        <ul>
+                            <li>
+                                <label for="dev_checkbox">
+                                    <input type="checkbox" name="webpublishing" id="dev_checkbox" value="Webpublishing" checked>Webpublishing
+                                </label>        
+                            </li>
+                            <li>
+                                <label for="dev_checkbox">
+                                    <input type="checkbox" name="app_develope" id="dev_checkbox" value="App develope">App develope
+                                </label>        
+                            </li>
+                            <li>
+                                <label for="dev_checkbox">
+                                    <input type="checkbox" name="enviroment_improvement" id="dev_checkbox" value="Enviroment improvement">dev_checkbox
+                                </label>        
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <input type="submit" value="ok google">
+                </form>
+            </section>
+            <aside>
+                <button>top</button>
+            </aside>
         </main>
-
         <footer>
-            <span>Copyright All Right Reserved.,</span>
-            <span class="logo_color">MCSSAM</span>
+            <h2>FOOTER</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere obcaecati hic repellendus quasi. Voluptate dolor quibusdam doloribus praesentium omnis corporis culpa, reiciendis temporibus enim repellendus soluta vitae alias et minima!
+            </p>
         </footer>
     </div>
 </body>

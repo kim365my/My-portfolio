@@ -1,5 +1,90 @@
-/* 폰트 */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
-.ibmplexsanskr{font-family: 'IBM Plex Sans KR', sans-serif;}
+@charset 'utf-8';
+
+
+/* 영문폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Rowdies&family=Oswald&family=Roboto+Mono&family=Raleway&family=Ubuntu&family=Nunito&family=Merriweather&family=Playfair+Display&family=PT+Sans&family=Rubik&family=Mukta&family=Work+Sans&family=Sevillana&family=Lora&family=Fira+Sans&family=Barlow&family=Kanit&family=Quicksand&family=Passions+Conflict&display=swap');
+/*각 링크{
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Nunito&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+} */
+
+/* 한글폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Nanum+Gothic&family=East+Sea+Dokdo&family=Yeon+Sung&family=Black+Han+Sans&family=Nanum+Pen+Script&family=Jua&family=Gugi&family=Do+Hyeon&family=IBM+Plex+Sans+KR&family=Gowun+Dodum&family=Gowun+Batang&family=Song+Myung&family=Hahmlet&family=Dongle&display=swap');
+/*각 링크{
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+}*/
+
+/* 영문/한글폰트 나눠서 해야함 */
+/* 영문 폰트 20개 이상 한글폰트 15개 이상 */
+/* 영문폰트 */
+.roboto{font-family: 'Roboto', sans-serif;}
+.opensans{font-family: 'Open Sans', sans-serif;}
+.rowdies{font-family: 'Rowdies', cursive;}
+.oswald{font-family: 'Oswald', sans-serif;}
+.robotoMono{font-family: 'Roboto Mono', monospace;}
+.raleway{font-family: 'Raleway', sans-serif;}
+.ubuntu{font-family: 'Ubuntu', sans-serif;}
+.nunito{font-family: 'Nunito', sans-serif;}
+.merriweather{font-family: 'Merriweather', serif;}
+.playfairdisplay{font-family: 'Playfair Display', serif;}
+.ptsans{font-family: 'PT Sans', sans-serif;}
+.rubik{font-family: 'Rubik', sans-serif;}
+.mukta{font-family: 'Mukta', sans-serif;}
+.worksans{font-family: 'Work Sans', sans-serif;}
+.sevillana{font-family: 'Sevillana', cursive;}
+.lora{font-family: 'Lora', serif;}
+.firasans{font-family: 'Fira Sans', sans-serif;}
+.barlow{font-family: 'Barlow', sans-serif;}
+.kanit{font-family: 'Kanit', sans-serif;}
+.quicksand{font-family: 'Quicksand', sans-serif;}
+.passionsconflict{font-family: 'Passions Conflict', cursive;}
+
+/* 한글폰트 */
+.notosanskr {font-family: 'Noto Sans KR', sans-serif;}
+.nanumgothic{font-family: 'Nanum Gothic', sans-serif;}
+.eastseadokdo{font-family: 'East Sea Dokdo', cursive;}
 .yeonsung{font-family: 'Yeon Sung', cursive;}
+.blackhansans{font-family: 'Black Han Sans', sans-serif;}
+.nonumpenscript{font-family: 'Nanum Pen Script', cursive;}
+.jua{font-family: 'Jua', sans-serif;}
+.gugi{font-family: 'Gugi', cursive;}
+.dohyeon{font-family: 'Do Hyeon', sans-serif;}
+.ibmplexsanskr{font-family: 'IBM Plex Sans KR', sans-serif;}
+.gowundodum{font-family: 'Gowun Dodum', sans-serif;}
+.gowunbatang{font-family: 'Gowun Batang', serif;}
+.songmyung{font-family: 'Song Myung', serif;}
+.hohmlet{font-family: 'Hahmlet', serif;}
+.dongle{font-family: 'Dongle', sans-serif;}
