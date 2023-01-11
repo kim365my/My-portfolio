@@ -12,6 +12,7 @@
 body{
     width: 980px;
     margin: 0 auto;
+    padding: 76px 60px;
 }
 /* 헤더 */
 header{
@@ -25,21 +26,13 @@ header{
 }
 
 header > h1 {
-    font-size: 2em;
+    font-size: 3rem;
     font-weight: 800;
-    line-height: 1;
+    letter-spacing: -1px;
 }
 
 header > p {
     padding-bottom: 20px;
-}
-footer{
-    text-align: center;
-    padding: 30px;
-}
-footer > span:last-child{
-    font-size: 18px;
-    font-weight: 600;
 }
 
 /* 메인 */
@@ -60,4 +53,15 @@ table{
 th{
     width: 150px;
     font-weight: 600;
+}
+
+/* 푸터 */
+footer{
+    text-align: center;
+    padding: 30px;
+}
+footer > span:last-child{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -1px;
 }
