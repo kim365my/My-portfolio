@@ -10,13 +10,12 @@
     background-color: rgb(235, 236, 238);
 }
 body{
-    width: 980px;
+    width: 1080px;
     margin: 0 auto;
     padding: 76px 60px;
 }
 /* 헤더 */
 header{
-    margin-top: 30px;
     text-align: center;
     font-size: 24px;
 }
