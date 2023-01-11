@@ -1,5 +1,3 @@
-/* reset.css */
-/* 브라우저에서 기본적으로 세팅되어있는 css를 리셋하는 것 */
 *{
     margin: 0;
     padding: 0;
@@ -20,4 +18,3 @@ li{
 img{
     vertical-align: top; /*기본적으로 씌여진 공백을 없애준다*/
 }
-/* 리셋 끝 */
