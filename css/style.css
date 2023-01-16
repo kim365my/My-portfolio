@@ -2,99 +2,52 @@
 @import url(./reset.css);
 @import url(./font.css);
 
-/* 전체 설정 */
-*{
-    box-sizing: border-box;
-    text-align: center;
-    color: gray;
-    font-style:inherit;
-    font: 16px/1.5 'Merriweather', serif;
-}
-
+/* 전역설정 */
 #wrap{
-    width: 980px;
+    width: 900px;
     margin: 0 auto;
-    padding: 50px 0px 0px;
+    font: 400 16px/1.6 'Oswald','Noto Sans KR', sans-serif ;
 }
-
-
-/* 헤더 */
-header{
-    margin-bottom: 25px;
+h1{
+    margin: 30px 0;
+    color: red;
+    font-weight: 600;
+    font-size: 32px;
 }
-header img{
-    width: 500px;
-    border: 20px solid white;
-    box-shadow: 7px 6px 15px 0px rgb(211, 198, 194);
-}
-#gnb{
-    padding: 50px;
-}
-#gnb li{
-    display: inline;
-    padding: 0 10px;
-}
-#gnb li > a{padding: 10px 25px;}
-#gnb li > a:hover{
-    background-color: rgb(255, 153, 116);
-    color: whitesmoke;
-}
-
-
-/* 메인 */
 h2{
-    color: black;
-    font: 400 3rem/1.5 'Oswald', sans-serif;
-    text-shadow: 0px 3px 2px gray;
-    padding-bottom: 10px;
+    float: left;
+    margin: 25px 0;
+    color: red;
+    font-size: 24px;
 }
-section{
-    margin-bottom: 25px;    
-}
-.content{
-    line-height: 2rem;
-}
-.content > p {
-    font-weight: 600;
-}
-form{
-    padding: 10px 50px;
-}
-form > input[type="submit"]{
-    padding: 2px 10px;
-    font-weight: 600;
-}
-fieldset:first-child label{
-    display: inline-block;
-    width: 110px;
-    text-align: right;
-}
-fieldset{
-    padding: 25px;
-    border: rgb(177, 177, 177) 2px solid;
-    margin-bottom: 20px;
+p > a{
+    color: blue;
 }
 
-button{
-    padding: 15px 50px;
-    background-color: rgb(177, 177, 177);
-    color: white;
-    border: none;
+/* header */
+header{margin: 30px 0;}
+header p {white-space: pre-line;}
+header .gnb li a{
+    float: left;
+    width: 50%;
+    background-color: rgb(100, 100, 100);
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
 }
 
-button:hover{
-    background-color: rgb(63, 63, 63);
+/* main */
+main p{
+    width: 95%;
+    float: right;
+    padding: 20px;
+    background-color: rgba(204, 204, 204, 0.336);
+    white-space: pre-line;
 }
-input[type="checkbox"]{
-    margin-right: 10px;
-}
-/* 푸터 */
+
+/* footer */
 footer{
-    background: url(../images/christmas-balls-g863d4c2bb_640.jpg) no-repeat top;
-    background-size: cover;
-    padding: 50px 25px;
-    margin-top: 35px;
-}
-footer > p, footer>h2{
-    color: rgb(255, 153, 116);
+    padding: 30px;
+    text-align: center;
+    font: 400 14px/1.6 'Oswald', sans-serif;;
 }
