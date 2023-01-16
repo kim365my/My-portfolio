@@ -3,6 +3,7 @@
 @import url(./font.css);
 
 /* 전역설정 */
+body{padding: 30px 0;}
 #wrap{
     width: 1000px;
     padding: 40px;
@@ -26,7 +27,7 @@ p > a{color: blue;}
 p > a:visited{color: blue;}
 
 /* header */
-header{margin: 30px 0;}
+header{margin-bottom: 30px;}
 header p {white-space: pre-line;}
 header .gnb li a{
     float: left;
@@ -48,6 +49,6 @@ main p{
 
 /* footer */
 footer{
-    padding: 30px;
+    padding-top: 50px;
     text-align: center;
 }
