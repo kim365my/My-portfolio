@@ -4,7 +4,9 @@
 
 /* 전역설정 */
 #wrap{
-    width: 900px;
+    width: 1000px;
+    padding: 40px;
+    border: 2px solid rgba(100, 100, 100, 0.3);
     margin: 0 auto;
     font: 400 16px/1.6 'Oswald','Noto Sans KR', sans-serif ;
 }
@@ -48,5 +50,4 @@ main p{
 footer{
     padding: 30px;
     text-align: center;
-    font: 400 14px/1.6 'Oswald', sans-serif;;
 }
