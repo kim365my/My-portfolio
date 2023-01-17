@@ -1,54 +1,70 @@
 @charset "UTF-8";
 @import url(./reset.css);
-@import url(./font.css);
 
-/* 전역설정 */
-body{padding: 30px 0;}
 #wrap{
-    width: 1000px;
-    padding: 40px;
-    border: 2px solid rgba(100, 100, 100, 0.3);
+    width: 800px;
     margin: 0 auto;
-    font: 400 16px/1.6 'Oswald','Noto Sans KR', sans-serif ;
+   text-align: center;
+   position: relative;
+   border: 1px solid black;
 }
-h1{
-    margin: 30px 0;
-    color: red;
-    font-weight: 600;
-    font-size: 32px;
-}
-h2{
-    float: left;
-    margin: 25px 0;
-    color: red;
-    font-size: 24px;
-}
-p > a{color: blue;}
-p > a:visited{color: blue;}
+/* 개별설정 */
+/* 헤더 */
 
-/* header */
-header{margin-bottom: 30px;}
-header p {white-space: pre-line;}
-header .gnb li a{
+header > *{
     float: left;
-    width: 50%;
-    background-color: rgb(100, 100, 100);
-    color: #ccc;
-    text-align: center;
-    padding: 10px 0;
+
+}
+header > h1{
+    width: 15%;
+    background-color: gainsboro;
+    padding: 25px;
+
+}
+header > nav{
+    width: 85%;
+    background-color: red;
+}
+header > nav a {
+    float: left;
+    width: 20%;
+    display: inline-block;
+    padding: 25px 0;
+
+}
+header > nav a:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/* 메인 */
+main{
+    height: 700px;
+    line-height: 700px;
 }
 
-/* main */
-main p{
-    width: 95%;
+main > nav{
+    float: left;
+    width: 30%;
+    height: 100%;
+    background-color: gainsboro;
+}
+main > section {
     float: right;
-    padding: 20px;
-    background-color: rgba(204, 204, 204, 0.336);
-    white-space: pre-line;
+    width: 70%;
+    height: 100%;
+    background-color: green;
 }
-
-/* footer */
+/* 아티클 */
+article{
+    padding: 125px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    background-color: aqua;
+    z-index: -1;
+}
+/* 푸터 */
 footer{
-    padding-top: 50px;
-    text-align: center;
+    background-color: yellow;
+    padding: 25px;
 }
