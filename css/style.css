@@ -31,25 +31,34 @@ main{
     background-color: gray;
 }
 main > .cf{
-    margin: 0 auto;
     background-color: red;
     padding: 25px;
 }
-main section{
-    float: left;
-    width: 20%;
+.cf section{
     padding: 50px 25px;
+}
+/* 컨텐츠 컨테이너 */
+.content_canniner {
+    width: 75%;
+    float: left;
+}
+.content_canniner > section{
+    float: left;
+    width: 25%;
     background-color: orange;
 }
-main section:nth-child(2){
-    width: 50%;
-    margin-left: 40px;
+.content_canniner > section:last-child{
+    float: right;
+    width: 70%;
     background-color: hotpink;
 }
-main section:last-child{
+/* 컨텐츠 컨테이너 종료*/
+.content_canniner + section{
     float: right;
+    width: 20%;
     background-color: fuchsia;
 }
+
 main section p{
     margin-bottom: 25px;
 }
