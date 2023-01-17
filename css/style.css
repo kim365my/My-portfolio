@@ -1,70 +1,70 @@
 @charset "UTF-8";
 @import url(./reset.css);
+@import url(./font.css);
 
+/* 전역설정 */
 #wrap{
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
-   text-align: center;
-   position: relative;
-   border: 1px solid black;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 25px;
+}
+h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 /* 개별설정 */
 /* 헤더 */
-
-header > *{
-    float: left;
-
-}
-header > h1{
-    width: 15%;
-    background-color: gainsboro;
-    padding: 25px;
-
-}
-header > nav{
-    width: 85%;
-    background-color: red;
-}
-header > nav a {
-    float: left;
-    width: 20%;
-    display: inline-block;
-    padding: 25px 0;
-
-}
-header > nav a:hover{
-    background-color: rgba(0, 0, 0, 0.4);
+header{
+    background-color: dodgerblue;
+    padding: 40px 25px;
 }
 /* 메인 */
 main{
-    height: 700px;
-    line-height: 700px;
+    padding: 25px;
+    background-color: gray;
 }
-
-main > nav{
+main > .cf{
+    margin: 0 auto;
+    background-color: red;
+    padding: 25px;
+}
+main section{
     float: left;
-    width: 30%;
-    height: 100%;
-    background-color: gainsboro;
+    width: 20%;
+    padding: 50px 25px;
+    background-color: orange;
 }
-main > section {
+main section:nth-child(2){
+    width: 50%;
+    margin-left: 40px;
+    background-color: hotpink;
+}
+main section:last-child{
     float: right;
-    width: 70%;
-    height: 100%;
-    background-color: green;
+    background-color: fuchsia;
 }
-/* 아티클 */
-article{
-    padding: 125px 20px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(100%);
-    background-color: aqua;
-    z-index: -1;
+main section p{
+    margin-bottom: 25px;
+}
+main .cf li{
+    list-style-position: inside;
+    list-style-type:disc;
+    margin-left: 15px;
+}
+main .cf a{
+    color: blue;
+    text-decoration: underline solid 1px black;
 }
 /* 푸터 */
 footer{
-    background-color: yellow;
-    padding: 25px;
+    background-color: skyblue;
+    padding: 40px 25px;
+
 }

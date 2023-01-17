@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import url(./reset.css);
+
+#wrap{
+    width: 800px;
+    margin: 0 auto;
+   text-align: center;
+   position: relative;
+   border: 1px solid black;
+}
+/* 개별설정 */
+/* 헤더 */
+
+header > *{
+    float: left;
+
+}
+header > h1{
+    width: 15%;
+    background-color: gainsboro;
+    padding: 25px;
+
+}
+header > nav{
+    width: 85%;
+    background-color: red;
+}
+header > nav a {
+    float: left;
+    width: 20%;
+    display: inline-block;
+    padding: 25px 0;
+
+}
+header > nav a:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/* 메인 */
+main{
+    height: 700px;
+    line-height: 700px;
+}
+
+main > nav{
+    float: left;
+    width: 30%;
+    height: 100%;
+    background-color: gainsboro;
+}
+main > section {
+    float: right;
+    width: 70%;
+    height: 100%;
+    background-color: green;
+}
+/* 아티클 */
+article{
+    padding: 125px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    background-color: aqua;
+    z-index: -1;
+}
+/* 푸터 */
+footer{
+    background-color: yellow;
+    padding: 25px;
+}
