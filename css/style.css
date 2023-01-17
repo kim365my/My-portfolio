@@ -30,6 +30,8 @@ main{
     padding: 25px;
     background-color: gray;
 }
+
+/* 3단 플롯 */
 main > .cf{
     background-color: red;
     padding: 25px;
@@ -37,7 +39,7 @@ main > .cf{
 .cf section{
     padding: 50px 25px;
 }
-/* 컨텐츠 컨테이너 */
+/* 2단 플롯 컨텐츠 컨테이너 */
 .content_canniner {
     width: 75%;
     float: left;
@@ -58,6 +60,7 @@ main > .cf{
     width: 20%;
     background-color: fuchsia;
 }
+/* 플롯끝 */
 
 main section p{
     margin-bottom: 25px;
