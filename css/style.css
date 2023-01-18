@@ -3,80 +3,110 @@
 @import url(./font.css);
 
 /* 전역설정 */
+body{
+    line-height: 1.6;
+    font: 13px 'Noto Sans KR', 'Roboto', sans-serif;
+    background-color: #aaa;
+}
 #wrap{
-    width: 1000px;
+    width: 800px;
     margin: 0 auto;
-    margin-top: 20px;
-    border: 1px solid black;
-    padding: 25px;
+    background-color: #fff;
+    margin-bottom: 50px;
 }
-h1{
-    font-size: 32px;
-    font-weight: 600;
-}
-h2{
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
+
 /* 개별설정 */
 /* 헤더 */
 header{
-    background-color: dodgerblue;
-    padding: 40px 25px;
+    background-color: orange;
+    color: white;
+    text-align: center;
 }
-/* 메인 */
-main{
-    padding: 25px;
-    background-color: gray;
+h1{font: 600 800% 'Roboto', sans-serif;}
+h1 > span{
+    display: block;
+    font-size: 20px;
+    padding: 4px;
+}
+header > p {
+    background-color: rgb(187, 187, 187);
+    padding: 5px;
+}
+header > p span{
+    font-style: normal;
+    font-weight: 700;
+    color: blue;
 }
 
-/* 3단 플롯 */
-main > .cf{
-    background-color: red;
-    padding: 25px;
+/* 메인 */
+main h2{font: bold 1.3rem 'Roboto', sans-serif;}
+main .cf a:hover{background-color: rgba(0, 0, 0, 0.5);}
+
+/* nav */
+.nav h2{
+    background-color: darkred;
+    padding: 10px 15px;
+    color: white;
 }
-.cf section{
-    padding: 50px 25px;
+.nav ul > li {padding: 10px 5px;}
+.nav a{
+    padding: 0 10px;
+    text-decoration: underline dashed 1px black;
 }
+
+/* content */
+.content section{padding: 10px;}
+.content h2{
+    background-color: #123456;
+    padding: 10px 15px;
+    color: white;
+}
+.content h2 + p{
+    color: #123456;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px 0;
+}
+
+/* aside */
+.aside > h2{margin-bottom: 20px;}
+.aside > h2 > strong{font-weight: 900;}
+.aside > h2 > .love{
+    color: orange;
+    text-decoration: underline solid 2px orange;
+    margin: 5px 0;
+}
+.aside > ul > li{margin-bottom: 20px;}
+
 /* 2단 플롯 컨텐츠 컨테이너 */
-.content_canniner {
+#content_box {
     width: 75%;
     float: left;
 }
-.content_canniner > section{
+.nav{
     float: left;
     width: 25%;
-    background-color: orange;
 }
-.content_canniner > section:last-child{
+.content{
     float: right;
-    width: 70%;
-    background-color: hotpink;
+    width: 75%;
+    background-color: #ccc;
 }
-/* 컨텐츠 컨테이너 종료*/
-.content_canniner + section{
+.aside{
     float: right;
-    width: 20%;
-    background-color: fuchsia;
+    width: 25%;
+    padding: 10px 15px;
 }
 /* 플롯끝 */
 
-main section p{
-    margin-bottom: 25px;
-}
-main .cf li{
-    list-style-position: inside;
-    list-style-type:disc;
-    margin-left: 15px;
-}
-main .cf a{
-    color: blue;
-    text-decoration: underline solid 1px black;
-}
-/* 푸터 */
+/* footer */
 footer{
-    background-color: skyblue;
-    padding: 40px 25px;
-
+    text-align: center;
+    background-color: #123456;
+    color: #fff;
+    padding: 20px;
+}
+footer a{
+    color: darkred; 
+    font-weight: 600;
 }
