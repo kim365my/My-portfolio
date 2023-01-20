@@ -2,66 +2,60 @@
 @import url(./reset.css);
 @import url(./font.css);
 
-#wrap{
-    width: 800px;
-    margin: 0 auto;
-    text-align: center;
+/* 전역설정 */
+body{
+    font: 400 14px/1.6 'Noto Sans KR', sans-serif;
 }
+
+#wrap{
+    width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.technology > li{
+    /* height: 20px; */
+    display: inline-block;
+    padding: 2px 5px;
+    margin-left: 4px;
+    border-radius: 2px;
+    background-color: #edf0f7;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+dt, dd{margin-bottom: 10px;}
 
 /* header */
 header{
-    display: flex;
-    line-height: 60px;
-
+    width: 400px;
 }
-header > h1 {
-    position: absolute;
-    z-index: 2;
-    width: 200px;
-    height: 100px;
-    line-height: 100px;
-    background-color: #fe6b57;
-
+header > h1{
+    font: 600 24px/1.6 'Noto Sans KR', sans-serif;
+    margin-bottom: 10px;
 }
-header > nav{
-    width: 80%;
-    height: 60px;
-    line-height: 60px;
-    margin-left: 20%;
-    background-color: #fe6b57;
+
+#propel >ul > li{
+    padding: 20px 0;
+    border-bottom: 1px solid #ececec;
+    margin-top: 20px;
+    box-shadow: 0 1px 5px -3px gainsboro;
+}
+#propel_aboutme{
+    white-space: pre-line;
 }
 
 /* main */
-#content_box1, #content_box2{
-    width: 100%;
-    height: 300px;
-    display: flex;
-    line-height: 300px;
+main{
+    width: 680px;
 }
-#content_box1 > *{width: 25%}
-#content_box2 > *{width: 20%;}
-
-#conent1{flex: 2 2 0;}
-#conent4, #conent5{flex: 1.3 1.3 0;}
-#conent6{
-    display: flex;
-    flex-direction: column;
-    line-height: 150px;
-}
-#conent6 > *{height: 100%;}
-
-/* 컬러 */
-#conent1{background-color: #3c8fbd;}
-#conent2{background-color: #f7dd73;}
-#conent3{background-color: #00d1a4;}
-#conent4{background-color: #9baae3;}
-#conent5{background-color: #d66817;}
-#conent6 > :nth-child(1){background-color: #0175ba;}
-#conent6 > :nth-child(2){background-color: #1d4a65;}
-#conent7{background-color: #fd6ed9;}
-
-/* footer */
-footer{
-    background-color: #474747;
-    padding: 25px;
+main > section{
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    box-shadow: #ececec 1px 1px 10px 0;
 }
