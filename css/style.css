@@ -4,8 +4,13 @@
 @import url(./variable.css);
 
 /* 전역설정 */
+html, body{
+	height: 100%;
+	width: 100%;
+}
+
 body{
-    font: 400 13px/1.6 'Noto Sans KR', sans-serif;
+    font: 400 16px/1.8 'Noto Sans KR', sans-serif;
 }
 
 #wrap{
@@ -24,6 +29,11 @@ i{
 dt, dd{
     margin-bottom: 10px;
 }
+.txt_small {
+    width: 160px;
+    font-size: 14px;
+    color:#afb6bc;
+}
 
 /* 기술리스트 */
 .technology > li{
@@ -40,9 +50,6 @@ dt, dd{
     color: white;
 }
 
-dt > span{
-    color: #afb6bc;
-}
 
 /* 개별설정 */
 /* header */
@@ -53,7 +60,9 @@ header > h1{
     font: 600 24px/1.6 'Noto Sans KR', sans-serif;
     margin-bottom: 10px;
 }
-
+article, #propel >ul{
+    height: 100%;
+}
 #propel >ul{
     overflow: hidden;
 }
@@ -71,13 +80,49 @@ main{
     width: 600px;
 }
 main > section{
-    padding: 30px;
+    padding: 25px 20px;
     margin-bottom: 25px;
     border: 1px solid #ececec;
     border-radius: 10px;
     box-shadow: #ececec 1px 1px 10px 0;
 }
 
-section p {
-    width: 200px;
+/* .content_box */
+/* content_box_header */
+.content_box_header{
+    width: 160px;
+    margin-bottom: 10px;
+}
+
+
+/* content_box_contents */
+.content_box_contents:has(+.content_box_contents){
+    padding-bottom: 15px;
+}
+.content_box_contents + .content_box_contents{
+    padding-top: 15px;
+    border-top: #ececec solid 1px;
+}
+
+.content_box_contents > dl{
+    width: 400px;
+}
+
+.content_box_contents dt {
+    font-weight: 600;
+}
+
+/* 플렉스박스 */
+.one_box{
+    display: flex;
+}
+.content_box_contents:has(.txt_small){
+    display: flex;
+}
+
+
+.skill-level_img > li{
+    width: 80px;
+    display: inline-block;
+    margin-right: 10px;
 }
