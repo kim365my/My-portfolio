@@ -14,7 +14,7 @@ html, body{
     font-family: 'Roboto', sans-serif;
 }
 .inside{
-    width: 1320px;
+    width: 1280px;
     margin: 0 auto;
     text-align: center;
 }
@@ -24,7 +24,7 @@ html, body{
     color: white;
     height: 700px;
     background: no-repeat top center url(../images/slide_back_img.png);
-    padding: 40px 20px;
+    padding: 40px 0;
 }
 header{
     height: 64px;
@@ -100,7 +100,6 @@ header > .logo{
 #main_content > figure{
     position: relative;
     top: -80px;
-    padding: 0 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -110,9 +109,6 @@ header > .logo{
 }
 
 /* 컨텐츠 텍스트 */
-#main_content > div{
-    padding: 0 20px;
-}
 #main_content > div > *{
     float: left;
     color: #807f7f;
@@ -131,16 +127,14 @@ header > .logo{
 /* 컨텐츠 1 */
 #main_content1{
     height: 872px;
-    padding: 100px 20px;
+    padding: 100px 0;
 }
 #main_content1 > p{
     height: 172px;
     line-height: 40px;
     color: #807f7f;
 }
-#main_content1 img{
-    width: 1280px;
-}
+
 /* 컨텐츠 2 */
 #main_content2{
     height: 860px;
@@ -153,28 +147,20 @@ header > .logo{
 /* 컨텐츠 3 */
 #main_content3{
     height: 700px;
-    padding: 100px 20px;
+    padding: 100px 0;
 }
-#main_content3 img{
-    width: 1280px;
-}
+
 /* 컨텐츠 4 */
 #main_content4{
     height: 692px;
     padding-top: 70px;
     background-color: #dcdcdc;
 }
-#main_content4 img{
-    width: 1280px;
-}
+
 /* 컨텐츠 5 */
 #main_content5{
-    padding: 0 20px;
     height: 240px;
     background-color: #ffcc33;
-}
-#main_content5 img{
-    width: 1280px;
 }
 
 /* 푸터 */
