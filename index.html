@@ -4,171 +4,150 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>기초 스크립트 테스트</title>
-    <script>
-        /**인수의 내용을 prompt로 질문해서 입력된 숫자로 돌려주는 반복문*/
-        var loop = function (params) {
-            do{
-                var num = prompt(...params);
-                if (!Number(num)) {
-                    alert("숫자만 입력해주세요.");
-                }
-            }while(!Number(num));
-            return Number(num)
-        }
-        /**1번 문제*/
-        function payAverage() {
-            // 변수선언
-            var sum = 0;
-
-            // 3번 반복되는 질문을 for로 처리
-            for (var i = 1; i <= 3; i++) {
-                // 숫자만 입력되었는지 확인
-                var pay = loop([i+"월 급여를 입력해주세요. (만원 단위)", 500]);
-                sum += pay;
-            }
-
-            // 3항 연산자를 이용해 1000이상이면 고소득자, 아니면 평균임금자로 결과값 표시
-            var result = (sum / 3) >= 1000? "고소득자":"평균임금자";
-
-            // 결과출력
-            document.write(result);
-        }
-
-        /**2번 문제*/
-        function health() {
-            // 변수선언
-            var age = loop(["나이를 입력해주세요.", 20]);
-            var num = loop(["태어난 출생연도를 입력해주세요.", 2020]);
-            var result = "";
-
-            // 나이와 연도가 나눴을때 0이 되면 실행되도록
-            if (age%2 == 0 && num%2 == 0) {
-                result = "건강검진 대상자입니다.";
-            } else {
-                result = "건강검진 대상자가 아닙니다.";
-            }
-
-            // 결과값 출력
-            document.write(result);
-        }
-
-        /**3번 문제*/
-        function seasons() {
-            // 변수선언
-            var whatMonth  = loop(["오늘이 몇월인가요?", 1]);
-            var result = "";
-
-            // 1월에서 12월사이에서만 대답하도록
-            if (whatMonth >= 1 && whatMonth <= 12) {
-                if (whatMonth >= 9 && whatMonth <= 11) {
-                    // 9월부터 11월사이
-                    result = "가을입니다."
-                    
-                } else if(whatMonth >= 6 && whatMonth <= 8){
-                    // 6월부터 8월사이
-                    result = "여름입니다."
-                    
-                }else if(whatMonth >= 3 && whatMonth <= 5){
-                    // 3월부터 5월사이
-                    result = "봄입니다."
-                    
-                }else {
-                    result = "겨울입니다."
-                }                    
-            } else {
-                alert("1부터 12사이까지만 입력해주세요.");
-                // 다시 함수를 실행
-                seasons();
-            }
-            // 결과 출력
-            document.write(result);
-            
-        }
-
-        /**4번 문제*/
-        function number() {
-            // 변수선언
-            var num  = loop(["숫자를 입력해주세요", 1]);
-
-            // 숫자만 2로 나눠서 그 값으로 홀짝 판정
-            switch (num%2) {
-                case 0:
-                    alert("짝수입니다.");
-                    break;
-                case 1:
-                    alert("홀수입니다.");
-                    break;
-                default:
-                    alert("에러...");
-                    location.reload();
-                    break;
-            }
-        }
-
-        /**5번 문제*/
-        function printSum(){
-            // 변수선언
-            var sum = 0;
-
-            // 1부터 10까지 덧셈
-            for (var i = 1; i <= 10; i++) {
-                sum += i;
-            }
-            
-            // 결과 출력
-            var result = "1부터 10까지의 합은 "+ sum +" 입니다.";
-            document.write(result);
-        }
-
-        /**6번 문제*/
-        function printMulti(){
-            // 변수선언
-            var num = 5;
-            var sum = 0;
-            var result = "";
-
-            // 9번 반복
-            for (var i = 1; i <= 9; i++) {
-                // 5단 구구단
-                sum = num*i;
-                // 결과값에 추가
-                result += (num + " x " + i + " = " + sum + "<br>" + "<br>");
-            }
-            // 결과 출력
-            document.write(result);
-        }
-        
-        /**7번 문제*/
-        function printSubject(){
-            // 변수선언
-            var subject = ["HTML","CSS","javaScript","jQuery","React", "js"];
-            var result = "";
-
-            // 변수길이만큼 반복
-            for (var i = 0; i < subject.length; i++) {
-                result += subject[i]  + "<br>" + "<br>";                
-            }
-            // ...subject를 이용해서 출력해도 될 것 같은데, 전개 연산자에 띄어쓰기 적용하는 걸 모르겠어
-            // document.write(...subject + "<br>");
-
-            // 결과 출력
-            document.write(result);
-        }
-</script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <form action="#">
-        <fieldset>
-            <legend>기초 스크립트 테스트</legend>
-            <input type="button" value="문제 1" onclick="payAverage()"></input>
-            <input type="button" value="문제 2" onclick="health()"></input>
-            <input type="button" value="문제 3" onclick="seasons()"></input>
-            <input type="button" value="문제 4" onclick="number()"></input>
-            <input type="button" value="문제 5" onclick="printSum()"></input>
-            <input type="button" value="문제 6" onclick="printMulti()"></input>
-            <input type="button" value="문제 7" onclick="printSubject()"></input>
-        </fieldset>
-    </form>
+    <div id="wrap">
+        <div id="header_container">
+            <header class="inside cf">
+                <h1 class="logo">
+                    <img src="./images/logo.png" alt="헤더로고">
+                </h1>
+                <div id="gnb_container">
+                    <p id="search">
+                        <img src="./images/btn_search.png" alt="">
+                    </p>
+                    <nav class="gnb">
+                        <ul>
+                            <li><a href="#">WOMAN</a></li>
+                            <li><a href="#">MAN</a></li>
+                            <li><a href="#">CHILDREN</a></li>
+                            <li><a href="#">JEWELRY & WATCHES</a></li>
+                            <li><a href="#">BEAUTY</a></li>
+                            <li><a href="#">DECOR</a></li>
+                            <li><a href="#">GIFTS</a></li>
+                            <li><a href="#">STORIES</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <article  class="inside">
+                <div id="bg_txt">
+                    <h2>Father's Day Gifts Le Petit Prince</h2>
+                    <p>Receie a complimentary Explorer Travel Set with you purchase of $400 or more. Browse the collection</p>
+                    <button>SHOP NOW</button>                    
+                </div>
+            </article>    
+        </div>
+        <main role="main">
+            <section id="main_content">
+                <figure class="inside">
+                    <img src="./images/card_box01.jpg" alt="">
+                    <img src="./images/card_box02.jpg" alt="">
+                    <img src="./images/card_box03.jpg" alt="">
+                </figure>
+                <div class="inside cf">
+                    <span>Please call our concierge on <strong>1-800-995-4810</strong></span>
+                    <a href="#">
+                        <span>VIEW ALL SERVICES</span>
+                        <img src="./images/arrow_silver.png" alt="">
+                    </a>
+                </div>
+            </section>
+
+            <section id="main_content1">
+                <p class="inside">
+                    OIN MONTBLANC Create an account Save details for faster shopping Manage your order history and wish listOIN MONTBLANC Create an account Save details for faster shopping Manage your order history and wish listOIN MONTBLANC Create an account Save details faster shopping Manage your order history and wish listOIN MONTBLANC Create an account Save details for faster shopping
+                </p>
+                <figure class="inside">
+                    <img src="./images/aboutus.jpg" alt="">
+                </figure>
+            </section>
+            <section id="main_content2">
+                <!-- 동영상 -->
+                <figure class="inside">
+                    <!-- <img src="./images/mov_back.jpg" alt=""> -->
+                    <img src="./images/mov_clip.jpg" alt="">
+                </figure>
+            </section>
+            <section id="main_content3">
+                <figure class="inside">
+                    <img src="./images/why.jpg" alt="">
+                </figure>
+            </section>
+            <section id="main_content4">
+                <figure class="inside">
+                    <img src="./images/faq.jpg" alt="">
+                </figure>
+            </section>
+            <section id="main_content5">
+                <a href="#">
+                    <figure class="inside">
+                        <img src="./images/banner.jpg" alt="">
+                    </figure>
+                </a>
+            </section>
+        </main>
+        <footer class="cf">
+            <div id="footer_container" class="inside cf">
+                <div id="footer_logo">
+                    <h2 class="logo">
+                        <img src="./images/footer_logo.png" alt="헤더로고">
+                    </h2>
+                    <p>
+                        ave s for faster shopping Manage your order his Create an account Save details for faster shopping history and wish list OIN MONTBLAVC Create anr
+                    </p>
+                    <ul id="SNS">
+                        <li><a href="#"><img src="./images/sns_facebook.png" alt="SNS페이스북"></a></li>
+                        <li><a href="#"><img src="./images/sns_twitter.png" alt="SNS트위터"></a></li>
+                        <li><a href="#"><img src="./images/sns_insta.png" alt="SNS인스타"></a></li>
+                        <li><a href="#"><img src="./images/sns_naver.png" alt="SNS네이버"></a></li>
+                    </ul>
+                </div>
+                <div id="nnb">
+                    <div>
+                        <h3>Services</h3>
+                        <ul>
+                            <li>Personal shopping</li>
+                            <li>Engraving & Embossing</li>
+                            <li>Gift Wrapping</li>
+                            <li>Shipping & Delivery</li>
+                            <li>Returns & Guarantee</li>
+                            <li>Click & Collect</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Services</h3>
+                        <ul>
+                            <li>Personal shopping</li>
+                            <li>Engraving & Embossing</li>
+                            <li>Gift Wrapping</li>
+                            <li>Shipping & Delivery</li>
+                            <li>Returns & Guarantee</li>
+                            <li>Click & Collect</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Services</h3>
+                        <ul>
+                            <li>Personal shopping</li>
+                            <li>Engraving & Embossing</li>
+                            <li>Gift Wrapping</li>
+                            <li>Shipping & Delivery</li>
+                            <li>Returns & Guarantee</li>
+                            <li>Click & Collect</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="inside">
+                <p>
+                    &copy; Montblanc
+                </p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
