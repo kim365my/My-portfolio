@@ -21,7 +21,6 @@ html, body{
 
 /* 헤더 */
 #header_container{
-    color: white;
     height: 700px;
     background: no-repeat top center url(../images/slide_back_img.png);
     padding: 40px 0;
@@ -52,16 +51,18 @@ header > .logo{
 .gnb{
     line-height: 50px;
     float: right;
+    cursor:pointer;
 }
 .gnb li {
     display: inline-block;
     margin-left: 20px;
+    color: #c5c5c5;
 }
 .gnb li:first-child{
     margin-left: 0;
 }
 .gnb li:hover{
-    font-weight: 600;
+    color: white;
 }
 
 /* 헤더 아티클 */
@@ -79,6 +80,7 @@ header > .logo{
 #bg_txt > h2{
     font-size: 70px;
     font-weight: 600;
+    color: #ffffff;
 }
 #bg_txt > p {
     color: #888888;
@@ -118,6 +120,7 @@ header > .logo{
 }
 #main_content strong {
     font-weight: 600;
+    color: #3f3e3e;
 }
 #main_content a > img{
     width: 8px;
@@ -168,7 +171,11 @@ footer{
     height: 550px;
     color: white;
     background-color: black;
+}
+#footer_container{
     padding-top: 130px;
+    padding-bottom: 50px;
+    border-bottom: #ffffff solid 1px;
 }
 /* 푸터 기업소개 */
 #footer_logo{
@@ -223,5 +230,5 @@ footer{
 
 /* 푸터 라이센스 */
 footer > :last-child{
-    padding-top: 100px;
+    padding-top: 50px;
 }
