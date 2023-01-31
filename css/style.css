@@ -19,7 +19,6 @@ html, body{
     text-align: center;
 }
 
-
 /* 헤더 */
 #header_container{
     height: 700px;
@@ -184,7 +183,7 @@ footer{
 }
 #footer_container{
     padding: 130px 0 50px 0;
-    border-bottom: #ffffff solid 1px;
+    border-bottom: #c7c4c4 solid 1px;
     margin-bottom: 50px;
 }
 /* 푸터 기업소개 */
