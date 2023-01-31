@@ -19,6 +19,7 @@ html, body{
     text-align: center;
 }
 
+
 /* 헤더 */
 #header_container{
     height: 700px;
@@ -67,10 +68,9 @@ header > .logo{
 
 /* 헤더 아티클 */
 #header_container > article{
-    display: flex;
-    align-items: center;
     height: 610px;
     text-align: left;
+    padding-top: 200px;
 }
 #bg_txt{
     width: 600px;
@@ -102,29 +102,37 @@ header > .logo{
 #main_content > figure{
     position: relative;
     top: -80px;
-    display: flex;
-    justify-content: space-between;
 }
 #main_content img{
     width: 400px;
     cursor: pointer;
+    float: left;
+    margin-right: 40px;
+}
+#main_content img:last-child{
+    float: right;
+    margin-right: 0;
 }
 
 /* 컨텐츠 텍스트 */
-#main_content > div > *{
-    float: left;
+#contentTxt{
     color: #807f7f;
 }
-#main_content > div > :last-child{
-    float: right;
+#contentTxt > span{
+    float: left;
 }
-#main_content strong {
+#contentTxt strong {
     font-weight: 600;
     color: #3f3e3e;
 }
-#main_content a > img{
+#contentTxt > a {
+    float: right;
+    line-height: 10px;
+}
+#contentTxt > a > img{
     width: 8px;
-    vertical-align: middle;
+    margin-left: 10px;
+    vertical-align:middle;
 }
 
 /* 컨텐츠 1 */
@@ -146,7 +154,9 @@ header > .logo{
 #main_content2 > figure > img{
     width: 1060px;
     padding-top: 300px;
+    cursor: pointer;
 }
+
 /* 컨텐츠 3 */
 #main_content3{
     height: 700px;
@@ -173,9 +183,9 @@ footer{
     background-color: black;
 }
 #footer_container{
-    padding-top: 130px;
-    padding-bottom: 50px;
+    padding: 130px 0 50px 0;
     border-bottom: #ffffff solid 1px;
+    margin-bottom: 50px;
 }
 /* 푸터 기업소개 */
 #footer_logo{
@@ -199,11 +209,13 @@ footer{
     float: right;
     padding-top: 20px;
     line-height: 2;
-    display: flex;
-    justify-content: space-between;
 }
 #nnb > div{
     text-align: left;
+    display: inline-block;
+    margin-right: 180px;
+    
+    vertical-align: top;
 }
 #nnb > div:last-child{
     margin-right: 0;
@@ -228,7 +240,3 @@ footer{
     width: 30px;
 }
 
-/* 푸터 라이센스 */
-footer > :last-child{
-    padding-top: 50px;
-}
