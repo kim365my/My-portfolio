@@ -23,8 +23,6 @@ article, aside, footer, header, nav, section, time, mark, audio, video, button{
 }
 /* 문서전체 css 적용 */
 body{
-	width: 100vw;
-	height: 100vh;
 	line-height: 1;
 }
 
@@ -37,13 +35,13 @@ ul, ol, li{
 a, a:visited{
 	color: inherit; /* 상속 */
 	text-decoration: none;
+	font-size: 1em;
 	vertical-align: baseline;
 	background: none;
 }
 
 /* img 요소 */
 img{
-	width: 100%;
 	vertical-align: top; /*기본적으로 씌여진 공백을 없애준다*/
 }
 
@@ -53,6 +51,11 @@ hr{
 	margin: 0;
 	padding: 0;
 	border: 0;
+}
+
+/* button 요소 */
+button {
+    background: none;
 }
 
 /* 플롯해제 클리어 픽스 */

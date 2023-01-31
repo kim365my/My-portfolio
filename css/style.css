@@ -2,17 +2,22 @@
 @import url(./font.css);
 
 /* 전역설정 */
-*{
-    box-sizing: border-box;
-}
 html, body{
     height: 100%;
     width: 100%;
+    margin: 0 auto;
 }
 
+/* body {
+    overflow-x:hidden;
+} */
+
 #wrap{
+    width: 1903px;
+    margin: 0 auto;
     font-family: 'Roboto', sans-serif;
 }
+
 .inside{
     width: 1280px;
     margin: 0 auto;
