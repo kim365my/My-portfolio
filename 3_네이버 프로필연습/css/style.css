@@ -1,6 +1,12 @@
 @import url(./reset.css);
 @import url(./font.css);
 
+@media (max-width: 1220px) {
+    #wrap{
+        width: 1220px;
+    }
+}
+
 /* 전역설정 */
 html, body{
     height: 100%;
@@ -11,22 +17,20 @@ html, body{
 body{
     background-color: #FAFBFC;
 }
-#wrap{
-    height: auto;
-    position: relative;
-    
-}
-
 .inside{
-    width: 700px;
+    width: 1220px;
+    padding: 0 30px;
+    /* 700 */
     margin: 0 auto;
 }
-.clicked{
-    color: #03C85A;
-}
-li.more li{
-    display: none;
-}
+
+li.more li{display: none;}
+li{display: inline-block;}
+
+.clicked{color: #03C85A;}
+
+.fl{float: left;}
+.fr{float: right;}
 
 #headerContainer,
 #searchBar,
@@ -39,15 +43,18 @@ li.more li{
 /* 헤더 */
 header{
     height: 120px;
-    box-shadow: gainsboro 0px 4px 10px 0;
-}
-#headerContainer{
-    width: auto;
-    height: 65px;
     background-color: #ffff;
-    justify-content: space-between;
-    border: #03C85A solid 1px;
+    box-shadow: gainsboro 0px 4px 10px 0;
     position: relative;
+}
+#userBar {
+    position: absolute;
+    right: 0;
+} 
+
+#headerContainer{
+    height: 65px;
+    border-bottom: #03C85A solid 1px;
 }
 /* 헤더 search */
 h1 .logo{
@@ -58,12 +65,9 @@ h1 .logo{
     background-position: -286px -196px;
     background-size: 367px 347px;
 }
-#searchBar{
-    justify-content: space-between;
-}
+
 #search > input[type="search"]{
-    width: 400px;
-    /* 535px */
+    width: 535px;
     height: 60px;
     border: none;
     font-size: 24px;
@@ -71,35 +75,47 @@ h1 .logo{
 #search > input[type="search"]:focus{
     outline: none;
 }
-#userBar{
-    position: absolute;
-    right: 0;
-}
+
 
 /* 헤더 nav */
 #navContainer{
     height: 50px;
     background-color: #ffff;
-
-}
-#navContainer ul{
     line-height: 50px;
-    justify-content: space-between;
+
 }
 
+#navContainer ul > li:nth-child(even){
+    margin: 0 30px;
+}
 
 /* 메인 */
-main{
-    position: relative;
-}
-main > .inside{
+
+main > section{
+    width: 700px;
+    border-radius: 5px;
+    padding: 20px 10px;
+    margin-top: 25px;
     background-color: #A5A8AF;
 }
-main > aside{
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(100%);
+main > aside,
+.aside_box > ul{
+    display: flex;
+    flex-direction: column;
+}
+.aside_box > ul{
+    margin-top: 25px;
+    border-radius: 2px;
+    border: rgba(0, 0, 0, 0.3) 1px solid;
+    padding: 10px;
+    background-color: #ffff;
+}
+.aside_box li{
+    width: 400px;
+    height: 70px;
+}
+.aside_box li:nth-child(even){
+    border-top: rgba(0, 0, 0, 0.3) 1px solid;
 }
 
 /* 푸터 */
@@ -109,10 +125,15 @@ footer{
     padding-top: 32px;
     text-align: center;
     background-color: #F7F9FA;
-    position: absolute;
-    bottom: 0;
+    border-top: #A5A8AF 1px double;
+    margin-top: 25px;
 
 }
 #fnb{
+    width: 520px;
     margin: 0 auto;
+    font-size: 13px;
+}
+#fnb ul > li:nth-child(even){
+    margin: 0 20px;
 }

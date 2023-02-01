@@ -104,8 +104,6 @@ header > .logo{
     background-color: #b4b4b4;
 }
 #main_content > figure{
-    /* position: relative; */
-    /* top: -80px; */
     transform: translateY(-80px);
 }
 #main_content img{
