@@ -8,12 +8,12 @@ html, body{
     margin: 0 auto;
 }
 
-/* body {
+body {
     overflow-x:hidden;
-} */
+}
 
 #wrap{
-    width: 1903px;
+    width: 1920px;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
 }
@@ -104,8 +104,9 @@ header > .logo{
     background-color: #b4b4b4;
 }
 #main_content > figure{
-    position: relative;
-    top: -80px;
+    /* position: relative; */
+    /* top: -80px; */
+    transform: translateY(-80px);
 }
 #main_content img{
     width: 400px;
