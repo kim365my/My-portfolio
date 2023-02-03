@@ -4,257 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>네이버 프로필 연습</title>
+    <title>네이버클론</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="wrap">
+        <!-- /header -->
         <header>
-            <!-- 헤더컨테이너 -->
-            <div id="headerContainer">
-                <!--검색바 -->
-                <div id="searchBar"  class="inside cf">
-                    <!-- 헤더로고 -->
-                    <h1><a href="#" class="logo"><i></i></a></h1>
-                    <!-- 검색창 -->
-                    <form id="search">
-                        <input type="search">
-                        <button type="submit" name="키보드">
-                            <i class="fa fa-keyboard-o" aria-hidden="true"></i>
-                        </button>
-                        <button type="submit" name="최근검색어표시">
-                            <i class="fa fa-caret-down" aria-hidden="true"></i>
-                        </button>
-                        <button type="submit" name="검색">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
+            <!-- /header_container -->
+            <div class="header_container">
+                <!-- /search_bar -->
+                <div class="search_bar w1180">
+                    <h1 class="logo"><a href="#"><img src="" alt="네이버로고"></a></h1>
+                    <div class="line"></div>
+                    <form action="#">
+                        <input type="search" value="검색 창">
+                        <button>키보드</button>
+                        <button>최근 검색어 표시</button>
+                        <!-- 검색버튼 -->
+                        <input type="submit" id="searchBtn">
                     </form>
                 </div>
-                <!-- 검색바 종료 -->
-
-                <!-- 유저정보 -->
-                <aside id="userBar">
-                    <ul>
-                        <li><a href="#">유저명</a></li>
-                        <!-- 알림 -->
-                        <li><a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
-                        <!-- 메일 -->
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-                        <!-- 더보기 -->
-                        <li class="more"><a href="#"><i class="fa fa-stop" aria-hidden="true"></i></a></li>
-                    </ul>
-                </aside>
-                <!-- 유저정보 종료 -->
+                <!-- /search_bar -->
+                
+                <!-- user_bar -->
+                <ul class="user_bar">
+                    <li><a href="#">유저정보</a></dt>
+                    <li><a href="#">알림</a></dd>
+                    <li><a href="#">이메일</a></dd>
+                    <li><a href="#">더보기</a></dd>
+                </ul>
+                <!-- user_bar -->
             </div>
-            <!-- 헤더 컨테이너 종료 -->
+            <!-- /header_container -->
 
-            <!-- 네브 컨테이너 -->
-            <div id="headerNav">
-                <div id="navContainer" class="inside cf">
-                    <nav>
-                        <ul>
-                            <li class="clicked"><a href="#">통합</a></li>
-                            <li><a href="#">이미지</a></li>
-                            <li><a href="#">VIEW</a></li>
-                            <li><a href="#">지식iN</a></li>
-                            <li><a href="#">인플루언서</a></li>
-                            <li><a href="#">동영상</a></li>
-                            <li><a href="#">쇼핑</a></li>
-                            <li><a href="#">뉴스</a></li>
-                            <li><a href="#">어학사전</a></li>
-                            <li><a href="#">지도</a></li>
-                            <li class="more">
-                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                <ul>
-                                    <li><a href="#">도서</a></li>
-                                    <li><a href="#">뮤직</a></li>
-                                    <li><a href="#">지식백과</a></li>
-                                    <li><a href="#">오디오클립</a></li>
-                                    <li><a href="#">학술정보</a></li>
-                                    <li class="search_op"><a href="#">검색옵션</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+            <!-- /header_gnb -->
+            <nav>
+                <ul class="gnb w1180">
+                    <li><a href="#">통합</a></li>
+                    <li><a href="#">이미지</a></li>
+                    <li><a href="#">어학사전</a></li>
+                    <li><a href="#">VIEW</a></li>
+                    <li><a href="#">지식iN</a></li>
+                    <li><a href="#">인플루언서</a></li>
+                    <li><a href="#">동영상</a></li>
+                    <li><a href="#">쇼핑</a></li>
+                    <li><a href="#">뉴스</a></li>
+                    <li><a href="#">지도</a></li>
+                    <!-- gnb_more -->
+                    <li class="gnb_more">
+                        <a href="#">더보기</a>
+                        <div class="gnb_more_list">
+                            <ul>
+                                <li><a href="#">도서</a></li>
+                                <li><a href="#">뮤직</a></li>
+                                <li><a href="#">지식백과</a></li>
+                                <li><a href="#">오디오클립</a></li>
+                                <li><a href="#">학술정보</a></li>
+                                <li><a href="#">검색옵션</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
                 <p>
                     <a href="#">공유</a>
                 </p>
-            </div>
+            </nav>
+            <!-- /header_gnb -->
+
         </header>
+        <!-- /header -->
 
-        <main role="main" class="inside cf">
-            <aside>
-                <!-- 첫번째 박스 -->
-                <div class="aside_box">
-                    <div class="content_box">
-                        <a href="#">
-                            <img src="" alt="아이콘">
-                            <div class="content_box_infor">
-                                <p>코로나19 현황</p>
-                                <span>확진현황 및 백신 예방접종 정보 안내</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content_box">
-                        <a href="#">
-                            <img src="" alt="아이콘">
-                            <div class="content_box_infor">
-                                <p>코로나19 현황</p>
-                                <span>확진현황 및 백신 예방접종 정보 안내</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 두번째 박스 -->
-                <div class="aside_box">
-                    <!-- 박스컨텐츠 시작 -->
-                    <div class="content_box">
-                        <a href="#">
-                            <img src="" alt="아이콘">
-                            <div class="content_box_infor">
-                                <p>코로나19 현황</p>
-                                <span>확진현황 및 백신 예방접종 정보 안내</span>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- 박스컨텐츠 종료 -->
-                    <div class="content_box">
-                        <a href="#">
-                            <img src="" alt="아이콘">
-                            <div class="content_box_infor">
-                                <p>코로나19 현황</p>
-                                <span>확진현황 및 백신 예방접종 정보 안내</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content_box">
-                        <a href="#">
-                            <img src="" alt="아이콘">
-                            <div class="content_box_infor">
-                                <p>코로나19 현황</p>
-                                <span>확진현황 및 백신 예방접종 정보 안내</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content_box">
-                        <a href="#">
-                            <img src="" alt="아이콘">
-                            <div class="content_box_infor">
-                                <p>코로나19 현황</p>
-                                <span>확진현황 및 백신 예방접종 정보 안내</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </aside>
-
-            <div id="main_content">
-                <section>
-                    <article>
-                        <div class="content_header">
-                            <h2>이름</h2>
-                            <p>
-                                <span>영어이름</span>
-                                <span>직업명</span>
-                            </p>
-                        </div>
-                        <p class="article_banner">
-                            <span>생일을 축하합니다.</span>
-                            <span>D-Day</span>
-                        </p>
-                        
-                        <div class="content">
-                            <h3>최근소식</h3>
-                            <div class="content_box">
-                                <h4>소식명</h4>
-                                <p>
-                                    <span>내용</span>
-                                </p>
-                            </div>
-    
-                            <div class="content_box">
-                                <h4>소식명</h4>
-                                <p>
-                                    <span>내용</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <h3>
-                                <ul>
-                                    <li><a href="#">곡</a></li>
-                                    <li><a href="#">앨범</a></li>
-                                    <li><a href="#">영화</a></li>
-                                </ul>
-                            </h3>
-                            <div class="content_box">
-                                <h4>소식명</h4>
-                                <p>
-                                    <span>내용</span>
-                                </p>
-                            </div>
-                            <div class="content_box">
-                                <h4>소식명</h4>
-                                <p>
-                                    <span>내용</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <h3>관련 플레이리스트</h3>
-                            <div class="content_box">
-                                <h4>소식명</h4>
-                                <p>
-                                    <span>내용</span>
-                                </p>
-                            </div>
-                            <div class="content_box">
-                                <h4>소식명</h4>
-                                <p>
-                                    <span>내용</span>
-                                </p>
-                            </div>
-                        </div>
-                    </article>
+        <!-- /main -->
+        <main role="main" class="w1180 cf">
+            <!-- 메인 왼쪽 섹션 -->
+            <div class="main_left"> 
+                <!-- /section card_box -->
+                <section class="card_box">
                     
-                    <article>
-                        <div class="content">
-                            <h3>최근소식</h3>
-                            <div class="content_box">
-                                <h4>소식명</h4>
-                                <p>
-                                    <span>내용</span>
-                                </p>
-                            </div>
-                            <div class="content_box">
-                                <h4>소식명</h4>
-                                <p>
-                                    <span>내용</span>
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                    <article id="image">
-                        <h2>이미지</h2>
-                    </article>
                 </section>
-    
             </div>
+            
+            <!-- 메인 오른쪽 섹션 -->
+            <div class="main_right">
+                <!-- /aside card_box -->
+                <aside class="card_box">
+                    <!-- card_view banner-->
+                    <div class="card_view banner">
+                        <a href="#">
+                            <img src="" alt="아이콘">
+                            <div class="card_text">
+                                <h2>
+                                    코로나 확진자
+                                </h2>
+                                <p>
+                                    확진 현황 및 백신 접종 정보 안내
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- card_view banner-->
+                    <div class="card_view banner">
+                        <a href="#">
+                            <img src="" alt="아이콘">
+                            <div class="card_text">
+                                <h2>
+                                    코로나 확진자
+                                </h2>
+                                <p>
+                                    확진 현황 및 백신 접종 정보 안내
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </aside>
+                <!-- /aside card_box -->
+            </div>
+
         </main>
+        <!-- /main -->
+
+        <!-- /footer -->
         <footer>
-            <div id="fnb">
-                <ul>
-                    <li><a href="#">전체서비스</a></li>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보처리방침</a></li>
-                    <li><a href="#">통함검색 고객센터</a></li>
-                    <li><a href="#">&copy; NAVER Corp.</a></li>
-                </ul>
-            </div>
+
         </footer>
+        <!-- /footer -->
     </div>
 </body>
 </html>

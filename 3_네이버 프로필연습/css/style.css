@@ -1,176 +1,108 @@
 @import url(./reset.css);
 @import url(./font.css);
+
 /* 전역설정 */
-html, body{
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-}
 #wrap{
     max-width: 1920px;
-    min-width: 1182px;
-    height: 100%;
-    background-color: #FAFBFC;
+    min-width: 1180px;
+    background-color: #ccc;
 }
-
-.inside{
-    width: 1125px;
+/* 세이프존 */
+.w1180{
+    width: 1180px;
     margin: 0 auto;
 }
-button{cursor: pointer;}
-.clicked{color: #03C85A;}
-li{display: inline-block;}
-
-#userBar,
-#headerNav > p{
-    position: absolute;
-    top: 0;
-    right: 24px;
-    text-align: right;
-} 
+.w690{
+    width: 690px;
+}
 
 /* 헤더 */
 header{
-    height: 120px;
-    background-color: #ffff;
-    box-shadow: gainsboro 0px 4px 10px 0;
+    background-color: #fff;
+}
+
+/* header_container */
+.header_container{
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #000;
+    /* 포지션 */
     position: relative;
 }
 
-#search,
-#navContainer > nav{
-    width: 680px;
+/* search_bar */
+.search_bar > * {
+    display: inline-block;
 }
-
-/* 삼단 플롯 */
-#headerContainer{
-    /* padding: 15px 0; */
-    height: 65px;
-    line-height: 65px;
-    border-bottom: #03C85A solid 1px;
+.line{
+    display: inline-block;
+    width: 1px;
+    height: 15px;
     vertical-align: middle;
-}
-
-/* 헤더 search */
-#searchBar > h1{
-    float: left;
-}
-
-h1 > a.logo{
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    background-image: url(../images/sp_common2_12db1541.png);
-    background-position: -286px -196px;
-    background-size: 367px 347px;
-}
-#search{
-    float: left;
-}
-#search > input[type="search"]{
-    width: 577px;
-    height: 20px;
-    border: none;
-    font-size: 24px;
-    padding-left: 20px;
-    margin-left: 20px;
-    border-left: #A5A8AF 1px solid;
-}
-#search > input[type="search"]:focus{
-    outline: none;
-}
-
-
-/* 헤더 gnb */
-#headerNav{
-    position: relative;
-    height: 50px;
-    line-height: 50px;
-    background-color: #ffff;
-    font-size: 15px;
-}
-
-#navContainer ul{
-    display: flex;
-    justify-content: space-between;
-}
-
-#navContainer ul a{
-    display: inline-block;
-    width: 100%;
-    height: 50px;
-    padding: 0 5px;
-}
-#navContainer ul a:hover{
-    background-color: #A5A8AF;
-}
-li.more li{display: none;}
-
-
-
-/* 메인 */
-main > aside{
-    float: right;
-}
-main > #main_content{
-    float: left;
-
-}
-main section{
-    width: 680px;
-    border-radius: 5px;
-    padding: 20px 10px;
-    margin-top: 25px;
-    background-color: #A5A8AF;
-}
-
-.aside_box{
-    width: 400px;
-    padding: 0 10px;
-    margin-top: 25px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px 0;
-    background-color: #ffff;
-}
-
-.aside_box div{border-top: rgba(0, 0, 0, 0.1) 1px solid;}
-.aside_box div:first-child{border : none;}
-
-.aside_box div > a {
-    display: inline-block;
-    width: 400px;
-    padding: 20px 0;
-}
-.aside_box div > a > *{
-    display: inline-block;
-}
-.aside_box div > a > img{
-    width: 32px;
-}
-.aside_box div > a > .content_box_infor{
-    margin-left: 15px;
-}
-
-/* 푸터 */
-footer{
-    width: 100%;
-    height: 145px;
-    padding-top: 32px;
-    text-align: center;
-    background-color: #F7F9FA;
-    border-top: #A5A8AF 1px double;
-    margin-top: 25px;
-
-}
-#fnb{
-    width: 520px;
-    margin: 0 auto;
-    font-size: 13px;
-}
-#fnb ul > li{
-    display: inline-block;
+    padding-right: 10px;
+    border-right: 1px solid #000;
     margin-right: 10px;
 }
-#fnb ul > li:last-child{
-    margin-right: 0;
+
+/* user_bar */
+.user_bar{
+    /* 포지션 */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
 }
+.user_bar li{
+    display: inline-block;
+}
+
+/* GNB */
+header > nav {
+    height: 50px;
+    line-height: 50px;
+    /* 포지션 */
+    position: relative;
+}
+.gnb li{
+    display: inline-block;
+}
+.gnb .gnb_more_list{
+    display: none;
+}
+
+header > nav > p{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/* main */
+main{
+    padding: 20px 30px;
+}
+main .main_left{
+    float: left;
+}
+main .main_right{
+    float: right;
+}
+
+main .card_box{
+    box-shadow: black 0 0 1px 0;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+
+aside.card_box{
+    width: 400px;
+    padding: 15px 20px;
+}
+
+section.card_box{
+    width: 670px;
+    padding: 20px 10px;
+    margin-right: 50px;
+}
+
