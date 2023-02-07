@@ -1,0 +1,73 @@
+/* 공통> 모바일퍼스트 */
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#wrap{
+    width: 960px;
+    width: 90%;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+
+/* header */
+header{
+    width: 100%;
+    background-color: #bf545d;
+    height: 96px;
+}
+header .logo{
+    float: left;
+}
+header nav{
+    float: right;
+}
+header nav li{
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+/* article */
+article{
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+    background-color: #035088;
+}
+article h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+article p{
+    font-family: 'Nanum Pen Script', cursive;
+    line-height: 1.5;
+}
+
+/* Contents */
+#gallery{
+    padding: 10px 0;
+}
+#gallery li{
+    /* (((960/4)-20)/960)*100 = 22.916666666666664 */
+    width: 22.91666666666667%;
+    height: 220px;
+    float: left;
+    /* (10/960)*100 = 1.0416666666666665 */
+    margin: 10px;
+    margin: 1.0416666666666665%;
+}
+#gallery li img{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* footer */
+footer{
+    background-color: #0d0d0d;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
