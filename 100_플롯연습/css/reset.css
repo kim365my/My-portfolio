@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import url(./font.css);
+
+/* css 초기화 */
+
+/* 박스 사이징 */
+*{
+	box-sizing: border-box;
+}
+
+html, body, div, span, iframe, 
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, cite, code, del, q, small, strong, sup, sub, 
+dd, dl, dt, ul, li, fieldset, form, legend, canvas, details, figcaption, figure, 
+table, caption, tbody, thead, tfoot,tr, tb, th, 
+article, aside, footer, header, nav, section, time, mark, audio, video, button{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font-weight: normal;
+	/* 너비나 높이가 큰 애를 기준으로 움직이는 것 */
+	vertical-align: baseline;
+}
+/* 문서전체 css 적용 */
+body{
+	/* width: 100vw;
+	height: 100vh; */
+	line-height: 1;
+}
+
+/* 리스트 요소 */
+ul, ol, li{
+	list-style: none;
+}
+
+/* a 요소 */
+a, a:visited{
+	color: inherit; /* 상속 */
+	text-decoration: none;
+	vertical-align: baseline;
+	background: none;
+}
+
+/* img 요소 */
+img{
+	width: 100%;
+	vertical-align: top; /*기본적으로 씌여진 공백을 없애준다*/
+}
+
+/* hr 요소 */
+hr{
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* 플롯해제 클리어 픽스 */
+.cf::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* 모든 환경에 안보여도 되지만, 반드시 입력해야 할 html 태그가 존재(웹 접근성 때문에) */
+/* 그때, 해당 요소를 숨기기 위해 사용되는 class */
+.blind{
+	position: absolute;
+	top: -9999px;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+/* 해당, 마진값 초기화 클래스 */
+.no_mt{margin-top: 0 !important;}
+.no_mr{margin-right: 0 !important;}
+.no_mb{margin-bottom: 0 !important;}
+.no_ml{margin-left: 0 !important;}
+
+/* 해당, 패딩값 초기화 클래스 */
+.no_pt{padding-top: 0 !important;}
+.no_pr{padding-right: 0 !important;}
+.no_pb{padding-bottom: 0 !important;}
+.no_pl{padding-left: 0 !important;}
