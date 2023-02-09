@@ -11,7 +11,7 @@ body{
     padding-top: 70px;
     padding-bottom: 30px;
     background: no-repeat center/cover url(../images/main_back.png);
-    font-family: 'Noto Sans KR', 'Open Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .w1280{
     width: 1280px;
@@ -28,12 +28,12 @@ header{
 header h1{
     /* 플롯 */
     float: left;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 600;
 }
 /* nav */
 nav{
-    width: 1038px;
+    width: 1040px;
     /* 플롯 */
     float: right;
 }
@@ -51,6 +51,9 @@ nav .gnb a{
 nav .gnb li:hover{
     border-bottom: 3px solid #fef000;
     transition: all 0.3s;
+}
+nav .gnb li:focus{
+
 }
 
 nav .info_bar{
