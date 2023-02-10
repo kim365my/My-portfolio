@@ -14,7 +14,8 @@ $(document).ready(function(){
 
     // 스크롤 100px이상 되었을때 TOP 버튼 나오도록 코딩
     $(".top").hide();
-    $(window).scroll(function(){
+    $(window).scroll(function(e){
+        e.preventDefault();
         // 문자열로 해당 top위치를 가져옴
         var top = $(window).scrollTop();
         console.log(top);

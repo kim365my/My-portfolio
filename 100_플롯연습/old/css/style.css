@@ -1,12 +1,3 @@
-
-
-/* 개별설정 */
-header, 
-.logo-container{
-    display: flex;
-    justify-content: space-between;
-}
-
 /* 전역설정 */
 html,
 body{
@@ -14,16 +5,17 @@ body{
     height: 100%;
 }
 
-body{
+#wrap{
+    min-width: 1280px;
+    height: 100%;
+    padding-top: 70px;
+    padding-bottom: 30px;
     background: no-repeat center/cover url(../images/main_back.png);
     font-family: 'Noto Sans KR', sans-serif;
 }
-
-#container{
-    height: 100%;
-    padding-top: 5.46875%;
-    padding-bottom: 30px;
-    margin: 0 5.46875%;
+.w1280{
+    width: 1280px;
+    margin: 0 auto;
 }
 
 

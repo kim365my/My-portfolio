@@ -25,14 +25,9 @@ article, aside, footer, header, nav, section, time, mark, audio, video, button{
 }
 /* 문서전체 css 적용 */
 body{
-	width: 100vw;
-	height: 100vh;
+	/* width: 100vw;
+	height: 100vh; */
 	line-height: 1;
-}
-html,
-body{
-	width: 100%;
-	height: 100%;
 }
 
 /* 리스트 요소 */

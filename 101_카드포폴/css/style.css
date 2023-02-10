@@ -19,8 +19,10 @@ img{
 }
 
 /* 개별설정 */
-/* 헤더 */
-header{height: 32px;}
+/* header */
+header{
+    height: 32px;
+}
 
 header .logo{
     font-size: 32px;
@@ -36,7 +38,10 @@ header p{
 }
 
 /* main */
-main{height: 675px;}
+main{
+    height: 675px;
+    background-color: #ccc;
+}
 /* main img */
 main figure{
     width: 620px;
