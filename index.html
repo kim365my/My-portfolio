@@ -4,83 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>롤랙스</title>
-    <!-- style -->
-    <link rel="stylesheet" href="./css/font.css">
+    <title>Document</title>
+    <!-- 1. 스타일 -->
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <!-- 2. 해당문서 스타일 -->
+    <!-- <link rel="stylesheet" href="./css/scroll.css"> -->
+    <!-- 1. 제이쿼리 코어파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- 2. 제이쿼리 cdn방식 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- 3. 제이쿼리 플러그인 -->
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.scrollTo.min.js"></script>
+    <!-- 4. 해당문서 스크립트 -->
+    <script src="./js/scroll.js"></script>
 </head>
 <body>
-    <div id="wrap">
+    <div id="container">
         <!-- header -->
-        <header class="cf">
-            <h1 class="logo">MCSCM</h1>
-            <p>
-                <a href="#">
-                    <span>indopop</span>
-                    <img src="./images/icon_X.png" alt="닫기버튼">
-                </a>
-            </p>
+        <header>
+            <h1>ONE PAGE SITE</h1>
+            <nav class="gnb">
+                <ul>
+                    <li class="nav_btn"><a href="#aoa">AOA</a></li>
+                    <li class="nav_btn"><a href="#frozen">FROZEN</a></li>
+                    <li class="nav_btn"><a href="#spider">SPIDER</a></li>
+                    <li class="nav_btn"><a href="#sdii">SDII</a></li>
+                </ul>
+            </nav>
         </header>
         <!-- /header -->
 
-        <!-- main -->
-        <main role="main" class="cf">
-            <figure>
-                <img src="./images/rolex.png" alt="상품이미지">
-            </figure>
-            <div class="content">
-                <h2>KIM RUNGKUNG</h2>
-                <h3>
-                    <p>webadd</p>
-                    <a href="https://github.com/kim365my" target="_blank">https://github.com/kim365my</a>
-                </h3>
-                <div class="description">
-                    <!-- 연락처 -->
-                    <dl class="tel">
-                        <dt>TEL</dt>
-                        <dd>010.1234.5678</dd>
-                    </dl>
-                    <dl class="mail">
-                        <dt>MAIL</dt>
-                        <dd>indopop@naver.com</dd>
-                    </dl>
-
-                    <!-- SNS -->
-                    <dl>
-                        <dd class="sns"><a href="#"><img src="./images/icon_facebook.png" alt=""></a></dd>
-                        <dd class="sns"><a href="#"><img src="./images/icon_twitter.png" alt=""></a></dd>
-                        <dd class="sns"><a href="#"><img src="./images/icon_insta.png" alt=""></a></dd>
-                        <dd class="sns"><a href="#"><img src="./images/icon_naver.png" alt=""></a></dd>
-                    </dl>
-                    
-                    <!-- 기술 -->
-                    <dl class="tack_list">
-                        <dt>FRONT-END : </dt>
-                        <dd><a href="#">HTML</a></dd>
-                        <dd><a href="#">CSS</a></dd>
-                        <dd><a href="#">JAVASCRIPT</a></dd>
-                        <dd><a href="#">JQUERY</a></dd>
-                    </dl>
-                    <dl class="tack_list">
-                        <dt>ETC : </dt>
-                        <dd><a href="#">전산회계운용사 3급</a></dd>
-                        <dd><a href="#">간호조무사</a></dd>
-                        <dd><a href="#">기타 사무프로그램 자격증</a></dd>
-                    </dl>
-                </div>
-    
-            </div>
+        <!-- Contents -->
+        <main role="main">
+            <ul>
+                <li><a href="./0_resume/index.html"></a></li>
+                <li><a href="./100_플롯연습/index.html">플롯연습</a></li>
+                <li><a href="./101_카드포폴/index.html">카드포폴</a></li>
+                <li><a href="./102_플러그인 연습/index.html">플러그인</a></li>
+                <li><a href="./10_미디어 쿼리실습/index.html"></a></li>
+            </ul>
         </main>
-        <!-- /main -->
+        <!-- /Contents -->
 
-        <!-- footer -->
-        <footer>
-            <p>
-                COPYRIGHT 2023 WEBADD ALL RIGHTS RESERVED
-            </p>
-        </footer>
-        <!-- /footer -->
+        <!-- top_btn -->
+        <aside>
+            <div>
+                <a href="#" class="top">TOP</a>
+            </div>
+        </aside>
+        <!-- top_btn -->
     </div>
 </body>
 </html>
