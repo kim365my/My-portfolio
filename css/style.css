@@ -1,11 +1,20 @@
 @charset "utf-8";
 
+
 #container{
     width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
-
+.old::before{
+    content: "old";
+    font-size: 0.8rem;
+    margin-right: 5px;
+    padding: 0 5px;
+    border-radius: 5px;
+    background-color: #ccc;
+}
+/* 
 .new::before{
     content: "NEW";
     font-size: 0.8rem;
@@ -14,7 +23,7 @@
     color: #fff;
     border-radius: 5px;
     background-color: orange;
-}
+} */
 
 /* header */
 header h1{
@@ -62,4 +71,15 @@ main{
 }
 .contents{
     border: 1px solid black;
+}
+
+footer{
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media screen and (max-width:500px) {
+    main{
+        grid-template-columns: auto;
+    }
 }
