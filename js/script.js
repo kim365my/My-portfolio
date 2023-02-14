@@ -114,9 +114,9 @@ window.onload = function(){
     
     function printContent(e){
         // a링크가 클릭되었을때 이동하지 못하게
-        e.preventDefault();
+        // e.preventDefault();
         // 이벤트 버블링 방지
-        e.stopPropagation();
+        // e.stopPropagation();
 
         // 먼저 출력되어 있는 값을 지움
         removeContent();
