@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,21 +30,36 @@
 <body>
     <div id="wrap">
         <!-- banner -->
-        <aside>
-            <a href="#">
+        <a href="#" class="top_banner">
+            <aside class="w1300">
                 <span>로그인하면 확인되는 차별된 회원가!</span>
                 <span>혜택확인하기</span>
-            </a>
-        </aside>
+                <button>X</button>
+                <button>X</button>
+            </aside>
+        </a>
         <!-- banner -->
 
         <!-- header -->
-        <header class="w1300">
+        <header>
             <!-- 로고 -->
-            <h1 class="logo"><a href="#"><img src="https://place-hold.it/128x23" alt="logo"></a></h1>
-            
-            <div>
-                <nav>
+            <div id="logo_wrap" class="w1300 cf">
+                <h1 class="logo"><a href="#"><img src="https://place-hold.it/128x23" alt="logo"></a></h1>
+                <nav class="user">
+                    <div>
+                        <button>X</button>
+                        <button>X</button>
+                    </div>
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="deco_line"></div>
+            <div id="gnb_wrap" class="w1300">
+                <h2 class="gnb_logo"><a href="#"><img src="https://place-hold.it/58x54" alt="logo"></a></h2>
+                <nav class="gnb">
                     <ul>
                         <li><a href="#">ReFA</a></li>
                         <li><a href="#">CAXA UP</a></li>
@@ -53,12 +68,20 @@
                         <li><a href="#">Style</a></li>
                     </ul>
                 </nav>
+                <nav class="info">
+                    <ul>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">미디어</a></li>
+                        <li><a href="#">기업소개</a></li>
+                    </ul>
+                </nav>
+
             </div>
         </header>
         <!-- header -->
 
         <!-- article -->
-        <article>
+        <article>   
             <!-- h 600 -->
             <h2>아키클 제목</h2>
         </article>
@@ -67,44 +90,73 @@
         <!-- content -->
         <main role="main">
             <!-- section .card_view -->
-            <section class="card_view w1300">
-                <h2><img src="https://place-hold.it/172x24" alt="제목"></h2>
-                <p>
-                    <div class="card_box"><a href="#"><img src="https://place-hold.it/240x130" alt="가상 이미지"></a></div>
-                    <div class="card_box"><a href="#"><img src="https://place-hold.it/240x130" alt="가상 이미지"></a></div>
-                    <div class="card_box"><a href="#"><img src="https://place-hold.it/240x130" alt="가상 이미지"></a></div>
-                </p>
+            <section id="box1" class="w1300">
+                <div class="card_view">
+                    <div>
+                        <h2><img src="https://place-hold.it/172x24" alt="제목"></h2>
+                    </div>
+                    <div class="card_box_wrap">
+                        <div class="card_box"><a href="#"><img src="https://place-hold.it/240x330" alt="가상 이미지"></a></div>
+                        <div class="card_box"><a href="#"><img src="https://place-hold.it/240x330" alt="가상 이미지"></a></div>
+                        <div class="card_box"><a href="#"><img src="https://place-hold.it/240x330" alt="가상 이미지"></a></div>
+                    </div>
+                    <div class="card_box_link">
+                        <a href="#"><img src="https://place-hold.it/130x32" alt="가상이미지"></a>
+                    </div>
+                </div>
+                <div class="card_box_back"></div>
             </section>
             <!-- section -->
 
             <!-- section .item_video-->
-            <section>
+            <section id="box2" >
+                <div class="snb_wrap">
+                    <div class="card_box_back">234*80</div>
+                    <nav class="snb">
+                        <ul>
+                            <li><button>#다리붓기쏘옥</button></li>
+                            <li><button>#비포에프터</button></li>
+                            <li><button>#피부탄력WarkUp</button></li>
+                            <li><button>#사용방법</button></li>
+                        </ul>
+                    </nav>
+                    <div class="card_box_link">
+                        <a href="#"><img src="https://place-hold.it/130x32" alt="가상이미지"></a>
+                    </div>
+
+                </div>
                 
+                <div class="card_box_back"></div>
             </section>
             <!-- section -->
             
             <!-- section -->
-            <section class="boxs w1300">
+            <section id="box3" class="w1300">
                 <h2>제목</h2>
-                <ul>
-                    <li>
-                        <ul>
-                            <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
-                            <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
-                            <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
-                            <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><img src="https://place-hold.it/375x375" alt=""></a></li>
-                    <li>
-                        <ul>
-                            <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
-                            <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
-                            <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
-                            <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="card_box_set">
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
+                                <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
+                                <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
+                                <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><img src="https://place-hold.it/375x375" alt=""></a></li>
+                        <li>
+                            <ul>
+                                <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
+                                <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
+                                <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
+                                <li><a href="#"><img src="https://place-hold.it/185x185" alt=""></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card_box_link">
+                    <a href="#"><img src="https://place-hold.it/130x32" alt="가상이미지"></a>
+                </div>
             </section>
             <!-- section -->
             
@@ -113,14 +165,45 @@
 
         <!-- footer -->
         <footer>
-            <div class="w1300">
-                <ul>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">쇼핑몰&nbsp;이용안내</a></li>
-                    <li><a href="#">개인정보처리방침</a></li>
-                    <li><a href="#">고객센터</a></li>
-                    <li><a href="#">1:1문의</a></li>
-                    <li><a href="#">매장문의</a></li>
+            <div id="footer_wrap" class="w1300">
+                <div>
+                    <nav class="footer_snb">
+                        <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">쇼핑몰&nbsp;이용안내</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                            <li><a href="#">매장안내</a></li>
+                        </ul>
+                    </nav>
+                    <ul>
+                        <li>주식회사엠씨웹 | 대표이사 : MCSSAM |</li>
+                        <li>사업자등록번호 :120-21-05435 | 통신판매업신고번호 : 제 2021-서울강남-00810호</li>
+                        <li>주소: 서울특별시 강남구 아차산로 123 | 대표전화 : 02-3424-3432 | 팩스 : 02-446-7323</li>
+                    </ul>
+                    <p>
+                        고객님의 안전거래를 위해 현금 결제시, <br>
+                        구매안전 서비스를 이용하실 수 있습니다. [가입사실확인]
+                    </p>
+                    <p>
+                        Copyright &copy; 2022 MCWEB., Ltd All Rights Reserved
+                    </p>
+                </div>
+
+                <ul class="footer_info">
+                    <li>고객만족센터
+                        <dl>
+                            <dt>080-555-9812</dt>
+                            <dd>평일 09:00~18:00 | 점심 13:00~14:00</dd>
+                        </dl>
+                    </li>
+                    <li>BANK INFO
+                        <dl>
+                            <dt>국민은행 801-32-323236-39</dt>
+                            <dd>예금주:(주)엠씨웹</dd>
+                        </dl>
+                    </li>
                 </ul>
 
             </div>

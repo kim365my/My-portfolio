@@ -11,7 +11,9 @@ body{padding: 30px 0;}
     margin: 0 auto;
     font: 400 16px/1.6 'Oswald','Noto Sans KR', sans-serif ;
 }
-
+.hidden{
+    display: none;
+}
 .content_border{
     border-bottom: 1px solid #ccc;
     transition: all 1s ease-in;
@@ -65,9 +67,7 @@ header .gnb li a{
     background-color: #ccc;
 }
 /* main */
-
 article p{
-    display: none;
     width: 95%;
     margin-left: 5%;
     padding: 20px;
