@@ -1,54 +1,120 @@
-/* 전역설정 */
-#wrap{
-    width: 698px;
-    margin: 0 auto;
-}
 
-form{
-    padding-top: 20px;
+body{
+    font-family: 'Noto Sans KR',sans-serif;
 }
-
-fieldset{
-    padding: 40px;
-    border: 1px solid #cccccc;
-    /* 플렉스 */
-    display: flex;
-    justify-content: space-between;
-}
-/* goods_pt */
-.goods_mini_pt{
-    /* 플렉스 */
-    display: flex;
-}
-.goods_brand{
-    /* 플렉스 */
-    display: flex;
-    
-}
-
-/* goods_info */
-.goods_info{
-    width: 300px;
-    height: 390px;
-}
-
-input[type="button"]{
-    display: inline-block;
-    width: 146px;
-    height: 48px;
-    color: white;
-    border: none;
-    background-color: #0f20fd;
-}
-
-/* goods_info_sub */
-.goods_info_sub{
-    margin: 24px 0;
-    padding: 24px 0;
-    border-top: 1px solid #000;
+/* 라인 */
+.line{
     border-bottom: 1px solid #000;
+    margin-bottom: 24px;
 }
-.goods_info_sub dt{
-    width: 25%;
+.line2{
+    border-bottom: 1px solid #000;
+    margin: 24px 0;
+}
+
+#wrap{
+    width: 640px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 40px;
+}
+.shop{}
+.goods_info{
+    width: 240px;
+    margin-right: 16px;
+    /* 플롯 */
+    float: left;
+}
+.goods_info .goods_img{
+    margin-bottom: 20px;
+}
+.goods_info .goods_them{
+    width: 50px;
+    margin-right: 12px;
+    /* 플롯 */
+    float: left;
+}
+.goods_text{
+    font-size: 12px;
+    line-height: 1.4;
+    /* 플롯 */
+    float: left;
+}
+.goods_text a{
     font-weight: 600;
+    text-decoration: underline;
+}
+
+/* 오른쪽 폼 */
+.form{
+    width: 300px;
+    /* 플롯 */
+    float: left;
+}
+.form h2{
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+.form h2+p{
+    font-size: 11px;
+    color: #565656;
+    font-weight: 700;
+    text-decoration: line-through;
+}
+.form h2+p+p{
+    font-size: 16px;
+    color: #ff2f10;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+}
+
+/* 테이블 */
+table{
+    font-size: 12px;
+}
+table th{
+    width: 60px;
+    text-align: left;
+    font-weight: 600;
+}
+/* 테이블 내 높이값 맞추기 */
+.table_blank{height: 44px;}
+.table_blank2{height: 24px;}
+
+button{
+    width: 140px;
+    height: 40px;
+    background: #0f20fd;
+    border: 0;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* select css */
+select{
+    width: 300px;
+    height: 34px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    background: none;
+    padding-left: 16px;
+}
+
+/* appearance : 브라우저에 기본으로 설정되어있는 요소를 표현 */
+select{
+    --webkit-appearance: none;
+    --ms-appearance: none;
+    appearance: none;
+}
+/* IE select 화살표 없애기 */
+select::-ms-expand {display: none;}
+
+/* 화살표 넣기 */
+select{
+    background-image: url(../images/화살표.jpg);
+    background-repeat: no-repeat;
+    background-size: 32px 37px;
+    background-position: 255px;
 }
