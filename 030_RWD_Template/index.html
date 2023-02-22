@@ -30,7 +30,7 @@
 <body>
     <div id="wrap">
         <!-- 1. Header -->
-        <header class="header cf">
+        <header class="header cf fixed">
             <!-- Logo -->
             <h1 class="logo"><a href="#">WEBADD</a></h1>
             <!-- /Logo -->
@@ -314,12 +314,11 @@
             </p>
         </footer>
         <!-- /4.Footer -->
+        <div>
+            <a href="#" class="top_btn"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        </div>
     </div>
 </body>
-<script>
-    $('.menu_toggle_btn').click(function(){
-        $('.gnb').stop().slideToggle();
-    })
-    $('.slider').bxSlider();
-</script>
+<!-- 커스텀 js -->
+<script src="./js/rw_script.js"></script>
 </html>
