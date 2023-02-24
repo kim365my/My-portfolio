@@ -1,113 +1,186 @@
-/* 전역설정 */
-body{
-    background: bottom fixed no-repeat url(../images/josh-calabrese-XXpbdU_31Sg-unsplash.jpg);
-    background-size:cover;
+html,body{
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 #wrap{
-    width: 1280px;
-    height: 800px;
-    padding: 40px;
-    border: 3px solid black;
-    margin: 30px auto;
-    font-family: 'Roboto', sans-serif;
-    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 100%;
 }
 
-img{
-    max-width: min-content;
-    vertical-align: middle;
-}
-
-/* 개별설정 */
+/* ------------------------------ */
 /* header */
 header{
-    height: 32px;
+    width: 100%;
+    padding: 20px 5%;
 }
 
 header .logo{
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 800;
     letter-spacing: -2px;
-    /* 플롯 */
-    float: left;
+        /* 플롯 */
+        float: left;
 }
-header p{
-    font-size: 25px;
+header .logo + p{
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: -3px;
     /* 플롯 */
     float: right;
 }
-
+header .logo + p img{display: none;}
+/* -------------------------------- */
 /* main */
+/* -------------------------------- */
 main{
-    height: 675px;
-    background-color: #ccc;
+    transform: translateY(-50%);
 }
 /* main img */
 main figure{
-    width: 620px;
-    line-height: 620px;
+    width: 50%;
     text-align: center;
+    /* background-color: #a29494; */
+    margin: 0;
     /* 플롯 */
-    float: left;
+    float: right;
+    /* 포지션 */
+    position: relative;
 }
-
+main figure::after{
+    content: "";
+    background-color: gainsboro;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+}
+main figure img{
+    vertical-align: middle;
+}
 /* main .content */
 main .content{
+    width: 50%;
     padding-top: 75px;
+    /* background-color: #494949; */
     /* 플롯 */
     float: left;
 }
 main .content h2{
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 60px;
 }
 main .content h3{
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: 80px;
     line-height: 55px;
 }
 
-/* main .description */
-.description dl > dt,
-.description dl > dd{
-    display: inline-block;
-}
-
-/* main .description tel&mail */
-.tel,.mail{margin-bottom: 25px;}
-.tel > dt,.mail > dt{width: 70px;}
-
-/* main .description sns */
-.description :has(.sns){margin-bottom: 60px;}
-.description .sns{margin-right: 16px;}
-
-/* main .description 기술 */
-dl.tack_list{margin-bottom: 15px;}
-
-.tack_list > dd:not(:last-child):after{
-    content: "";
-    display: inline-block;
-    height: 10px;
-    vertical-align: middle;
-    padding-right: 3px;
-    border-right: #a29494 solid 1px;
-    margin-right: 3px;
-}
-.tack_list a{
-    color: #a29494;
-    display: inline-block;
-    padding: 3px 10px;
-}
-.tack_list a:hover{
-    border-radius: 25px;
-    background-color:darkseagreen;
-    color: #fff;
-}
-
+/* -------------------------------- */
 /* footer */
 footer{
+    width: 100%;
     color: #494949;
     text-align: center;
+}
+
+
+/* ===================================== */
+/* pc */
+/* ===================================== */
+@media screen and (min-width:1020px){
+    /* 전역설정 */
+    html, body{
+        font-size: 16px;
+    }
+    body{
+        background: bottom fixed no-repeat url(../images/josh-calabrese-XXpbdU_31Sg-unsplash.jpg);
+        background-size:cover;
+    }
+    #wrap{
+        max-width: 1280px;
+        width: 91.42857142857143%;
+        height: 800px;
+        padding: 40px;
+        border: 3px solid black;
+        margin: 30px auto;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    /* 개별설정 */
+    /* header */
+    header{
+        height: 34px;
+        padding: 0;
+    }
+    /* ------------------------- */
+    /* main */
+    main{
+        width: 100%;
+        height: 675px;
+        margin-top: 0 !important;
+        transform: none;
+    }
+    /* main img */
+    main figure{
+        width: 50%;
+        line-height: 620px;
+        text-align: center;
+        /* 플롯 */
+        float: left;
+    }
+
+    /* main .content */
+    main .content{
+        padding-top: 75px;
+        /* 플롯 */
+        float: right;
+    }
+    main .content h2{
+        margin-bottom: 60px;
+    }
+    main .content h3{
+        margin-bottom: 80px;
+        line-height: 55px;
+    }
+
+    /* main .description */
+    .description dl > dt,
+    .description dl > dd{
+        display: inline-block;
+    }
+
+    /* main .description tel&mail */
+    .tel,.mail{margin-bottom: 25px;}
+    .tel > dt,.mail > dt{width: 70px;}
+
+    /* main .description sns */
+    .description :has(.sns){margin-bottom: 60px;}
+    .description .sns{margin-right: 16px;}
+
+    /* main .description 기술 */
+    dl.tack_list{margin-bottom: 15px;}
+
+    .tack_list > dd:not(:last-child):after{
+        content: "";
+        display: inline-block;
+        height: 10px;
+        vertical-align: middle;
+        padding-right: 3px;
+        border-right: #a29494 solid 1px;
+        margin-right: 3px;
+    }
+    .tack_list a{
+        color: #a29494;
+        display: inline-block;
+        padding: 3px 10px;
+    }
+    .tack_list a:hover{
+        border-radius: 25px;
+        background-color:darkseagreen;
+        color: #fff;
+    }
+    /* -------------------------------- */
+
 }
