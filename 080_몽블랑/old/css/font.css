@@ -2,7 +2,7 @@
 
 
 /* 영문폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Rowdies&family=Oswald&family=Roboto+Mono&family=Raleway&family=Ubuntu&family=Nunito&family=Merriweather&family=Playfair+Display&family=PT+Sans&family=Rubik&family=Mukta&family=Work+Sans&family=Sevillana&family=Lora&family=Fira+Sans&family=Barlow&family=Kanit&family=Quicksand&family=Passions+Conflict&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Rowdies&family=Oswald&family=Roboto+Mono&family=Raleway&family=Ubuntu&family=Nunito&family=Merriweather&family=Playfair+Display&family=PT+Sans&family=Rubik&family=Mukta&family=Work+Sans&family=Sevillana&family=Lora&family=Fira+Sans&family=Barlow&family=Kanit&family=Quicksand&family=Passions+Conflict&display=swap');
 /*각 링크{
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -25,8 +25,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-    
 } */
 
 /* 한글폰트 */
@@ -74,7 +72,6 @@
 .kanit{font-family: 'Kanit', sans-serif;}
 .quicksand{font-family: 'Quicksand', sans-serif;}
 .passionsconflict{font-family: 'Passions Conflict', cursive;}
-.montserrat{font-family: 'Montserrat', sans-serif;}
 
 /* 한글폰트 */
 .notosanskr {font-family: 'Noto Sans KR', sans-serif;}

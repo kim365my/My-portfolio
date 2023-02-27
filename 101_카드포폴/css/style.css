@@ -33,7 +33,8 @@ header .logo + p img{display: none;}
 /* main */
 /* -------------------------------- */
 main{
-    transform: translateY(-50%);
+    overflow: hidden;
+    padding: 0 5%;
 }
 /* main img */
 main figure{
@@ -44,7 +45,10 @@ main figure{
     /* 플롯 */
     float: right;
     /* 포지션 */
-    position: relative;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 main figure::after{
     content: "";
@@ -52,7 +56,7 @@ main figure::after{
     width: 100%;
     height: 50%;
     position: absolute;
-    z-index: -1;
+    z-index: -10;
     bottom: 0;
     left: 0;
 }
@@ -61,7 +65,7 @@ main figure img{
 }
 /* main .content */
 main .content{
-    width: 50%;
+    width: auto;
     padding-top: 75px;
     /* background-color: #494949; */
     /* 플롯 */
@@ -76,10 +80,52 @@ main .content h3{
     font-weight: 500;
     line-height: 55px;
 }
+main .content .sns {
+    display: block;
+    margin-bottom: 25px;
+}
+main .content .sns dd{
+    font-size: 3rem;
+    margin-right:10px;
+    /* 플롯 */
+    float: left;
+}
+/* main .description */
+.description dl > dt,
+.description dl > dd{
+    display: inline-block;
+}
 
+/* main .description tel&mail */
+.tel,.mail{margin-bottom: 25px;}
+.tel > dt,.mail > dt{width: 70px;}
+
+/* main .description sns */
+.description :has(.sns){margin-bottom: 60px;}
+.description .sns{margin-right: 16px;}
+
+/* main .description 기술 */
+dl.tack_list{margin-bottom: 15px;}
+
+.tack_list > dd:not(:last-child):after{
+    content: "";
+    display: inline-block;
+    height: 10px;
+    vertical-align: middle;
+    padding-right: 3px;
+    border-right: #a29494 solid 1px;
+    margin-right: 3px;
+}
+.tack_list a{
+    color: #792626;
+    display: inline-block;
+    padding: 3px 10px;
+}
 /* -------------------------------- */
 /* footer */
 footer{
+    position: absolute;
+    bottom: 10px;
     width: 100%;
     color: #494949;
     text-align: center;
@@ -91,9 +137,6 @@ footer{
 /* ===================================== */
 @media screen and (min-width:1020px){
     /* 전역설정 */
-    html, body{
-        font-size: 16px;
-    }
     body{
         background: bottom fixed no-repeat url(../images/josh-calabrese-XXpbdU_31Sg-unsplash.jpg);
         background-size:cover;
@@ -101,7 +144,7 @@ footer{
     #wrap{
         max-width: 1280px;
         width: 91.42857142857143%;
-        height: 800px;
+        height: 800px !important;
         padding: 40px;
         border: 3px solid black;
         margin: 30px auto;
@@ -133,9 +176,12 @@ footer{
 
     /* main .content */
     main .content{
+        width: 50%;
         padding-top: 75px;
         /* 플롯 */
         float: right;
+        /* 포지션 */
+        position: static;
     }
     main .content h2{
         margin-bottom: 60px;
@@ -145,42 +191,14 @@ footer{
         line-height: 55px;
     }
 
-    /* main .description */
-    .description dl > dt,
-    .description dl > dd{
-        display: inline-block;
-    }
-
-    /* main .description tel&mail */
-    .tel,.mail{margin-bottom: 25px;}
-    .tel > dt,.mail > dt{width: 70px;}
-
-    /* main .description sns */
-    .description :has(.sns){margin-bottom: 60px;}
-    .description .sns{margin-right: 16px;}
-
-    /* main .description 기술 */
-    dl.tack_list{margin-bottom: 15px;}
-
-    .tack_list > dd:not(:last-child):after{
-        content: "";
-        display: inline-block;
-        height: 10px;
-        vertical-align: middle;
-        padding-right: 3px;
-        border-right: #a29494 solid 1px;
-        margin-right: 3px;
-    }
-    .tack_list a{
-        color: #a29494;
-        display: inline-block;
-        padding: 3px 10px;
-    }
     .tack_list a:hover{
         border-radius: 25px;
         background-color:darkseagreen;
         color: #fff;
     }
     /* -------------------------------- */
+    footer{
+        position: static;
+    }
 
 }

@@ -107,18 +107,9 @@
 
         <!-- /article mov -->
         <article class="mov">
-            <!-- <h2 class="video">
+            <h2 class="video">
                 <a href="#"><img src="./images/mov_clip.jpg" alt="동영상 클립"></a>
-            </h2> -->
-            <figure class="video">
-                <button>
-                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-                    <i class="fa fa-pause-circle-o" aria-hidden="true"></i>
-                </button>
-                <video muted autoplay loop>
-                    <source src="./images/montblanc.mp4">
-                </video>
-            </figure>
+            </h2>
         </article>
         <!-- /article mov -->
 
@@ -203,20 +194,4 @@
         <!-- footer -->
     </div>
 </body>
-<script>
-    var video = $("video");
-    var btn = $(".mov button");
-    btn.children().eq(1).css({display:"none"});
-    btn.click(function(){
-        if (video.get(0).paused) {
-            video.get(0).play();
-            btn.children().eq(0).css({display:"none"});
-            btn.children().eq(1).css({display:"block"});
-        } else {
-            video.get(0).pause();
-            btn.children().eq(1).css({display:"none"});
-            btn.children().eq(0).css({display:"block"});
-        }        
-    })
-</script>
 </html>
