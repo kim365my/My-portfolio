@@ -206,7 +206,7 @@
 <script>
     var video = $("video");
     var btn = $(".mov button");
-    btn.children().eq(1).css({display:"none"});
+    btn.children().eq(0).css({display:"none"});
     btn.click(function(){
         if (video.get(0).paused) {
             video.get(0).play();

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- 1. 스타일 -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
@@ -13,19 +15,27 @@
 
     <!-- 해당문서 스크립트 -->
     <!-- <script src="./js/script.js"></script> -->
+    <script src="./js/value.js"></script>
 </head>
 <body>
     <div id="container">
         <!-- header -->
         <header>
-            <h1>여태까지 만든 연습 사이트</h1>
+            <div class="logo_wrap w1824">
+                <h1 class="logo"><a href="#">여태까지 만든 연습 사이트</a></h1>
+                <nav>
+                    <ul class="snb">
+                        <li><a href="https://github.com/kim365my" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <!-- /header -->
-
+        
         <!-- Contents -->
-        <main role="main">
-            <nav class="gnb">
-                <ul class="nav_btn">
+        <main role="main" class="w1824">
+            <nav>
+                <ul class="gnb">
                     <li><a href="./000_resume/index.html">000_resume</a></li>
                     <li><a href="./001_레쥬메/index.html">001_레쥬메</a></li>
                     <li><a href="./002_기초스크립트테스트/index.html">002_기초스크립트테스트</a></li>
@@ -58,47 +68,48 @@
                         </ul>
                         
                     </li>
-                    <ul>
-                        <li><a href="./101_카드포폴/old/index.html">101_카드포폴</a></li>
-                        <li><a href="./101_카드포폴/index.html">101_카드포폴</a></li>
-
-                    </ul>
+                    <li>
+                        <ul>
+                            <li><a href="./101_카드포폴/old/index.html">101_카드포폴</a></li>
+                            <li><a href="./101_카드포폴/index.html">101_카드포폴</a></li>
+    
+                        </ul>
+                    </li>
                     <li><a href="./102_플러그인 연습/index.html">102_플러그인</a></li>
                     <li><a href="./15_패럴럭스 스크롤링/index.html">15_패럴럭스 스크롤링</a></li>
                     <li><a href="./300_간격시스템/index.html">300_간격시스템</a></li>
                     <li><a href="./김령경_UI구현평가파일/김령경_가변이미지구현.html">김령경_UI구현평가파일</a></li>
                     <li><a href="./030_RWD_Template/index.html">030_RWD_Template</a></li>
+                    <li><a href="./800_나이키_이벤구현/index.html">800_나이키_이벤구현</a></li>
+                    <li><a href="./800_치타가 있는 파리/index.html">800_치타가 있는 파리</a></li>
                 </ul>
             </nav>
             <section class="contents">
                 <div class="des">
-                    <h2>000_resume
+                    <div>
+                        <h2>000_resume</h2>
                         <p>
                             설명
                         </p>
-                    </h2>
-                    <p>
-                        <a href="#">바로가기 ></a>
+                    </div>
+                    <p class="pageLink">
+                        <a href="./000_resume/index.html">바로가기
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </a>
                     </p>
                 </div>
-                <iframe src="./000_resume/index.html" frameborder="0"></iframe>
+                <div class="innerPage">
+                    <iframe src="./000_resume/index.html" title="000_resume" frameborder="0" allowfullscreen></iframe>
+                </div>
             </section>
 
         </main>
         <!-- /Contents -->
 
-        <!-- top_btn -->
-        <aside>
-            <div>
-                <!-- <a href="#" class="top">TOP</a> -->
-            </div>
-        </aside>
-        <!-- top_btn -->
-
         <!-- footer -->
         <footer>
             <p>
-                &copy;COPYRIGHT
+                &copy;&nbsp;COPYRIGHT&nbsp;ALL&nbsp;RIGHTS&nbsp;RESERVED.
             </p>
         </footer>
         <!-- footer -->

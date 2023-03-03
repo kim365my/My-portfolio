@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* 영문폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Rowdies&family=Oswald&family=Roboto+Mono&family=Raleway&family=Ubuntu&family=Nunito&family=Merriweather&family=Playfair+Display&family=PT+Sans&family=Rubik&family=Mukta&family=Work+Sans&family=Sevillana&family=Lora&family=Fira+Sans&family=Barlow&family=Kanit&family=Quicksand&family=Passions+Conflict&family=Montserrat&family=PT+Serif&family=Play&family=Monoton&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Rowdies&family=Oswald&family=Roboto+Mono&family=Raleway&family=Ubuntu&family=Nunito&family=Merriweather&family=Playfair+Display&family=PT+Sans&family=Rubik&family=Mukta&family=Work+Sans&family=Sevillana&family=Lora&family=Fira+Sans&family=Barlow&family=Kanit&family=Quicksand&family=Passions+Conflict&family=Montserrat&family=PT+Serif&family=Play&family=Monoton&display=swap');
 /*각 링크{
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -28,7 +28,7 @@
     @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap'); 
     @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 } */
 
 /* 한글폰트 */
@@ -80,7 +80,6 @@
 .ptserif{font-family: 'PT Serif', serif;}
 .play{font-family: 'Play', sans-serif;}
 .monoton{font-family: 'Monoton', cursive;}
-.raleway{font-family: 'Raleway', sans-serif;}
 
 /* 한글폰트 */
 .notosanskr {font-family: 'Noto Sans KR', sans-serif;}
@@ -96,6 +95,6 @@
 .gowundodum{font-family: 'Gowun Dodum', sans-serif;}
 .gowunbatang{font-family: 'Gowun Batang', serif;}
 .songmyung{font-family: 'Song Myung', serif;}
-.hohmlet{font-family: ;}
+.hohmlet{font-family: 'Hahmlet', serif;}
 .dongle{font-family: 'Dongle', sans-serif;}
 .notoserifkorean{font-family: 'Noto Serif KR', serif;}
