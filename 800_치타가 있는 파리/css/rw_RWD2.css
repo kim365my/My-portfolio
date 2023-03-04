@@ -2,7 +2,7 @@
 
 #wrap{
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
 }
 
 .bg {
@@ -20,15 +20,17 @@
 header{
     position: fixed;
     top: 50%;
+    left: 0.8vw;
     transform: translateY(-100%);
     z-index: 1;
 }
 header h1{
     text-align: center;
+    margin-bottom: 20px;
 }
-header h1 strong{
+header h1 span{
     display: block;
-    font: bold 40px/1.1 Arial, sans-serif;
+    font: bold 16px/1.1 Arial, sans-serif;
     color: #444;
     letter-spacing: 5px;
 }
@@ -168,8 +170,8 @@ footer{
     height: 40px;
     background: #000;
     /* 포지션 */
-    position: absolute;
-    left: 0;
+    position: fixed;
+    /* left: 0; */
     bottom: 0;
     z-index: 1;
     font: 17px/3.2 Arial, sans-serif;
