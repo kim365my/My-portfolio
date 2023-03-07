@@ -1,7 +1,12 @@
+@charset "utf-8";
+
+@import url(./reset.css);
+@import url(./font.css);
+@import url(./variable.css);
+
 /* ------------------- */
 /* 전역설정 */
 /* ------------------- */
-@charset "utf-8";
 html,
 body{
     width: 100vw;
@@ -30,73 +35,95 @@ body{
 /* ------------------- */
 header{
     width: 100%;
-    height: 8%;
-    padding-top: 20px;
-    box-shadow: 0 0 3px 0 black;
-    /* border-bottom: 1px solid black; */
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     
 }
 header .logo_wrap{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--main-color);
+    font: 800 1.8rem 'Noto Sans KR', sans-serif;
+}
+header .gnb_wrap{
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+header .gnb_wrap nav{
+    padding: 20px 0;
+    font: 600 1.1rem 'Noto Sans KR', sans-serif;
     /* 플렉스 */
     display: flex;
     justify-content: space-between;
-    font: bold 2rem 'Noto Sans KR', sans-serif;
 }
-header h1{
-    font-weight: 800;
+header .gnb li{
+    display: inline-block;
+    margin-right: 10px;
+}
+header .gnb li.check{
+    color: var(--main-color);
 }
 
 /* ------------------- */
 /* main */
 /* ------------------- */
 main{
-    height: 85%;
+    height: 80%;
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
 }
 /* main nav */
 main nav{
+    width: 20vw;
     height: 100%;
     margin-right: 10px;
+    overflow-x: hidden;
     overflow-y: scroll;
+    border-right: none;
+    border-left: none;
 }
-.gnb{
+/* main nav ul */
+main nav ul.list{
+    /* 리스트 숨기기 */
+    display: none;
+}
+
+main .list.check{
     display: grid;
     /* 간격 */
     row-gap: 10px;
     column-gap: 5px;
 }
-.gnb > li{
-    border: 1px solid black;
+main .list > li{
+    width: 100%;
+    border: 1px solid var(--border-color);
     text-align: center;
 }
 
-.gnb a{
+main .list a{
     display: inline-block;
     width: 100%;
     height: 100%;
     padding: 10px;
 }
-.gnb a:hover{
-    background-color:dodgerblue;
+main .list a:hover{
+    background-color:var(--main-color);
     color: white;
 }
-.gnb ul > li:nth-child(even){
-    border-top: 1px dotted black;
+main .list ul > li:nth-child(even){
+    border-top: 1px dotted var(--border-color);
 }
 
-.contents{
+section.contents{
     width: 100%;
     height: 100%;
-    border: 1px solid black;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
     
 }
-.contents > .des{
+section.contents > .des{
     background-color:rgb(243, 243, 243);
     padding: 30px;
     border-bottom: 1px dotted #000;
@@ -108,16 +135,16 @@ main nav{
     position: sticky;
     top: 0;
 }
-.contents > .des h2{
+section.contents > .des h2{
     font-size: 1.2rem;
     font-weight: 600;
 }
-.contents > .des h2 + p{
+section.contents > .des h2 + p{
     margin-top: 10px;
     font-size: 0.8rem;
 }
 .pageLink{
-    color: rgb(58, 157, 255);
+    color: var(--main-color);
     font: 600 0.8rem/1.6 "Raleway", sans-serif;
 }
 
@@ -125,6 +152,10 @@ main nav{
     width: 100%;
     height: 100%;
 }
+
+/* ------------------- */
+/* footer */
+/* ------------------- */
 footer{
     height: 2vh;
     font-size: 0.8rem;
@@ -135,6 +166,7 @@ footer{
 footer p{
     text-align: center;
 }
+
 /* ------------------------------------- */
 /* 780px 이하 기기 적용 */
 /* ------------------------------------- */

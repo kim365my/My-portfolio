@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="ather" content="김령경">
+    <meta name="description" content="포트폴리오, 플롯레이아웃">
+    <title>포트폴리오</title>
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--5버전 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/icon_32x32.png">
+    <link rel="apple-touch-icon=precomposed" href="./img/icon_180x180.png">
+
+    <!-- 제이쿼리 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- 코딩할때 웹킷 안써줘도 자동으로 브라우저에 인식하게 해줌 : 접두어 일일히 쓰는거 -->
+    <script src="./js/prefixfree.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 노토산스가 사파리 계열에서 적용이 안된걸 적용할 수 있게 하는거 -->
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <style>
+        body{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        nav{
+            width: 50%;
+            margin: 100px auto;
+            text-align: center;
+            border: 1px solid #000;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            padding: 0 24px;
+        }
+        nav ul li a{
+            font-size: 1.2rem;
+        }
+        nav ul li a:hover{
+            color: red;
+        }
+        .alert{
+            position: fixed;
+            left: 50%;
+            top: 4%;
+            transform: translateX(-50%);
+            z-index: 99999;
+            /* 로딩시 숨기기 */
+            display: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴01</a></li>
+            <li><a href="#">메뉴01</a></li>
+            <li><a href="#">메뉴01</a></li>
+            <li><a href="#">메뉴01</a></li>
+        </ul>
+    </nav>
+    
+</body>
+<script>
+    // 동적 구조생성
+    var tag = $(`<div class="alert"><img src="./images/alert.png" alt="준비중 알림창"></div>`);
+
+    // 로딩시 tag 생성
+    tag.appendTo("body");
+
+    $("a[href='#']").on("click", function(e){
+        e.preventDefault();
+        $(".alert").stop().fadeIn(700)
+        setTimeout(() => {
+            $(".alert").fadeOut(700);
+        }, 300);
+    })
+</script>
+</html>

@@ -1,0 +1,9 @@
+.bafge{
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    background-color: tomato;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
