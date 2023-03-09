@@ -1,0 +1,640 @@
+/* 기본 공통 적용 css */
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* safe area */
+.container{
+    /* max-width: 1132px; */
+    max-width: 88.4375%;
+    margin: 0 auto;
+}
+
+/* 각 타이틀 스타일 */
+.sec_title{
+    font-size: 42px;
+    /* (42/16) = 2.625 */
+    font-size: 2.625rem;
+    /* 주조색, 보조색, 강조색 */
+    /* 아래 색이 사이트의 주조색이 됨 */
+    color: dodgerblue;
+    margin-top: 80px;
+}
+/* 고정 */
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #fff;
+}
+
+/* 구분선 스타일 */
+.m_divider{
+    width: 20px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #3f51b5;
+    margin-top: 80px;
+}
+
+/* 이미지 가로세로비율 */
+a:has(img){
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* 포지션 기준값 */
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+a:has(img) img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 포지션 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+/* 모바일 퍼스트 = 모바일을 공통스타일 */
+/* ---------------------------- */
+/* 1. header */
+/* 스타일 관련된거는 클래스? */
+.header{
+    padding: 18px 5%;
+    /* 포지션 위치 기준값 */
+    position: relative;
+}
+/* ------logo------ */
+.header .logo{
+    /* 플롯 */
+    float: left;
+}
+.header .logo a{
+    font-size: 1.25rem;
+    color: #3f51b5;
+    letter-spacing: -2px;
+    font-weight: 500;
+}
+/* ----gnb------- */
+.header .gnb{
+    width: 100%;
+    background-color: #3f51b5;
+    /* 포지션 */
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 99;
+    /* 스크립트 연동: 처음 로딩시 안보이도록 */
+    display: none;
+}
+.header .gnb li{
+    border-bottom: 1px solid #e0e0e0;
+}
+.header .gnb li:last-child{
+    border: none;
+}
+.header .gnb li a{
+    display: block;
+    font-size: 0.875rem;
+    padding: 14px 0 14px 5%;
+    color: #e0e0e0;
+}
+/* -------Hamberger Toggle-------- */
+.menu_toggle_btn{
+    width: 20px;
+    margin-top: 4px;
+    cursor: pointer;
+    /* 플롯 */
+    float: right;
+}
+.menu_toggle_btn span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #3f51b5;
+}
+.menu_toggle_btn span:nth-child(2){
+    margin: 5px 0;
+}
+
+/* --------2. 슬라이더--------- */
+.slider .slider_img div:has(img){
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    /* 포지션 기준값 */
+    position: relative;
+    padding-top: 37%;
+    overflow: hidden;
+}
+
+.slider .slider_img img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 포지션 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+} 
+/* 슬라이더 */
+.bx-wrapper{
+    position: relative;
+}
+
+.bx-controls-direction{
+    display: none;
+}
+.bx-controls-direction .bx-prev{
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-100%);
+    font-size: 0;
+}
+.bx-controls-direction .bx-prev::before{
+    content: "\f053";
+    font-family: fontawesome;
+    font-size: 3rem;
+    color: #fff;
+}
+.bx-controls-direction .bx-next{
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-100%);
+    font-size: 0;
+}
+.bx-controls-direction .bx-next::after{
+    content: "\f054";
+    font-family: fontawesome;
+    font-size: 3rem;
+    color: #fff;
+}
+
+/* bx-pager */
+.bx-pager{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bx-pager-item{
+    float: left;
+}
+.bx-pager-item a{
+    display: block;
+    width: 15px;
+    height: 15px;
+    line-height: 300px;
+    background-color: gainsboro;
+    box-shadow: 0 0 0 2px #fff;
+    border-radius: 100%;
+    margin-right: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+.bx-pager-item:last-child a{
+    margin-right: 0;
+}
+.bx-pager-item a.active{
+    background-color: #616161;
+}
+/* --------------------------------------- */
+/* Contents */
+/* ------3-1. display영역------- */
+.display_section{
+    margin-top: 68px;
+    text-align: center;
+}
+.display_section .sec_title{
+    margin-bottom: 32px;
+}
+.display_section .desc{
+    color: #616161;
+    line-height: 2;
+}
+/* -----3-2.promotion_section-------- */
+.promotion_section{
+    margin-top: 68px;
+}
+
+.promotion_list li{
+    margin-top: 48px;
+    text-align: center;
+}
+.promotion_list li:nth-child(1){
+    margin-top: 0;
+}
+.promotion_list li i{
+    width: 52px;
+    height: 52px;
+}
+.promotion_list li h3{
+    margin: 30px 0 20px;
+    color: #3f51b5;
+}
+.promotion_list li p{
+    font-family: 'Pt serif', serif;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
+
+}
+/* -----3-3. Work ------*/
+.work_section{
+    margin-top: 80px;
+}
+.work_section .sec_title{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 48px;
+}
+.work_section .sec_title{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 48px;
+}
+/* 이미지 정보 효과 */
+.work_section li a::before{
+    content: "";
+    display: block;
+    /* 포지션 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #3f51b5;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    transition: all 0.1s;
+}
+.work_section li a:hover::before{
+    opacity: 0.7;
+}
+/* 정보텍스트 css */
+.work_section li div{
+    /* 포지션 */
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    z-index: 200;
+    opacity: 0;
+    color: #fff;
+    transition: all 0.3s;
+}
+/* a를 호버하면 div를 */
+.work_section li a:hover div{
+    opacity: 1;
+}
+.work_section li div h3{
+    /* font-size: 24px; */
+    font-size: 1.5rem;
+}
+
+/* -------3-4. blog_section------- */
+.blog_section{
+    margin-top: 80px;
+}
+.blog_section .sec_title{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.blog_list li{
+    width: 100%;
+    margin-top: 40px;
+}
+.blog_list li:first-child{
+    margin-top: 0;
+}
+.blog_list time{
+    display: block;
+    font-size: 12px;
+    font-size: 0.75rem;
+    color: #e0e0e0;
+    margin: 10px 0;
+}
+.blog_list h3{
+    color: #616161;
+    line-height: 1.6;
+}
+
+/* -------3-5. contact_section----------- */
+.contact_section{
+    margin-top: 100px;
+}
+.contact_section .sec_title{
+    margin-bottom: 48px;
+    text-align: center;
+}
+input, textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #3f51b5;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #3f51b5;
+    transition: all 0.5s ease-in;
+}
+input:focus, textarea:focus{
+    outline: none;
+    border-bottom: 1px solid violet;
+}
+/* input form */
+.form_box .form input{
+    padding-bottom: 14px;
+    margin-bottom: 48px;
+}
+/* textarea form */
+.form_box textarea{
+    height: 195px;
+}
+.send_btn{
+    margin-top: 30px;
+    text-align: right;
+}
+.send_btn button{
+    font-size: 12px;
+    font-size: 0.75rem;
+    color: #fff;
+    background-color: #3f51b5;
+    border-radius: 5%;
+    padding: 15px;
+    cursor: pointer;
+}
+/* ------------------- */
+/* footer */
+.footer{
+    margin-top: 100px;
+}
+.footer iframe{
+    width: 100%;
+    height: 320px;
+}
+.footer p{
+    margin: 20px 0;
+    color: darkgray;
+    text-align: center;
+    font-size: 0.75rem;
+}
+/* ---------------------- */
+.top_btn{
+    display: none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 0 0 1px gainsboro;
+    z-index: 9999;
+}
+
+
+/* ============================ */
+/* 태블릿 : 너비 768px 이상 */
+/* ============================ */
+@media screen and (min-width:768px){
+    /* --------------------------------- */
+    /* 1. 태블릿 header */
+    /* 태블릿 gnb */
+    .header .gnb{
+        /* 모바일 속성값 초기화 */
+        width: auto;
+        background:none;
+        /* 포지션 */
+        position: static;
+        /* 태블릿, pc단에서부터는 보이도록 */
+        display: block !important;
+        /* 플롯 */
+        float: right;
+    }
+    .header .gnb li{
+        display: inline-block;
+        margin-left: 20px;
+        border-bottom: none;
+    }
+    .header .gnb li a{
+        padding: 5px 0 0 0;
+        color: black;
+    }
+    /* ----Hamberger Toggle---- */
+    .menu_toggle_btn{
+        /* 태블릿, pc단에서부터는 안보이도록 */
+        display: none;
+    }
+    /* ----------------------------------- */
+    /* Contents */
+    /* ------3-1. display영역------- */
+    .display_section{
+        margin-top: 100px;
+    }
+    /* -----3-2.promotion_section-------- */
+    .promotion_list li{
+        /* (177/768)*100 = 23.046875 */
+        width: 23.046875%;
+        /* (20/768)*100 = 2.604166666666667 */
+        margin-left: 2.604166666666667%;
+        /* 속성값 수정 */
+        margin-top: 0;
+        /* 플롯 */
+        float: left;
+    }
+    .promotion_list li:nth-child(1){
+        margin-left: 0;
+    }
+    /* -----3-3. Work ------*/
+    .work_section li {
+        width: 50%;
+        /* 플롯 */
+        float: left;
+    }
+    /* -------3-4. blog_section------- */
+    .blog_section{
+        margin-top: 120px;
+    }
+    .blog_list li{
+        /* (768-40)/3 = 242.66666666666666 */
+        /* (242.66666666666666/768)*100 = 31.59722222222222 */
+        width: 31.59722222222222%;
+        margin-top: 0;
+        /* 플롯 */
+        float: left;
+    }
+    .blog_list li:nth-child(even){
+        /* (20/768)*100 = 2.604166666666667 */
+        margin: 0 2.604166666666667%;
+    }
+    /* -------3-5. contact_section----------- */
+    .contact_section{
+        /* 속성값 수정 */
+        margin-top: 180px;
+    }
+    .contact_section .sec_title{
+        margin-bottom: 80px;
+    }
+    /* 2단 플롯 구조 */
+    .form_box .form{
+        /* (768-20)/2 = 374 */
+        /* (374/768)*100 = 48.69791666666667 */
+        width: 48.69791666666667%;
+        /* (20/768)*100 = 2.604166666666667 */
+        margin-right: 2.604166666666667%;
+        /* 플롯 */
+        float: left;
+    }
+    .form_box .txta{
+        width: 48.69791666666667%;
+        float: right;
+    }
+}
+
+/* ============================ */
+/* pc : 너비 1132px 이상 */
+/* ============================ */
+@media screen and (min-width:1132px){
+    /* 슬라이더 */
+    .bx-controls-direction{
+        display: block;
+    }
+    /* --------------------------------------- */
+    /* Contents */
+    /* ------3-1. display영역------- */
+    .display_section{
+        /* 픽셀 값 수정 */
+        text-align:left;
+    }
+    .display_section .sec_title{
+        margin-top: 0;
+        /* 플롯 */
+        float: left;
+    }
+    .display_section .desc{
+        /* 플롯 */
+        float: right;
+        /* 포지션 */
+        position: relative;
+    }
+
+    .display_section .desc::before{
+        content: "";
+        display: block;
+        width: 2px;
+        height: 44px;
+        background-color: #e0e0e0;
+        /* 포지션 */
+        position: absolute;
+        top: 10px;
+        left: -50px;
+    }
+    /* 3-2.promotion_section */
+    .promotion_section{
+        margin-top: 80px;
+    }
+
+    .promotion_list li{
+        /* 왜 268이 나오지? 마진값을 다합쳐서 기본 값을 뺀다음에 구한듯 (1132-60)/4 */
+        /* (268/1132)*100 = 23.674911660777383 */
+        width: 23.674911660777383%;
+        /* (20/1132)*100 = 1.76678445229682 */
+        margin-left: 1.76678445229682%;
+        margin-top: 0;
+        text-align: center;
+        /* 플롯 */
+        float: left;
+    }
+    .promotion_list li:nth-child(1){
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    /* -----3-3. Work ------*/
+    .work_section .sec_title{
+        text-align: left;
+    }
+    .work_section li {
+        width: 25%;
+        /* 플롯 */
+        float: left;
+    }
+
+    /* -------3-4. blog_section------- */
+    .blog_section{
+        margin-top: 120px;
+    }
+
+    .blog_section .sec_title{
+        margin-top: 0;
+        margin-bottom: 40px;
+        text-align: left;
+        /* 플롯 */
+        float: left;
+    }
+    .blog_list{
+        /* (844/1132)*100 = 74.55830388692578 */
+        width: 74.55830388692578%;
+        /* 플롯 */
+        float: right;
+    }
+    .blog_list li{
+        /* (844-40)/3 = 268 */
+        /* (268/844)*100 = 31.753554502369667 */
+        width: 31.7535545023696675%;
+        margin-top: 0;
+        /* 플롯 */
+        float: left;
+    }
+    .blog_list li:nth-child(even){
+        /* (20/844)*100 = 2.3696682464454977 */
+        margin: 0 2.3696682464454977%;
+    }
+
+    /* -------3-5. contact_section----------- */
+    .contact_section{
+        /* 속성값 수정 */
+        margin-top: 180px;
+    }
+    /* 3단 플롯 */
+    .contact_section .sec_title{
+        /* 속성값 수정 */
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+        /* 플롯 */
+        float: left;
+    }
+    .form_box{
+        /* (844/1132)*100 = 74.55830388692578 */
+        width: 74.55830388692578%;
+        /* 플롯 */
+        float: right;
+    }
+    /* 2단 플롯 구조 */
+    .form_box .form{
+        /* (844-20)/2 = 412 */
+        /* (412/844)*100 = 48.81516587677725 */
+        width: 48.81516587677725%;
+        /* (20/844)*100 = 2.3696682464454977 */
+        margin-right: 2.3696682464454977%;
+        /* 플롯 */
+        float: left;
+    }
+    .form_box .txta{
+        width: 48.81516587677725%;
+        /* 플롯 */
+        float: right;
+    }
+
+}

@@ -1,0 +1,77 @@
+#wrap{
+    padding: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#wrap_header{margin: 20px 0;}
+#wrap_header > h1{
+    font-weight: 600;
+    font-size: 1.875rem;
+}
+#login_form li{
+    margin-bottom: 20px;
+}
+#login_form input:not([type="checkbox"]){
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+}
+#login_form input[id^="user_"]{border-bottom: var(--border-main);}
+#login_form input[id^="user_"]:focus{
+    outline: none;
+    border-color: var(--kokoa-maincolor);
+    transition: all 0.5s ease-in;
+}
+#login_form input::placeholder{color: rgba(0,0,0,0.5);}
+#login_form input[type="submit"]{background-color: var(--kokoa-maincolor);}
+
+#ssi_containner{
+    text-align: start;
+}
+#ssi_containner > label{
+    line-height: 20px;
+}
+#ssi_containner > label::before{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: var(--border-main);
+    border-radius: 25px;
+    margin-right: 5px;
+}
+#ssi_containner > input:checked +label::before{
+    content: "✔";
+    border: none;
+    background-color: var(--kokoa-maincolor);
+}
+
+#user_info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2px;
+}
+
+#or::after{
+    content: "또는";
+    z-index: 2;
+    position: relative;
+    margin-top: 8px;
+}
+
+footer{
+    width: 100%;
+    padding: 15px;
+    border-top: var(--border-main);
+    text-align: center;
+}
+
+#service_info li{
+    display: inline-block;
+    font-size: 12px;
+}
+
+#txt_copyright{
+    font-size: 10px;
+}

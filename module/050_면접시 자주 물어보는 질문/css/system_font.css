@@ -1,0 +1,15 @@
+@charset "utf-8";
+body {
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* "system" font family 설정*/
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local("./font/SFNSText-Light.ttf"), local("./font/HelveticaNeueDeskInterface-Light.ttf"), local("./font/LucidaGrandeUI.ttf"), local("./font/Ubuntu-Light.ttf"), local("./font/SegoeUILight.ttf"), local("./font/Roboto-Light.ttf"), local("./font/DroidSans.ttf"), local("./font/Tahoma.ttf");
+}
+/* @font-family 적용 */
+body {
+    font-family: "system";
+}

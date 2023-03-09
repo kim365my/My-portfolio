@@ -1,0 +1,85 @@
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background: #fff;
+    color: #39313c;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 1.125rem;
+}
+
+/* header */
+h1{
+    font-size: 3.75rem;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+p span{
+    font-size: 1.875rem;
+}
+
+/* 공통 클래스 */
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* header 박스 */
+header .wrapper{
+    background: url(../images/fish_chips_01.jpg) 4.1667% center no-repeat;
+    background-size: 33.333333333% auto;
+    padding: 10% 4.16667% 10% 41.6667%;
+}
+#store_1 .wrapper{
+    background: url(../images/fish_chips_02.jpg) 4.1667% center no-repeat;
+    background-size: 33.333333333% auto;
+    padding: 10% 4.16667% 10% 41.6667%;
+}
+#store_2 .wrapper{
+    background: url(../images/fish_chips_03.jpg) 4.1667% center no-repeat;
+    background-size: 33.333333333% auto;
+    padding: 10% 4.16667% 10% 41.6667%;
+}
+#store_3 .wrapper{
+    background: url(../images/fish_chips_04.jpg) 4.1667% center no-repeat;
+    background-size: 33.333333333% auto;
+    padding: 10% 4.16667% 10% 41.6667%;
+}
+footer{
+    background-color: #79e836;
+    text-align: center;
+    padding: 4 1.0007% 3.3333%;
+}
+
+/* 패럴렉스 */
+header:after, section:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 400px;
+    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header:after{
+    background: url(../images/fish_chips_01.jpg) 4.1667% center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section#store_1:after{
+    background: url(../images/fish_chips_02.jpg) 4.1667% center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section#store_2:after{
+    background: url(../images/fish_chips_03.jpg) 4.1667% center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section#store_3:after{
+    background: url(../images/fish_chips_04.jpg) 4.1667% center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

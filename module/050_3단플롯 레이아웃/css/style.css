@@ -1,0 +1,82 @@
+@charset "UTF-8";
+@import url(./reset.css);
+@import url(./font.css);
+
+/* 전역설정 */
+#wrap{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 25px;
+}
+h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+/* 개별설정 */
+/* 헤더 */
+header{
+    background-color: dodgerblue;
+    padding: 40px 25px;
+}
+/* 메인 */
+main{
+    padding: 25px;
+    background-color: gray;
+}
+
+/* 3단 플롯 */
+main > .cf{
+    background-color: red;
+    padding: 25px;
+}
+.cf section{
+    padding: 50px 25px;
+}
+/* 2단 플롯 컨텐츠 컨테이너 */
+#content_box {
+    width: 75%;
+    float: left;
+}
+#content_box > section{
+    float: left;
+    width: 25%;
+    background-color: orange;
+}
+#content_box > section:last-child{
+    float: right;
+    width: 70%;
+    background-color: hotpink;
+}
+/* 컨텐츠 컨테이너 종료*/
+#content_box + section{
+    float: right;
+    width: 20%;
+    background-color: fuchsia;
+}
+/* 플롯끝 */
+
+main section p{
+    margin-bottom: 25px;
+}
+main .cf li{
+    list-style-position: inside;
+    list-style-type:disc;
+    margin-left: 15px;
+}
+main .cf a{
+    color: blue;
+    text-decoration: underline solid 1px black;
+}
+/* 푸터 */
+footer{
+    background-color: skyblue;
+    padding: 40px 25px;
+
+}

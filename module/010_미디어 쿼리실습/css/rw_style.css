@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* 공통 : CSS 모바일 퍼스트 */
+#wrap{
+    /* (960px) */
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: #000;
+}
+#wrap h1{
+    color: blue;
+    padding: 24px 0;
+}
+#wrap ul li{
+    width: 100%;
+}
+#wrap ul img{
+    width: 90%;
+}
+#wrap p{
+    font-size: 0.75rem;
+    line-height: 1.0;
+    padding: 12px 0;
+}
+
+/* 768px 이상 959px 이하 */
+@media screen and (min-width : 768px) and (max-width:959px){
+    #wrap{
+        /* (960px) */
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        color: #000;
+        /* 추가 */
+        background-color:cadetblue;
+    }
+    #wrap h1{
+        color: blue;
+        padding: 24px 0;
+        /* 추가 */
+        font-size: 2rem;
+    }
+    #wrap ul li{
+        width: 100%;
+        /* 수정 */
+        width: 50%;
+        /* 플롯 */
+        float: left;
+    }
+    #wrap ul img{
+        width: 90%;
+    }
+
+    #wrap p{
+        font-size: 0.75rem;
+        line-height: 1.0;
+        padding: 12px 0;
+        /* 수정 */
+        font-size: 1rem;
+        /* 추가 */
+        color: #111;
+    }
+}
+/* 1024px 이상 */
+@media screen and (min-width : 1024px){
+    #wrap{
+        /* (960px) */
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        color: #000;
+        /* 수정 */
+        background-color:gray;
+    }
+    #wrap h1{
+        color: blue;
+        padding: 24px 0;
+        /* 수정 */
+        font-size: 4rem;
+    }
+    #wrap ul li{
+        width: 100%;
+        width: 50%;
+        /* 플롯 */
+        float: left;
+    }
+    #wrap ul img{
+        width: 90%;
+    }
+
+    #wrap p{
+        font-size: 0.75rem;
+        line-height: 1.0;
+        padding: 12px 0;
+        font-size: 1rem;
+        color: #111;
+        /* 추가 */
+        border: 1px #fff dotted;
+    }
+}

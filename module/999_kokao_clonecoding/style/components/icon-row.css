@@ -1,0 +1,21 @@
+.icon-row{
+    margin-top: var(--horizontal-space);
+}
+.icon__list{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--horizontal-space);
+}
+.icon__btn{
+    width: 20%;
+}
+
+.icon__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.7;
+}
+.icon__link-text{
+    margin-top: 10px;
+}

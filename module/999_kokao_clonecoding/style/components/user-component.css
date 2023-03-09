@@ -1,0 +1,92 @@
+/* 유저 전체적인 설정 */
+.user-component{
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.user-component_column{
+    justify-content: space-between;
+}
+.user-component:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.user-component, 
+.user-component_column:first-child{
+    display: flex;
+    align-items: center;
+}
+
+/* 배경 이미지*/
+.backgroundimg{
+    background-image: url(https://pbs.twimg.com/media/DxIM8FqV4AE9hHB.png);
+    background-repeat: repeat;
+    border: var(--main-border);
+    border-radius: 10px;
+}
+/* 유저 이름 */
+.user-component_text{
+    display: flex;
+    flex-direction: column;
+}
+.user-component_title{
+    font-weight: 600;
+    font-size: 22px;
+}
+.user-component_title--not-bold {
+    font-weight: 400;
+}
+.user-component__subtitle{
+    margin-top: 8px;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* 유저 프로필 */
+.user-component__avatar{
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    margin-right: 20px;
+    background-color: gray;
+}
+.user-component__avatar--sm{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+/* 유저 상태 메시지 */
+.user-component > .user-component_column:last-child{
+    display: flex;
+    color: rgba(0, 0, 0, 0.4);
+}
+.user-component_column:has(.user-component__message-window){
+    align-items: center;
+}
+.user-component__message-window:first-child{
+    color: var(--cocoatalk-color);
+    margin-right: -1px;
+}
+.user-component__message-window:last-child{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--cocoatalk-color);
+}
+.user-component__status-message{
+    font-size: 18px;
+    font-weight: 600;
+}
+.user-component_column > audio{
+    width: 60px;
+}
+
+/* 유저 읽지 않은 메시지 */
+.user-component_column:has(.user-component__time){
+    flex-direction: column;
+    align-items: flex-end;
+}
+.user-component__time{
+    margin-bottom: 5px;
+}

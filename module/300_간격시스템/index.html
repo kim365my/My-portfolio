@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 스타일 -->
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 커스텀 css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 제이쿼리 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 커스텀 js -->
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <section class="shop cf">
+            <section class="goods_info">
+                <h1 class="goods_img"><img src="https://place-hold.it/240x320" alt="상품이미지"></h1>
+                <div>
+                    <img  class="goods_them" src="https://place-hold.it/50x50" alt="섬네일_상품이미지">
+                </div>
+                <div class="goods_text">
+                    <p>Lego</p>
+                    <p>덴마크 장난감 회사</p>
+                    <p><a href="#">BRAND HOME</a></p>
+                </div>
+            </section>
+            <!-- 상품 상세 정보 -->
+            <section class="form">
+                <form action="#">
+                    <fieldset>
+                        <legend class="blind">상품정보</legend>
+                        <h2>Lego Musk Express</h2>
+                        <p>300,000원</p>
+                        <p>20% &#8361;240,000원</p>
+                        <!-- 테이블시작 -->
+                        <div class="line"></div>
+                        <table>
+                            <tr>
+                                <th>추가혜택</th>
+                                <td>현대카드 93,600원(2%청구할인)</td>
+                                
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>적립금 950포인트</td>
+                            <tr>
+                                <th></th>
+                                <td>월할부금 월 15,000원(6개월 할부시)</td></tr>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>무이자 카드보기</td>
+                            </tr>
+                            <tr class="table_blank"><td></td></tr>
+                            <tr>
+                                <th>배송비</th>
+                                <td>0원(결제금액 7만원 이상 무료)</td>
+                            </tr>
+                            <tr class="table_blank2"><td></td></tr>
+                        </table>
+                        <!-- 테이블 종료 -->
+                        <select name="배송지" id="dg_list">
+                            <option value="10210">10210 백화점</option>
+                            <option value="10211">10211 백화점</option>
+                            <option value="10212">10212 백화점</option>
+                        </select>
+                        <div class="line2"></div>
+                        <button>장바구니 담기</button>
+                        <button>구매하기</button>
+                    </fieldset>
+                </form>
+            </section>
+        </section>
+    </div>
+</body>
+</html>
