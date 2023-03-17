@@ -52,3 +52,5 @@ function gnbAndList(){
         
     }
 }
+
+console.dir(iframe.clientWidth);
