@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{
+            width: 80%;
+            margin: 40px auto;
+            border: 1px solid black;
+        }
+        section{
+            height: 100vh;
+            background-color: thistle;
+            border-bottom: 1px solid #000;
+        }
+        a.active{
+            font-weight: 500;
+        }
+        nav{
+            position: fixed;
+            top: 50%;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <nav>
+            <!-- ul>li*5>a[data-scroll="name$" href="#name$" class="dot"]{name$} -->
+            <ul>
+                <li><a href="#name1" data-scroll="name1" class="dot active">name1</a></li>
+                <li><a href="#name2" data-scroll="name2" class="dot">name2</a></li>
+                <li><a href="#name3" data-scroll="name3" class="dot">name3</a></li>
+                <li><a href="#name4" data-scroll="name4" class="dot">name4</a></li>
+                <li><a href="#name5" data-scroll="name5" class="dot">name5</a></li>
+            </ul>
+        </nav>
+        
+        <section id="name1">
+            <table>
+                <colgroup>
+                    <col class="name1_td">
+                    <col>
+                </colgroup>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </section>
+        <section id="name2"></section>
+        <section id="name3"></section>
+        <section id="name4"></section>
+        <section id="name5"></section>
+    </div>
+</body>
+</html>
