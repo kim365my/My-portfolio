@@ -1,0 +1,43 @@
+/* 헤더영역 */
+header{
+    padding: 30px 50px;
+    border-radius: 10px 10px 0 0;
+    background-color: white;
+    
+    /* 플렉스 설정 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* 포지션 설정 */
+    /* #wrap에 오버플로우 설정하면 sticky가 안먹는구나... */
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+header h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* 헤더 gnb 영역 */
+.gnb li {
+    display: inline-block;
+}
+.gnb li:not(:last-child){
+    margin-right: 10px;
+}
+
+.gnb li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+    border-bottom: 1px solid #00000000;
+}
+/* 호버시 */
+.gnb li a:hover{
+    border-bottom: 1px solid #000;
+    transition: all ease-in-out 0.5s;
+}

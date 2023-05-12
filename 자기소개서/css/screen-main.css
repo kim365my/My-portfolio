@@ -1,0 +1,131 @@
+/* 메인영역 */
+main > section{
+    height: 100%;
+    padding: 100px 50px;
+    border-bottom: 1px dotted #000;
+}
+
+main > section:first-child{
+    height: 85%;
+    padding-top: 0;
+}
+main > section:last-child{
+    border-bottom: none;
+}
+
+main h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 2.5rem 0 1.5rem 0;
+}
+main p{
+    margin: 1.25rem 0;
+}
+
+/* --------------- */
+/* about 섹션 */
+.about_tel li:not(:last-child){
+    margin-bottom: 0.625rem;
+}
+.about_tel i{
+    margin-right: 5px;
+}
+.about_img{
+    width: 100%;
+    height: 380px;
+    background: url(../img/main.jpg) center  no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*  */
+.profile_img ul{
+    /* 플렉스 */
+    display: flex;
+    margin: 1rem 0;
+}
+.profile_img li{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    /* 커서 */
+    cursor: pointer;
+    /* 오버플로우 */
+    overflow: hidden;
+    /* 포지션 */
+    position: relative;
+}
+.profile_img li:not(:last-child){
+    margin-right: 10px;
+}
+.profile_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile_img li::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* 포지션 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    transition: all 0.1s;
+    opacity: 0;
+    background-color: #dddddd;
+}
+
+.profile_img li:hover::before{
+    opacity: 0.7;
+}
+.profile_img h3{
+    font-size: 5rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0 20px #494949;
+    /* 포지션 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    text-align: center;
+    opacity: 0;
+}
+.profile_img li:hover h3{
+    opacity: 1;
+}
+
+/* #goal */
+#goal h3{
+    font-size: 5rem;
+    font-weight: 600;
+    background: url(../img/main.jpg) center no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+/* --------------- */
+/* #contact form */
+#contact form{
+    padding: 1.25rem;
+    background-color: rgba(87, 87, 87, 0.13);
+}
+#contact form table {
+    width: 100%;
+}
+#contact form :is(input, textarea){
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+}
+#contact input[type="submit"]{
+    background-color: #B6D3E5;
+}
+#contact form table td{
+    vertical-align: middle;
+}
+
