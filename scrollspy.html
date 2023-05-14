@@ -73,7 +73,7 @@
 </body>
 <script>
     const section = document.querySelectorAll("section");
-    window.addEventListener("scroll", function(){
+    window.addEventListener("scroll", function(e){
         console.log(window.scrollY); // 현재 스크롤바 위치
 
         section.forEach(function(se){
@@ -88,10 +88,21 @@
                 
 
             }
-
+            var scrolling = $(this).scrollTop() + $(this).height() / 3;
+            var scroll_id;
+            for (var i in sections) {
+            var section = sections[i];
+            if (scrolling > section.offset().top) {
+                scroll_id = section.attr("id");
+            }
+            }
+            if (scroll_id !== id) {
+            id = scroll_id;
+            $menu_a.removeClass("isactive");
+            $("a[href='#" + id + "']", $menu).addClass("isactive");
+            }
 
         })
     })
-        
 </script>
 </html>
