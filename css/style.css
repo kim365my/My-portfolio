@@ -12,8 +12,8 @@ html, body {
 }
 
 #wrap{
-    width: 60%;
-    margin: 0 auto;
+    width: 90%;
+    /* margin: 0 auto; */
     padding: 0 20px;
     /* 포지션 */
     position: relative;
@@ -37,39 +37,48 @@ html, body {
 /* header */
 /* ------------------- */
 header{
-    width: 130px;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border: 3px solid #000;
+    padding: 20px 10px;
+    margin-right: 5%;
     /* 포지션 */
-    position: sticky;
-    top: 10px;
-    left: 0;
-    transform: translateX(-120%);
+    position: fixed;
+    bottom: 2.5rem;
+    right: 0;
     z-index: 99;
 }
 
 header .gnb li{
-    display: inline-block;
-    margin-right: 32px;
-    margin-bottom: 50px;
-}
-header .gnb li.check{
-    color: var(--main-color);
+    padding-right: 20px;
+    border-bottom: 3px solid transparent;
+    margin-bottom: 20px;
+    /* 포지션 */
+    position: relative;
 }
 
+header .gnb li a{
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0;
+}
+header .gnb li.check,
+header .gnb li:hover{
+    color: var(--main-color);
+    border-bottom: 3px solid #000;
+}
 /* ------------------- */
 /* main */
 /* ------------------- */
 main > section{
     height: 100vh;
-    padding-bottom: 8rem;
-    border: 3px solid #000;
+    padding: 2.5rem 2rem;
+    display: none;
 }
+
+main > section.check {
+    display: block;
+}
+
 main > section > h2 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     border-bottom: 3px solid var(--main-color);
@@ -77,12 +86,17 @@ main > section > h2 {
 
 /* #about_me */
 #about_me .content {
+    height: 80vh;
+    /* 오버플로 */
+    overflow: hidden;
+    /* 포지션 */
     position: relative;
-    height: 100%;
 }
 #about_me .img_wrap {
-    width: 50%;
-    height: 100%;
+    width: 80%;
+    height: 150%;
+    /* 변형 */
+    transform: rotate(10deg);
     /* 포지션 */
     position: absolute;
     top: 0;
@@ -170,19 +184,6 @@ main > section > h2 {
     height: 100%;
 }
 
-/* ------------------- */
-/* footer */
-/* ------------------- */
-footer{
-    height: 2vh;
-    font-size: 0.8rem;
-    color: #ccc;
-    padding: 20px 0;
-    text-align: center;
-}
-footer p{
-    text-align: center;
-}
 
 /* ------------------------------------- */
 /* 780px 이하 기기 적용 */
