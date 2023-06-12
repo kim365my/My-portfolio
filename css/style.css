@@ -7,15 +7,22 @@
 /* ------------------- */
 /* 전역설정 */
 /* ------------------- */
-* {
+html, body {
     font-family: 'Noto sans KR',sans-serif;
 }
 
-.w1200{
-    max-width: 1240px;
-    width: 1240px;
-    padding: 0 20px;
+#wrap{
+    width: 60%;
     margin: 0 auto;
+    padding: 0 20px;
+    /* 포지션 */
+    position: relative;
+}
+
+.w1200{
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
 }
 .old::before{
     content: "old";
@@ -30,34 +37,24 @@
 /* header */
 /* ------------------- */
 header{
-    width: 100%;
-    margin-bottom: 15px;
+    width: 130px;
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-    
-    /* 포지션 */
-    position: sticky;
-    top: 0;
-    z-index: 99;
-}
-header .logo{
-    font: 800 1.5rem 'Noto Sans KR', sans-serif;
-}
-header .gnb_wrap{
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
     padding-top: 20px;
     padding-bottom: 20px;
-    /* 플렉스 */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border: 3px solid #000;
+    /* 포지션 */
+    position: sticky;
+    top: 10px;
+    left: 0;
+    transform: translateX(-120%);
+    z-index: 99;
 }
-header .gnb_wrap nav{
-    /* 플렉스 */
-    display: flex;
-}
+
 header .gnb li{
     display: inline-block;
     margin-right: 32px;
+    margin-bottom: 50px;
 }
 header .gnb li.check{
     color: var(--main-color);
@@ -66,18 +63,35 @@ header .gnb li.check{
 /* ------------------- */
 /* main */
 /* ------------------- */
-main > article{
-    height: 50vh;
-}
 main > section{
-    height: 95vh;
-    padding-top: 8rem;
+    height: 100vh;
+    padding-bottom: 8rem;
+    border: 3px solid #000;
 }
 main > section > h2 {
     font-size: 1.2rem;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     border-bottom: 3px solid var(--main-color);
+}
+
+/* #about_me */
+#about_me .content {
+    position: relative;
+    height: 100%;
+}
+#about_me .img_wrap {
+    width: 50%;
+    height: 100%;
+    /* 포지션 */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#about_me img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 /* #project 영역 */
