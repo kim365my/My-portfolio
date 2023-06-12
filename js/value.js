@@ -33,23 +33,19 @@ function printContent(){
     }
 }
 
+/** check가 붙은 gnb 리스트에  */
 function gnbAndList(){
     const CHECK_CLASS = "check"
     for (let i = 0; i < gnb.length; i++) {
         gnb[i].addEventListener("click", function(e){
-            e.preventDefault();
-
             let className = gnb[i].classList.contains(CHECK_CLASS);
             if (!className) {
                 for (let index = 0; index < gnb.length; index++) {
                     gnb[index].classList.remove(CHECK_CLASS);
-                    navList[index].classList.remove(CHECK_CLASS);
                 }
                 gnb[i].classList.add(CHECK_CLASS);
-                navList[i].classList.add(CHECK_CLASS);
             }
         })
-        
     }
 }
 

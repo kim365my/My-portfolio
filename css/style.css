@@ -7,19 +7,15 @@
 /* ------------------- */
 /* 전역설정 */
 /* ------------------- */
-html,
-body{
-    width: 100vw;
-    height: 100vh;
+* {
     font-family: 'Noto sans KR',sans-serif;
 }
-#container{
-    height: 100%;
-}
-.w1824{
-    max-width: 95%;
-    margin: 0 auto;
 
+.w1200{
+    max-width: 1240px;
+    width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 .old::before{
     content: "old";
@@ -36,27 +32,32 @@ body{
 header{
     width: 100%;
     margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
     
+    /* 포지션 */
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
-header .logo_wrap{
-    padding-top: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--main-color);
-    font: 800 1.8rem 'Noto Sans KR', sans-serif;
+header .logo{
+    font: 800 1.5rem 'Noto Sans KR', sans-serif;
 }
 header .gnb_wrap{
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-}
-header .gnb_wrap nav{
-    padding: 20px 0;
-    font: 600 1.1rem 'Noto Sans KR', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
     /* 플렉스 */
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+header .gnb_wrap nav{
+    /* 플렉스 */
+    display: flex;
 }
 header .gnb li{
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 32px;
 }
 header .gnb li.check{
     color: var(--main-color);
@@ -65,89 +66,92 @@ header .gnb li.check{
 /* ------------------- */
 /* main */
 /* ------------------- */
-main{
-    height: 80%;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row nowrap;
+main > article{
+    height: 50vh;
 }
-/* main nav */
-main nav{
+main > section{
+    height: 95vh;
+    padding-top: 8rem;
+}
+main > section > h2 {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--main-color);
+}
+
+/* #project 영역 */
+#project nav{
     width: 20vw;
-    height: 100%;
-    margin-right: 10px;
     overflow-y: scroll;
     border-right: none;
     border-left: none;
 }
 /* main nav ul */
-main nav ul.list{
-    /* 리스트 숨기기 */
-    display: none;
+#project .project_list {
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
 }
-
-main .list.check{
+#project .list{
     display: grid;
     /* 간격 */
     row-gap: 10px;
     column-gap: 5px;
 }
-main .list > li{
+#project .list > li{
     width: 100%;
     border: 1px solid var(--border-color);
     text-align: center;
 }
 
-main .list a{
+#project .list a{
     display: inline-block;
     width: 100%;
     height: 100%;
     padding: 10px;
 }
-main .list a:hover{
+#project .list a:hover{
     background-color:var(--main-color);
     color: white;
 }
-main .list ul > li:nth-child(even){
+#project .list ul > li:nth-child(even){
     border-top: 1px dotted var(--border-color);
 }
 
-section.contents{
+#project .contents{
     width: 100%;
     height: 100%;
-    border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
     
 }
-section.contents > .des{
+#project .contents > .des{
     background-color:rgb(243, 243, 243);
     padding: 30px;
-    border-bottom: 1px dotted #000;
+    border-bottom: 3px solid var(--border-color);
     /* 플랙스 */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* 포지션 */
-    position: sticky;
-    top: 0;
 }
-section.contents > .des h2{
+#project .contents > .des h2{
     font-size: 1.2rem;
     font-weight: 600;
 }
-section.contents > .des h2 + p{
+#project .contents > .des h2 + p{
     margin-top: 10px;
     font-size: 0.8rem;
 }
-.pageLink{
+#project .pageLink{
     color: var(--main-color);
     font: 600 0.8rem/1.6 "Raleway", sans-serif;
 }
 
-.innerPage, .innerPage > iframe{
+#project .innerPage, .innerPage > iframe{
     width: 100%;
     height: 100%;
 }
@@ -170,41 +174,5 @@ footer p{
 /* 780px 이하 기기 적용 */
 /* ------------------------------------- */
 @media screen and (max-width:780px) {
-    /* 아코디언 형식으로 하고 싶은데 */
-    main{
-        flex-flow: column;
-    }
-    main nav{
-        width: 100%;
-        height: 20%;
-        margin-bottom: 10px;
-    }
-    .header .menu .hambeger{
-        width: 20px;
-        height: 20px;
-        overflow: hidden;
-        /* 플랙스 */
-        display: flex;
-        flex-flow: nowrap column;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .header .menu .hambeger div{
-        width: 20px;
-        height: 3px;
-        background-color: #000;
-        transition: all 0.1s;
-    }
-    .header .menu:hover .hambeger {
-        justify-content: center;
-    }
-    .header .menu:hover .hambeger div:first-child{
-        transform: translateY(50%) rotate(40deg);
-    }
-    .header .menu:hover .hambeger div:last-child{
-        transform:translateY(-50%) rotate(-45deg);
-    }
-    .header .menu:hover .hambeger div:nth-child(2){
-        display: none;
-    }
+
 }
