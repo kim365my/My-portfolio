@@ -39,27 +39,28 @@ realTimeBtn.forEach((e) =>{
 // --------------------------------
 const totalGnbBtn = document.querySelectorAll(".gnb > li");
 const total = document.querySelectorAll(".snb");
-
-totalGnbBtn.forEach((e, i)=> {
+const gnb = document.querySelector(".gnb");
+totalGnbBtn.forEach((e)=> {
     e.addEventListener("mouseenter", () => {
-        total[i].classList.remove("hidden");
-    });
-
-    e.addEventListener("mouseleave", () => {
-        total[i].classList.add("hidden");
-    });
+        total.forEach((snb) => snb.classList.remove("hidden"));
+        gnb.classList.add("on");
+    });    
 })
+gnb.addEventListener("mouseleave", () => {
+    total.forEach((snb) => snb.classList.add("hidden"));
+    gnb.classList.remove("on");
+});
 
 // --------------------------------
 // 박스 슬라이더
 // --------------------------------
-$('.slider').bxSlider({
-    // 슬라이드간의 마진
-    slideMargin:0,
+// const slideTimes = ["6","10","10"];
+const slider = $('.slider').bxSlider({
+    slideMargin:0, // 슬라이드간의 마진
     // 오토슬라이드
     auto: true,
     autoControls: true,
-    // stopAutoOnClick: true,
+    autoHover: true,   // 마우스 호버시 정지 여부
     pager: true,
     // 오토슬라이드 start/pause버튼 합치기
     autoControlsCombine:true,
@@ -67,5 +68,15 @@ $('.slider').bxSlider({
     startText:" ",
     stopText:" ",
     // 오류픽스 : 터치로 이동되는 것을 막아서 이미지 클릭이 이동 되도록
-    touchEnabled : (navigator.maxTouchPoints > 0)
+    touchEnabled : (navigator.maxTouchPoints > 0),
+    onSlideAfter : function(el, old, current){
+        slider.stopAuto();
+        slider.pause = (6 * 1000) || 5000; // 스피드 조절
+        console.log(slider);
+        
+    }
+
 });
+
+var current = slider.getCurrentSlide(); // 현재 활성 슬라이드 가져오기
+console.log(current);
