@@ -1,14 +1,44 @@
 // --------------------------------
 // 미구현기능 클릭시 안내문
 // --------------------------------
-$(`<div class="alert">죄송합니다. 해당페이지는 준비중입니다.</div>`).appendTo("#wrap");
-$("a[href='#']").not(".eventNone").on("click", function(e){
-    e.preventDefault();
-    $(".alert").stop().fadeIn(700)
-    setTimeout(() => {
-        $(".alert").stop().fadeOut(700);
-    }, 1000);
-})
+const alertMeg = document.querySelector(".alert");
+const noLink = document.querySelectorAll("a[href='#']");
+noLink.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        if(!link.classList.contains("eventNone")) {
+            e.preventDefault();
+            alertMeg.classList.add("showAlert");
+            window.setTimeout(() => {
+                alertMeg.classList.remove("showAlert");
+            }, 2000);
+        }
+        
+    })
+});
+// --------------------------------
+// 탑배너 닫기 이벤트
+// --------------------------------
+const closeBtn = document.querySelector(".close_btn");
+const topBanner = document.querySelector(".top_banner");
+
+// 로컬스토리지
+const bannerItem = localStorage.getItem("closeBanner");
+if(bannerItem == null) {
+    closeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        topBanner.classList.add("hidden");
+
+        // 로컬스토리지 시간 추가
+        localStorage.setItem("closeBanner", Date.now().toString());
+    });
+} else {
+    const date = Date.parse(bannerItem);
+    if(Date.now() > date){
+        localStorage.removeItem("closeBanner");
+    } else {
+        topBanner.classList.add("hidden");
+    }
+}
 
 // --------------------------------
 // 스크롤 이벤트
@@ -93,14 +123,39 @@ gnb.addEventListener("mouseleave", () => {
 // --------------------------------
 // 박스 슬라이더
 // --------------------------------
-const slider = $('.slider').slick({
-    slidesToShow : 1, // 보여지는 슬라이드 갯수
-    dots :true, // 도트 
-    // 오토슬라이드
-    autoplay: true,
-    autoplaySpeed: 3000,
-    prevArrow : `<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>`,
-    nextArrow : `<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>`,
-    pauseOnDotsHover : true, // 점에 호버시 일시중지
+const progressCircle = document.querySelector(".autoplay-progress svg");
+const progressContent = document.querySelector(".autoplay-progress span");
+const playBtn = document.querySelector(".play");
+const pauseBtn = document.querySelector(".pause");
+const swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  loop:true,
+  autoplay: {
+    delay: 5000, // 오토플레이 시간
+    disableOnInteraction: false,
+    pauseOnMouseEnter :true
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
 
+  },
+  on: {
+    autoplayTimeLeft(s, time, progress) {
+      progressCircle.style.setProperty("--progress", 1 - progress);
+      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+    }
+  }
+});
+
+playBtn.addEventListener("click", (e) => {
+    swiper.autoplay.start();
+});
+pauseBtn.addEventListener("click", (e) => {
+    swiper.autoplay.stop();
 });

@@ -28,13 +28,30 @@ body{
     padding: 10px 20px;
     font-size: 1.8rem;
     border-radius: 25px;
+    white-space: nowrap;
     /* 포지션 */
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99999;
+    opacity: 0;
     display: none;
+}
+.showAlert{
+    display: block;
+    animation: showAlert 2s;
+}
+@keyframes showAlert {
+    0% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 a.moreBtn{
     display: inline-block;
@@ -54,14 +71,20 @@ aside{
 }
 aside .top_sub{
     display: block;
-    line-height: 1.6;
+    line-height: 1.6rem;
     text-align: center;
     font-size: 1.6rem;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
+    /* 포지션 */
+    position: relative;
 }
-aside .top_sub img{
-    margin-left: 10px;
-    vertical-align: middle;
+aside .top_sub i{
+    font-size: 1.2rem;
+}
+aside .close_btn{
+    font-size: 1.2rem;
+    position: absolute;
+    right: 0;
 }
 
 /* =================== */
@@ -69,7 +92,7 @@ aside .top_sub img{
 /* =================== */
 header{
     font-size: 1.4rem;
-    border-bottom: 3px solid #ff8800;
+    border-bottom: 1px solid #ddd;
     background-color: #fff;
     /* 포지션 */
     position: sticky;
@@ -120,10 +143,9 @@ header{
 }
 .gnb > li {
     display: inline-block;
-    margin-left: 10px;
+    margin: 0 1rem;
     font-size: 1.8rem;
     font-weight: 700;
-    margin-right: 20px;
     /* 포지션 */
     position: relative;
 }
@@ -133,9 +155,9 @@ header{
     width: 100%;
     height: 77px;
     line-height: 77px;
-    padding: 0 50px;
+    padding: 0 60px;
     vertical-align: middle;
-    transition: all 0.3;
+    transition: all 0.3s;
 }
 .gnb > li:hover > a {
     border-bottom: 3px solid #000;
@@ -184,7 +206,7 @@ header{
     font-weight: 400;
 }
 .snb li:hover a{
-    border-bottom: 1px solid #ff8800;
+    border-bottom: 2px solid #ff8800;
 }
 .snb li a{
     display: inline-block;
@@ -197,19 +219,12 @@ header{
 /* ======================= */
 /* article .slider */
 /* ======================= */
-article .slider{
+article .swiper{
     height: 600px;
     overflow: hidden;
 }
-article .slider div {
-    width: 100%;
-    height: 100%;
-    /* 포지션 */
-    position: relative;
-    z-index: 1;
-}
-article .slider img,
-article .slider iframe{
+article .swiper img,
+article .swiper iframe{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -220,52 +235,88 @@ article .slider iframe{
 }
 
 /* 박스 슬라이더 커스텀 작업 */
-.slick-next,
-.slick-prev{
-    font-size: 10rem;
-    color: #fff;
-    cursor: pointer;
-    /* 포지션 */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 9;
-}
-.slick-prev{
-    left: 1rem;
-}
-.slick-next {
-    right: 1rem;
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.slick-dots{
-    width: 70rem;
-    /* 플렉스 */
-    display: flex;
-    justify-content: space-between;
-    /* 포지션 */
-    position: absolute;
-    bottom: 1rem;
-    right: 50%;
-    z-index: 9;
-    transform: translateX(50%);
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.slick-dots button{
-    width: 8rem;
+.swiper-button-next,
+.swiper-button-prev{
+    color: #fff;
+    padding: 40px;
+    text-shadow: 0 0 2rem #8f8f8f;
+}
+.swiper-pagination-bullet{
+    width: 7.5rem;
+    height: 3rem;
+    background: transparent;
+    padding-top: 1.5rem;
+}
+
+.swiper-pagination-bullet::after{
+    content: "";
+    display: block;
+    width: 100%;
     height: .5rem;
     border-radius: 25px;
-    background-color: #fff;
-    color: transparent;
-    /*  커서 */
+    background: var(--swiper-pagination-bullet-inactive-color,#000);
+}
+.swiper-pagination-bullet-active::after{
+    background: #ff8800;
+}
+.autoplay-progress {
+    /* 포지션 */
+    position: absolute;
+    right: 1.6rem;
+    bottom: 1.6rem;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    /* 플렉스 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+.autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: #fff;
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+    text-shadow: 0 0 2rem #686868;
+}
+.autoplay-controll{
+    color: #fff;
+    font-size: 1.6rem;    /* 포지션 */
+    position: absolute;
+    right: 10rem;
+    bottom: 1.6rem;
+    z-index: 10;
+}
+.autoplay-controll button{
     cursor: pointer;
-
 }
-.slick-dots button:hover,
-.slick-active button {
-    background-color: #ff8800;
-}
-
-
 /* ======================= */
 /* main */
 /* ======================= */
@@ -306,7 +357,7 @@ section h2 {
 .md_pick_menu .md_pick_area h3{
     font-size: 2.4rem;
     font-weight: 500;
-    text-align: center;
+    padding-left: 5rem;
 }
 .md_pick_area_detail{
     margin-top: 35px;
@@ -539,14 +590,10 @@ footer{
 }
 .footer_left img {
     margin-top: 2rem;
-
 }
-.footer_left > div:nth-child(even) {
-    margin-left: 50px;
-    padding-left: 50px;
-    border-left: 1px solid #929294;
+.footer_info_list{
+    margin-left: 5.5rem;
 }
-
 .footer_gnb{
     width: 100%;
     color: #929294;

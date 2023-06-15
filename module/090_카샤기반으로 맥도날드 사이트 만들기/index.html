@@ -8,19 +8,13 @@
     <title>맥도날드</title>
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="./img/logo.png">
     <link rel="apple-touch-icon=precomposed" href="./img/logo.png">
-    <!-- 제이쿼리 -->
-    <script src="./js/jquery-1.12.4.min.js"></script>
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/jquery-3.4.1.min.js"></script>
     <!-- 코딩할때 웹킷 안써줘도 자동으로 브라우저에 인식하게 해줌 : 접두어 일일히 쓰는거 -->
     <script src="./js/prefixfree.min.js"></script>
     <!-- 박스슬라이더 -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
@@ -32,10 +26,14 @@
 <body>
     <div id="wrap">
         <!-- aside -->
-        <aside>
-            <a href="#" class="top_sub w1300">
+        <aside class="top_banner">
+            <a href="#" class="top_sub w1300 eventNone">
                 <span>
                     회원가입 시 아이스 아메리카노 쿠폰을 드립니다!&nbsp;&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </span>
+                <span class="close_btn">
+                    오늘 하루 더 보지 않기&nbsp;&nbsp;
+                    <i class="fa fa-times" aria-hidden="true"></i>
                 </span>
             </a>
         </aside>
@@ -94,7 +92,6 @@
                                 <li><a href="#">맥도날드 품질이야기</a></li>
                             </ul>
                         </li>
-                        <li class="search"><i class="fa fa-search" aria-hidden="true"></i></li>
                     </ul>
                 </nav>
             </div>
@@ -103,18 +100,32 @@
         
         <!-- article -->
         <article>
-            <div class="slider">
-                <div><a href="#"><img src="./images/main-banner01.jpg" alt=""></a></div>
-                <div><a href="#"><img src="./images/main-banner02.jpg" alt=""></a></div>
-                <div><a href="#"><img src="./images/main-banner03.jpg" alt=""></a></div>
-                <div><a href="#"><img src="./images/main-banner04.jpg" alt=""></a></div>
-                <div><a href="#"><img src="./images/main-banner05.jpg" alt=""></a></div>
-                <div><a href="#"><img src="./images/main-banner06.jpg" alt=""></a></div>
-                <div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner01.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner02.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner03.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner04.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner05.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner06.jpg" alt=""></a></div>
+                    <!-- <div>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/ifC2G1jjUfM?autoplay=1&mute=1&loop=1&playlist=ifC2G1jjUfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div> -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                  <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                  </svg>
+                  <span></span>
+                </div>
+                <div class="autoplay-controll">
+                    <!-- <button class="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                    <button class="pause"><i class="fa fa-pause" aria-hidden="true"></i></button> -->
                 </div>
             </div>
-            <div class="progressbar"></div>
         </article>
         <!-- article -->
 
@@ -231,7 +242,6 @@
                                 <li><a href="#">이용약관</a></li>
                                 <li><a href="#">쇼핑몰&nbsp;이용안내</a></li>
                                 <li><a href="#">개인정보처리방침</a></li>
-                                <li><a href="#">고객센터</a></li>
                                 <li><a href="#">1:1문의</a></li>
                                 <li><a href="#">매장안내</a></li>
                             </ul>
@@ -273,9 +283,11 @@
             </a>
         </div>
         <!-- /top 버튼 -->
+        <div class="alert hidden">죄송합니다. 해당페이지는 준비중입니다.</div>
     </div>
 
 </body>
+<!-- 박스 슬라이드 플러그인 -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="./js/script.js"></script>
-
 </html>
