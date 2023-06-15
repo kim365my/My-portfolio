@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="./img/icon_32x32.png">
-    <link rel="apple-touch-icon=precomposed" href="./img/icon_180x180.png">
+    <link rel="shortcut icon" href="./img/logo.png">
+    <link rel="apple-touch-icon=precomposed" href="./img/logo.png">
     <!-- 제이쿼리 -->
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/jquery-3.3.1.min.js"></script>
@@ -19,9 +19,8 @@
     <!-- 코딩할때 웹킷 안써줘도 자동으로 브라우저에 인식하게 해줌 : 접두어 일일히 쓰는거 -->
     <script src="./js/prefixfree.min.js"></script>
     <!-- 박스슬라이더 -->
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
@@ -47,12 +46,9 @@
             <div class="root_lnb">
                 <nav class="w1300">
                     <ul class="lnb">
-                        <li>
-                            <a href="#">로그인</a>
-                        </li>
-                        <li>
-                            <a href="#">회원가입</a>
-                        </li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">마이페이지</a></li>
                     </ul>
                 </nav>
             </div>
@@ -98,7 +94,6 @@
                                 <li><a href="#">맥도날드 품질이야기</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">마이페이지</a></li>
                         <li class="search"><i class="fa fa-search" aria-hidden="true"></i></li>
                     </ul>
                 </nav>
@@ -143,7 +138,7 @@
                             </ul>
                         </div>
                         <p>
-                            <a href="#" class="moreBtn">더보기&nbsp;&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                            <a href="#" target="_blank" class="moreBtn">더보기&nbsp;&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                         </p>
                     </div>
                 </div>
@@ -209,33 +204,49 @@
         <!-- content -->
         <!-- footer -->
         <footer>
+            <div class="footer_company">
+                <nav class="w1300">
+                    <ul class="footer_company_lnb">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">채용안내</a></li>
+                        <li><a href="#">가맹점 개설문의</a></li>
+                        <li><a href="#">사이버 감사실</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                    <ul class="footer_sns">
+                        <li><a href="https://www.facebook.com/McDonaldsKorea"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/McDonalds_kr/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.youtube.com/user/McDonaldsKor"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
             <div class="footer_Info w1300">
                 <div class="footer_left">
-                    <nav class="footer_gnb">
-                        <ul class="footer_gnb">
-                            <li><a href="#">이용약관</a></li>
-                            <li><a href="#">쇼핑몰&nbsp;이용안내</a></li>
-                            <li><a href="#">개인정보처리방침</a></li>
-                            <li><a href="#">고객센터</a></li>
-                            <li><a href="#">1:1문의</a></li>
-                            <li><a href="#">매장안내</a></li>
-                        </ul>
-                    </nav>
-                    <div class="footer_info">
+                    <div class="footer_logo">
+                        <img src="./images/logo.png" alt="footer_logo">
+                    </div>
+                    <div class="footer_info_list">
+                        <nav>
+                            <ul class="footer_gnb">
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">쇼핑몰&nbsp;이용안내</a></li>
+                                <li><a href="#">개인정보처리방침</a></li>
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">1:1문의</a></li>
+                                <li><a href="#">매장안내</a></li>
+                            </ul>
+                        </nav>
                         <p>
-                            주식회사엠씨웹 | 대표이사 : MCSSAM | <br>
-                            사업자등록번호 :120-21-05435 | 통신판매업신고번호 : 제 2021-서울강남-00810호 <br>
-                            주소: 서울특별시 강남구 아차산로 123 | 대표전화 : 02-3424-3432 | 팩스 : 02-446-7323 
+                            한국 맥도날드(유) | 대표이사 : 앤토니 마티네즈 | 사업자등록번호 : 101-81-26409 <br>
+                            주소: 서울특별시 종로구 종로 51 종로타워 14층 | 대표전화 : 1600-5252
                         </p>
                         <p class="footer_mcssam">
-                            <span>
-                                고객님의 안전거래를 위해 현금 결제시, <br>
-                                구매안전 서비스를 이용하실 수 있습니다. [가입사실확인]
-                            </span>
-                            <img src="https://place-hold.it/130x40" alt="거래확인안전이미지">
+                            고객님의 안전거래를 위해 현금 결제시, <br>
+                            구매안전 서비스를 이용하실 수 있습니다. [가입사실확인]
                         </p>
                         <p>
-                            Copyright &copy; 2022 MCWEB., Ltd All Rights Reserved
+                            COPYRIGHT &copy; 2014 ALL RIGHTS RESERVED BY MCDONALD'S™ <br>
+                            골든 아치 로고와 "I'M LOVIN' IT"은 맥도날드 고유의 상표입니다.
                         </p>
                     </div>
                 </div>
@@ -256,7 +267,7 @@
         <!-- /footer -->
 
         <!-- top 버튼 -->
-        <div class="top">
+        <div class="top hidden">
             <a href="#" class="eventNone">
                 <i class="fa fa-chevron-up fa-3x" aria-hidden="true"></i>
             </a>
@@ -266,4 +277,5 @@
 
 </body>
 <script src="./js/script.js"></script>
+
 </html>

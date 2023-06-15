@@ -1,18 +1,57 @@
 // --------------------------------
 // 미구현기능 클릭시 안내문
 // --------------------------------
-$(function(){
-    $(`<div class="alert">죄송합니다. 해당페이지는 준비중입니다.</div>`).appendTo("#wrap");
-    $("a[href='#']").not(".eventNone").on("click", function(e){
-        e.preventDefault();
-        $(".alert").stop().fadeIn(700)
-        setTimeout(() => {
-            $(".alert").stop().fadeOut(700);
-        }, 1000);
-    })
+$(`<div class="alert">죄송합니다. 해당페이지는 준비중입니다.</div>`).appendTo("#wrap");
+$("a[href='#']").not(".eventNone").on("click", function(e){
+    e.preventDefault();
+    $(".alert").stop().fadeIn(700)
+    setTimeout(() => {
+        $(".alert").stop().fadeOut(700);
+    }, 1000);
 })
 
+// --------------------------------
+// 스크롤 이벤트
+// --------------------------------
+const topBtnWrap = document.querySelector(".top");
+window.addEventListener("scroll", (e) => {
+    // 변수 선언
+    let scroll = window.scrollY;
+    if(scroll < 100) {
+        topBtnWrap.classList.add("hidden")
+    } else {
+        topBtnWrap.classList.remove("hidden");
+    }
+})
 
+// --------------------------------
+// 맨 위로 이동
+// --------------------------------
+const topBtn = document.querySelector(".top a");
+topBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    scrollToTop();
+});
+
+/** 위로 부드럽게 올라가는 메소드 */
+function scrollToTop() {
+    const between = 16;
+    const scroll = window.setInterval(() => {
+        const pos = window.scrollY;
+        const step = 50; 
+        if(pos > 0) {
+            window.scrollTo(0, pos - step);
+        } else {
+            window.clearInterval(scroll);
+        }
+    }, between);
+}
+
+
+
+// --------------------------------
+// 썸머크리스피월드 아이프레임 동영상 바꾸는 메소드
+// --------------------------------
 const realTimeBtn = document.querySelectorAll(".real_time_btn a");
 const realTimeFrame = document.querySelector(".real_time iframe");
 const moreBtn = document.querySelector(".real_time .moreBtn");
@@ -37,7 +76,7 @@ realTimeBtn.forEach((e) =>{
 // --------------------------------
 // snb 메뉴 표시
 // --------------------------------
-const totalGnbBtn = document.querySelectorAll(".gnb > li");
+const totalGnbBtn = document.querySelectorAll(".gnb > li > a");
 const total = document.querySelectorAll(".snb");
 const gnb = document.querySelector(".gnb");
 totalGnbBtn.forEach((e)=> {
@@ -54,29 +93,14 @@ gnb.addEventListener("mouseleave", () => {
 // --------------------------------
 // 박스 슬라이더
 // --------------------------------
-// const slideTimes = ["6","10","10"];
-const slider = $('.slider').bxSlider({
-    slideMargin:0, // 슬라이드간의 마진
+const slider = $('.slider').slick({
+    slidesToShow : 1, // 보여지는 슬라이드 갯수
+    dots :true, // 도트 
     // 오토슬라이드
-    auto: true,
-    autoControls: true,
-    autoHover: true,   // 마우스 호버시 정지 여부
-    pager: true,
-    // 오토슬라이드 start/pause버튼 합치기
-    autoControlsCombine:true,
-    // 텍스트 없게
-    startText:" ",
-    stopText:" ",
-    // 오류픽스 : 터치로 이동되는 것을 막아서 이미지 클릭이 이동 되도록
-    touchEnabled : (navigator.maxTouchPoints > 0),
-    onSlideAfter : function(el, old, current){
-        slider.stopAuto();
-        slider.pause = (6 * 1000) || 5000; // 스피드 조절
-        console.log(slider);
-        
-    }
+    autoplay: true,
+    autoplaySpeed: 3000,
+    prevArrow : `<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>`,
+    nextArrow : `<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>`,
+    pauseOnDotsHover : true, // 점에 호버시 일시중지
 
 });
-
-var current = slider.getCurrentSlide(); // 현재 활성 슬라이드 가져오기
-console.log(current);
