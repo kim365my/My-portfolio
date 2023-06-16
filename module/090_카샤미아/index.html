@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="포트폴리오, 플롯레이아웃">
+    <title>서브웨이</title>
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/icon_32x32.png">
+    <link rel="apple-touch-icon=precomposed" href="./img/icon_180x180.png">
+
+    <!-- 코딩할때 웹킷 안써줘도 자동으로 브라우저에 인식하게 해줌 : 접두어 일일히 쓰는거 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 박스슬라이더 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <!-- 노토산스가 사파리 계열에서 적용이 안된걸 적용할 수 있게 하는거 -->
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <!-- 커스텀 css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="wrap">
+        <!-- aside -->
+        <aside class="top_banner">
+            <a href="#" class="top_sub w1300 eventNone">
+                <span>
+                    회원가입 시 아이스 아메리카노 쿠폰을 드립니다!&nbsp;&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </span>
+                <span class="close_btn">
+                    오늘 하루 더 보지 않기&nbsp;&nbsp;
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </a>
+        </aside>
+        <!-- aside -->
+        
+        <!-- header -->
+        <header>
+            <div class="lnb_all">
+                <div class="root_lnb w1300">
+                    <div class="logo_wrap">
+                        <h1 class="logo"><a href="#">Fira</a></h1>
+                        <label for="search">
+                            <input type="search" name="search" id="search" class="header_search">
+                            <a href="#" class="search_btn">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <nav class="local">
+                        <ul class="lnb">
+                            <li>
+                                <a href="#">로그인</a>
+                            </li>
+                            <li>
+                                <a href="#">회원가입</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="gnb_all">
+                <nav class="global w1300">
+                    <h2 class="total_gnb_wrap">
+                        <a href="#">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                            <span>전체 메뉴 확인하기</span>
+                        </a>
+                        <div class="total_gnb">
+                            <ul>
+                                <li><a href="#">침실가구</a></li>
+                                <li><a href="#">옷장/수납장</a></li>
+                                <li><a href="#">거실가구</a></li>
+                                <li><a href="#">주방가구</a></li>
+                                <li><a href="#">서재가구</a></li>
+                                <li><a href="#">유아/키즈룸</a></li>
+                                <li><a href="#">주방용품</a></li>
+                                <li><a href="#">홈인테리어</a></li>
+                                <li><a href="#">라이프</a></li>
+                                <li><a href="#">패브릭</a></li>
+                                <li><a href="#">가전</a></li>
+                            </ul>
+                        </div>
+                    </h2>
+                    <ul class="gnb">
+                        <li><a href="#">SALE</a></li>
+                        <li><a href="#">BEST</a></li>
+                        <li><a href="#">OUTLET</a></li>
+                        <li><a href="#">BRAND</a></li>
+                        <li><a href="#">MAGAZNE</a></li>
+                        <li><a href="#">EVENT</a></li>
+                    </ul>
+                    <ul class="snb">
+                        <li><a href="#">주문/배송</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">매장안내</a></li>
+                    </ul>    
+                </nav>
+            </div>
+        </header>
+        <!-- header -->
+        
+        <!-- article -->
+        <article>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner01.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner02.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner03.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner04.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner05.png" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner06.png" alt=""></a></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-controll-wrap">                    
+                    <div class="autoplay-controll">
+                        <button class="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                        <button class="pause hidden"><i class="fa fa-pause" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </article>
+        <!-- article -->
+
+        <!-- content -->
+        <main role="main">
+            <!-- section 01 -->
+            <section class="md_pick w1300">
+                <h2 class="md_pick_title">오늘 하루는 어떠셨나요?</h2>
+                <div class="md_pick_itme_wrap">
+                    <ul>
+                        <li class="md_pick_item"><a href="#"><img src="" alt=""></a></li>
+                        <li class="md_pick_item"><a href="#"><img src="" alt=""></a></li>
+                        <li class="md_pick_item"><a href="#"><img src="" alt=""></a></li>
+                        <li class="md_pick_item"><a href="#"><img src="" alt=""></a></li>
+                        <li class="md_pick_item"><a href="#"><img src="" alt=""></a></li>
+                        <li class="md_pick_item"><a href="#"><img src="" alt=""></a></li>
+                        <li class="md_pick_item"><a href="#"><img src="" alt=""></a></li>
+                        <li class="md_pick_item"><a href="#"><img src="" alt=""></a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- section 01 -->
+            
+            <!-- section 02 -->
+            <section class="real_title">
+                <h2 class="real_time w1300">
+                    <ul>
+                        <li><img src="https://place-hold.it/234x80/050502" alt="리얼타임타이틀"></li>
+                        <li><a href="#">#다리붓기쏘옥</a></li>
+                        <li><a href="#">#비포에프터</a></li>
+                        <li><a href="#">#피부탄력WarkUp</a></li>
+                        <li><a href="#">#사용방법</a></li>
+                        <li><img src="https://place-hold.it/130x32" alt="영상전체보기"></li>
+                    </ul>
+                    <figure>
+                        <!-- <img src="https://place-hold.it/800x450/050507" alt="영상전체보기"> -->
+                        <img src="./images/not-pot-FGR6B0ZP2dg-unsplash.jpg" alt="영상전체보기">
+                    </figure>
+                </h2>
+            </section>
+            <!-- section 02 -->
+            
+            <!-- section 03 -->
+            <section class="caxa w1300">
+                <h2><img src="https://place-hold.it/260x32/848484" alt="카사타이틀"></h2>
+                <div class="caxa_sns">
+                    <ul>
+                        <!-- <li><a href="#"><img src="https://place-hold.it/185x185/acb6b8" alt="제품01"></a></li> -->
+                        <li><a href="#"><img loading="lazy" src="./images/not-pot-FGR6B0ZP2dg-unsplash.jpg" alt="제품01"></a></li>
+                        <li><a href="#"><img loading="lazy" src="./images/not-pot-_hcqEGLC1LM-unsplash.jpg" alt="제품02"></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img loading="lazy" src="./images/amy-shamblen-xwM61TPMlYk-unsplash.jpg" alt="제품03"></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img loading="lazy" src="./images/not-pot-Ch5lyw7HcfY-unsplash.jpg" alt="제품04"></a></li>
+                        <li><a href="#"><img loading="lazy" src="./images/not-pot-FGR6B0ZP2dg-unsplash.jpg" alt="제품05"></a></li>
+                        <li><a href="#"><img loading="lazy" src="./images/not-pot-HG9LZPvTtok-unsplash.jpg" alt="제품06"></a></li>
+                        <li><a href="#"><img loading="lazy" src="./images/not-pot-HTxSDEqoiek-unsplash.jpg" alt="제품07"></a></li>
+                        <li><a href="#"><img loading="lazy" src="./images/not-pot-mFL-IbpNkT4-unsplash.jpg" alt="제품08"></a></li>
+                        <li><a href="#"><img loading="lazy" src="./images/pmv-chamara-dMjkQJs58uo-unsplash (1).jpg" alt="제품09"></a></li>
+                    </ul>
+                </div>
+                <p>
+                    <a href="#"><img src="https://place-hold.it/130x32/848484" alt="전체리뷰보기"></a>
+                </p>
+            </section>
+            <!-- section 03 -->
+        </main>
+        <!-- content -->
+        <!-- footer -->
+        <footer>
+            <div class="footer_Info w1300">
+                <div class="footer_left">
+                    <div class="footer_info_list">
+                        <nav>
+                            <ul class="footer_gnb">
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">쇼핑몰&nbsp;이용안내</a></li>
+                                <li><a href="#">개인정보처리방침</a></li>
+                                <li><a href="#">1:1문의</a></li>
+                                <li><a href="#">매장안내</a></li>
+                            </ul>
+                        </nav>
+                        <p>
+                            한국 맥도날드(유) | 대표이사 : 앤토니 마티네즈 | 사업자등록번호 : 101-81-26409 <br>
+                            주소: 서울특별시 종로구 종로 51 종로타워 14층 | 대표전화 : 1600-5252
+                        </p>
+                        <p class="footer_mcssam">
+                            고객님의 안전거래를 위해 현금 결제시, <br>
+                            구매안전 서비스를 이용하실 수 있습니다. [가입사실확인]
+                        </p>
+                        <p>
+                            COPYRIGHT &copy; 2014 ALL RIGHTS RESERVED BY MCDONALD'S™ <br>
+                            골든 아치 로고와 "I'M LOVIN' IT"은 맥도날드 고유의 상표입니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="footer_right">
+                    <dl>
+                        <dt>고객만족센터</dt>
+                        <dd>080-555-9812</dd>
+                        <dd>평일 09:00~18:00 | 점심 13:00~14:00</dd>
+                    </dl>
+                    <dl>
+                        <dt>BANK INFO</dt>
+                        <dd>국민은행 801-32-323236-39</dd>
+                        <dd>예금주:(주)엠씨웹</dd>
+                    </dl>
+                </div>
+            </div>
+        </footer>
+        <!-- /footer -->
+
+        <!-- top 버튼 -->
+        <div class="top hidden">
+            <a href="#" class="eventNone">
+                <i class="fa fa-chevron-up fa-3x" aria-hidden="true"></i>
+            </a>
+        </div>
+        <!-- /top 버튼 -->
+        <div class="alert hidden">죄송합니다. 해당페이지는 준비중입니다.</div>
+    </div>
+
+</body>
+<!-- 박스 슬라이드 플러그인 -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/script.js"></script>
+</html>
