@@ -62,7 +62,7 @@ header .gnb li a{
 }
 header .gnb li.check,
 header .gnb li:hover{
-    color: var(--main-color);
+    color: #0046ff;
     border-bottom: 3px solid #000;
 }
 /* ------------------- */
@@ -82,7 +82,7 @@ main > section > h2 {
     font-size: 2.2rem;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 3px solid var(--main-color);
+    border-bottom: 3px solid #0046ff;
 }
 
 /* #about_me */
@@ -142,7 +142,7 @@ main > section > h2 {
     padding: 10px;
 }
 #project .list a:hover{
-    background-color:var(--main-color);
+    background-color:#0046ff;
     color: white;
 }
 #project .list ul > li:nth-child(even){
@@ -176,7 +176,7 @@ main > section > h2 {
     font-size: 0.8rem;
 }
 #project .pageLink{
-    color: var(--main-color);
+    color: #0046ff;
     font: 600 0.8rem/1.6 "Raleway", sans-serif;
 }
 #project .innerPage {

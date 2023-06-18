@@ -49,7 +49,7 @@ header{
     font-weight: 800;
     transition: all 0.5s;
 }
-.logo:hover{color: var(--main-color);}
+.logo:hover{color: #0046ff;}
 
 /* header .gnb */
 .gnb ul{
@@ -70,7 +70,7 @@ header{
     transition: all 0.5s;
 }
 .gnb a:hover{
-    color: var(--main-color);
+    color: #0046ff;
     border-bottom: 5px solid #000;
 }
 

@@ -8,16 +8,19 @@
     <title>맥도날드</title>
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- 파비콘 -->
-    <link rel="shortcut icon" href="./img/logo.png">
-    <link rel="apple-touch-icon=precomposed" href="./img/logo.png">
+    <!-- 박스 슬라이드 플러그인 -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- 코딩할때 웹킷 안써줘도 자동으로 브라우저에 인식하게 해줌 : 접두어 일일히 쓰는거 -->
     <script src="./js/prefixfree.min.js"></script>
-    <!-- 박스슬라이더 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/icon/favmc32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/icon/montblanc_fav144.png">    
     <!-- CSS -->
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/font.css">
     <!-- 노토산스가 사파리 계열에서 적용이 안된걸 적용할 수 있게 하는거 -->
     <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
     <!-- 커스텀 css -->
@@ -100,38 +103,29 @@
         
         <!-- article -->
         <article>
-            <div class="swiper mySwiper">
+            <div class="swiper main-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><a href="#"><img src="./images/main-banner01.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner02.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner03.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner04.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner05.jpg" alt=""></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner06.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner02.jpg" loading="lazy" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner03.jpg" loading="lazy" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner04.jpg" loading="lazy" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner05.jpg" loading="lazy" alt=""></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./images/main-banner06.jpg" loading="lazy" alt=""></a></div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-controll-wrap">                    
                     <div class="autoplay-controll">
-                        <button class="play"><i class="fa fa-play" aria-hidden="true"></i></button>
-                        <button class="pause hidden"><i class="fa fa-pause" aria-hidden="true"></i></button>
+                        <button class="play hidden"><i class="fa fa-play" aria-hidden="true"></i></button>
+                        <button class="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div>
+                        <div class="swiper-pagination"></div>
+                        <div class="autoplay-progress">
+                            <div></div>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div class="autoplay-progress">
-                  <svg viewBox="0 0 48 48">
-                    <defs>
-                        <filter id="f1" x="0" y="0" width="200%" height="200%">
-                            <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
-                            <feColorMatrix result="matrixOut" in="offOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
-                            <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10" />
-                            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
-                        </filter>
-                    </defs>
-                    <circle cx="24" cy="24" r="20"></circle>
-                  </svg>
-                  <span></span>
-                </div> -->
             </div>
         </article>
         <!-- article -->
@@ -151,8 +145,8 @@
                         </h3>
                         <div class="md_pick_area_detail">
                             <ul>
-                                <li><a href="#"><img src="images/best-menu (2).jpg" alt="엠디픽제품01" loading="lazy"></a></li>
-                                <li><a href="#"><img src="images/best-menu (3).jpg" alt="엠디픽제품02" loading="lazy"></a></li>
+                                <li><a href="#"><img src="images/best-menu (2).jpg" alt="엠디픽제품01" loading="lazy" loading="lazy"></a></li>
+                                <li><a href="#"><img src="images/best-menu (3).jpg" alt="엠디픽제품02" loading="lazy" loading="lazy"></a></li>
                             </ul>
                         </div>
                         <p>
@@ -241,7 +235,7 @@
             <div class="footer_Info w1300">
                 <div class="footer_left">
                     <div class="footer_logo">
-                        <img src="./images/logo.png" alt="footer_logo">
+                        <img src="./images/logo.png" loading="lazy" alt="footer_logo">
                     </div>
                     <div class="footer_info_list">
                         <nav>
@@ -294,7 +288,5 @@
     </div>
 
 </body>
-<!-- 박스 슬라이드 플러그인 -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="./js/script.js"></script>
 </html>

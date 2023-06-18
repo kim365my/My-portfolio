@@ -95,7 +95,7 @@ function scrollToTop() {
     const between = 16;
     const scroll = window.setInterval(() => {
         const pos = window.scrollY;
-        const step = 50; 
+        const step = 100; 
         if(pos > 0) {
             window.scrollTo(0, pos - step);
         } else {
@@ -132,33 +132,29 @@ realTimeBtn.forEach((e) =>{
 // --------------------------------
 // 박스 슬라이더
 // --------------------------------
-const progressCircle = document.querySelector(".autoplay-progress svg");
-const progressContent = document.querySelector(".autoplay-progress span");
+const progressBar = document.querySelector(".autoplay-progress div");
 
-const swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  loop:true,
-  autoplay: {
-    delay: 5000, // 오토플레이 시간
-    disableOnInteraction: false,
-    // pauseOnMouseEnter :true
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-
-  },
-  on: {
-    autoplayTimeLeft(s, time, progress) {
-      progressCircle.style.setProperty("--progress", 1 - progress);
-      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+const swiper = new Swiper(".main-slider", {
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop:true, // 반복
+    autoplay: {
+        delay: 5000, // 오토플레이 시간
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    on: {
+        autoplayTimeLeft(s, time, progress) {
+            progressBar.style.width = `calc(100% - ${Math.ceil(progress * 100)}%)`;
+        }
     }
-  }
 });
 
 const playBtn = document.querySelector(".play");
@@ -166,14 +162,11 @@ const pauseBtn = document.querySelector(".pause");
 
 playBtn.addEventListener("click", () => {
     swiper.autoplay.resume();
-    // console.log(swiper.autoplay.running);
     playBtn.classList.add("hidden");
     pauseBtn.classList.remove("hidden");
 })
 pauseBtn.addEventListener("click", () => {
     swiper.autoplay.pause();
-    // console.log(swiper.autoplay.paused);
-    // console.log(swiper.autoplay.timeLeft);
     pauseBtn.classList.add("hidden");
     playBtn.classList.remove("hidden");
 })

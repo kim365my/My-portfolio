@@ -64,7 +64,13 @@ button {
 	display: block;
 	clear: both;
 }
-
+/* 인풋태그 검색버튼 x 없애기 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;
+}
 /* 모든 환경에 안보여도 되지만, 반드시 입력해야 할 html 태그가 존재(웹 접근성 때문에) */
 /* 그때, 해당 요소를 숨기기 위해 사용되는 class */
 .blind{

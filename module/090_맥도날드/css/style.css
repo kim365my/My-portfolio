@@ -1,4 +1,6 @@
 @charset "utf-8";
+/* ------------- */
+/* 공통 CSS */
 html,
 body{
     width: 100%;
@@ -11,13 +13,14 @@ body{
 #wrap{
     min-width: 1300px;
 }
+
+/* ------------- */
 /* safe area */
 .w1300{
-    max-width: 1300px;
+    min-width: 1300px;
     width: 1300px;
     margin: 0 auto;
 }
-
 
 .hidden {
     display: none;
@@ -123,7 +126,7 @@ header{
     color: #fff;
 }
 .root_lnb .lnb li:first-child a {
-    background-color: #ff8800;
+    background-color: #ffbc0d;
 }
 /* --------------------- */
 /* gnb 메뉴 스타일 */
@@ -185,7 +188,7 @@ header{
     height: 400px;
     background-color: #fff;
     border-top: 1px solid #ddd;
-    border-bottom: 3px solid #ff8800;
+    border-bottom: 3px solid #ffbc0d;
 
     /* 포지션 */
     position: absolute;
@@ -236,7 +239,7 @@ header{
     animation: showSnb 1.5s;
 }
 .snb li:hover a{
-    border-bottom: 2px solid #ff8800;
+    border-bottom: 2px solid #ffbc0d;
 }
 
 /* ======================= */
@@ -267,12 +270,6 @@ article .swiper iframe{
     align-items: center;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 .swiper-button-next,
 .swiper-button-prev{
     color: #fff;
@@ -296,79 +293,73 @@ article .swiper iframe{
     width: 40px;
     height: 40px;
     margin-right: 10px;
-    border: 3px solid #ff8800;
+    border: 3px solid #fff;
     border-radius: 100%;
     text-align: center;
     /* 커서 */
     cursor: pointer;
 }
 .autoplay-controll i{
-    color: #ff8800;
+    color: #ffbc0d;
     font-size: 1.6rem;
 }
 /* 버튼 호버시 */
 .autoplay-controll button:hover{
-    border: 3px solid #cf5300;
+    border: 3px solid #ff6600;
 }
 .autoplay-controll button:hover i{
-    color: #cf5300;
+    color: #ff6600;
 }
 /* 현재위치  */
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets{
     position: static;
 }
-.swiper-pagination-bullet{
-    width: 7.5rem;
-    height: 100%;
-    background: transparent;
-    transition: all 0.5s;
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0;
 }
-
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child){
+    margin-right: 10px;
+}
+.swiper-pagination-bullet{
+    padding-top: 1rem;
+    width: 7.5rem;
+    height: 2.5rem;
+    background: transparent;
+    transition: background 0.5s;
+}
 .swiper-pagination-bullet::after{
     content: "";
     display: block;
     width: 100%;
-    height: .5rem;
+    height: 0.8rem;
     border-radius: 25px;
     background: var(--swiper-pagination-bullet-inactive-color,#000);
 }
 .swiper-pagination-bullet-active::after{
-    background: #ff8800;
+    background: #ffbc0d;
 }
 
 
 /* 프로그래스바 */
 .autoplay-progress {
+    width: 100%;
+    height: 0.8rem;
+    border-radius: 25px;
+    background-color: #fff;
+    overflow: hidden;
     /* 포지션 */
-    position: absolute;
-    right: 1.6rem;
-    bottom: 1.6rem;
-    z-index: 10;
-    width: 48px;
-    height: 48px;
-    /* 플렉스 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #fff;
+    position: relative;
 }
 
-.autoplay-progress svg {
-    --progress: 0;
-    position: absolute;
-    left: 0;
-    top: 0px;
-    z-index: 10;
-    width: 100%;
+.autoplay-progress div {
+    width: 0%;
     height: 100%;
-    stroke-width: 4px;
-    stroke: #fff;
-    fill: none;
-    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
-    stroke-dasharray: 125.6;
-    transform: rotate(-90deg);
-    text-shadow: 0 0 2rem #686868;
+    border-radius: 0 25px 25px 0;
+    background-color: #ffbc0d;
+
+    /* 포지션 */
+    position: absolute;
+    
 }
 
 
@@ -485,10 +476,12 @@ section h2 {
 .real_title .real_time figure{
     width: 800px;
     height: 450px;
+    overflow: hidden;
 }
 .real_title .real_time figure iframe{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .real_title .real_time ul{
     text-align: center;
@@ -519,7 +512,7 @@ section h2 {
 .real_title .real_time .real_time_play,
 .real_title .real_time li:not(:last-child) a:hover{
     color: #fff;
-    background-color: #ff3434;
+    background-color: #ffbc0d;
 }
 
 .real_title .real_time a.moreBtn{
@@ -558,6 +551,19 @@ section h2 {
     position: relative;
     border: 1px solid #ddd;
 }
+.caxa_sns ul:first-child li a{
+    margin-left: 0;
+}
+.caxa_sns li:nth-child(odd) a{
+    margin-bottom: 5px;
+}
+.caxa_sns ul:last-child{
+    height: 380px;
+    /* 플렉스 */
+    display: flex;
+    flex-flow: column wrap;
+}
+/* 호버시 이미지 스케일 */
 .caxa_sns li a:hover::before{
     content: "";
     width: 100%;
@@ -572,19 +578,8 @@ section h2 {
 .caxa_sns li a:hover img{
     transform: scale(1.15);
 }
-.caxa_sns ul:first-child li{
-    margin-left: 0;
-}
-.caxa_sns li:nth-child(odd) a{
-    margin-bottom: 5px;
-}
-.caxa_sns ul:last-child{
-    height: 380px;
-    /* 플렉스 */
-    display: flex;
-    flex-flow: column wrap;
-}
-.caxa_sns+p{
+/* 더보기 링크 */
+.caxa_sns + p{
     text-align: center;
     margin-top: 28px;
 }
@@ -649,6 +644,7 @@ footer{
 }
 .footer_info_list{
     margin-left: 5.5rem;
+    font-size: 1.2rem;
 }
 .footer_gnb{
     width: 100%;

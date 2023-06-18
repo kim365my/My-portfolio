@@ -73,7 +73,7 @@ function scrollToTop() {
     const between = 16;
     const scroll = window.setInterval(() => {
         const pos = window.scrollY;
-        const step = 50; 
+        const step = 100; 
         if(pos > 0) {
             window.scrollTo(0, pos - step);
         } else {
@@ -82,65 +82,94 @@ function scrollToTop() {
     }, between);
 }
 
-
-// --------------------------------
-// 썸머크리스피월드 아이프레임 동영상 바꾸는 메소드
-// --------------------------------
-const realTimeBtn = document.querySelectorAll(".real_time_btn a");
-const realTimeFrame = document.querySelector(".real_time iframe");
-const moreBtn = document.querySelector(".real_time .moreBtn");
-const YOUYUBE = "https://youtu.be/";
-const RealTimePlay = "real_time_play";
-realTimeBtn.forEach((e) =>{
-    e.addEventListener("click", (event) =>{
-        event.preventDefault();
-        // 클래스 추가
-        realTimeBtn.forEach((btn) => btn.classList.remove(RealTimePlay));
-        e.classList.add(RealTimePlay);
-        
-        // 아이프레임에 해당 링크 넣기
-        const link = e.getAttribute("href");
-        const links = link.split("/");
-
-        realTimeFrame.setAttribute("src", link);
-        moreBtn.setAttribute("href", YOUYUBE + links[links.length - 1]);
-    })
-})
-
 // --------------------------------
 // snb 메뉴 표시
 // --------------------------------
 const totalGnbBtn = document.querySelector(".total_gnb_wrap");
+const totalGnb = document.querySelector(".total_gnb");
 const gnb = document.querySelector(".gnb_all");
+const totalGnbUlBtn = document.querySelectorAll(".total_gnb_ul > li");
+const selectListBtn = document.querySelectorAll(".select_list > li");
+const CHECK = "check";
+
 totalGnbBtn.addEventListener("mouseenter", () => {
     gnb.classList.add("on");
+    totalGnb.classList.add("on");
 });    
 
 gnb.addEventListener("mouseleave", () => {
+    totalGnbUlBtn.forEach((item) => item.classList.remove(CHECK));
+    selectListBtn.forEach((item) => item.classList.remove(CHECK));
+    totalGnbUlBtn[0].classList.add(CHECK);
+    selectListBtn[0].classList.add(CHECK);
+
     gnb.classList.remove("on");
+    totalGnb.classList.remove("on");
 });
+
+
+totalGnbUlBtn.forEach((e) => {
+    e.addEventListener("mouseenter", () => {
+        if(!e.classList.contains(CHECK)){
+            totalGnbUlBtn.forEach((item) => item.classList.remove(CHECK));
+            e.classList.add(CHECK);
+        }
+    });
+})
+// 자식요소
+selectListBtn.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+        if(!item.classList.contains(CHECK)) {
+            selectListBtn.forEach((item) => item.classList.remove(CHECK));
+            item.classList.add(CHECK);
+        }
+    });
+})
+
+// --------------------------------
+// md pick 상품 표시
+// --------------------------------
+const mdPickBtn = document.querySelectorAll(".md_pick_select input");
+const mdPickList = document.querySelectorAll(".md_pick_itme_wrap");
+mdPickBtn.forEach((e, index) => {
+    e.addEventListener("click", () => {
+        mdPickList.forEach((item) => item.classList.remove(CHECK));
+        mdPickList[index].classList.add(CHECK);
+    })
+})
 
 // --------------------------------
 // 박스 슬라이더
 // --------------------------------
-const swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  loop:true,
-  autoplay: {
-    delay: 5000, // 오토플레이 시간
-    disableOnInteraction: false,
-    // pauseOnMouseEnter :true
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+const swiper = new Swiper(".main-slider", {
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: ["-20%", 0, -1],
+      },
+      next: {
+        translate: ["100%", 0, 0],
+      },
+    },
+    parallax: true,
+    loop:true,
+    loopedSlides: 1,
+    autoplay: {
+        delay: 5000, // 오토플레이 시간
+        disableOnInteraction: false,
+        // pauseOnMouseEnter :true
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        type : "fraction",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
 
-  },
+    },
 });
 
 const playBtn = document.querySelector(".play");
@@ -148,17 +177,30 @@ const pauseBtn = document.querySelector(".pause");
 
 playBtn.addEventListener("click", () => {
     swiper.autoplay.resume();
-    // console.log(swiper.autoplay.running);
     playBtn.classList.add("hidden");
     pauseBtn.classList.remove("hidden");
 })
 pauseBtn.addEventListener("click", () => {
     swiper.autoplay.pause();
-    // console.log(swiper.autoplay.paused);
-    // console.log(swiper.autoplay.timeLeft);
     pauseBtn.classList.add("hidden");
     playBtn.classList.remove("hidden");
 })
 
 
+// --------------------------------
+// 광고배너 슬라이더
+// --------------------------------
+const adSwiper = new Swiper(".ad-slider", {
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop:true, // 반복
+    autoplay: {
+        delay: 5000, // 오토플레이 시간
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
 
+});
