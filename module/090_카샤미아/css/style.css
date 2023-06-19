@@ -407,7 +407,7 @@ article .swiper{
 /* -------------------- */
 /* 박스슬라이더 텍스트 애니메이션 */
 .swiper-slide .info-box{
-    font-size: 5rem;
+    font-size: 50px;
     font-weight: 800;
     color: #554136;
     /* text-shadow: 0 5px 2rem rgba(0, 0, 0, 0.8); */
@@ -419,8 +419,8 @@ article .swiper{
     z-index: 10;
 }
 .swiper-slide .info-box h2{
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+    font-size: 35px;
+    margin-bottom: 10px;
 }
 
 .swiper-slide-active .info-box h2 {
@@ -972,6 +972,7 @@ footer{
 }
 
 .top a:hover{
+    border: 1px solid #6d6d6d;
     background-color: #6d6d6d;
     color: #fff;
 }

@@ -9,13 +9,13 @@
     <link rel="shortcut icon" href="./images/icon_32x32.png">
     <link rel="apple-touch-icon=precomposed" href="./images/icon_180x180.png">
 
-    <!-- 제이쿼리 -->
-    <script src="./js/jquery-1.12.4.min.js"></script>
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/jquery-3.4.1.min.js"></script>
     <!-- 코딩할때 웹킷 안써줘도 자동으로 브라우저에 인식하게 해줌 : 접두어 일일히 쓰는거 -->
     <script src="./js/prefixfree.min.js"></script>
-
+    <!-- 박스슬라이더 -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -25,19 +25,40 @@
 </head>
 <body>
     <div id="wrap">
-        <!-- 헤더 컨테이너 -->
-        <div id="header_container">
-            <!-- 헤더 -->
-            <header class="w1280">
+        <!-- 헤더 -->
+        <header>
+            <!-- 헤더 컨테이너 -->
+            <div class="header_wrap w1280">
                 <!-- 헤더 로고 -->
-                <h1 class="logo"><img src="./images/logo_white.png" alt="헤더로고"></h1>
+                <h1 class="logo"><a href="#"><img src="./images/logo_white.png" alt="헤더로고"></a></h1>
                 <!-- gnb 네비 -->
                 <nav class="gnb_wrap">
                     <ul class="gnb">
-                        <li><a href="#">제품</a></li>
+                        <li><a href="#">제품</a>
+                            <ul class="sub">
+                                <li><a href="#">베스트</a></li>
+                                <li><a href="#">티제품</a></li>
+                                <li><a href="#">티푸드</a></li>
+                                <li><a href="#">티웨어</a></li>
+                                <li><a href="#">라이프 스타일</a></li>
+                                <li><a href="#">대량구매</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">선물추천</a></li>
-                        <li><a href="#">다다일상</a></li>
-                        <li><a href="#">브랜드</a></li>
+                        <li><a href="#">다다일상</a>
+                            <ul class="sub">
+                                <li><a href="#">다다일상 구독</a></li>
+                                <li><a href="#">다다일상 챌린지</a></li>
+                                <li><a href="#">다다일상 기록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">브랜드</a>
+                            <ul class="sub">
+                                <li><a href="#">오설록 스토리</a></li>
+                                <li><a href="#">제주 티뮤지엄</a></li>
+                                <li><a href="#">매장 소개</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <ul class="lnb">
                         <li>
@@ -58,9 +79,9 @@
                     </ul>
                 </nav>
                 <!-- gnb 네비종료 -->
-            </header>
-            <!-- 헤더 종료 -->
-
+            </div>
+            <!-- /헤더 컨테이너 -->
+            
             <!-- 배경 텍스트 작성 -->
             <article>
                 <div class="w1280">
@@ -74,7 +95,6 @@
                         <button>SHOP NOW</button>
                     </div>
                 </div>
-                
             </article>    
             <!-- 배경 텍스트 종료 -->
 
@@ -84,21 +104,34 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/W6f9vwJt4sI?mute=1&autoplay=1&playlist=W6f9vwJt4sI&loop=1&controls=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            </div>
                 </div>
             </div>
-        </div>
-        <!-- 헤더 컨테이너 종료 -->
-
+        </header>
+        <!-- /헤더 -->
 
         <!-- 메인 시작 -->
         <main role="main">
             <section id="main_content">
-                <figure class="w1280 cf">
+                <div class="w1280 cf">
+                    <div class="info_box">
+                        <h2>자연을 숨쉬게 해주는 차밭</h2>
+                    </div>
+                    <div class="info_box">
+                        <h2>그대로의 제주를 담은 차</h2>
+                        
+                    </div>
+                    <div class="info_box">
+                        <h2>깊이를 찾는 발효의 기술</h2>
+                        
+                    </div>
+                    <div class="info_box">
+                        <h2>기술이 만드는 내일의 차</h2>
 
-                </figure>
+                    </div>
+                </div>
                 <div id="contentTxt" class="w1280 cf">
                     <span>Please call our concierge on <strong>1-800-995-4810</strong></span>
                     <a href="#">
                         <span>VIEW ALL SERVICES</span>
-                        <img src="./images/arrow_silver.png" alt="아이콘">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
                 </div>
             </section>
@@ -111,58 +144,137 @@
                     </p>
                 </div>
                 <hr>
-                <div class="about_us w1280 cf">
-                    <div class="about_text_wrap">
-                        <h2>About us</h2>
-                        <div class="areaBtn">
-                            <ul>
-                                <li class="check">서광 차밭</li>
-                                <li>돌송이 차밭</li>
-                                <li>한남 차밭</li>
-                            </ul>
+                <div class="about_us_wrap">
+                    <div class="about_us w1280 cf">
+                        <div class="about_text_wrap">
+                            <h2>About us</h2>
+                            <div class="areaBtn">
+                                <ul>
+                                    <li class="check">서광 차밭</li>
+                                    <li>돌송이 차밭</li>
+                                    <li>한남 차밭</li>
+                                </ul>
+                            </div>
+                            <div class="location">                            
+                                <ul>
+                                    <li class="check">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>
+                                            제주특별자치도 서귀포시 안덕면 신화역사로 36
+                                        </span>
+                                        <p>
+                                            산방산 근처의 서광 차밭은 대기가 한라산을 지나며 많은 구름과 안개를 <wbr>
+                                            형성하고, 이는 자연 차광 효과를 내 찻잎의 색을 좋게 만듭니다. 온화한<wbr>
+                                            기후와 자연 차광 효과는 고급 품질의 차를 만들 때 더없이 좋은 생육<wbr>
+                                            조건이 됩니다.
+                                        </p>
+                                        <a href="#">VIEW aLL ABOUT US
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>
+                                            제주특별자치도 서귀포시 중산간서로356번길 152-41
+                                        </span>
+                                        <p>
+
+                                        </p>
+                                        <a href="#">VIEW aLL ABOUT US
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>
+                                            제주특별자치도 서귀포시 남원읍 서성로652번길 166
+                                        </span>
+                                        <p>
+
+                                        </p>
+                                        <a href="#">VIEW aLL ABOUT US
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="location">                            
+                        <div class="about_img_wrap">
                             <ul>
                                 <li class="check">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    제주특별자치도 서귀포시 안덕면 신화역사로 36
+                                    <div class="about_img">
+                                        <img src="./images/intro_element_1.png" alt="">
+                                    </div>
+                                    <div class="about_img">
+                                        <img src="./images/intro_element_2.png" alt="">
+                                    </div>
                                 </li>
                                 <li>
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    제주특별자치도 서귀포시 중산간서로356번길 152-41
+                                    <div class="about_img">
+                                        <img src="./images/intro_element_3.png" alt="">
+                                    </div>
+                                    <div class="about_img">
+                                        <img src="./images/intro_element_4.png" alt="">
+                                    </div>
                                 </li>
                                 <li>
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    제주특별자치도 서귀포시 남원읍 서성로652번길 166
+                                    <div class="about_img">
+                                        <img src="./images/intro_element_5.png" alt="">
+                                    </div>
+                                    <div class="about_img">
+                                        <img src="./images/intro_element_5.png" alt="">
+                                    </div>
                                 </li>
                             </ul>
-                        </div>
-                        <p>
-                            산방산 근처의 서광 차밭은 대기가 한라산을 지나며 많은 구름과 안개를 <wbr>
-                            형성하고, 이는 자연 차광 효과를 내 찻잎의 색을 좋게 만듭니다. 온화한<wbr>
-                            기후와 자연 차광 효과는 고급 품질의 차를 만들 때 더없이 좋은 생육<wbr>
-                            조건이 됩니다.
-                        </p>
-                        <div>
-                            <a href="#">VIEW aLL ABOUT US
-                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="about_img_wrap">
-                        <div class="about_img">
-                            <img src="./images/intro_element_1.png" alt="">
-                        </div>
-                        <div class="about_img">
-                            <img src="./images/intro_element_2.png" alt="">
                         </div>
                     </div>
                 </div>
             </section>
             <section id="main_content2">
-                <!-- 동영상 -->
-                <figure class="w1280">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jhPJki_2gAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                </figure>
+                <div class="swiper main-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="info-box">
+                                    <h2>GUUD CHANCE 추가쿠폰 3% 혜택</h2>
+                                    <h3>
+                                        뉴트로 감성 디자인 가구 <br>장미맨숀
+                                    </h3>
+                                </div>
+                                <picture>
+                                    <img src="./images/tea_field_item_1.jpg" alt="bg01">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="swiper-slide mbaner02">
+                            <a href="#">
+                                <div class="info-box">
+                                    <h2>호텔감성을 담은 인테리어</h2>
+                                    <h3>
+                                        우아하고 품격있는 침실
+                                    </h3>
+                                </div>
+                                <picture>
+                                    <img src="./images/tea_field_item_2.jpg" alt="bg02">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <div class="info-box">
+                                    <h2>오래된 추억이자, 새로운 경험</h2>
+                                    <h3>
+                                        턴테이블, 아날로그를 듣다
+                                    </h3>
+                                </div>
+                                <picture>
+                                    <img src="./images/tea_field_item_3.jpg" alt="bg03">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </section>
             <section id="main_content3">
                 <figure class="w1280">
@@ -185,20 +297,20 @@
         <!-- 메인 종료 -->
 
         <!-- 푸터 시작 -->
-        <footer class="cf">
+        <footer>
             <div id="footer_container" class="w1280 cf">
                 <div id="footer_logo">
                     <h2 class="logo">
-                        <img src="./images/footer_logo.png" alt="헤더로고">
+                        <img src="./images/logo_black.png" alt="헤더로고">
                     </h2>
                     <p>
                         ave s for faster shopping Manage your order his Create an account Save details for faster shopping history and wish list OIN MONTBLAVC Create anr
                     </p>
                     <ul id="SNS">
-                        <li><a href="#"><img src="./images/sns_facebook.png" alt="SNS페이스북"></a></li>
-                        <li><a href="#"><img src="./images/sns_twitter.png" alt="SNS트위터"></a></li>
-                        <li><a href="#"><img src="./images/sns_insta.png" alt="SNS인스타"></a></li>
-                        <li><a href="#"><img src="./images/sns_naver.png" alt="SNS네이버"></a></li>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
                 <div id="nnb">
@@ -241,6 +353,21 @@
             </div>
         </footer>
         <!-- 푸터 종료 -->
+
+        <!-- top 버튼 -->
+        <div class="top hidden">
+            <a href="#" class="eventNone">
+                <i class="fa fa-angle-up fa-3x" aria-hidden="true"></i>
+                TOP
+            </a>
+        </div>
+        <!-- /top 버튼 -->
+        <div class="alert hidden">죄송합니다. 해당페이지는 준비중입니다.</div>
+
     </div>
 </body>
+<!-- 박스슬라이드 -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- 스크립트  -->
+<script src="./js/script.js"></script>
 </html>

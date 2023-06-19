@@ -132,8 +132,6 @@ realTimeBtn.forEach((e) =>{
 // --------------------------------
 // 박스 슬라이더
 // --------------------------------
-const progressBar = document.querySelector(".autoplay-progress div");
-
 const swiper = new Swiper(".main-slider", {
     spaceBetween: 0,
     centeredSlides: true,
@@ -144,7 +142,15 @@ const swiper = new Swiper(".main-slider", {
     },
     pagination: {
         el: ".swiper-pagination",
-        clickable: true
+        clickable: true,
+        renderBullet: function (index, className) {
+			return `
+            <span class="${className}">
+                <div class="autoplay-progress">
+                    <div></div>
+                </div>
+            </span>`;
+		},
     },
     navigation: {
         nextEl: ".swiper-button-next",
@@ -152,6 +158,7 @@ const swiper = new Swiper(".main-slider", {
     },
     on: {
         autoplayTimeLeft(s, time, progress) {
+            let progressBar = document.querySelector(".swiper-pagination-bullet-active .autoplay-progress div");
             progressBar.style.width = `calc(100% - ${Math.ceil(progress * 100)}%)`;
         }
     }
