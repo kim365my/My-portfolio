@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -27,61 +28,71 @@
         <!-- 헤더 컨테이너 -->
         <div id="header_container">
             <!-- 헤더 -->
-            <header class="w1280 cf">
+            <header class="w1280">
                 <!-- 헤더 로고 -->
-                <h1 class="logo"><img src="./images/logo.png" alt="헤더로고"></h1>
-
+                <h1 class="logo"><img src="./images/logo_white.png" alt="헤더로고"></h1>
                 <!-- gnb 네비 -->
-                <div id="gnb_container">
-                    <!-- 네비 -->
-                    <nav class="gnb">
-                        <ul>
-                            <li><a href="#">WOMAN</a></li>
-                            <li><a href="#">MAN</a></li>
-                            <li><a href="#">CHILDREN</a></li>
-                            <li><a href="#">JEWELRY&nbsp;&&nbsp;WATCHES</a></li>
-                            <li><a href="#">BEAUTY</a></li>
-                            <li><a href="#">DECOR</a></li>
-                            <li><a href="#">GIFTS</a></li>
-                            <li><a href="#">STORIES</a></li>
-                            <li><a href="#">ALL&nbsp;PRODUCTS</a></li>
-                        </ul>
-                    </nav>
-                    <!-- 네비 종료 -->
-
-                    <!-- 검색버튼 -->
-                    <p id="search">
-                        <img src="./images/btn_search.png" alt="검색아이콘">
-                    </p>
-                    <!-- 검색버튼 종료 -->
-                </div>
+                <nav class="gnb_wrap">
+                    <ul class="gnb">
+                        <li><a href="#">제품</a></li>
+                        <li><a href="#">선물추천</a></li>
+                        <li><a href="#">다다일상</a></li>
+                        <li><a href="#">브랜드</a></li>
+                    </ul>
+                    <ul class="lnb">
+                        <li>
+                            <a href="#" class="searchBtn">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>                                
+                            <a href="#" class="cartBtn">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>                                
+                            <a href="#" class="moreBtn">
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
                 <!-- gnb 네비종료 -->
             </header>
             <!-- 헤더 종료 -->
 
             <!-- 배경 텍스트 작성 -->
-            <article  class="w1280">
-                <div id="bg_txt">
-                    <h2>Father's Day Gifts Le Petit Prince</h2>
-                    <p>
-                        Receie a complimentary Explorer Travel Set with you purchase of $400 or more. 
-                        <br>
-                        Browse the collection
-                    </p>
-                    <button>SHOP NOW</button>                    
+            <article>
+                <div class="w1280">
+                    <div id="bg_txt">
+                        <h2>TEA FROM JEJU</h2>
+                        <p>
+                            대한민국이 가진 천혜의 자연 유산 제주, <br>
+                            화산섬 제주가 가진 경이로운 생명력으로 <br>
+                            오설록의 차는 탄생합니다.
+                        </p>
+                        <button>SHOP NOW</button>
+                    </div>
                 </div>
+                
             </article>    
             <!-- 배경 텍스트 종료 -->
+
+            <!-- 배경이미지 -->
+            <div class="bgImg">
+                <div class="playVideo">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/W6f9vwJt4sI?mute=1&autoplay=1&playlist=W6f9vwJt4sI&loop=1&controls=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            </div>
+                </div>
+            </div>
         </div>
         <!-- 헤더 컨테이너 종료 -->
+
 
         <!-- 메인 시작 -->
         <main role="main">
             <section id="main_content">
                 <figure class="w1280 cf">
-                    <img src="./images/card_box01.jpg" alt="카드배너1">
-                    <img src="./images/card_box02.jpg" alt="카드배너2">
-                    <img src="./images/card_box03.jpg" alt="카드배너3">
+
                 </figure>
                 <div id="contentTxt" class="w1280 cf">
                     <span>Please call our concierge on <strong>1-800-995-4810</strong></span>
@@ -93,18 +104,65 @@
             </section>
 
             <section id="main_content1">
-                <p class="w1280">
-                    OIN MONTBLANC Create an account Save details for faster shopping Manage your order history and wish listOIN MONTBLANC Create an account Save details for faster shopping Manage your order history and wish listOIN MONTBLANC Create an account Save details faster shopping Manage your order history and wish listOIN MONTBLANC Create an account Save details for faster shopping
-                </p>
-                <figure class="w1280">
-                    <img src="./images/aboutus.jpg" alt="">
-                </figure>
+                <div class="w1280">
+                    <h2>오설록의 제주 차밭</h2>
+                    <p>
+                        약 100만 평에 달하는 3개의 오설록 유기농 차밭은 화산섬의 지역적 기후 환경에 따라 각각의 색과 향, 그리고 맛이 특별한 차를 생산하고 있습니다.
+                    </p>
+                </div>
+                <hr>
+                <div class="about_us w1280 cf">
+                    <div class="about_text_wrap">
+                        <h2>About us</h2>
+                        <div class="areaBtn">
+                            <ul>
+                                <li class="check">서광 차밭</li>
+                                <li>돌송이 차밭</li>
+                                <li>한남 차밭</li>
+                            </ul>
+                        </div>
+                        <div class="location">                            
+                            <ul>
+                                <li class="check">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    제주특별자치도 서귀포시 안덕면 신화역사로 36
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    제주특별자치도 서귀포시 중산간서로356번길 152-41
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    제주특별자치도 서귀포시 남원읍 서성로652번길 166
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            산방산 근처의 서광 차밭은 대기가 한라산을 지나며 많은 구름과 안개를 <wbr>
+                            형성하고, 이는 자연 차광 효과를 내 찻잎의 색을 좋게 만듭니다. 온화한<wbr>
+                            기후와 자연 차광 효과는 고급 품질의 차를 만들 때 더없이 좋은 생육<wbr>
+                            조건이 됩니다.
+                        </p>
+                        <div>
+                            <a href="#">VIEW aLL ABOUT US
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about_img_wrap">
+                        <div class="about_img">
+                            <img src="./images/intro_element_1.png" alt="">
+                        </div>
+                        <div class="about_img">
+                            <img src="./images/intro_element_2.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </section>
             <section id="main_content2">
                 <!-- 동영상 -->
                 <figure class="w1280">
-                    <img src="./images/mov_clip.jpg" alt="">
-                </figure>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jhPJki_2gAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                </figure>
             </section>
             <section id="main_content3">
                 <figure class="w1280">

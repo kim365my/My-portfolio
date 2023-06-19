@@ -564,7 +564,7 @@ section h2 {
 .item_heart{
     font-size: 2.5rem;
     color: #fff;
-    text-shadow: 0 0 0.5rem rgba(145, 145, 145, 0.5);
+    text-shadow: 0 0 0.5rem rgba(145, 145, 145, 0.89);
     padding: 1rem;
     /* 포지션 */
     position: absolute;
@@ -617,12 +617,10 @@ section h2 {
 .item_text_info{
     font-size: 1.4rem;
     margin-top: 0.5rem;
-    /* 플렉스 */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    color: #646464;
 }
 .item_text_info i {
+    margin-left: 0.5rem;
     color: #ffb327;
 }
 /* --------------- */
@@ -631,7 +629,7 @@ section h2 {
 .real_title{
     background-color: #f5f5f5;
     height: 100%;
-    margin-top: 10rem;
+    margin-top: 15rem;
     /* 포지션 */
     position: relative;
 }
@@ -646,12 +644,18 @@ section h2 {
 }
 /* 이미지 */
 .real_time_img{
-    width: 70%;
+    width: 68%;
     height: 100%;
     overflow: hidden;
     /* 포지션 */
     position: absolute;
     left: 0;
+}
+.real_time_img a{
+    display: none;
+    width: 100%;
+    height: 100%;
+
 
 }
 .real_time_img img{
@@ -659,31 +663,30 @@ section h2 {
     height: 100%;
     object-fit: cover;
 }
+.real_time_img .check{
+    display: block;
+}
 
 /* 텍스트 부분 */
-.real_time li{
-    margin-bottom: 1.4rem;
-    
-}
-.real_time li:first-child{
+/* 제목 */
+.real_time h2{
     font-weight: 700;
     padding-bottom: 30px;
     border-bottom: 1px solid #ddd;
 }
-
-
-.real_time ul a{
+/* 초이스 버튼 */
+.real_time_btn{
     width: 100%;
-    line-height: 4.5rem;
-    padding: 1rem;
+    height: 5rem;
+    line-height: 5rem;
     /* 폰트 사이즈 */
     font-size: 2rem;
     color: #393939;
-    display: inline-block;
+    cursor: pointer;
 }
 /* 호버효과 */
-.real_time li.check a,
-.real_time li:not(:last-child) a:hover{
+.real_time_btn.check,
+.real_time_btn:hover{
     border-bottom: 1px solid #000;
 }
 
@@ -694,6 +697,8 @@ section h2 {
     border: 1px solid #000;
 }
 .real_time li:last-child a{
+    display: inline-block;
+    width: 100%;
     font-size: 1.6rem;
     line-height: normal;
     padding: 1.5rem 0.5rem;
@@ -701,7 +706,7 @@ section h2 {
 /* --------------- */
 /* section 03 */
 .megazne{
-    margin-top: 10rem;
+    margin-top: 15rem;
     margin-bottom: 10rem;
 }
 .megazne_title{
@@ -869,11 +874,12 @@ section h2 {
 footer{
     border-top: 1px solid #000;
     padding-bottom: 5rem;
-    line-height: 1.5;
+
 }
 /* ---------------- */
 /* footer_Info */
 .footer_Info{
+    line-height: 1.5;
     padding-top: 5.7rem;
     color: #929294;
     /* 플렉스 */
@@ -903,7 +909,6 @@ footer{
     /* 플렉스 */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
 }
 .footer_gnb li:not(:last-child){
     padding-right: 1.5rem;
@@ -913,12 +918,6 @@ footer{
 .footer_info_list p:not(:last-child){
     margin-bottom: 1.5rem;
 }
-.footer_mcssam{
-    /* 플렉스 */
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-}
 
 /* ---------------- */
 /* footer_right */
@@ -926,17 +925,29 @@ footer{
     padding-top: 1.2rem;
     font-size: 1.3rem;
     font-weight: 400;
-    line-height: 1.6;
 }
-.footer_right dt{
+.footer_right a{
+    color: #393939;
+    font-size: 1.4rem;
     font-weight: 600;
 }
-.footer_right dl{
+.footer_tel {
+    margin-top: 1rem;
     margin-bottom: 2rem;
+    /* 플렉스 */
+    display: flex;
+    align-items: center;
 }
-.footer_right dl:first-child dt+dd,
-.footer_right dl:last-child dt+dd+dd{
-    font-size: 2.2rem;
+.footer_tel dl{
+    margin-right: 4rem;
+}
+.footer_tel dt{
+    font-size: 1.4rem;
+}
+.footer_tel dd{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #393939;
 }
 /* ======================= */
 /* top 버튼 */

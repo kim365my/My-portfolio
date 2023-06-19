@@ -137,6 +137,19 @@ mdPickBtn.forEach((e, index) => {
         mdPickList[index].classList.add(CHECK);
     })
 })
+// --------------------------------
+// real_time 상품 표시
+// --------------------------------
+const realBtn = document.querySelectorAll(".real_time_btn");
+const realImg = document.querySelectorAll(".real_time_img a");
+realBtn.forEach((e, index) => {
+    e.addEventListener("click", () => {
+        realBtn.forEach((item) => item.classList.remove(CHECK));
+        realImg.forEach((item) => item.classList.remove(CHECK));
+        realImg[index].classList.add(CHECK);
+        realBtn[index].classList.add(CHECK);
+    })
+})
 
 // --------------------------------
 // 박스 슬라이더

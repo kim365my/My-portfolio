@@ -10,6 +10,8 @@
     <link rel="apple-touch-icon=precomposed" href="./images/favicon/montblanc_fav144.png">    
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <!-- 해당문서 스타일 -->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -22,8 +24,9 @@
                 <ul class="gnb">
                     <li class="check"><a href="#about_me">About Me</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#project">Project</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
                     <li><a href="#contact_me">Contact ME</a></li>
+                    <li><a href="#project">project</a></li>
                 </ul>
                 <ul>
                     <li><a href="https://github.com/kim365my" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
@@ -53,6 +56,75 @@
                 <h2>Skills</h2>
             </section>
 
+            <!-- Portfolio -->
+            <section id="Portfolio">
+                <h2>Project</h2>
+                <div class="Portfolio_list">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="./module/090_맥도날드/index.html">맥도날드 사이트 리뉴얼</a>
+                                <dl>
+                                    <dt>작업기간</dt>
+                                    <dd>2023.06.14 ~ 2023.06.16(2일 소요)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>사용한 라이브러리</dt>
+                                    <dd>Swiper 슬라이드</dd>
+                                </dl>
+                                <dl>
+                                    <dt>태그</dt>
+                                    <dd>#개별작업 #PC</dd>
+                                </dl>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="./module/090_카샤미아/index.html">까사미아 사이트 리뉴얼</a>
+                                <dl>
+                                    <dt>작업기간</dt>
+                                    <dd>2023.06.17 ~ 2023.06.19(3일 소요)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>사용한 라이브러리</dt>
+                                    <dd>Swiper 슬라이드</dd>
+                                </dl>
+                                <dl>
+                                    <dt>태그</dt>
+                                    <dd>#개별작업 #PC</dd>
+                                </dl>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://kim365my.github.io/Shinhan-Investment-Corp_citeRemake/">신한투자증권 리마스터</a>
+                                <dl>
+                                    <dt>작업기간</dt>
+                                    <dd>2023.06.17 ~ 2023.06.19(3일 소요)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>사용한 라이브러리</dt>
+                                    <dd>
+                                        <ul>
+                                            <li>제이쿼리</li>
+                                            <li>Swiper 슬라이드</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>태그</dt>
+                                    <dd>#조별작업 #PC</dd>
+                                </dl>
+                                
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Contact ME -->
+            <section id="contact_me">
+                <h2>Contact ME</h2>
+            </section>
+
             <!-- Project -->
             <section id="project">
                 <h2>Project</h2>
@@ -64,7 +136,13 @@
                             <li><a href="./module/15_패럴럭스 스크롤링/index.html">15_패럴럭스 스크롤링</a></li>
                             <li><a href="./module/081_내가만든몽블랑/index.html">081_내가만든몽블랑</a></li>
                             <li><a href="./module/090_포트폴리오_카샤/index.html">090_포트폴리오_카샤</a></li>
-                            <li><a href="./module/090_맥도날드/index.html">090_맥도날드</a></li>
+                            <li>
+                                <a href="./module/090_맥도날드/index.html">맥도날드 사이트 리뉴얼</a>
+                            </li>
+                            <li>
+                            <li>
+                                <a href="./module/090_카샤미아/index.html">까사미아 사이트 리뉴얼</a>
+                            </li>
                             <li>
                                 <ul>
                                     <li><a href="./module/101_카드포폴/old/index.html" class="old">101_카드포폴</a></li>
@@ -110,11 +188,6 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Contact ME -->
-            <section id="contact_me">
-                <h2>Contact ME</h2>
-            </section>
         </main>
         <!-- /Contents -->
 
@@ -125,6 +198,7 @@
         <!-- footer -->
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <!-- 해당문서 스크립트 -->
 <script src="./js/script.js"></script>
 <script src="./js/scroll.js"></script>
