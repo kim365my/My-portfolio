@@ -100,30 +100,49 @@ const swiper = new Swiper(".main-slider", {
         el: ".swiper-pagination", 
     },
     on: {
-
+        sliderChange:()=>{
+            
+        },
+        reachBeginning:() => {
+            // 첫번째 섹션
+            setTimeout(() => {
+                startScrollSwiper();
+            }, 500) // 0.5초 정도 마우스 움직임이 없으면 슬라이드 스크롤 가능하게
+        },
+        reachEnd:() => {
+            // 마지막 섹션
+            setTimeout(() => {
+                startScrollSwiper();
+            }, 500) // 0.5초 정도 마우스 움직임이 없으면 슬라이드 스크롤 가능하게
+        }
     },
 
 });
-const mainSlider = document.querySelector(".main-slider");
+
+
+const stopScrollSwiper = () => {
+    // swiper.parameter.releaseOnEdges = true;
+    // swiper.parameter.touchReleaseOnEdges = true;
+    swiper.mousewheel.disable();
+
+}
+const startScrollSwiper = () => {
+    // swiper.parameter.releaseOnEdges = false;
+    // swiper.parameter.touchReleaseOnEdges = false;
+    swiper.mousewheel.enable();
+
+}
 // 버그, 위로 올렸다가 다시 2번째의 슬라이드를 보려고 할때 작동 안함
 let lastSwiperY = 0;
 window.addEventListener('wheel', function (event) {
-    console.log(swiper.translate);
     const swiperY = swiper.translate;
-    if(lastSwiperY == swiperY) {
-        if(swiper.isEnd) {
-            swiper.mousewheel.disable()
-        }
-
-        if(swiper.isBeginning) {
-            swiper.mousewheel.disable()
-        }
+    if(lastSwiperY == swiperY && (swiper.isEnd || swiper.isBeginning)) {
+        stopScrollSwiper();
     }
     lastSwiperY = swiperY;
     
-    if (event.deltaY < 0) { // 위로 올릴경우 
-        if(swiper.isEnd) {swiper.mousewheel.enable()}
-    } else if (event.deltaY > 0) { // 아래로 내릴경우
-        if(swiper.isBeginning) {swiper.mousewheel.enable()}
+    if (event.deltaY < 0 && swiper.isEnd || event.deltaY > 0 && swiper.isBeginning) {
+        startScrollSwiper();
     }
 });
+

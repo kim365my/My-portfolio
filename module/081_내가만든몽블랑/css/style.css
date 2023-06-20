@@ -6,6 +6,7 @@ html, body{
     height: 100%;
     width: 100%;
     margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #wrap{
@@ -24,6 +25,7 @@ html, body{
 .hidden {
     display: none;
 }
+
 .alert{
     background: #000;
     color: #fff;
@@ -56,12 +58,22 @@ html, body{
         opacity: 1;
     }
 }
+@keyframes showAni_toBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
 /* ------------------ */
 /* 헤더 */
 header{
-    height: 850px;
+    height: 100vh;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.5) 5%, transparent 95%);
+    background: linear-gradient(rgba(0, 0, 0, 0.4) 0%, transparent 8%);
     /* 포지션 */
     position: relative;
 }
@@ -95,6 +107,41 @@ header{
     z-index: -1;
 }
 
+.playDown{
+    width: 30px;
+    height: 50px;
+    padding:5px 0;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    /* 포지션 */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.playDown div{
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: #fff;
+    /* 포지션 */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: pageDown 3s ease infinite;
+}
+@keyframes pageDown {
+    0%{
+        top: 0;
+    }
+    50%{
+        top: 70%;
+    }
+    100%{
+        top: 0;
+    }
+}
 /* ------------------ */
 /* 헤더 컨테이너 */
 .header_wrap {
@@ -121,10 +168,7 @@ header{
 .header_wrap .gnb > li {
     display: inline-block;
     height: 50px;
-    font-size: 18px;
-    font-weight: 600;
     margin-left: 40px;
-    color: #fff;
 
     /* 포지션 */
     position: relative;
@@ -132,6 +176,10 @@ header{
 .header_wrap .gnb li a{
     display: inline-block;
     width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+
     overflow: hidden;
     /* 포지션 */
     position: relative;
@@ -161,13 +209,10 @@ header{
 }
 
 /* 공통 gnb css */
-.header_wrap .sub{
+.header_wrap .snb{
     display: none;
     width: 200px;
-    margin-top: 20px;
     padding: 10px 15px;
-    color: #000;
-    font-size: 16px;
     background-color: #ddd;
     /* 포지션 */
     position: absolute;
@@ -175,33 +220,48 @@ header{
     left: 0;
     transform: translateY(100%);
 }
-.header_wrap .sub li {
+.header_wrap .snb li {
+    width: 100%;
     height: 40px;
 }
-
+.header_wrap .snb li a{
+    display: inline-block;
+    width: 100%;
+    color: #000;
+    font-size: 16px;
+}
 /* 호버시 */
-.header_wrap .gnb > li:hover .sub{
+.header_wrap li:hover .snb{
     display: block;
 }
-.header_wrap .gnb li .sub li:hover {
+.header_wrap li .snb li:hover {
     color: #668904;
     border-bottom: 1px solid #668904;
 }
 
 /* lnb 메뉴 리스트 */
 .header_wrap .lnb{
+    margin-left: 30px;
     /* 플롯 */
     float: right;
 }
-.header_wrap .lnb li {
+.header_wrap .lnb > li {
     display: inline-block;
+    /* 포지션 */
+    position: relative;
+}
+.header_wrap .lnb > li > a{
+    padding: 0 20px;
     font-size: 24px;
     color: #fff;
-    margin-left: 40px;
 }
-.header_wrap .lnb a{
-    display: inline-block;
-    width: 25px;
+.header_wrap .lnb li .snb{
+    position: absolute;
+    left: auto;
+    right: 0;
+}
+.header_wrap .lnb li:hover i{
+    color: #668904;
 }
 /* -------------------------- */
 /* 메인 비디오 텍스트 부분 */
@@ -210,49 +270,64 @@ header{
 }
 #bg_txt > h2{
     margin-bottom: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 15px;
     font-size: 60px;
     font-weight: 600;
     color: #fff;
 }
 #bg_txt > p {
-    line-height: 1.3;
+    line-height: 1.6;
     font-size: 20px;
     color: #ffffff;
     margin: 30px 0;
+    
 }
-#bg_txt > button{
+#bg_txt > a{
+    display: inline-block;
     font-weight: 600;
     margin-top: 15px;
     padding: 15px 30px;
     color: #668904;
     background-color: #fff;
-    /* 커서 포인트 */
-    cursor: pointer;
 }
-
+/* ================ */
 /* 메인 */
-/* 컨텐츠 */
+/* ================ */
+/* ----------------- */
+/* 메인 컨텐츠 */
 #main_content{
-    height: 560px;
-    background-color: #b4b4b4;
+    height: 800px;
+    padding-top: 100px;
+    border-bottom: 1px solid #b4b4b4;
+    overflow: hidden;
+}
+#main_content h2{
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+#main_content p{
+    height: 172px;
+    line-height: 40px;
+    color: #807f7f;
+
 }
 
-#main_content .info_box{
-    width: 24%;
-    height: 500px;
-    cursor: pointer;
-    margin-right: 1.33%;
-    background-color: #fff;
-    /* 플롯 */
-    float: left;
-    /* 포지션 */
-    position: relative;
-    top: -60px;
+.content_img_wrap{
+    margin-bottom: 30px;
+
 }
-#main_content .info_box:last-child{
-    float: right;
-    margin-right: 0;
+.content_img{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.content_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* 컨텐츠 텍스트 */
@@ -275,53 +350,35 @@ header{
     margin-left: 10px;
     vertical-align:middle;
 }
-
+/* ----------------- */
 /* 컨텐츠 1 */
-#main_content1{
-    height: 800px;
-    padding: 100px 0;
-
-}
-#main_content1 > p{
-    height: 172px;
-    line-height: 40px;
-    color: #807f7f;
-    text-align: center;
-}
-#main_content1 > hr{
-    display: block;
-    width: 212px;
-    height: 5px;
-    margin: 0 auto;
-    margin-top: 100px;
-    text-align: center;
-    background: #668904;
-}
-
-
-/* about_us_wrap */
-.about_us_wrap{
-    margin-top: 150px;
+/* ----------------- */
+.about_us{
+    margin-top: 200px;
+    margin-bottom: 200px;
     /* 포지션 */
     position: relative;
+}
+.about_us h2{
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
 }
 .about_text_wrap{
     width: 580px;
     /* 플롯 */
     float: left;
 }
-.about_text_wrap h2{
-    font-size: 42px;
-    font-weight: 800;
-    margin-bottom: 10px;
-    animation: showani 1s;
-}
 
 /* areaBtn */
 .areaBtn ul{
     text-align: center;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #cfcfcf;
     margin-bottom: 20px;
+    background-color: #fff;
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-around;
 }
 .areaBtn li{
     display: inline-block;
@@ -352,30 +409,58 @@ header{
     color: #668904;
 }
 
-
+/* 지역에 대한 설명 스타일 */
 .location li{
     display: none;
+    height: 250px;
     color: #807f7f;
-    margin-bottom: 40px;
+    animation: showAni 2s;
 }
 .location li.check{
     display: block;
 }
-/* .about_text_wrap 상세정보 표시 */
-.about_text_wrap p{
-    margin-top: 50px;
-    height: 200px;
+
+/* 해당 지역에 대한 설명 */
+.location li  p{
+    margin: 50px 0;
     line-height: 1.6;
-    margin-bottom: 20px;
+    animation: showAni_toBottom 1s;
+}
+/* 주요 생산 제품 */
+.location li a{
+    display: inline-block;
+    color: #807f7f;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #807f7f;
+}
+.location li a:hover{
+    color: #668904;
+    border-bottom: 1px solid #668904;
 }
 
+/* 지도 이미지 */
+.location_img{
+    width: 370px;
+    /* 포지션 */
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    z-index: -1;
+}
+.location_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 해당 지역 사진 */
 .about_img_wrap{
     /* 플롯 */
     float: right;
 }
 .about_img_wrap li{
     display: none;
-    height: 870px;
 }
 .about_img_wrap li.check{
     display: block;
@@ -391,15 +476,18 @@ header{
     height: 100%;
     object-fit: cover;
 }
-.about_img:first-child{
-    transform: translateY(70px);
+.about_img:last-child{
+    transform: translateY(-70px);
 }
-
+/* ----------------- */
 /* 컨텐츠 2 */
+/* ----------------- */
 #main_content2{
     width: 100%;
     height: 100vh;
 }
+/* -------------------- */
+/* 박스 슬라이드 커스텀 */
 .main-slider{
     width: 100%;
     height: 100%;
@@ -411,50 +499,110 @@ header{
     height: 100%;
     object-fit: cover;
 }
-/* -------------------- */
+.swiper-pagination-bullet-active{
+    background-color: #668904;
+}
 /* 박스슬라이더 텍스트 애니메이션 */
-.swiper-slide .info-box{
-    font-size: 5rem;
-    font-weight: 800;
-    color: #554136;
-    /* text-shadow: 0 5px 2rem rgba(0, 0, 0, 0.8); */
+.info-box-wrap{
+    height: 100%;
     /* 포지션 */
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     z-index: 10;
 }
+.swiper-slide .info-box{
+    width: 500px;
+    height: 55%;
+    background-color: #4b593b;
+    padding: 10% 20px 0;
+}
+/* 슬라이드마다 배경 색 다르게 */
+.swiper-slide.mbaner02 .info-box{background-color: #59443B;}
+.swiper-slide.mbaner03 .info-box{background-color: #98875F;}
+
 .swiper-slide .info-box h2{
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: #fff;
+}
+.swiper-slide .info-box h2::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin: 10px 0;
+    background-color: #fff;
+}
+.swiper-slide .info-box p{
+    font-size: 20px;
+    line-height: 1.6;
+    color: #fff;
 }
 
+/* 애니메이션 효과 */
 .swiper-slide-active .info-box h2 {
     animation: text-ani 1s .1s both;
 }
-.swiper-slide-active .info-box h3 {
+.swiper-slide-active .info-box p {
     animation: text-ani 1s .2s both;
 }
 
 @keyframes text-ani {
-    0% { opacity: 0; transform: translateX(50px)};
-    100% { opacity: 1; transform: translateX(100%)};
-}
-/* 컨텐츠 3 */
-#main_content3{
-    height: 700px;
-    padding: 100px 0;
+    0% { opacity: 0; transform: translateY(50px)};
+    100% { opacity: 1; transform: translateY(100%)};
 }
 
+/* ----------------- */
+/* 컨텐츠 3 */
+/* ----------------- */
+#main_content3{
+    margin-top: 150px;
+}
+.since_img_wrap{
+    width: 55%;
+    /* 플롯 */
+    float: left;
+}
+.since_img{
+    display: inline-block;
+    width: 320px;
+    height: 320px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+.since_img_wrap img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 텍스트 */
+.since_text_wrap{
+    width: 40%;
+    height: 260px;
+    /* 플롯 */
+    float: right;
+    /* 포지션 */
+    position: sticky;
+}
+
+/* ----------------- */
 /* 컨텐츠 4 */
+/* ----------------- */
 #main_content4{
-    height: 692px;
+    margin-top: 150px;
+    height: 700px;
     padding-top: 70px;
     background-color: #dcdcdc;
 }
 
+/* ----------------- */
 /* 컨텐츠 5 */
+/* ----------------- */
 #main_content5{
     height: 240px;
     background-color: #668904;

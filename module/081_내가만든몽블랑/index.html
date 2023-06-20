@@ -35,7 +35,7 @@
                 <nav class="gnb_wrap">
                     <ul class="gnb">
                         <li><a href="#">제품</a>
-                            <ul class="sub">
+                            <ul class="snb">
                                 <li><a href="#">베스트</a></li>
                                 <li><a href="#">티제품</a></li>
                                 <li><a href="#">티푸드</a></li>
@@ -46,14 +46,14 @@
                         </li>
                         <li><a href="#">선물추천</a></li>
                         <li><a href="#">다다일상</a>
-                            <ul class="sub">
+                            <ul class="snb">
                                 <li><a href="#">다다일상 구독</a></li>
                                 <li><a href="#">다다일상 챌린지</a></li>
                                 <li><a href="#">다다일상 기록</a></li>
                             </ul>
                         </li>
                         <li><a href="#">브랜드</a>
-                            <ul class="sub">
+                            <ul class="snb">
                                 <li><a href="#">오설록 스토리</a></li>
                                 <li><a href="#">제주 티뮤지엄</a></li>
                                 <li><a href="#">매장 소개</a></li>
@@ -75,6 +75,12 @@
                             <a href="#" class="moreBtn">
                                 <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                             </a>
+                            <ul class="snb">
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">매장찾기</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">뷰티포인트 추후 적립</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -83,17 +89,17 @@
             <!-- /헤더 컨테이너 -->
             
             <!-- 배경 텍스트 작성 -->
-            <article>
-                <div class="w1280">
-                    <div id="bg_txt">
-                        <h2>TEA FROM JEJU</h2>
-                        <p>
-                            대한민국이 가진 천혜의 자연 유산 제주, <br>
-                            화산섬 제주가 가진 경이로운 생명력으로 <br>
-                            오설록의 차는 탄생합니다.
-                        </p>
-                        <button>SHOP NOW</button>
-                    </div>
+            <article class="w1280">
+                <div id="bg_txt">
+                    <h2>TEA FROM JEJU</h2>
+                    <p>
+                        대한민국이 가진 천혜의 자연 유산 제주, <br>
+                        화산섬 제주가 가진 경이로운 생명력으로 오설록의 차는 탄생합니다.
+                    </p>
+                    <a href="#">
+                        SHOP NOW
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
                 </div>
             </article>    
             <!-- 배경 텍스트 종료 -->
@@ -103,6 +109,9 @@
                 <div class="playVideo">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/W6f9vwJt4sI?mute=1&autoplay=1&playlist=W6f9vwJt4sI&loop=1&controls=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            </div>
                 </div>
+                <div class="playDown">
+                    <div></div>
+                </div>
             </div>
         </header>
         <!-- /헤더 -->
@@ -110,20 +119,29 @@
         <!-- 메인 시작 -->
         <main role="main">
             <section id="main_content">
-                <div class="w1280 cf">
-                    <div class="info_box">
-                        <h2>자연을 숨쉬게 해주는 차밭</h2>
-                    </div>
-                    <div class="info_box">
-                        <h2>그대로의 제주를 담은 차</h2>
-                        
-                    </div>
-                    <div class="info_box">
-                        <h2>깊이를 찾는 발효의 기술</h2>
-                        
-                    </div>
-                    <div class="info_box">
-                        <h2>기술이 만드는 내일의 차</h2>
+                <div class="w1280">
+                    <h2>오설록의 제주 차밭</h2>
+                    <p>
+                        약 100만 평에 달하는 3개의 오설록 유기농 차밭은 
+                        <strong>화산섬</strong>의 지역적 기후 환경에 따라 
+                        각각의 색과 향, 그리고 맛이 특별한 차를 생산하고 있습니다.
+                    </p>
+                    <div class="content_img_wrap">
+                        <div class="content_img">
+                            <img src="./images/intro_element_1.png" alt="">
+                        </div>
+                        <div class="content_img">
+                            <img src="./images/intro_element_2.png" alt="">
+                        </div>
+                        <div class="content_img">
+                            <img src="./images/intro_element_3.png" alt="">
+                        </div>
+                        <div class="content_img">
+                            <img src="./images/intro_element_4.png" alt="">
+                        </div>
+                        <div class="content_img">
+                            <img src="./images/intro_element_5.png" alt="">
+                        </div>
 
                     </div>
                 </div>
@@ -136,151 +154,188 @@
                 </div>
             </section>
 
-            <section id="main_content1">
-                <div class="w1280">
+            <section>
+                <div class="about_us w1280 cf">
                     <h2>오설록의 제주 차밭</h2>
-                    <p>
-                        약 100만 평에 달하는 3개의 오설록 유기농 차밭은 화산섬의 지역적 기후 환경에 따라 각각의 색과 향, 그리고 맛이 특별한 차를 생산하고 있습니다.
-                    </p>
-                </div>
-                <hr>
-                <div class="about_us_wrap">
-                    <div class="about_us w1280 cf">
-                        <div class="about_text_wrap">
-                            <h2>About us</h2>
-                            <div class="areaBtn">
-                                <ul>
-                                    <li class="check">서광 차밭</li>
-                                    <li>돌송이 차밭</li>
-                                    <li>한남 차밭</li>
-                                </ul>
-                            </div>
-                            <div class="location">                            
-                                <ul>
-                                    <li class="check">
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <span>
-                                            제주특별자치도 서귀포시 안덕면 신화역사로 36
-                                        </span>
-                                        <p>
-                                            산방산 근처의 서광 차밭은 대기가 한라산을 지나며 많은 구름과 안개를 <wbr>
-                                            형성하고, 이는 자연 차광 효과를 내 찻잎의 색을 좋게 만듭니다. 온화한<wbr>
-                                            기후와 자연 차광 효과는 고급 품질의 차를 만들 때 더없이 좋은 생육<wbr>
-                                            조건이 됩니다.
-                                        </p>
-                                        <a href="#">VIEW aLL ABOUT US
-                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <span>
-                                            제주특별자치도 서귀포시 중산간서로356번길 152-41
-                                        </span>
-                                        <p>
-
-                                        </p>
-                                        <a href="#">VIEW aLL ABOUT US
-                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <span>
-                                            제주특별자치도 서귀포시 남원읍 서성로652번길 166
-                                        </span>
-                                        <p>
-
-                                        </p>
-                                        <a href="#">VIEW aLL ABOUT US
-                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="about_img_wrap">
+                    <div class="about_text_wrap">
+                        <div class="areaBtn">
                             <ul>
-                                <li class="check">
-                                    <div class="about_img">
-                                        <img src="./images/intro_element_1.png" alt="">
-                                    </div>
-                                    <div class="about_img">
-                                        <img src="./images/intro_element_2.png" alt="">
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="about_img">
-                                        <img src="./images/intro_element_3.png" alt="">
-                                    </div>
-                                    <div class="about_img">
-                                        <img src="./images/intro_element_4.png" alt="">
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="about_img">
-                                        <img src="./images/intro_element_5.png" alt="">
-                                    </div>
-                                    <div class="about_img">
-                                        <img src="./images/intro_element_5.png" alt="">
-                                    </div>
-                                </li>
+                                <li class="check">서광 차밭</li>
+                                <li>돌송이 차밭</li>
+                                <li>한남 차밭</li>
                             </ul>
                         </div>
+                        <div class="location">                            
+                            <ul>
+                                <li class="check">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <span>
+                                        제주특별자치도 서귀포시 안덕면 신화역사로 36
+                                    </span>
+                                    <p>
+                                        산방산 근처의 서광 차밭은 대기가 한라산을 지나며 많은 구름과 안개를 형성하고, <br>
+                                        이는 자연 차광 효과를 내 찻잎의 색을 좋게 만듭니다. 온화한 기후와 자연 차광 효과는 <br>
+                                        고급 품질의 차를 만들 때 더없이 좋은 생육 조건이 됩니다.
+                                    </p>
+                                    <a href="#">주요 생산 제품</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <span>
+                                        제주특별자치도 서귀포시 중산간서로356번길 152-41
+                                    </span>
+                                    <p>
+                                        돌송이 차밭 지역은 예로부터 화산재가 굳어서 돌멩이같이 잘게 부서진 화산송이가 <br>
+                                        많아 ‘돌송이’라고 불리어 왔습니다. 이곳은 산과 바다를 동시에 접하고 있어 <br>
+                                        매년 4월 한라산의 잔설을 품은 산바람과 바다의 수분을 머금은 바닷바람이 <br>
+                                        밤낮으로 불어와 돌송이 차밭에서 채엽한 차는 향이 매우 좋습니다.
+                                    </p>
+                                    <a href="#">주요 생산 제품</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <span>
+                                        제주특별자치도 서귀포시 남원읍 서성로652번길 166
+                                    </span>
+                                    <p>
+                                        과거 ‘해들이밭’이라 하여 마을에서 가장 먼저 해가 드는 곳이라 불렸던 한남 차밭은 <br>
+                                        온화한 기후에서 성장해 차나무가 어리고 아미노산 함량이 높아 뛰어난 맛을 선사합니다.
+                                    </p>
+                                    <a href="#">주요 생산 제품</a>
+                                </li>
+                            </ul>
+                            <div class="location_img">
+                                <img src="./images/tea_field.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about_img_wrap">
+                        <ul>
+                            <li class="check">
+                                <div class="about_img">
+                                    <img src="./images/intro_element_1.png" alt="">
+                                </div>
+                                <div class="about_img">
+                                    <img src="./images/intro_element_2.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="about_img">
+                                    <img src="./images/1Z07ZLKANW_8.jpg" alt="">
+                                </div>
+                                <div class="about_img">
+                                    <img src="./images/tea_field_item_2.jpg" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="about_img">
+                                    <img src="./images/tea_field_item_3.jpg" alt="">
+                                </div>
+                                <div class="about_img">
+                                    <img src="./images/speciality_item_bg_1_1.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
+
+            <!-- 오설록의 차가 특별한 이유 -->
             <section id="main_content2">
                 <div class="swiper main-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="#">
+                        <div class="swiper-slide mbaner01">
+                            <div class="info-box-wrap w1280">
                                 <div class="info-box">
-                                    <h2>GUUD CHANCE 추가쿠폰 3% 혜택</h2>
-                                    <h3>
-                                        뉴트로 감성 디자인 가구 <br>장미맨숀
-                                    </h3>
+                                    <h2>자연을 숨쉬게 하는 차밭</h2>
+                                    <p>
+                                        제주 오설록의 유기농 차밭은 연간 11,176톤의 이산화 탄소를 흡수합니다. <wbr>
+                                        이는 과수작물 대비 3배 이상의 탄소 축적 효과가 있습니다. 차 나무는 인류에게 <wbr>
+                                        건강한 차를 제공하며 동시에 지구의 건강한 환경에도 기여하고 있습니다.
+                                    </p>
                                 </div>
-                                <picture>
-                                    <img src="./images/tea_field_item_1.jpg" alt="bg01">
-                                </picture>
-                            </a>
+                            </div>
+                            <picture>
+                                <img src="./images/tea_field_item_1.jpg" alt="bg01">
+                            </picture>
                         </div>
                         <div class="swiper-slide mbaner02">
-                            <a href="#">
+                            <div class="info-box-wrap w1280">
                                 <div class="info-box">
-                                    <h2>호텔감성을 담은 인테리어</h2>
-                                    <h3>
-                                        우아하고 품격있는 침실
-                                    </h3>
+                                    <h2>제주의 자연이 선물한 발효</h2>
+                                    <p>
+                                        제주의 봄볕 아래 약발효한 섬세한 꽃향미, 따뜻한 제주 바람으로 발효한 <wbr>
+                                        건과일의 깊은 풍미 등 제주의 기후로 만들어진 특별한 발효를 통해서 <wbr>
+                                        오설록의 발효 명차는 만들어집니다.
+                                    </p>
                                 </div>
-                                <picture>
-                                    <img src="./images/tea_field_item_2.jpg" alt="bg02">
-                                </picture>
-                            </a>
+                            </div>
+                            <picture>
+                                <img src="./images/tea_field_item_2.jpg" alt="bg02">
+                            </picture>
                         </div>
-                        <div class="swiper-slide">
-                            <a href="#">
+                        <div class="swiper-slide mbaner03">
+                            <div class="info-box-wrap w1280">
                                 <div class="info-box">
-                                    <h2>오래된 추억이자, 새로운 경험</h2>
-                                    <h3>
-                                        턴테이블, 아날로그를 듣다
-                                    </h3>
+                                    <h2>그대로의 제주를 담은 차</h2>
+                                    <p>
+                                        제주의 겨울 바닷바람을 이기고 핀 제주 동백꽃, 제주의 돌담길을 걸을 때 <wbr>
+                                        풍겨오는 제주 귤꽃, 하얗게 수놓은 제주 자생종인 왕벚꽃, 일 년에 단 열흘만 꽃을 <wbr>
+                                        피우는 제주한란 등 제주에 서식하는 꽃을 '헤드 스페이스' 기법을 통해 원물의 훼손 없이 <wbr>
+                                        꽃향을 포집하여 제주의 향기 그대로 차에 담았습니다.
+                                    </p>
                                 </div>
-                                <picture>
-                                    <img src="./images/tea_field_item_3.jpg" alt="bg03">
-                                </picture>
-                            </a>
+                            </div>
+                            <picture>
+                                <img src="./images/tea_field_item_3.jpg" alt="bg03">
+                            </picture>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
             </section>
+
+            <!-- 오설록의 역사 -->
             <section id="main_content3">
-                <figure class="w1280">
-                    <img src="./images/why.jpg" alt="">
-                </figure>
+                <div class="since w1280 cf">
+                    <div class="since_img_wrap">
+                        <picture class="since_img">
+                            <img src="./images/speciality_item_bg_1_1.png" alt="">
+                        </picture>
+                        <picture class="since_img">
+                            <img src="./images/speciality_item_bg_2_1.png" alt="">
+                        </picture>
+                        <picture class="since_img">
+                            <img src="./images/speciality_item_bg_3_1.png" alt="">
+                        </picture>
+                        <picture class="since_img">
+                            <img src="./images/speciality_item_bg_4_1.png" alt="">
+                        </picture>
+                        <picture class="since_img">
+                            <img src="./images/speciality_item_bg_5_1.png" alt="">
+                        </picture>
+                        <picture class="since_img">
+                            <img src="./images/speciality_item_bg_6_1.png" alt="">
+                        </picture>
+                        <picture class="since_img">
+                            <img src="./images/speciality_item_bg_7_1.png" alt="">
+                        </picture>
+                        <picture class="since_img">
+                            <img src="./images/speciality_item_bg_8.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="since_text_wrap">
+                        <h2>Since 1979</h2>
+                        <p>
+                            차밭을 개간한 집념을 근간으로 차를 재배하고, 가공 발효하여 세계적으로 권위있는 명차 대회에서 <br>
+                            꾸준히 수상을 이어가며 증명된 오설록의 차는 이제 전 세계의 사람들과 만나고 있습니다.
+                        </p>
+                    </div>
+
+                </div>
             </section>
+
+
             <section id="main_content4">
                 <figure class="w1280">
                     <img src="./images/faq.jpg" alt="">
@@ -288,9 +343,9 @@
             </section>
             <section id="main_content5">
                 <a href="#">
-                    <figure class="w1280">
-                        <img src="./images/banner.jpg" alt="">
-                    </figure>
+                    <div class="w1280">
+                        <h2>오설록의 더 많은 이야기들을 만나보세요</h2>
+                    </div>
                 </a>
             </section>
         </main>
