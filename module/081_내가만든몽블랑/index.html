@@ -107,46 +107,106 @@
             <!-- 배경이미지 -->
             <div class="bgImg">
                 <div class="playVideo">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/W6f9vwJt4sI?mute=1&autoplay=1&playlist=W6f9vwJt4sI&loop=1&controls=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            </div>
+                    <object width="560" height="315" data="https://www.youtube.com/embed/W6f9vwJt4sI?mute=1&autoplay=1&playlist=W6f9vwJt4sI&loop=1&controls=0&modestbranding=1&vq=large" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></object>
                 </div>
-                <div class="playDown">
-                    <div></div>
-                </div>
+            </div>
+            <div class="playDown">
+                <div></div>
             </div>
         </header>
         <!-- /헤더 -->
 
         <!-- 메인 시작 -->
         <main role="main">
-            <section id="main_content">
-                <div class="w1280">
-                    <h2>오설록의 차밭 이야기</h2>
+            <section id="main_content" class="w1280">
+                <div class="main_text cf">
+                    <h2>오설록의 스토리</h2>
                     <p>
-                        제주는 엄청난 생명력을 가진, 2100여종의 식물자원이 분포하는 생태계 보고입니다. <br>
-                        이러한 제주는 화산지역이라는 생태계적 특성을 가져 차 품질의 특이성을 만들어 냅니다. <br>
-                        오설록의 차밭은 지리적 특성에 따라서 차의 특색이 조금씩 달라집니다. 이러한 개성을 지닌 오설록 3대 차밭의 찻잎들이 조화롭게 어우러져 오설록의 명차는 색(色), 향(香), 미(味)가 뛰어납니다. <br>
-                        약 100만 평에 달하는 3개의 오설록 유기농 차밭은 <strong>화산섬</strong>의 지역적 기후 환경에 따라 각각의 색과 향, 그리고 맛이 특별한 차를 생산하고 있습니다.
+                        제주는 화산지역이라는 생태계적 특성을 가져 차의 특색이 조금씩 달라집니다. <br>
+                        이러한 개성을 지닌 오설록 3대 차밭의 찻잎들이 조화롭게 어우러져 오설록의 명차는 색(色), 향(香), 미(味)가 뛰어납니다. <br>
+                        약 100만 평에 달하는 3개의 오설록 유기농 차밭은 <strong>화산섬</strong>의 
+                        지역적 기후 환경에 따라 각각의 색과 향, 그리고 맛이 특별한 차를 생산하고 있습니다.
+                        
                     </p>
-                    <div class="content_img_wrap">
-                        <div class="content_img">
-                            <img src="./images/intro_element_1.png" alt="">
-                        </div>
-                        <div class="content_img">
-                            <img src="./images/intro_element_2.png" alt="">
-                        </div>
-                        <div class="content_img">
-                            <img src="./images/intro_element_3.png" alt="">
-                        </div>
-                        <div class="content_img">
-                            <img src="./images/intro_element_4.png" alt="">
-                        </div>
-                        <div class="content_img">
-                            <img src="./images/intro_element_5.png" alt="">
-                        </div>
+                </div>
 
+                <div class="content_img_wrap">
+                    <div class="swiper content-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="./images/intro_element_1.png" alt="">
+                                </picture>
+                                <div class="content_text">
+                                    <h3>
+                                        한라산이 빚은 안개
+                                    </h3>
+                                    <p>
+                                        연평균 해무 발생일수 25일
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="./images/intro_element_2.png" alt="">
+                                </picture>
+                                <div class="content_text">
+                                    <h3>
+                                        생명을 품은 화산섬의 흙
+                                    </h3>
+                                    <p>
+                                        최대 공극률 75%
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="./images/intro_element_3.png" alt="">
+                                </picture>
+                                <div class="content_text">
+                                    <h3>
+                                        청정 화산 암반수
+                                    </h3>
+                                    <p>
+                                        1,800mm 빗물의 천연필터
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="./images/intro_element_4.png" alt="">
+                                </picture>
+                                <div class="content_text">
+                                    <h3>
+                                        제주의 거친 바람 
+                                    </h3>
+                                    <p>
+                                        연평균 초속 4~7m
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <img src="./images/intro_element_5.png" alt="">
+                                </picture>
+                                <div class="content_text">
+                                    <h3>
+                                        아열대 기후의 화산섬
+                                    </h3>
+                                    <p>
+                                        연평균 기온 16도씨
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button_wrap">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div id="contentTxt" class="w1280 cf">
+                <div id="content_info" class="cf">
                     <span>Please call our concierge on <strong>1-800-995-4810</strong></span>
                     <a href="#">
                         <span>VIEW ALL SERVICES</span>
@@ -248,6 +308,22 @@
                         <div class="swiper-slide mbaner01">
                             <div class="info-box-wrap w1280">
                                 <div class="info-box">
+                                    <h2>오설록의 차가 특별한 이유</h2>
+                                    <p>
+                                        오설록의 차밭은 지리적 특성에 따라서 차의 특색이 조금씩 달라집니다. <wbr>
+                                        이러한 개성을 지닌 오설록 3대 차밭의 찻잎들이 조화롭게 어우러져 오설록의 명차는 색(色), 향(香), 미(味)가 뛰어납니다. <br>
+                                        약 100만 평에 달하는 3개의 오설록 유기농 차밭은 <strong>화산섬</strong>의 
+                                        지역적 기후 환경에 따라 각각의 색과 향, 그리고 맛이 특별한 차를 생산하고 있습니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <picture>
+                                <img src="./images/aroma_1.jpg" alt="bg01">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide mbaner01">
+                            <div class="info-box-wrap w1280">
+                                <div class="info-box">
                                     <h2>자연을 숨쉬게 하는 차밭</h2>
                                     <p>
                                         제주 오설록의 유기농 차밭은 연간 11,176톤의 이산화 탄소를 흡수합니다. <wbr>
@@ -338,14 +414,29 @@
 
 
             <section id="main_content4">
+                <div class="w1280">
+                    <h2>
+                        다다일상, <br>
+                        차와 함께하는 삶
+                    </h2>
+                    <p>
+                        차를 마시는 것은 일상의 쉼을 가지며, 나를 이끌어내고 세상을 따뜻하게 바라보는 것에 관한 일입니다. <br>
+                        당신이 언제 어디에 있든 차와 함께 삶의 아름다운 여백을 만들어 나가길 바랍니다.
+                    </p>
+                </div>
                 <figure class="w1280">
-                    <img src="./images/faq.jpg" alt="">
+                    
                 </figure>
             </section>
             <section id="main_content5">
                 <a href="#">
                     <div class="w1280">
                         <h2>오설록의 더 많은 이야기들을 만나보세요</h2>
+                        <ul>
+                            <li><a href="#">다다일상 기록</a></li>
+                            <li><a href="#">베스트 제품</a></li>
+                            <li><a href="#">선물추천</a></li>
+                        </ul>
                     </div>
                 </a>
             </section>

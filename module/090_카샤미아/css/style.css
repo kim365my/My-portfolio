@@ -31,7 +31,7 @@ body{
     display: none;
 }
 .alert{
-    background: #000;
+    background: #111;
     color: #fff;
     padding: 1rem 2rem;
     font-size: 1.8rem;
@@ -64,7 +64,7 @@ body{
 /* =================== */
 aside{
     color: white;
-    background: #000;
+    background: #111;
 }
 aside .top_sub{
     display: block;
@@ -100,7 +100,7 @@ aside.close {
 /* lnb_all */
 .lnb_all{
     height: 7rem;
-    border-bottom: 1px solid #c9c9c9;
+    border-bottom: 1px solid #DBDBDB;
 }
 .root_lnb{
     padding: 2rem 0;
@@ -126,7 +126,7 @@ aside.close {
     height: 3rem;
     padding: 0 2rem;
     border-radius: 16px;
-    background-color: #ddd;
+    background-color: #DBDBDB;
     /* 플렉스 */
     display: flex;
     align-items: center;
@@ -158,14 +158,14 @@ aside.close {
     vertical-align: middle;
 }
 .lnb li:first-child a {
-    border-right: 1px solid #000;
+    border-right: 1px solid #111;
 }
 /* ------------- */
 /* gnb_all */
 .gnb_all{
     width: 100%;
     background-color: #fff;
-    border-bottom: 1px solid #c9c9c9;
+    border-bottom: 1px solid #DBDBDB;
     font-size: 1.6rem;
     /* 포지션 */
     position: sticky;
@@ -212,9 +212,9 @@ aside.close {
     display: none;
     width: 100%;
     height: 480px;
-    border-top: 1px solid #c9c9c9;
+    border-top: 1px solid #DBDBDB;
     background: #fff;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #111;
     /* 포지션 */
     position: absolute;
     bottom: 0;
@@ -250,13 +250,13 @@ aside.close {
     
 }
 .total_gnb_wrap:hover > a {
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid #111;
 }
 /* 전체메뉴 스타일 */
 .total_gnb{
     width: 100%;
     height: 480px;
-    border-top: 1px solid #c9c9c9;
+    border-top: 1px solid #DBDBDB;
     background-color: #fff;
     overflow: hidden;
     display: none;
@@ -282,12 +282,13 @@ aside.close {
 }
 .total_gnb_ul > li > a{
     width: 20rem;
+    color: #111;
 }
 
 .total_gnb_ul li a{
     line-height: 36px;
     font-weight: 600;
-    color: #929294;
+    color: #aaaaaa;
 }
 /* ------------- */
 /* 선택할 시 표시되는 메뉴 스타일 */
@@ -322,7 +323,7 @@ aside.close {
 .total_gnb_ul .check > a,
 .select_list .check > a,
 .total_gnb_ul .check a:hover{
-    color: #000;
+    color: #111;
     border-bottom: 1px solid #393939;
 }
 .total_gnb_ul li:hover > a{
@@ -506,7 +507,7 @@ section h2 {
 }
 .md_pick_select input:checked + label{
     color: #fff;
-    background-color: #000;
+    background-color: #111;
     border: none;
 }
 .md_pick_select input{
@@ -594,6 +595,7 @@ section h2 {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     font-size: 1.8rem;
+    color: #111;
 }
 .item_text_title strong{
     font-weight: 600;
@@ -609,7 +611,7 @@ section h2 {
     color: #ff3434;
 }
 .item_text_price del{
-    color: #c9c9c9;
+    color: #DBDBDB;
     font-size: 1.4rem;
 }
 
@@ -618,6 +620,9 @@ section h2 {
     font-size: 1.4rem;
     margin-top: 0.5rem;
     color: #646464;
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-between;
 }
 .item_text_info i {
     margin-left: 0.5rem;
@@ -672,7 +677,7 @@ section h2 {
 .real_time h2{
     font-weight: 700;
     padding-bottom: 30px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #DBDBDB;
 }
 /* 초이스 버튼 */
 .real_time_btn{
@@ -687,14 +692,14 @@ section h2 {
 /* 호버효과 */
 .real_time_btn.check,
 .real_time_btn:hover{
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #111;
 }
 
 /* 더보기 버튼 */
 .real_time li:last-child{
     margin-top: 2.5rem;
     text-align: center;
-    border: 1px solid #000;
+    border: 1px solid #111;
 }
 .real_time li:last-child a{
     display: inline-block;
@@ -707,7 +712,6 @@ section h2 {
 /* section 03 */
 .megazne{
     margin-top: 15rem;
-    margin-bottom: 10rem;
 }
 .megazne_title{
     margin-bottom: 5rem;
@@ -726,7 +730,7 @@ section h2 {
     gap: 1.5rem;
 }
 .megazne_content li{
-    border: 1px solid #ddd;
+    border: 1px solid #DBDBDB;
     border-radius: 16px;
     overflow: hidden;
 }
@@ -756,6 +760,7 @@ section h2 {
     font-size: 1.6rem;
     line-height: 2rem;
     margin-bottom: 2rem;
+    color: #767676;
     /* 오버플로시 */
     display: -webkit-box;
     height: 4rem;
@@ -769,8 +774,7 @@ section h2 {
 /* --------------- */
 /* section 04 이벤트 */
 .event{
-    min-height: 50rem;
-    margin-top: 12.4rem;
+    margin-top: 15rem;
 }
 .event_title{
     margin-bottom: 4.4rem;
@@ -782,17 +786,23 @@ section h2 {
 .event_title h3 {
     font-size: 1.6rem;
 }
-.event_sns{
+.event_sns ul{
     /* 플렉스 */
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
-.event_sns li a{
-    display: inline-block;
-    margin-left: 0.5rem;
+.event_sns li{
+    width: calc(100%/2 - 0.5rem);
     /* 오버플로 */
     overflow: hidden;
-    /* 포지션 */
-    position: relative;
+}
+.event_sns li{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.event_sns li:nth-child(2n){
+    margin-right: 0;
 }
 .event_sns img{
     width: 100%;
@@ -800,7 +810,7 @@ section h2 {
     object-fit: cover;
     transition: all 0.3s;
 }
-.event_sns ul:nth-child(1) li a{width: 50rem; height: 30rem;}
+/* .event_sns ul:nth-child(1) li a{width: 50rem; height: 30rem;}
 .event_sns ul:nth-child(2) li a{width: 100%; height: 60.5rem;}
 .event_sns ul:nth-child(2) li img{
     object-position: left;
@@ -814,10 +824,9 @@ section h2 {
 .event_sns ul:last-child{
     width: 100%;
     height: 38rem;
-    /* 플렉스 */
     display: flex;
     flex-flow: column wrap;
-}
+} */
 .event_sns ul:last-child a{
     width: 100%;
 }
@@ -865,14 +874,14 @@ section h2 {
     object-fit: cover;
 }
 .ad-slider .swiper-pagination-bullet-active{
-    background: #000;
+    background: #111;
 }
 
 /* ======================= */
 /* footer */
 /* ======================= */
 footer{
-    border-top: 1px solid #000;
+    border-top: 1px solid #111;
     padding-bottom: 5rem;
 
 }
@@ -956,7 +965,7 @@ footer{
     width: 5rem;
     height: 5rem;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid #DBDBDB;
     border-radius: 50%;
     background-color: #fff;
     /* 플렉스 */

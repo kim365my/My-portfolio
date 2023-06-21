@@ -26,7 +26,7 @@ body{
     display: none;
 }
 .alert{
-    background: #000;
+    background: #111;
     color: #fff;
     padding: 10px 20px;
     font-size: 1.8rem;
@@ -61,7 +61,7 @@ a.moreBtn{
     font-size: 1.5rem;
 }
 a.moreBtn > i {
-    color: #393939;
+    color: #111;
 }
 /* =================== */
 /* 탑 배너 */
@@ -171,7 +171,7 @@ header{
     transition: all 0.3s;
 }
 .gnb > li:hover > a {
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid #111;
 }
 
 .gnb > li > i {
@@ -332,7 +332,7 @@ article .swiper iframe{
     width: 100%;
     height: 0.8rem;
     border-radius: 25px;
-    background: #000;
+    background: #111;
     overflow: hidden;
     /* 포지션 */
     position: relative;

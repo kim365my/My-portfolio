@@ -75,7 +75,7 @@ aboutBtn.forEach((e, index) => {
 // --------------------------------
 // 박스 슬라이더
 // --------------------------------
-const offsetData = document.querySelector(".main-slider").offsetTop;
+const mainSlider = document.querySelector(".main-slider");
 const swiper = new Swiper(".main-slider", {
     direction: "vertical",
     slidesPerView: 1,
@@ -93,21 +93,30 @@ const swiper = new Swiper(".main-slider", {
             translate: [0, "100%", 0],
         },
     },
+    breakpoints:{
+        320:{
+
+        },
+        480 : {
+
+        },
+        1080 : {
+
+        },
+    },
     on: {
-        slideChange:() => {
-        },
-        sliderFirstMove:()=>{
-            scrollToY(offsetData, 0);
-            document.body.classList.add("stop-scrolling");
-        },
         // 첫번째나 마지막 슬라이드로 이동하게 되면 마우스휠 비활성화
         reachBeginning:() => {
-            stopScrollSwiper()
-            document.body.classList.remove("stop-scrolling");
+            window.setTimeout(() => {
+                stopScrollSwiper();
+                document.body.classList.remove("stop-scrolling");
+            }, 1000)
         },
         reachEnd:() => {
-            stopScrollSwiper()
-            document.body.classList.remove("stop-scrolling");
+            window.setTimeout(() => {
+                stopScrollSwiper();
+                document.body.classList.remove("stop-scrolling");
+            }, 1000)
         },
         scroll:() => {
             thresholdTime = 500; // 마우스 휠 이벤트 시간 0.5초
@@ -115,26 +124,54 @@ const swiper = new Swiper(".main-slider", {
     },
 
 });
-
 const startScrollSwiper = () => swiper.mousewheel.enable();
 const stopScrollSwiper = () => swiper.mousewheel.disable();
 
-// 버그, 위로 올렸다가 다시 2번째의 슬라이드를 보려고 할때 작동 안함
-let lastSwiperY = 0;
-window.addEventListener('wheel', function (event) {
-    const swiperY = swiper.translate;
-    lastSwiperY = swiperY;
-    
-    if(window.scrollY == offsetData) {
-        
-    }
-    if (event.deltaY < 0 && swiper.isEnd || // 마우스 휠 아래로 내렸는데 마지막 슬라이드면
-    event.deltaY > 0 && swiper.isBeginning) { // 마우스 휠 위로 올렸는데 첫번째 슬라이드면
-        startScrollSwiper();
-        document.body.classList.remove("stop-scrolling");
-    }
-});
 
+// --------------------------------
+// 스크롤링 이벤트
+// 현재 화면 요소가 보이는지 파악
+let inter = new IntersectionObserver((e) => {
+    // 감시 중 박스가 화면에 등장하거나 퇴장할 때 여기에 코드를 실행
+    e.forEach((slide) => {
+        if(slide.isIntersecting) { // 등장했을 경우
+            scrollToY(mainSlider.offsetTop, 30);
+            startScrollSwiper();
+            document.body.classList.add("stop-scrolling");
+        } else { // 퇴장했을 경우
+            stopScrollSwiper();
+            document.body.classList.remove("stop-scrolling");
+        }
+    })
+    console.log(e);
+
+}, {threshold: 0.5}); // 50% 등장했을 경우
+inter.observe(mainSlider); // 감시해주는 코드, 배열로 저장됨
+
+
+
+// --------------------------------
+// 콘텐츠 배너 슬라이더
+// --------------------------------
+const adSwiper = new Swiper(".content-slider", {
+    slidesPerView:3,
+    spaceBetween: 80,
+    centeredSlides:true,
+    grabCursor: true,
+    // effect: "fade",
+    loop:true,
+    loopedSlides: 2,
+    pagination: {
+        el: ".swiper-pagination",
+        type : "fraction",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+
+    },
+
+});
 
 // --------------------------------
 // 사용하는 함수들
