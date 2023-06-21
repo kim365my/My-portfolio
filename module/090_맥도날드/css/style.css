@@ -72,7 +72,7 @@ aside{
 }
 aside .top_sub{
     display: block;
-    line-height: 1.6rem;
+    line-height: 2rem;
     text-align: center;
     font-size: 1.6rem;
     padding: 2rem 0;
@@ -442,7 +442,7 @@ section h2 {
     z-index: 99;
 }
 .md_pick_area_detail ul a:hover img{
-    transform: scale(1.15);
+    transform: scale(1.05);
 }
 .md_pick_area_detail + p{
     text-align: right;
@@ -566,7 +566,7 @@ section h2 {
     z-index: 1;
 }
 .caxa_sns li a:hover img{
-    transform: scale(1.15);
+    transform: scale(1.05);
 }
 /* 더보기 링크 */
 .caxa_sns + p{

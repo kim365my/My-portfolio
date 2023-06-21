@@ -154,6 +154,8 @@ realBtn.forEach((e, index) => {
 // --------------------------------
 // 박스 슬라이더
 // --------------------------------
+const playBtn = document.querySelector(".play");
+const pauseBtn = document.querySelector(".pause");
 const swiper = new Swiper(".main-slider", {
     grabCursor: true,
     effect: "creative",
@@ -183,21 +185,20 @@ const swiper = new Swiper(".main-slider", {
         prevEl: ".swiper-button-prev",
 
     },
+    on: {
+        autoplayResume() {
+            playBtn.classList.add("hidden");
+            pauseBtn.classList.remove("hidden");
+        },
+        autoplayPause(){
+            pauseBtn.classList.add("hidden");
+            playBtn.classList.remove("hidden");
+        },
+    }
 });
 
-const playBtn = document.querySelector(".play");
-const pauseBtn = document.querySelector(".pause");
-
-playBtn.addEventListener("click", () => {
-    swiper.autoplay.resume();
-    playBtn.classList.add("hidden");
-    pauseBtn.classList.remove("hidden");
-})
-pauseBtn.addEventListener("click", () => {
-    swiper.autoplay.pause();
-    pauseBtn.classList.add("hidden");
-    playBtn.classList.remove("hidden");
-})
+playBtn.addEventListener("click", () => swiper.autoplay.resume())
+pauseBtn.addEventListener("click", () => swiper.autoplay.pause())
 
 
 // --------------------------------

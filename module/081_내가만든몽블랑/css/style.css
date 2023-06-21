@@ -7,6 +7,7 @@ html, body{
     width: 100%;
     margin: 0 auto;
     font-family: 'Noto Sans KR', sans-serif;
+    font-size: 62.5%;
 }
 
 #wrap{
@@ -19,7 +20,10 @@ html, body{
     width: 1280px;
     margin: 0 auto;
 }
-
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
 /* ------------------------ */
 /* 공통적으로 사용하는 CSS */
 .hidden {
@@ -30,7 +34,7 @@ html, body{
     background: #000;
     color: #fff;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 1.8rem;
     border-radius: 25px;
     white-space: nowrap;
     /* 포지션 */
@@ -97,8 +101,8 @@ header{
     z-index: -1;
 }
 .playVideo iframe{
-    width: 150%;
-    height: 150%;
+    width: 160%;
+    height: 160%;
     /* 포지션 */
     position: absolute;
     top: -30%;
@@ -176,7 +180,7 @@ header{
 .header_wrap .gnb li a{
     display: inline-block;
     width: 100%;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 600;
     color: #fff;
 
@@ -228,7 +232,7 @@ header{
     display: inline-block;
     width: 100%;
     color: #000;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 /* 호버시 */
 .header_wrap li:hover .snb{
@@ -271,13 +275,13 @@ header{
 #bg_txt > h2{
     margin-bottom: 10px;
     letter-spacing: 15px;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 600;
     color: #fff;
 }
 #bg_txt > p {
     line-height: 1.6;
-    font-size: 20px;
+    font-size: 2rem;
     color: #ffffff;
     margin: 30px 0;
     
@@ -286,9 +290,10 @@ header{
     display: inline-block;
     font-weight: 600;
     margin-top: 15px;
+    font-size: 1.6rem;
     padding: 15px 30px;
-    color: #668904;
-    background-color: #fff;
+    color: #fff;
+    border: 1px solid #fff;
 }
 /* ================ */
 /* 메인 */
@@ -296,23 +301,22 @@ header{
 /* ----------------- */
 /* 메인 컨텐츠 */
 #main_content{
-    height: 800px;
+    height: 100vh;
     padding-top: 100px;
     border-bottom: 1px solid #b4b4b4;
     overflow: hidden;
 }
 #main_content h2{
-    font-size: 42px;
+    font-size: 4.2rem;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 #main_content p{
     height: 172px;
-    line-height: 40px;
+    font-size: 1.6rem;
+    line-height: 1.6;
     color: #807f7f;
-
 }
-
 .content_img_wrap{
     margin-bottom: 30px;
 
@@ -354,18 +358,22 @@ header{
 /* 컨텐츠 1 */
 /* ----------------- */
 .about_us{
-    margin-top: 200px;
-    margin-bottom: 200px;
+    height: 100vh;
+    padding-top: 200px;
+    
+    
+    margin-bottom: 230px;
     /* 포지션 */
     position: relative;
 }
 .about_us h2{
-    font-size: 42px;
+    font-size: 4.2rem;
     font-weight: 800;
     margin-bottom: 20px;
 }
 .about_text_wrap{
     width: 580px;
+    font-size: 1.6rem;
     /* 플롯 */
     float: left;
 }
@@ -522,7 +530,7 @@ header{
 .swiper-slide.mbaner03 .info-box{background-color: #98875F;}
 
 .swiper-slide .info-box h2{
-    font-size: 30px;
+    font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 800;
     color: #fff;
@@ -536,7 +544,7 @@ header{
     background-color: #fff;
 }
 .swiper-slide .info-box p{
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 1.6;
     color: #fff;
 }
@@ -612,6 +620,7 @@ header{
 /* ==================== */
 footer{
     height: 550px;
+    font-size: 1.6rem;
     color: #000;
     background-color: #F5F5F5;
 }
@@ -623,9 +632,10 @@ footer{
 /* 푸터 기업소개 */
 #footer_logo{
     width: 310px;
-    float: left;
     text-align: left;
     line-height: 1.3;
+    /* 플롯 */
+    float: left;
 }
 #footer_logo > .logo{
     width: 130px;
@@ -654,7 +664,7 @@ footer{
     margin-right: 0;
 }
 #nnb h3{
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-bottom: 25px;
 }
 #nnb li{

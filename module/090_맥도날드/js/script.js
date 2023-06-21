@@ -132,6 +132,8 @@ realTimeBtn.forEach((e) =>{
 // --------------------------------
 // 박스 슬라이더
 // --------------------------------
+const playBtn = document.querySelector(".play");
+const pauseBtn = document.querySelector(".pause");
 const swiper = new Swiper(".main-slider", {
     spaceBetween: 0,
     centeredSlides: true,
@@ -160,20 +162,18 @@ const swiper = new Swiper(".main-slider", {
         autoplayTimeLeft(s, time, progress) {
             let progressBar = document.querySelector(".swiper-pagination-bullet-active .autoplay-progress div");
             progressBar.style.width = `calc(100% - ${Math.ceil(progress * 100)}%)`;
-        }
+        },
+        autoplayResume() {
+            playBtn.classList.add("hidden");
+            pauseBtn.classList.remove("hidden");
+        },
+        autoplayPause(){
+            pauseBtn.classList.add("hidden");
+            playBtn.classList.remove("hidden");
+        },
     }
 });
 
-const playBtn = document.querySelector(".play");
-const pauseBtn = document.querySelector(".pause");
 
-playBtn.addEventListener("click", () => {
-    swiper.autoplay.resume();
-    playBtn.classList.add("hidden");
-    pauseBtn.classList.remove("hidden");
-})
-pauseBtn.addEventListener("click", () => {
-    swiper.autoplay.pause();
-    pauseBtn.classList.add("hidden");
-    playBtn.classList.remove("hidden");
-})
+playBtn.addEventListener("click", () => swiper.autoplay.resume())
+pauseBtn.addEventListener("click", () => swiper.autoplay.pause())
