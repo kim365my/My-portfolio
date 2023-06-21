@@ -75,7 +75,7 @@ aboutBtn.forEach((e, index) => {
 // --------------------------------
 // 박스 슬라이더
 // --------------------------------
-const mainSlider = document.querySelector(".main-slider");
+const mainSliderWrap = document.querySelector("##main_content2");
 const swiper = new Swiper(".main-slider", {
     direction: "vertical",
     slidesPerView: 1,
@@ -135,7 +135,7 @@ let inter = new IntersectionObserver((e) => {
     // 감시 중 박스가 화면에 등장하거나 퇴장할 때 여기에 코드를 실행
     e.forEach((slide) => {
         if(slide.isIntersecting) { // 등장했을 경우
-            scrollToY(mainSlider.offsetTop, 30);
+            scrollToY(mainSliderWrap.offsetTop, 30);
             startScrollSwiper();
             document.body.classList.add("stop-scrolling");
         } else { // 퇴장했을 경우
@@ -146,7 +146,7 @@ let inter = new IntersectionObserver((e) => {
     console.log(e);
 
 }, {threshold: 0.5}); // 50% 등장했을 경우
-inter.observe(mainSlider); // 감시해주는 코드, 배열로 저장됨
+inter.observe(mainSliderWrap); // 감시해주는 코드, 배열로 저장됨
 
 
 
