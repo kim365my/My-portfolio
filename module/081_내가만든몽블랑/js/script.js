@@ -71,11 +71,24 @@ aboutBtn.forEach((e, index) => {
     })
 })
 
+// --------------------------------
+// 
+// --------------------------------
+const faqBtn = document.querySelectorAll(".faq_left dt");
+
+faqBtn.forEach((e, index) => {
+    e.addEventListener("click", () => {
+        faqBtn.forEach((i) => i.classList.remove(CHECK));
+        e.classList.add(CHECK);
+    })
+})
+
 
 // --------------------------------
 // 박스 슬라이더
 // --------------------------------
-const mainSliderWrap = document.querySelector("##main_content2");
+const startScrollSwiper = () => swiper.mousewheel.enable();
+const stopScrollSwiper = () => swiper.mousewheel.disable();
 const swiper = new Swiper(".main-slider", {
     direction: "vertical",
     slidesPerView: 1,
@@ -93,59 +106,60 @@ const swiper = new Swiper(".main-slider", {
             translate: [0, "100%", 0],
         },
     },
-    breakpoints:{
-        320:{
-
-        },
-        480 : {
-
-        },
-        1080 : {
-
-        },
-    },
     on: {
         // 첫번째나 마지막 슬라이드로 이동하게 되면 마우스휠 비활성화
         reachBeginning:() => {
             window.setTimeout(() => {
                 stopScrollSwiper();
-                document.body.classList.remove("stop-scrolling");
-            }, 1000)
+            }, 500)
         },
         reachEnd:() => {
             window.setTimeout(() => {
                 stopScrollSwiper();
-                document.body.classList.remove("stop-scrolling");
-            }, 1000)
+            }, 500)
         },
-        scroll:() => {
+        scroll:(swiper, e) => {
             thresholdTime = 500; // 마우스 휠 이벤트 시간 0.5초
         },
+        progress:(e, progress)=>{
+            if(progress > 1 || progress < 0) {
+                stopScrollSwiper();
+            }
+        },
+        
     },
 
 });
-const startScrollSwiper = () => swiper.mousewheel.enable();
-const stopScrollSwiper = () => swiper.mousewheel.disable();
-
 
 // --------------------------------
+const mainWrap = document.querySelector("#main_content");
+let observe = new IntersectionObserver((e) => {
+    e.forEach((slide) => {
+        if(slide.isIntersecting) {
+            scrollToY(mainWrap.offsetTop, 30);
+        } else {
+
+        }
+    })
+}, {threshold : 0.2})
+observe.observe(mainWrap);
+
+
 // 스크롤링 이벤트
 // 현재 화면 요소가 보이는지 파악
+const mainSliderWrap = document.querySelector("#main_content2");
 let inter = new IntersectionObserver((e) => {
     // 감시 중 박스가 화면에 등장하거나 퇴장할 때 여기에 코드를 실행
     e.forEach((slide) => {
         if(slide.isIntersecting) { // 등장했을 경우
             scrollToY(mainSliderWrap.offsetTop, 30);
             startScrollSwiper();
-            document.body.classList.add("stop-scrolling");
         } else { // 퇴장했을 경우
             stopScrollSwiper();
-            document.body.classList.remove("stop-scrolling");
         }
     })
-    console.log(e);
 
-}, {threshold: 0.5}); // 50% 등장했을 경우
+}, {threshold: 0.2}); // 20% 등장했을 경우
 inter.observe(mainSliderWrap); // 감시해주는 코드, 배열로 저장됨
 
 
@@ -153,7 +167,7 @@ inter.observe(mainSliderWrap); // 감시해주는 코드, 배열로 저장됨
 // --------------------------------
 // 콘텐츠 배너 슬라이더
 // --------------------------------
-const adSwiper = new Swiper(".content-slider", {
+const contentSwiper = new Swiper(".content-slider", {
     slidesPerView:3,
     spaceBetween: 80,
     centeredSlides:true,
@@ -171,6 +185,21 @@ const adSwiper = new Swiper(".content-slider", {
 
     },
 
+});
+
+
+// --------------------------------
+// 오설록의 역사 배너 슬라이더
+// --------------------------------
+const sinceSwiper = new Swiper(".since-slider", {
+    slidesPerView:3.5,
+    spaceBetween: 20,
+    grabCursor: true,
+    loopedSlides: 2,
+    scrollbar: {
+        el: '.since-swiper-scrollbar',
+        draggable: true,
+      },
 });
 
 // --------------------------------
