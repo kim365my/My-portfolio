@@ -386,6 +386,16 @@ article .swiper{
     transform: translateX(-50%);
     z-index: 10;
 }
+.main-slider .swiper-button-prev:after{
+    content: "\f104";
+    font-family: "FontAwesome";
+    font-weight: 400;
+}
+.main-slider .swiper-button-next:after{
+    content: "\f105";
+    font-family: "FontAwesome";
+    font-weight: 400;
+}
 /* 오토 제어버튼 */
 .main-slider .autoplay-controll button{
     height: 2rem;

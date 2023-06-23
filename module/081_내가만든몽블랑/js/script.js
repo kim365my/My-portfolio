@@ -103,13 +103,13 @@ const swiper = new Swiper(".main-slider", {
             stopScrollSwiper();
             window.setTimeout(() => {
                 startScrollSwiper();
-            }, 1000)
+            }, 2000)
         },
         reachEnd:() => {
             stopScrollSwiper();
             window.setTimeout(() => {
                 startScrollSwiper();
-            }, 1000)
+            }, 2000)
         },
         scroll:(swiper, e) => {
             thresholdTime = 500; // 마우스 휠 이벤트 시간 0.5초
