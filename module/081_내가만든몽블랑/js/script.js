@@ -1,3 +1,6 @@
+// 상수
+const CHECK = "check";
+
 // --------------------------------
 // 미구현기능 클릭시 안내문
 // --------------------------------
@@ -56,7 +59,7 @@ playDown.addEventListener("click", () => {
 const aboutBtn = document.querySelectorAll(".about_us .areaBtn li");
 const aboutLocation = document.querySelectorAll(".about_us .location li");
 const aboutImgList = document.querySelectorAll(".about_us .about_img_wrap li");
-const CHECK = "check";
+
 aboutBtn.forEach((e, index) => {
     e.addEventListener("click", () => {
         aboutBtn.forEach((i) => i.classList.remove(CHECK));
@@ -68,18 +71,6 @@ aboutBtn.forEach((e, index) => {
         aboutImgList.forEach((i) => i.classList.remove(CHECK));
         aboutImgList[index].classList.add(CHECK);
 
-    })
-})
-
-// --------------------------------
-// 
-// --------------------------------
-const faqBtn = document.querySelectorAll(".faq_left dt");
-
-faqBtn.forEach((e, index) => {
-    e.addEventListener("click", () => {
-        faqBtn.forEach((i) => i.classList.remove(CHECK));
-        e.classList.add(CHECK);
     })
 })
 
@@ -109,14 +100,16 @@ const swiper = new Swiper(".main-slider", {
     on: {
         // 첫번째나 마지막 슬라이드로 이동하게 되면 마우스휠 비활성화
         reachBeginning:() => {
+            stopScrollSwiper();
             window.setTimeout(() => {
-                stopScrollSwiper();
-            }, 500)
+                startScrollSwiper();
+            }, 1000)
         },
         reachEnd:() => {
+            stopScrollSwiper();
             window.setTimeout(() => {
-                stopScrollSwiper();
-            }, 500)
+                startScrollSwiper();
+            }, 1000)
         },
         scroll:(swiper, e) => {
             thresholdTime = 500; // 마우스 휠 이벤트 시간 0.5초
@@ -145,23 +138,23 @@ let inter = new IntersectionObserver((e) => {
         }
     })
 
-}, {threshold: 0.2}); // 20% 등장했을 경우
+}, {threshold: 0.5}); // 50% 등장했을 경우
 inter.observe(mainSliderWrap); // 감시해주는 코드, 배열로 저장됨
 
 // ---------------------------------
+
+const header = document.querySelector("header");
 let observe = new IntersectionObserver((e) => {
-    e.forEach((slide) => {
-        if(slide.isIntersecting) {
-            
-        } else {
-
-        }
+    e.forEach((item) => {
+        if(!item.isIntersecting) {item.target.classList.add("fixed");}
     })
-}, {threshold : 1})
+}, {threshold : 0})
+observe.observe(header);
 
-const section = document.querySelectorAll("main > section");
-section.forEach((e) => {
-    observe.observe(e);
+document.addEventListener("scroll", (e) => {
+    if(window.pageYOffset < 100) {
+        header.classList.remove("fixed");
+    } 
 })
 
 // --------------------------------
@@ -192,8 +185,8 @@ const contentSwiper = new Swiper(".content-slider", {
 // 오설록의 역사 배너 슬라이더
 // --------------------------------
 const sinceSwiper = new Swiper(".since-slider", {
-    slidesPerView:3.5,
-    spaceBetween: 20,
+    slidesPerView:4.5,
+    spaceBetween: 10,
     grabCursor: true,
     loopedSlides: 2,
     scrollbar: {

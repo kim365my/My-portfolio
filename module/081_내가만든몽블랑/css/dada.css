@@ -1,0 +1,446 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+/* 전역설정 */
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 62.5%;
+    font-family: 'NanumSquare', sans-serif;
+}
+#wrap{
+    margin: 0 auto;
+}
+.w1440{
+    width: 1440px;
+    min-width: 1440px;
+    margin: 0 auto;
+}
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
+/* ------------------------ */
+/* 공통적으로 사용하는 CSS */
+.hidden {
+    display: none;
+}
+
+.alert{
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.8rem;
+    border-radius: 25px;
+    white-space: nowrap;
+    /* 포지션 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    opacity: 0;
+    display: none;
+}
+.showAlert{
+    display: block;
+    animation: showAni 2s;
+}
+
+.showAni{
+    animation: showAni 2s;
+}
+@keyframes showAni {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes showAni_toBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+/* ======================= */
+/* 헤더 */
+/* ======================= */
+header {
+    width: 100%;
+    height: 70px;
+    padding: 10px 0;
+    /* 포지션 */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+}
+
+/* 삼단플롯 .logo .gnb_wrap */
+header .logo{
+    float: left;
+}
+header .logo a{
+    display: inline-block;
+    width: 109px;
+    height: 50px;
+    background: url(../images/logo_black.png) no-repeat center;
+    background-size: 100%;
+}
+/* 헤더 메뉴 */
+header .gnb_wrap{
+    height: 50px;
+    line-height: 40px;
+    /*플롯 */
+    float: right;
+}
+header .gnb{
+    float: left;
+}
+/* gnb */
+header .gnb > li {
+    display: inline-block;
+    margin-left: 40px;
+    
+    /* 포지션 */
+    position: relative;
+}
+header .gnb li a{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #111;
+
+    overflow: hidden;
+    /* 포지션 */
+    position: relative;
+}
+header .gnb > li > a::before{
+    content: "";
+    display: none;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #608106;
+}
+header .gnb > li:hover > a::before{
+    display: inline-block;
+    left: 0;
+    animation: showBottom 0.3s;
+}
+@keyframes showBottom {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* 공통 gnb css */
+header .snb{
+    display: none;
+    width: 200px;
+    padding: 10px 15px;
+    border: 1px solid #DBDBDB;
+    background-color: #fff;
+    /* 포지션 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+}
+header .snb li {
+    width: 100%;
+    height: 4rem;
+}
+header .snb li a{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #111;
+    font-size: 1.6rem;
+}
+/* 호버시 */
+header li:hover .snb{
+    display: block;
+}
+header li .snb li:hover {
+    color: #608106;
+    border-bottom: 1px solid #608106;
+}
+
+/* lnb 메뉴 리스트 */
+header .lnb{
+    margin-left: 30px;
+    /* 플롯 */
+    float: right;
+}
+header .lnb > li {
+    display: inline-block;
+    /* 포지션 */
+    position: relative;
+}
+header .lnb > li > a{
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 24px;
+    color: #111;
+}
+header .lnb li .snb{
+    /* 포지션 */
+    position: absolute;
+    left: auto;
+    right: 0;
+}
+header .lnb li:hover i{
+    color: #608106;
+}
+
+/* ==================== */
+/* 메인 */
+/* ==================== */
+main{
+    font-family: 'Gowun Dodum', sans-serif;
+}
+/* --------------- */
+/* 다다일상 타이틀 */
+.dada_title{
+    background: url(../images/main_banner_pc.png) no-repeat top;
+    background-size: 100%;
+    padding: 15rem 0;
+}
+.dada_title h3{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+.dada_title h3 span{
+    color: #5A7E62;
+}
+.dada_title p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: #767676;
+    line-height: 1.6;
+}
+
+
+/* --------------- */
+/* 이달의 다다일상 */
+.dada_today{
+    border: 1px solid #767676;
+    margin: 20rem 0;
+}
+.card_text{
+    width: 45%;
+    padding-top: 3rem;
+    margin: 0 auto;
+    /* 플롯 */
+    float: left;
+}
+.card_img{
+    width: 55%;
+    height: 45rem;
+    margin: 0 auto;
+    /* 플롯 */
+    float: left;
+}
+.card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.dada_today h3{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+.dada_today p {
+    font-size: 1.6rem;
+    color: #767676;
+    line-height: 1.6;
+}
+
+
+/* FAQ */
+.dada_faq{
+    height: 50rem;
+    margin-top: 16rem;
+    margin-bottom: 16rem;
+}
+.dada_faq h3{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.faq_list{
+    width: calc(50% - 1rem);
+    line-height: 1.6;
+    /* 플롯 */
+    float: left;
+}
+.faq_list:last-child{
+    /* 플롯 */
+    float: right;
+}
+.faq_list dt{
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 2rem 0;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    /* 포지션 */
+    position: relative;
+}
+.faq_list dt:first-child{
+    border-top: 1px solid #ccc;
+}
+.faq_list dt::after{
+    content: "+";
+    /* 포지션 */
+    position: absolute;
+    right: 1rem;
+}
+.faq_list dt.check::after{
+    content: "-";
+}
+.faq_list dt.check + dd{
+    display: block;
+    animation: showFaq 1s;
+}
+.faq_list dd{
+    display: none;
+    font-size: 1.6rem;
+    background-color: rgba(163, 163, 163, 0.1);
+    border-bottom: 1px solid #ccc;
+    padding: 3rem 2rem;
+    animation: showFaq 1s;
+    /* 오버플로 */
+    overflow: hidden;
+}
+@keyframes showFaq {
+    0%{
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        height: 16rem;
+        opacity: 1;
+    }
+}
+
+
+/* ==================== */
+/* 푸터 */
+/* ==================== */
+footer{
+    font-size: 1.4rem;
+    color: #767676;
+    background-color: #F5F5F5;
+    padding: 40px 0;
+}
+#footer_container{
+    padding: 50px 0 20px;
+    border-bottom: #c7c4c4 solid 1px;
+    margin-bottom: 20px;
+}
+/* 푸터 기업소개 */
+.footer_logo{
+    width: 130px;
+    margin-right: 20px;
+    text-align: left;
+    line-height: 1.3;
+    /* 플롯 */
+    float: left;
+}
+
+footer .footer_gnb{
+
+    /* 플롯 */
+    float: left;
+}
+/* 푸터 네비 */
+footer .footer_gnb li{
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #767676;
+}
+footer .footer_gnb_list{
+    margin-bottom: 20px;
+}
+footer .footer_gnb_list li:not(:last-child):after{
+    content: "|";
+    padding-right: 5px;
+    margin-left: 5px;
+}
+footer .footer_gnb li:hover{
+    color: #000000;
+}
+
+footer .footer_gnb p {
+    line-height: 1.4;
+}
+
+.footer_sns{
+    /* 플롯 */
+    float: right;
+
+}
+.footer_sns li{
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #767676;
+    margin-left: 20px;
+}
+#footer_container + div p {
+    line-height: 1.4;
+}
+/* ======================= */
+/* top 버튼 */
+/* ======================= */
+.top a {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 10px;
+    /* 플렉스 */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* 포지션 */
+    position: fixed;
+    bottom: 40px;
+    right: 35px;
+    z-index: 999;
+}
+
+.top a:hover{
+    border: 1px solid #6d6d6d;
+    background-color: #6d6d6d;
+    color: #fff;
+}

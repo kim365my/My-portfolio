@@ -1,21 +1,22 @@
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
 /* 전역설정 */
 html, body{
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    /* font-family: 'Noto Sans KR', sans-serif; */
     font-size: 62.5%;
-    font-family: 'NanumSquare';
+    font-family: 'NanumSquare', sans-serif;
 }
 
 #wrap{
-    min-width: 1320px;
     margin: 0 auto;
 }
 
-.w1280{
-    width: 1280px;
+.w1440{
+    width: 1440px;
+    min-width: 1440px;
     margin: 0 auto;
 }
 .stop-scrolling {
@@ -70,20 +71,169 @@ html, body{
         transform: translateY(0%);
     }
 }
-/* ------------------ */
+/* ======================= */
 /* 헤더 */
-header{
+/* ======================= */
+header {
+    width: 100%;
+    height: 70px;
+    padding: 10px 0;
+    /* 포지션 */
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+/* 헤더 픽스 */
+header.fixed{
+    position: fixed;
+    top: 0;
+    background: #fff;
+}
+header.fixed .gnb li a,
+header.fixed .lnb li a{
+    color: #111;
+}
+header.fixed .logo a{
+    background: url(../images/logo_black.png) no-repeat center;
+}
+
+/* 삼단플롯 .logo .gnb_wrap */
+header .logo{
+    float: left;
+}
+header .logo a{
+    display: inline-block;
+    width: 109px;
+    height: 50px;
+    background: url(../images/logo_white.png) no-repeat center;
+    background-size: 100%;
+}
+/* 헤더 메뉴 */
+header .gnb_wrap{
+    height: 50px;
+    line-height: 40px;
+    /*플롯 */
+    float: right;
+}
+header .gnb{
+    float: left;
+}
+/* gnb */
+header .gnb > li {
+    display: inline-block;
+    margin-left: 40px;
+    
+    /* 포지션 */
+    position: relative;
+}
+header .gnb li a{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+
+    overflow: hidden;
+    /* 포지션 */
+    position: relative;
+}
+header .gnb > li > a::before{
+    content: "";
+    display: none;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #608106;
+}
+header .gnb > li:hover > a::before{
+    display: inline-block;
+    left: 0;
+    animation: showBottom 0.3s;
+}
+@keyframes showBottom {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* 공통 gnb css */
+header .snb{
+    display: none;
+    width: 200px;
+    padding: 10px 15px;
+    border: 1px solid #DBDBDB;
+    background-color: #fff;
+    /* 포지션 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+}
+header .snb li {
+    width: 100%;
+    height: 4rem;
+}
+header .snb li a{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #111;
+    font-size: 1.6rem;
+}
+/* 호버시 */
+header li:hover .snb{
+    display: block;
+}
+header li .snb li:hover {
+    color: #608106;
+    border-bottom: 1px solid #608106;
+}
+
+/* lnb 메뉴 리스트 */
+header .lnb{
+    margin-left: 30px;
+    /* 플롯 */
+    float: right;
+}
+header .lnb > li {
+    display: inline-block;
+    /* 포지션 */
+    position: relative;
+}
+header .lnb > li > a{
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 24px;
+    color: #fff;
+}
+header .lnb li .snb{
+    /* 포지션 */
+    position: absolute;
+    left: auto;
+    right: 0;
+}
+header .lnb li:hover i{
+    color: #608106;
+}
+/* ------------------ */
+.videoTitle{
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     background: linear-gradient(rgba(0, 0, 0, 0.4) 0%, transparent 8%);
     /* 포지션 */
     position: relative;
-
-    /* border-bottom-right-radius: 50% 26%;
-    border-bottom-left-radius: 50% 26%; */
 }
-
-/* ------------------ */
 /* 배경 영상 */
 .bgImg {
     width: 100%;
@@ -100,16 +250,19 @@ header{
     position: relative;
     padding-bottom:56.25%;
 }
-.playVideo object{
-    width: 160%;
-    height: 160%;
+.playVideo object,
+.playVideo img{
+    width: calc(160vh + 40%);
+    height: 160vh;
     /* 포지션 */
     position: absolute;
     top: -30%;
     left: 50%;
     transform: translateX(-50%);
 }
-
+.playVideo img{
+    z-index: -2;
+}
 .playDown{
     width: 3rem;
     height: 5rem;
@@ -143,125 +296,6 @@ header{
 }
 /* ------------------ */
 /* 헤더 컨테이너 */
-.header_wrap {
-    height: 64px;
-    padding: 40px 0;
-}
-
-/* 삼단플롯 .logo .gnb_wrap */
-.header_wrap .logo{
-    float: left;
-}
-
-/* 헤더 메뉴 */
-.header_wrap .gnb_wrap{
-    height: 50px;
-    line-height: 40px;
-    /*플롯 */
-    float: right;
-}
-.header_wrap .gnb{
-    float: left;
-}
-/* gnb */
-.header_wrap .gnb > li {
-    display: inline-block;
-    height: 50px;
-    margin-left: 40px;
-
-    /* 포지션 */
-    position: relative;
-}
-.header_wrap .gnb li a{
-    display: inline-block;
-    width: 100%;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #fff;
-
-    overflow: hidden;
-    /* 포지션 */
-    position: relative;
-}
-.header_wrap .gnb > li > a::before{
-    content: "";
-    display: none;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: #608106;
-}
-.header_wrap .gnb > li:hover > a::before{
-    display: inline-block;
-    left: 0;
-    animation: showBottom 0.3s;
-}
-@keyframes showBottom {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-/* 공통 gnb css */
-.header_wrap .snb{
-    display: none;
-    width: 200px;
-    padding: 10px 15px;
-    background-color: #ddd;
-    /* 포지션 */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translateY(100%);
-}
-.header_wrap .snb li {
-    width: 100%;
-    height: 40px;
-}
-.header_wrap .snb li a{
-    display: inline-block;
-    width: 100%;
-    color: #111;
-    font-size: 1.6rem;
-}
-/* 호버시 */
-.header_wrap li:hover .snb{
-    display: block;
-}
-.header_wrap li .snb li:hover {
-    color: #608106;
-    border-bottom: 1px solid #608106;
-}
-
-/* lnb 메뉴 리스트 */
-.header_wrap .lnb{
-    margin-left: 30px;
-    /* 플롯 */
-    float: right;
-}
-.header_wrap .lnb > li {
-    display: inline-block;
-    /* 포지션 */
-    position: relative;
-}
-.header_wrap .lnb > li > a{
-    padding: 0 20px;
-    font-size: 24px;
-    color: #fff;
-}
-.header_wrap .lnb li .snb{
-    position: absolute;
-    left: auto;
-    right: 0;
-}
-.header_wrap .lnb li:hover i{
-    color: #608106;
-}
 /* -------------------------- */
 /* 메인 비디오 텍스트 부분 */
 #bg_txt{
@@ -297,6 +331,9 @@ header{
 /* ================ */
 /* 메인 */
 /* ================ */
+main{
+    font-family: 'Gowun Dodum', sans-serif;
+}
 /* ----------------- */
 /* 메인 컨텐츠 */
 #main_content{
@@ -314,7 +351,6 @@ header{
     margin-bottom: 40px;
 }
 #main_content .main_text p{
-    height: 10rem;
     font-size: 1.6rem;
     line-height: 1.6;
     color: #767676;
@@ -335,8 +371,8 @@ header{
 }
 .content_img_wrap picture{
     display: block;
-    width: 30rem;
-    height: 30rem;
+    width: 24rem;
+    height: 24rem;
     border-radius: 100%;
     overflow: hidden;
     margin: 0 auto;
@@ -409,18 +445,17 @@ header{
 /* 컨텐츠 1 */
 /* ----------------- */
 .about_us{
-    height: 100vh;
-    padding-top: 200px;
-    
-    
-    margin-bottom: 230px;
-    /* 포지션 */
-    position: relative;
+    padding-top: 20rem;
+    margin-bottom: 23rem;
+}
+.about_us article{
+    background: url(../images/tea_field.png) no-repeat 35rem bottom;
+    background-size: 37rem;
 }
 .about_us h2{
     font-size: 4.2rem;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 .about_text_wrap{
     width: 580px;
@@ -433,7 +468,7 @@ header{
 .areaBtn ul{
     text-align: center;
     border-bottom: 1px solid #cfcfcf;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     background-color: #fff;
     /* 플렉스 */
     display: flex;
@@ -441,7 +476,7 @@ header{
 }
 .areaBtn li{
     display: inline-block;
-    line-height: 80px;
+    line-height: 8rem;
     font-weight: 600;
     margin: 0 35px;
     cursor: pointer;
@@ -497,22 +532,6 @@ header{
     border-bottom: 1px solid #608106;
 }
 
-/* 지도 이미지 */
-.location_img{
-    width: 370px;
-    /* 포지션 */
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    z-index: -1;
-}
-.location_img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
 /* 해당 지역 사진 */
 .about_img_wrap{
     /* 플롯 */
@@ -526,9 +545,9 @@ header{
 }
 .about_img{
     display: inline-block;
-    width: 320px;
-    height: 600px;
-    margin-left: 20px;
+    width: 36rem;
+    height: 60rem;
+    margin-left: 2rem;
 }
 .about_img img{
     width: 100%;
@@ -544,7 +563,7 @@ header{
 #main_content2{
     width: 100%;
     height: 100vh;
-    padding: 5rem 0;
+    /* padding: 5rem 0; */
 }
 /* -------------------- */
 /* 박스 슬라이드 커스텀 */
@@ -553,6 +572,7 @@ header{
     height: 100%;
     /* 포지션 */
     position: relative;
+    font-family: 'Gowun Dodum', sans-serif;
 }
 .main-slider img{
     width: 100%;
@@ -572,36 +592,32 @@ header{
     z-index: 10;
 }
 .swiper-slide .info-box{
-    width: 55rem;
+    width: 50rem;
+    height: max-content;
     height: 100%;
-    background-color: rgba(255, 255, 255, 1);
-    padding: 10% 2rem 0;
-
+    padding-bottom: 20px;
+    background-color: rgb(255 255 255);
+    padding: 10% 2rem;
+    
     margin-left: auto;
     margin-right: 0;
 }
-/* 슬라이드마다 배경 색 다르게 */
-/* .swiper-slide.mbaner01 .info-box{background-color: rgba(75, 89, 59, 0.8);}
-.swiper-slide.mbaner02 .info-box{background-color: rgba(89, 68, 59, 0.8);}
-.swiper-slide.mbaner03 .info-box{background-color: rgb(189 45 62 / 80%);} */
-
 .swiper-slide .info-box h2{
     text-align: start;
-    font-size: 4.4rem;
-    margin-bottom: 20px;
+    font-size: 3.2rem;
     font-weight: 800;
     color: #111;
 }
 .swiper-slide .info-box h2::after{
     content: "";
     display: block;
-    width: 60%;
+    width: 90%;
     height: 2px;
     margin: 3rem 0;
-    background-color: #608106;
+    background-color: #7f7f7f;
 }
 .swiper-slide .info-box p{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     text-align: start;
     
     line-height: 1.6;
@@ -651,9 +667,7 @@ header{
 /* 텍스트 */
 .since_text_wrap{
     margin-bottom: 5rem;
-
 }
-
 .since_text_wrap h2{
     font-size: 4.4rem;
     font-weight: 800;
@@ -662,13 +676,12 @@ header{
 .since_text_wrap p{
     margin: 2rem 0;
     font-size: 1.8rem;
-    line-height: 1.2;
+    line-height: 1.4;
     color: #767676;
-}
-/* 슬라이드 커스텀 */
-.swiper since-slider{
+
 
 }
+/* 슬라이드 커스텀 */
 .since-swiper-scrollbar{
     height: 0.5rem;
 }
@@ -704,120 +717,29 @@ header{
     line-height: 1.4;
     color: #767676;
 }
-/* ----------------- */
-/* 컨텐츠 4 */
-/* ----------------- */
-#main_content4{
-    background-color: #F8F8FA;
-    padding: 15rem 0;
-    /* 포지션 */
-    position: relative;
-}
-#main_content4 .faq_title{
-    margin-bottom: 8rem;
-}
-#main_content4 h2 {
-    font-size: 4.4rem;
-    font-weight: 600;
-    color: #111;
-    /* 플롯 */
-    float: left;
-}
-#main_content4 p {
-    font-size: 1.6rem;
-    color: #767676;
-    line-height: 2rem;
 
-    border-left: 1px solid #ccc;
-    padding-left: 5rem;
-    margin-left: 5rem;
-    margin-top: 4.5rem;
-    /* 플롯 */
-    float: left;
-}
-
-/* FAQ */
-#main_content4 .faq_left{
-    width: 50%;
-    line-height: 1.6;
-    /* 플롯 */
-    float: left;
-}
-#main_content4 .faq_left dt{
-    font-size: 1.8rem;
-    font-weight: 600;
-    padding: 2rem 0;
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-    /* 포지션 */
-    position: relative;
-}
-#main_content4 .faq_left dt:first-child{
-    border-top: 1px solid #ccc;
-}
-#main_content4 .faq_left dt::after{
-    content: "+";
-    /* 포지션 */
-    position: absolute;
-    right: 1rem;
-}
-#main_content4 .faq_left dt.check + dd{
-    display: block;
-}
-#main_content4 .faq_left dd{
-    display: none;
-    height: 16rem;
-    font-size: 1.6rem;
-    background-color: rgba(163, 163, 163, 0.1);
-    border-bottom: 1px solid #ccc;
-    padding: 3rem 2rem;
-    animation: showFaq 1s;
-    /* 오버플로 */
-    overflow: hidden;
-}
-@keyframes showFaq {
-    0%{
-        height: 0;
-        transform: translateY(-50%);
-        opacity: 0;
-    }
-    100% {
-        height: 16rem;
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
-/* 상품평 */
-#main_content4 .faq_right{
-    width: 45%;
-    /* 플롯 */
-    float: right;
-}
-#main_content4 picture{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-}
-#main_content4 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 /* ----------------- */
 /* 컨텐츠 5 */
 /* ----------------- */
 #main_content5{
-
     padding: 16rem 0;
 }
 #main_content5 h2 {
+    text-align: center;
     font-size: 4rem;
     font-weight: 600;
-    margin-bottom: 8rem;
     color: #111;
+    line-height: 1.2;
+    margin-bottom: 4rem;
 }
+#main_content5 p {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #767676;
+    line-height:1.6;
 
+    margin-bottom: 8rem;
+}
 /* 슬라이드 커스텀 */
 .dada-img-wrap .dada-img{
     width: calc(100%/3 - 4rem);
@@ -842,8 +764,16 @@ header{
     height: 100%;
     object-fit: cover;
 }
+/* 이미지 이중 처리 */
+.dada-img ul{
+    height: 100%;
+}
 .dada-img ul li{
+    height: calc(50% - 1rem);
     margin-bottom: 2rem;
+}
+.dada-img ul li:last-child{
+    margin-bottom: 0;
 }
 .dada-img-wrap .dada_text{
     text-align: start;
@@ -871,14 +801,15 @@ header{
 #main_content6{
 
 }
-#main_content6 > div {
+#main_content6 > article {
     text-align: center;
-    padding: 32rem 0;
+    padding: 12rem 0 24rem;
 }
 #main_content6 h2 {
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: 600;
-    color: #111;
+    color: #666;
+    line-height: 1.2;
     margin-bottom: 3rem;
 }
 #main_content6 ul > li{
@@ -892,74 +823,74 @@ header{
     padding: 2rem; 
     font-size: 1.6rem;
 }
+#main_content6 ul > li:nth-child(even) > a{
+    margin: 0 4rem;
+}
 /* ==================== */
 /* 푸터 */
 /* ==================== */
 footer{
-    height: 550px;
-    font-size: 1.6rem;
-    color: #111;
+    font-size: 1.4rem;
+    color: #767676;
     background-color: #F5F5F5;
+    padding: 40px 0;
 }
 #footer_container{
-    padding: 80px 0 50px 0;
+    padding: 50px 0 20px;
     border-bottom: #c7c4c4 solid 1px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 /* 푸터 기업소개 */
-#footer_logo{
-    width: 310px;
+.footer_logo{
+    width: 130px;
+    margin-right: 20px;
     text-align: left;
     line-height: 1.3;
     /* 플롯 */
     float: left;
 }
-#footer_logo > .logo{
-    width: 130px;
-    margin-bottom: 10px;
-}
-#footer_logo > p{
-    margin-bottom: 30px;
-    color: #767676;
-}
 
+footer .footer_gnb{
+
+    /* 플롯 */
+    float: left;
+}
 /* 푸터 네비 */
-#nnb{
-    width: 770px;
-    float: right;
-    padding-top: 20px;
-    line-height: 2;
-}
-#nnb > div{
-    text-align: left;
+footer .footer_gnb li{
     display: inline-block;
-    margin-right: 180px;
-    
-    vertical-align: top;
-}
-#nnb > div:last-child{
-    margin-right: 0;
-}
-#nnb h3{
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-}
-#nnb li{
+    font-size: 1.4rem;
     color: #767676;
-    cursor: pointer;
 }
-#nnb li:hover{
-    color: #608106;
+footer .footer_gnb_list{
+    margin-bottom: 20px;
 }
-/* 푸터 SNS */
-#SNS > li{
-    display: inline-block;
-    margin-right: 20px;
+footer .footer_gnb_list li:not(:last-child):after{
+    content: "|";
+    padding-right: 5px;
+    margin-left: 5px;
 }
-#SNS img{
-    width: 30px;
+footer .footer_gnb li:hover{
+    color: #000000;
 }
 
+footer .footer_gnb p {
+    line-height: 1.4;
+}
+
+.footer_sns{
+    /* 플롯 */
+    float: right;
+
+}
+.footer_sns li{
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #767676;
+    margin-left: 20px;
+}
+#footer_container + div p {
+    line-height: 1.4;
+}
 /* ======================= */
 /* top 버튼 */
 /* ======================= */

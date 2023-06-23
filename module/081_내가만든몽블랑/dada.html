@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 몽블랑</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/icon_32x32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/icon_180x180.png">
+
+    <!-- 코딩할때 웹킷 안써줘도 자동으로 브라우저에 인식하게 해줌 : 접두어 일일히 쓰는거 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 박스슬라이더 -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/dada.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="fixed">
+        <div class="w1440 cf">
+            <!-- 헤더 로고 -->
+            <h1 class="logo">
+                <a href="./index.html"></a>
+            </h1>
+            <!-- gnb 네비 -->
+            <nav class="gnb_wrap">
+                <ul class="gnb">
+                    <li><a href="#">제품</a>
+                        <ul class="snb">
+                            <li><a href="#">베스트</a></li>
+                            <li><a href="#">티제품</a></li>
+                            <li><a href="#">티푸드</a></li>
+                            <li><a href="#">티웨어</a></li>
+                            <li><a href="#">라이프 스타일</a></li>
+                            <li><a href="#">대량구매</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">선물추천</a></li>
+                    <li><a href="./dada.html">다다일상</a>
+                        <ul class="snb">
+                            <li><a href="#">다다일상 구독</a></li>
+                            <li><a href="#">다다일상 챌린지</a></li>
+                            <li><a href="#">다다일상 기록</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">브랜드</a>
+                        <ul class="snb">
+                            <li><a href="#">오설록 스토리</a></li>
+                            <li><a href="#">제주 티뮤지엄</a></li>
+                            <li><a href="#">매장 소개</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="lnb">
+                    <li>
+                        <a href="#" class="searchBtn">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>                                
+                        <a href="#" class="cartBtn">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>                                
+                        <a href="#" class="moreBtn">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </a>
+                        <ul class="snb">
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">매장찾기</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">뷰티포인트 추후 적립</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- gnb 네비종료 -->
+        </div>
+    </header>
+    <!-- /헤더 -->
+
+    <main>
+        <section class="dada_title">
+            <article class="w1440">
+                <p>
+                    <img src="./images/logo.png" alt="">
+                </p>
+                <h3>
+                    다다일상은 다채롭고 다양한 일상을 위한 <br>
+                    오설록 만의 특별한 <span>차 구독 서비스</span>입니다. <br>
+                </h3>
+                <p>
+                    매일 똑같은 하루가 지겹다면 티 한잔으로 당신의 일상에 색깔을 불어넣으세요. <br>
+                    다채로운 차 향기로 더욱 풍요로워지는 티 라이프를 만나보세요.
+                </p>
+            </article>
+        </section>
+
+        <!-- 이달의 다다일상 -->
+        <section>
+            <article class="w1440 cf">
+                <div class="dada_today cf">
+                    <div class="card_text">
+                        <h3>이달의 다다일상</h3>
+                        <p>
+                            오설록 티 소믈리에가 그달의 테마와 어울리는 차들을 선정하여 보내드립니다. <br>
+                            매월 향기로운 선물같은 일상을 선사합니다.
+                        </p>
+                        <button>
+                            <a href="#">더 알아보기
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </a>
+                        </button>
+                    </div>
+                    <div class="card_img">
+                        <picture>
+                            <img src="./images/20230525164343740SS.jpg" alt="">
+                        </picture>
+                    </div>
+                </div>
+            
+            </article>
+        </section>
+        <!-- /이달의 다다일상 -->
+
+
+        <!-- 다다일상 베네핏 -->
+        <section class="w1440">
+            <h2>
+                다다일상 베네핏
+            </h2>
+            <p>
+                다다일상 구독자에게만 제공해 드리는 특별한 혜택을 경험해보세요. 다다일상과 함께 더욱 쉽고 편하게 즐거운 티 라이프를 누릴 수 있어요.
+            </p>
+            <ul>
+                <li class="card">
+                    <div class="img">
+                        <picture>
+                            <img src="" alt="">
+                        </picture>
+                    </div>
+                    <dl>
+                        <dt>
+                            더욱 즐거운 찻자리를 위해 
+                            매월 증정되는 <span>스페셜 기프트</span>
+                        </dt>
+                        <dd>
+                            매월 찻잔, 차칙, 티매트 등 각기 다른 티웨어들이 발송됩니다. 다다일상으로 모은 티웨어들로 꾸민 나만의 즐거운 찻자리를 SNS에 인증해보세요.
+                            (서비스 증정품으로, 구독 가격에 포함되지 않습니다)
+                        </dd>
+                    </dl>
+                </li>
+                <li class="card">
+                    <div class="img">
+                        <picture>
+                            <img src="" alt="">
+                        </picture>
+                    </div>
+                    <dl>
+                        <dt>
+                            더욱 즐거운 찻자리를 위해 
+                            매월 증정되는 <span>스페셜 기프트</span>
+                        </dt>
+                        <dd>
+                            매월 찻잔, 차칙, 티매트 등 각기 다른 티웨어들이 발송됩니다. 다다일상으로 모은 티웨어들로 꾸민 나만의 즐거운 찻자리를 SNS에 인증해보세요.
+                            (서비스 증정품으로, 구독 가격에 포함되지 않습니다)
+                        </dd>
+                    </dl>
+                </li>
+                <li class="card">
+                    <div class="img">
+                        <picture>
+                            <img src="" alt="">
+                        </picture>
+                    </div>
+                    <dl>
+                        <dt>
+                            더욱 즐거운 찻자리를 위해 
+                            매월 증정되는 <span>스페셜 기프트</span>
+                        </dt>
+                        <dd>
+                            매월 찻잔, 차칙, 티매트 등 각기 다른 티웨어들이 발송됩니다. 다다일상으로 모은 티웨어들로 꾸민 나만의 즐거운 찻자리를 SNS에 인증해보세요.
+                            (서비스 증정품으로, 구독 가격에 포함되지 않습니다)
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </section>
+        <!-- /다다일상 베네핏 -->
+
+        <section class="w1440">
+            <h2>
+                이달의 티타임 챌린지
+            </h2>
+            <p>
+                매달 티타임을 기록하며 나누는 일상을 만들어보세요.
+                <a href="#">더 알아보기</a>
+            </p>
+            
+        </section>
+        <section>
+            <h2>
+                조금 더 가벼운 티라이프도 만나보세요.
+            </h2>
+            <p>
+                매달 티타임을 기록하며 나누는 일상을 만들어보세요.
+            </p>
+        </section>
+        
+        <!-- 다다일상 FAQ -->
+        <section class="dada_faq w1440 cf">
+            <h3>다다일상 FAQ</h3>
+            <div class="faq_list_wrap cf">
+                <div class="faq_list">
+                    <!-- FAQ -->
+                    <dl>
+                        <!-- 1번째 질문 -->
+                        <dt>다다일상, 다다일상 라이트, 정기배송은 어떤 점이 다른가요?</dt>
+                        <dd>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>다다일상</th>
+                                        <th>다다일상 라이트</th>
+                                        <th>정기배송</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>가격</td>
+                                        <td>
+                                            <ul>
+                                                <li>1개월 24,900원/월</li>
+                                                <li>3개월 22,900원/월</li>
+                                                <li>6개월 19,900원/월</li>
+                                            </ul>
+                                        </td>
+                                        <td>13,900원</td>
+                                        <td>상시 15% 할인</td>
+                                    </tr>
+                                    <tr>
+                                        <td>매월 무료 배송</td>
+                                        <td>O</td>
+                                        <td>O</td>
+                                        <td>O</td>
+                                    </tr>
+                                    <tr>
+                                        <td>티 큐레이션</td>
+                                        <td>O</td>
+                                        <td>O</td>
+                                        <td>X</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3,6개월 묶음 결제</td>
+                                        <td>O</td>
+                                        <td class="not">X</td>
+                                        <td class="not">X</td>
+                                    </tr>
+                                    <tr>
+                                        <td>다다일상 챌린지 참여</td>
+                                        <td>O</td>
+                                        <td class="not">X</td>
+                                        <td class="not">X</td>
+                                    </tr>
+                                    <tr>
+                                        <td>정기구독 리워드(6개월)</td>
+                                        <td>O</td>
+                                        <td class="not">X</td>
+                                        <td class="not">X</td>
+                                    </tr>
+                                    <tr>
+                                        <td>매월 구성품</td>
+                                        <td>차 + 티푸드 + 이달의 티레터 + 스페셜 기프트</td>
+                                        <td>차2종 + 모먼트 카드</td>
+                                        <td>내가 원하는 차</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </dd>
+
+                        <!-- 2번째 질문  -->
+                        <dt>다다일상이 뭔가요?</dt>
+                        <dd>
+                            다다일상은 다채롭고 다양한 일상을 위한 오설록 만의 특별한 <strong>차 구독 서비스</strong>입니다.
+                            매일 똑같은 하루가 지겹다면 티 한잔으로 당신의 일상에 색깔을 불어넣으세요.
+                            다채로운 차 향기로 더욱 풍요로워지는 티 라이프를 만나보세요.
+                        </dd>
+
+                        <!-- 3번째 질문 -->
+                        <dt>다다일상 베네핏이란?</dt>
+                        <dd>
+                            다다일상 구독자에게만 제공해드리는 특별한 혜택을 경험해보세요. 다다일상과 함께 더욱 쉼고 편하게 즐거운 티 라이프를 누릴 수 있어요.
+                        </dd>
+
+                        <!-- 4번째 질문 -->
+                        <dt>다다일상 구성은 어떻게 되나요?</dt>
+                        <dd>
+                            다다일상은 매월 오설록 티와 티푸드를 합쳐 정상가 기준 3만원 이상으로 구성됩니다. <br>
+                            티웨어는 금액 외로 추가로 전달해드리는 '스페셜 기프트'입니다.
+                            스페셜 기프트는 상황에 따라 변경될 수 있고, 구독 금액에는 영향을 주지 않습니다.
+                        </dd>
+
+                        <!-- 5번째 질문 -->
+                        <dt>결제일, 배송지 변경은 어떻게 하나요?</dt>
+                        <dd>
+                            [마이페이지 > 주문/예약관리 > 다다일상관리 > 다다일상 구독 상세페이지]에서 기존 결제일 기준 2일 전까지 자유롭게 변경 가능합니다.
+                        </dd>
+                       
+                        <!-- 6번째 질문 -->
+                        <dt>구독 신청은 언제든지 가능한가요?</dt>
+                        <dd>
+                            매월 1일~28일 까지 신청이 가능합니다.
+                        </dd>
+
+                    </dl>
+                </div>
+                <div class="faq_list">
+                    <!-- FAQ -->
+                    <dl>
+                        <!-- 7번째 질문  -->
+                        <dt>구독 신청은 언제든지 가능한가요?</dt>
+                        <dd>
+                            매월 1일~28일 까지 신청이 가능합니다.
+                        </dd>
+        
+                        <!-- 8번째 질문 -->
+                        <dt>이번달 다다일상을 받고 싶지 않아요?</dt>
+                        <dd>
+                            받으신 차가 아직 많이 남았거나, 부담스러운 달에는 다음 달로 건너뛰기 또는 정기 배송일 변경이 가능합니다. [마이페이지>다다일상 관리>다다일상 구독 상세 페이지 > 건너뛰기 & 정기 배송일 변경]을 통해 기존 결제일 기준 2일 전까지 변경하세요.
+                        </dd>
+        
+                        <!-- 9번째 질문 -->
+                        <dt>이번달 주문을 취소하고 싶어요</dt>
+                        <dd>
+                            주문취소는 주문 접수, 결제 완료 단계에서만 신청 가능하며 즉시 처리됩니다. 주문취소 처리 완료 후 환불금액은 2~3일 내 결제한 정보로 환불되며, 신용카드의 경우 해당 카드회사에서 확인하실 수 있습니다.
+                        </dd>
+        
+                        <!-- 10번째 질문 -->
+                        <dt>결제일, 배송지 변경은 어떻게 하나요?</dt>
+                        <dd>
+                            [마이페이지 > 주문/예약관리 > 다다일상관리 > 다다일상 구독 상세페이지]에서 기존 결제일 기준 2일 전까지 자유롭게 변경 가능합니다.
+                        </dd>
+
+                        <!-- 11번째 질문 -->
+                        <dt>3개월 / 6개월 묶음 결제 구독 중간에 취소하고 싶어요.</dt>
+                        <dd>
+                            환불 절차는 다음과 같습니다. <br>
+                            - 3개월/6개월 동일 : 총 결제 금액 - (24,900원*지금까지 구독한 개월 수) <br>
+                            - 여기에 6개월 묶음 결제 구독자는 다이어리 비용인 5,000원을 제외하고 남은 금액을 돌려받습니다.
+                        </dd>
+
+                        <!-- 12번째 질문 -->
+                        <dt>이번 달 제품이 이미 발송되었는데 반품(교환)하고 싶어요.</dt>
+                        <dd>
+                            제품이 이미 발송이 완료된 경우, 반품은 불가능하며 제품에 하자가 있는 경우에 교환만 가능합니다.
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div>
+                <h3>유의사항</h3>
+                <ul>
+                    <li>
+                        결제일을 다음 달로 변경하신 경우, 이번 달 구성은 배송되지 않고 다음 달 구성으로 배송됩니다.
+                    </li>
+                    <li>
+                        매월 구성되는 상품은 1개의 세트입니다. 구성품 일부를 다른 상품으로 교체가 불가합니다.
+                    </li>
+                    <li>
+                        각 상품별 유통기한이 상이합니다. 상품 뒷면에 표기된 유통기한을 확인 해주세요.
+                    </li>
+                    <li>
+                        매월 결제일은 1일부터 28일까지 입니다.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- /다다일상 FAQ -->
+    </main>
+    <!-- 푸터 시작 -->
+    <footer>
+        <div id="footer_container" class="w1440 cf">
+            <h2 class="footer_logo">
+                <img src="./images/f_logo.png" alt="헤더로고">
+            </h2>
+            <div class="footer_gnb">
+                <nav class="footer_gnb_list">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">서비스 이용약관</a></li>
+                        <li><a href="#"><strong>개인정보 처리방침</strong></a></li>
+                        <li><a href="#">영상정보 처리방침</a></li>
+                        <li><a href="#">뷰티포인트</a></li>
+                        <li><a href="#">임직원할인</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">전자공고</a></li>
+                    </ul>
+                </nav>
+                <p>
+                    ㈜ 오설록 <br>
+                    대표이사:서혁제 주소:서울특별시 용산구 한강대로 100, 14층(한강로2가) 사업자등록번호: 390-87-01499 <a href="#">사업자 정보확인 ></a> <br>
+                    통신판매업신고번호:2019-서울용산-1173호 호스팅제공자: ㈜오설록 <br>
+                </p>
+
+            </div>
+            <ul class="footer_sns">
+                <li><a href="https://www.facebook.com/Jeju.OSULLOC"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.tiktok.com/@osulloc_official"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/osulloc_official/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UC27q_WWuOkdyNIr7M_6trvA"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="w1440">
+            <p>
+                (주)오설록은 오설록 브랜드를 제외한 입점 브랜드에 대해서는 통신판매중개자 이며 통신판매의 당사자가 아닙니다. <br>
+                따라서 입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다.
+            </p>
+        </div>
+    </footer>
+    <!-- 푸터 종료 -->
+
+    <!-- top 버튼 -->
+    <div class="top hidden">
+        <a href="#" class="eventNone">
+            <i class="fa fa-angle-up fa-3x" aria-hidden="true"></i>
+            TOP
+        </a>
+    </div>
+    <!-- /top 버튼 -->
+
+    <div class="alert hidden">죄송합니다. 해당페이지는 준비중입니다.</div>
+</body>
+<script src="./js/dada_script.js"></script>
+</html>

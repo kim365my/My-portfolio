@@ -27,10 +27,11 @@
     <div id="wrap">
         <!-- 헤더 -->
         <header>
-            <!-- 헤더 컨테이너 -->
-            <div class="header_wrap w1280">
+            <div class="w1440 cf">
                 <!-- 헤더 로고 -->
-                <h1 class="logo"><a href="#"><img src="./images/logo_white.png" alt="헤더로고"></a></h1>
+                <h1 class="logo">
+                    <a href="./index.html"></a>
+                </h1>
                 <!-- gnb 네비 -->
                 <nav class="gnb_wrap">
                     <ul class="gnb">
@@ -45,7 +46,7 @@
                             </ul>
                         </li>
                         <li><a href="#">선물추천</a></li>
-                        <li><a href="#">다다일상</a>
+                        <li><a href="./dada.html">다다일상</a>
                             <ul class="snb">
                                 <li><a href="#">다다일상 구독</a></li>
                                 <li><a href="#">다다일상 챌린지</a></li>
@@ -86,10 +87,10 @@
                 </nav>
                 <!-- gnb 네비종료 -->
             </div>
-            <!-- /헤더 컨테이너 -->
-            
+        </header>
+        <section class="videoTitle">
             <!-- 배경 텍스트 작성 -->
-            <article class="w1280">
+            <article class="w1440">
                 <div id="bg_txt">
                     <h2>TEA FROM JEJU</h2>
                     <p>
@@ -103,24 +104,28 @@
                 </div>
             </article>    
             <!-- 배경 텍스트 종료 -->
-
+    
             <!-- 배경이미지 -->
             <div class="bgImg">
                 <div class="playVideo">
                     <object width="560" height="315" data="https://www.youtube.com/embed/W6f9vwJt4sI?mute=1&autoplay=1&playlist=W6f9vwJt4sI&loop=1&controls=0&modestbranding=1&vq=large" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></object>
+                    <!-- 대체 이미지 -->
+                    <picture>
+                        <img src="./images/defaultImg.png" alt="">
+                    </picture>
                 </div>
             </div>
             <div class="playDown">
                 <div></div>
             </div>
-        </header>
+        </section>
         <!-- /헤더 -->
 
         <!-- 메인 시작 -->
         <main role="main">
             <!-- 오설록의 이야기 -->
-            <section id="main_content" class="w1280">
-                <div class="main_text cf">
+            <section id="main_content" class="w1440">
+                <article class="main_text cf">
                     <h2>오설록의 스토리</h2>
                     <p>
                         제주는 화산지역이라는 생태계적 특성을 가져 차의 특색이 조금씩 달라집니다. <br>
@@ -129,9 +134,9 @@
                         지역적 기후 환경에 따라 각각의 색과 향, 그리고 맛이 특별한 차를 생산하고 있습니다.
                         
                     </p>
-                </div>
+                </article>
 
-                <div class="content_img_wrap">
+                <article class="content_img_wrap">
                     <div class="swiper content-slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -206,19 +211,19 @@
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-                </div>
-                <div id="content_info" class="cf">
+                </article>
+                <article id="content_info" class="cf">
                     <span>Please call our concierge on <strong>1-800-995-4810</strong></span>
                     <a href="#">
                         <span>VIEW ALL SERVICES</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
-                </div>
+                </article>
             </section>
 
             <!-- 오설록의 제주 차밭 -->
             <section class="about_us">
-                <div class="w1280 cf">
+                <article class="w1440 cf">
                     <h2>오설록의 제주 차밭</h2>
                     <div class="about_text_wrap">
                         <div class="areaBtn">
@@ -267,9 +272,6 @@
                                     <a href="#">주요 생산 제품</a>
                                 </li>
                             </ul>
-                            <div class="location_img">
-                                <img src="./images/tea_field.png" alt="">
-                            </div>
                         </div>
                     </div>
                     <div class="about_img_wrap">
@@ -300,15 +302,15 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </article>
             </section>
 
             <!-- 오설록의 차가 특별한 이유 -->
             <section id="main_content2">
-                <div class="swiper main-slider">
+                <article class="swiper main-slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide mbaner01">
-                            <div class="info-box-wrap w1280">
+                            <div class="info-box-wrap w1440">
                                 <div class="info-box">
                                     <h2>오설록의 차가 특별한 이유</h2>
                                     <p>
@@ -324,7 +326,7 @@
                             </picture>
                         </div>
                         <div class="swiper-slide mbaner01">
-                            <div class="info-box-wrap w1280">
+                            <div class="info-box-wrap w1440">
                                 <div class="info-box">
                                     <h2>자연을 숨쉬게 하는 차밭</h2>
                                     <p>
@@ -339,7 +341,7 @@
                             </picture>
                         </div>
                         <div class="swiper-slide mbaner02">
-                            <div class="info-box-wrap w1280">
+                            <div class="info-box-wrap w1440">
                                 <div class="info-box">
                                     <h2>제주의 자연이 선물한 발효</h2>
                                     <p>
@@ -354,7 +356,7 @@
                             </picture>
                         </div>
                         <div class="swiper-slide mbaner03">
-                            <div class="info-box-wrap w1280">
+                            <div class="info-box-wrap w1440">
                                 <div class="info-box">
                                     <h2>그대로의 제주를 담은 차</h2>
                                     <p>
@@ -371,12 +373,12 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                </div>
+                </article>
             </section>
 
             <!-- 오설록의 역사 -->
             <section id="main_content3">
-                <div class="since w1280 cf">
+                <article class="since w1440">
                     <div class="since_text_wrap">
                         <h2>Since 1979</h2>
                         <p>
@@ -633,74 +635,20 @@
                         </div>
                         <div class="since-swiper-scrollbar"></div>
                     </div>
-                </div>
+                </article>
             </section>
 
-            <!-- 오설록과 함께 하는 사람들 -->
-            <section id="main_content4">
-                <div class="w1280 cf">
-                    <div class="faq_title cf">
-                        <h2>
-                            다다일상, <br>
-                            차와 함께하는 삶
-                        </h2>
-                        <p>
-                            차를 마시는 것은 일상의 쉼을 가지며, 나를 이끌어내고 세상을 따뜻하게 바라보는 것에 관한 일입니다. <br>
-                            당신이 언제 어디에 있든 차와 함께 삶의 아름다운 여백을 만들어 나가길 바랍니다.
-                        </p>
-                    </div>
-                    <div class="faq_left">
-                        <!-- FAQ -->
-                        <dl>
-                            <!-- 1번째 질문 -->
-                            <dt class="check">다다일상이 뭔가요?</dt>
-                            <dd>
-                                다다일상은 다채롭고 다양한 일상을 위한 오설록 만의 특별한 <strong>차 구독 서비스</strong>입니다.
-                                매일 똑같은 하루가 지겹다면 티 한잔으로 당신의 일상에 색깔을 불어넣으세요.
-                                다채로운 차 향기로 더욱 풍요로워지는 티 라이프를 만나보세요.
-                            </dd>
-                            <!-- 2번째 질문  -->
-                            <dt>다다일상 베네핏이란?</dt>
-                            <dd>
-                                다다일상 구독자에게만 제공해드리는 특별한 혜택을 경험해보세요. 다다일상과 함께 더욱 쉼고 편하게 즐거운 티 라이프를 누릴 수 있어요.
-                            </dd>
-    
-                            <!-- 3번째 질문 -->
-                            <dt>다다일상 구성은 어떻게 되나요?</dt>
-                            <dd>
-                                다다일상은 매월 오설록 티와 티푸드를 합쳐 정상가 기준 3만원 이상으로 구성됩니다. <br>
-                                티웨어는 금액 외로 추가로 전달해드리는 '스페셜 기프트'입니다.
-                                스페셜 기프트는 상황에 따라 변경될 수 있고, 구독 금액에는 영향을 주지 않습니다.
-                            </dd>
-    
-                            <!-- 4번째 질문 -->
-                            <dt>결제일, 배송지 변경은 어떻게 하나요?</dt>
-                            <dd>
-                                [마이페이지 > 주문/예약관리 > 다다일상관리 > 다다일상 구독 상세페이지]에서 기존 결제일 기준 2일 전까지 자유롭게 변경 가능합니다.
-                            </dd>
-    
-                            <!-- 4번째 질문 -->
-                            <dt>결제일, 배송지 변경은 어떻게 하나요?</dt>
-                            <dd>
-                                [마이페이지 > 주문/예약관리 > 다다일상관리 > 다다일상 구독 상세페이지]에서 기존 결제일 기준 2일 전까지 자유롭게 변경 가능합니다.
-                            </dd>
-                            
-                        </dl>
-                    </div>
-                    <div class="faq_right">
-                    </div>
-                </div>
-                <!-- 배경 이미지 넣지 말까? -->
-                <picture>
-                    <img src="./images/20230526094757095XA.jpg" alt="">
-                </picture>
-            </section>
+             <!-- 오설록과 함께 하는 사람들 -->
             <section id="main_content5">
-                <div class="w1280 cf">
+                <article class="w1440 cf">
                     <h2>
-                        그럼, <br>
-                        오늘 하루는 차 한잔 어떠세요?
+                        다다일상, <br>
+                        차와 함께하는 삶
                     </h2>
+                    <p>
+                        차를 마시는 것은 일상의 쉼을 가지며, 나를 이끌어내고 세상을 따뜻하게 바라보는 것에 관한 일입니다. <br>
+                        당신이 언제 어디에 있든 차와 함께 삶의 아름다운 여백을 만들어 나가길 바랍니다.
+                    </p>
                     <ul class="dada-img-wrap">
                         <li class="dada-img">
                             <ul>
@@ -814,11 +762,14 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
+                </article>
             </section>
+
             <section id="main_content6">
-                <div class="w1280">
-                    <h2>오설록의 더 많은 이야기들을 만나보세요</h2>
+                <article class="w1440">
+                    <h2>
+                        오설록의 더 많은 이야기들을 만나보세요.
+                    </h2>
                     <ul>
                         <li>
                             <a href="#">다다일상 기록
@@ -836,65 +787,48 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </article>
             </section>
         </main>
         <!-- 메인 종료 -->
 
         <!-- 푸터 시작 -->
         <footer>
-            <div id="footer_container" class="w1280 cf">
-                <div id="footer_logo">
-                    <h2 class="logo">
-                        <img src="./images/f_logo.png" alt="헤더로고">
-                    </h2>
+            <div id="footer_container" class="w1440 cf">
+                <h2 class="footer_logo">
+                    <img src="./images/f_logo.png" alt="헤더로고">
+                </h2>
+                <div class="footer_gnb">
+                    <nav class="footer_gnb_list">
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">서비스 이용약관</a></li>
+                            <li><a href="#"><strong>개인정보 처리방침</strong></a></li>
+                            <li><a href="#">영상정보 처리방침</a></li>
+                            <li><a href="#">뷰티포인트</a></li>
+                            <li><a href="#">임직원할인</a></li>
+                            <li><a href="#">사이트맵</a></li>
+                            <li><a href="#">전자공고</a></li>
+                        </ul>
+                    </nav>
                     <p>
-                        (주)오설록은 오설록 브랜드를 제외한 입점 브랜드에 대해서는 통신판매중개자 이며 통신판매의 당사자가 아닙니다.
-                        따라서 입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다.
+                        ㈜ 오설록 <br>
+                        대표이사:서혁제 주소:서울특별시 용산구 한강대로 100, 14층(한강로2가) 사업자등록번호: 390-87-01499 <a href="#">사업자 정보확인 ></a> <br>
+                        통신판매업신고번호:2019-서울용산-1173호 호스팅제공자: ㈜오설록 <br>
                     </p>
-                    <ul id="SNS">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                    </ul>
+
                 </div>
-                <div id="nnb">
-                    <div>
-                        <h3>Services</h3>
-                        <ul>
-                            <li>Personal shopping</li>
-                            <li>Engraving & Embossing</li>
-                            <li>Gift Wrapping</li>
-                            <li>Shipping & Delivery</li>
-                            <li>Returns & Guarantee</li>
-                            <li>Click & Collect</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Assistance</h3>
-                        <ul>
-                            <li>Customer Service</li>
-                            <li>Repair Request</li>
-                            <li>FAQ</li>
-                            <li>Watch Care</li>
-                            <li>Leather Care</li>
-                            <li>Jewellery Care</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>About</h3>
-                        <ul>
-                            <li>Company</li>
-                            <li>Contact us</li>
-                            <li>Career</li>
-                        </ul>
-                    </div>
-                </div>
+                <ul class="footer_sns">
+                    <li><a href="https://www.facebook.com/Jeju.OSULLOC"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@osulloc_official"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/osulloc_official/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC27q_WWuOkdyNIr7M_6trvA"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
             </div>
-            <div class="w1280">
+            <div class="w1440">
                 <p>
-                    &copy; Montblanc
+                    (주)오설록은 오설록 브랜드를 제외한 입점 브랜드에 대해서는 통신판매중개자 이며 통신판매의 당사자가 아닙니다. <br>
+                    따라서 입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다.
                 </p>
             </div>
         </footer>
@@ -908,6 +842,7 @@
             </a>
         </div>
         <!-- /top 버튼 -->
+
         <div class="alert hidden">죄송합니다. 해당페이지는 준비중입니다.</div>
 
     </div>
