@@ -625,7 +625,7 @@ header{
 /* 컨텐츠 3 */
 /* ----------------- */
 #main_content3{
-    padding-top: 150px;
+    margin: 20rem 0;
 }
 .since_img_wrap{
     width: 55%;
@@ -666,6 +666,12 @@ header{
     color: #767676;
 }
 /* 슬라이드 커스텀 */
+.swiper since-slider{
+
+}
+.since-swiper-scrollbar{
+    height: 0.5rem;
+}
 .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
     bottom: 0;
 }

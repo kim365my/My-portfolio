@@ -131,20 +131,6 @@ const swiper = new Swiper(".main-slider", {
 
 });
 
-// --------------------------------
-const mainWrap = document.querySelector("#main_content");
-let observe = new IntersectionObserver((e) => {
-    e.forEach((slide) => {
-        if(slide.isIntersecting) {
-            scrollToY(mainWrap.offsetTop, 30);
-        } else {
-
-        }
-    })
-}, {threshold : 0.2})
-observe.observe(mainWrap);
-
-
 // 스크롤링 이벤트
 // 현재 화면 요소가 보이는지 파악
 const mainSliderWrap = document.querySelector("#main_content2");
@@ -162,7 +148,21 @@ let inter = new IntersectionObserver((e) => {
 }, {threshold: 0.2}); // 20% 등장했을 경우
 inter.observe(mainSliderWrap); // 감시해주는 코드, 배열로 저장됨
 
+// ---------------------------------
+let observe = new IntersectionObserver((e) => {
+    e.forEach((slide) => {
+        if(slide.isIntersecting) {
+            
+        } else {
 
+        }
+    })
+}, {threshold : 1})
+
+const section = document.querySelectorAll("main > section");
+section.forEach((e) => {
+    observe.observe(e);
+})
 
 // --------------------------------
 // 콘텐츠 배너 슬라이더
