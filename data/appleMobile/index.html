@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="author" content="mcssam">
+    <meta name="description" content="포트폴리오, Apple 클론코딩">
+    <title>Portfolio, Flex Apple Clone PC Fixed</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="./meta_img/favicon32.png">
+    <link rel="apple-touch-icon=precomposed" href="./meta_img/favicon144.png">
+    <!-- 기본 코딩 JS 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 기본 코딩 CSS 파일 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <link rel="stylesheet" href="./css/display_none_scrollbar.css">
+    <link rel="stylesheet" href="./css/system_font.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/apple_moble.css">
+</head>
+<body>
+    <!--  Header -->
+    <header>
+        <!--  Hamberger -->
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon" class="ham">
+            <span></span>
+            <span></span>
+        </label>
+        <!-- / Hamberger -->
+        <!--  Moblie_gnb 햄버거 클릭시 나오는 내용 -->
+        <nav class="moblie_gnb">
+            <ul class="gnb">
+                <li>
+                    <form action="#">
+                        <fieldset>
+                            <legend class="blind">상품검색</legend>
+                            <label for="search_goods"></label>
+                            <input type="search" id="search_goods" placeholder="apple.com 검색">
+                            <button type="submit"></button>
+                        </fieldset>
+                    </form>
+                </li>
+                <li><a href="#">Mac</a></li>
+                <li><a href="#">iPad</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">고객지원</a></li>
+            </ul>
+        </nav>
+        <!-- / Moblie_gnb -->
+        <!--  logo -->
+        <h1 class="logo">
+            <a href="#"><img src="./images/apple_logo.svg" alt="logo"></a>
+        </h1>
+        <!-- / logo -->
+        <!-- 장바구니 -->
+        <div class="bag">
+            <h2><a href="#"><img src="./images/bag_small.svg" alt="bag"></a></h2>
+        </div>
+        <!-- /장바구니 -->
+    </header>
+    <!-- /Header -->
+    <!-- main -->
+    <main>
+        <aside class="notice">
+            <!-- notice -->
+            <h4>
+                <span>온라인으로 쇼핑</span>하고 무료배송, 스페셜리스트 지원 등의 <br>
+                혜택을 받으세요
+            </h4>
+            <!-- /notice -->
+            <!-- content -->
+            <section class="content">
+                <!-- iPhone 12 -->
+                <article class="common_content iphone12">
+                    <h2>iPhone 12</h2>
+                    <h3>
+                        스피드 그 이상의 스피드.
+                    </h3>
+                    <p>
+                        &#8361; 950,000부터 <br>
+                        (보상판매 미적용 가격)
+                    </p>
+                    <button><a href="#">더 알아보기</a></button>
+                    <button><a href="#">구입하기</a></button>
+                </article>
+                <!-- /iPhone 12 -->
+                <!-- iPhone 12 pro -->
+                <article class="common_content iphone12pro">
+                    <h2>iPhone 12 pro</h2>
+                    <h3>
+                        도약의 시간.
+                    </h3>
+                    <p>
+                        &#8361; 1,350,000부터 <br>
+                        (보상판매 미적용 가격)
+                    </p>
+                    <button><a href="#">더 알아보기</a></button>
+                    <button><a href="#">구입하기</a></button>
+                </article>
+                <!-- /iPhone 12 pro -->
+                <!-- iPad pro -->
+                <article class="common_content iPadpro">
+                    <h2>iPad pro</h2>
+                    <h3>
+                        막강한 성능의 Apple M1 칩 탑재.
+                    </h3>
+                    <button><a href="#">더 알아보기</a></button>
+                    <button><a href="#">구입하기</a></button>
+                </article>
+                <!-- /iPad pro -->
+                <!-- iMac -->
+                <article class="common_content iMac">
+                    <h2>iMac</h2>
+                    <h3>
+                        이제 새롭게 만날시간.
+                    </h3>
+                    <button><a href="#">더 알아보기</a></button>
+                    <button><a href="#">구입하기</a></button>
+                </article>
+                <!-- /iMac -->
+                <!-- watch -->
+                <article class="common_content watch">
+                    <h2>
+                        <img src="./images/apple_logo.svg" alt="애플로고">
+                        WATCH
+                    </h2>
+                    <p>
+                        SEREIES 6
+                    </p>
+                    <h3>
+                        건강의 미래, 이제 손목 위에.
+                    </h3>
+                    <button><a href="#">더 알아보기</a></button>
+                    <button><a href="#">구입하기</a></button>
+                </article>
+                <!-- /watch -->
+                <!-- MacBook Air -->
+                <article class="common_content macBookAir">
+                    <h2>MacBook Air</h2>
+                    <h3>
+                        Air의 흐름을 바꾸다.
+                    </h3>
+                    <button><a href="#">더 알아보기</a></button>
+                    <button><a href="#">구입하기</a></button>
+                </article>
+                <!-- /MacBook Air -->
+                <!-- arcade -->
+                <article class="common_content arcade">
+                    <h2>
+                        <img src="./images/apple_logo.svg" alt="apple logo">
+                        arcade
+                    </h2>
+                    <h3>
+                        Tetris&copy;Beat. 지금 플레이하세요.
+                    </h3>
+                    <button><a href="#">더 알아보기</a></button>
+                    <button><a href="#">구입하기</a></button>
+                </article>
+                <!-- /arcade -->
+                <!-- Air Tag -->
+                <article class="common_content airtag">
+                    <h2>Air Tag</h2>
+                    <h3>
+                        분실 걱정을 분실하는 법.
+                    </h3>
+                    <button><a href="#">더 알아보기</a></button>
+                    <button><a href="#">구입하기</a></button>
+                </article>
+                <!-- /Air Tag -->
+                <!-- AirPads Pro -->
+                <article class="common_content airpadsPro">
+                    <h2>AirPads Pro</h2>
+                    <h3>
+                        새롭게 귓가를 찾아온 매혹.
+                    </h3>
+                    <button><a href="#">더 알아보기</a></button>
+                    <button><a href="#">구입하기</a></button>
+                </article>
+                <!-- /AirPads Pro -->
+
+            </section>
+            <!-- /content -->
+        </aside>
+
+    </main>
+    <!-- /main -->
+    <!--  footer -->
+    <footer>
+        <!-- Bread Crumbs -->
+        <dl class="bread_crumbs">
+            <dt>
+                <img src="./images/apple_logo_footer.svg" alt="apple logo">
+                Apple Store
+            </dt>
+            <dd>iPhone</dd>
+            <dd>iPhone 12</dd>
+        </dl>
+        <!-- /Bread Crumbs -->
+        <!-- footer Menu -->
+        <nav class="footer_menu">
+            <dl>
+                <dt class="footer_title">쇼핑 및 알아보기</dt>
+                <div class="footer_sub">
+                    <dd>Mac</dd>
+                    <dd>iPad</dd>
+                    <dd>iPhone</dd>
+                    <dd>Watch</dd>
+                    <dd>Music</dd>
+                    <dd>AirPads</dd>
+                    <dd>iPad touch</dd>
+                    <dd>Air Tag</dd>
+                    <dd>액세서리</dd>
+                </div>
+            </dl>
+            <dl>
+                <dt class="footer_title">서비스</dt>
+                <div class="footer_sub">
+                    <dd>Apple Music</dd>
+                    <dd>Apple Arcade</dd>
+                    <dd>iCloud</dd>
+                    <dd>Apple Books</dd>
+                    <dd>Apple Podcast</dd>
+                    <dd>Apple Store</dd>
+                </div>
+            </dl>
+            <dl>
+                <dt class="footer_title">계정</dt>
+                <div class="footer_sub">
+                    <dd>Apple ID 관리</dd>
+                    <dd>Apple Store 계정</dd>
+                    <dd>iCloud.com</dd>
+                </div>
+            </dl>
+            <dl>
+                <dt class="footer_title">Apple Store</dt>
+                <div class="footer_sub">
+                    <dd>매장찾기</dd>
+                    <dd>온라인에서 쇼핑하기</dd>
+                    <dd>Genius Bar</dd>
+                    <dd>Today at Apple</dd>
+                    <dd>Apple 캠프</dd>
+                    <dd>Apple Store 앱</dd>
+                    <dd>리퍼 및 특가 제춤</dd>
+                    <dd>금융 혜택</dd>
+                    <dd>Apple Trade In</dd>
+                    <dd>주문 상태</dd>
+                    <dd>쇼핑 도움말</dd>
+                </div>
+            </dl>
+            <dl>
+                <dt class="footer_title">비지니스</dt>
+                <div class="footer_sub">
+                    <dd>Apple과 비지니스</dd>
+                    <dd>비지니스를 위한 제품 쇼핑하기</dd>
+                </div>
+            </dl>
+            <dl>
+                <dt class="footer_title">교육</dt>
+                <div class="footer_sub">
+                    <dd>Apple과 교육</dd>
+                    <dd>초중고용 제품 쇼핑하기</dd>
+                    <dd>대학 생활을 위한 제품 쇼핑하기</dd>
+                </div>
+            </dl>
+            <dl>
+                <dt class="footer_title">Apple의 가치관</dt>
+                <div class="footer_sub">
+                    <dd>손쉬운 사용</dd>
+                    <dd>환경</dd>
+                    <dd>개인정보 보호</dd>
+                    <dd>협약업체에 대한 책임</dd>
+                </div>
+            </dl>
+            <dl>
+                <dt class="footer_title">Apple의 정보</dt>
+                <div class="footer_sub">
+                    <dd>Newsroom</dd>
+                    <dd>Apple 리더십</dd>
+                    <dd>채용 안내</dd>
+                    <dd>윤리 및 규정 준수</dd>
+                    <dd>이벤트</dd>
+                    <dd>일자리 창출</dd>
+                    <dd>Apple 연락처</dd>
+                </div>
+            </dl>
+        </nav>
+        <!-- /footer Menu -->
+        <!-- footer Text -->
+        <div class="footer_text">
+            <h4 class="conciege">
+                <p>
+                    다양한 쇼핑방법 : <span>Apple Store를 방문</span>하거나,
+                    <span>리셀러</span>를 찾아오거나, 080-330-8877번으로 전화하세요.
+                </p>
+            </h4>
+            <h4 class="copyright">
+                <p>
+                    Copyright &copy; 2022 Apple Inc. 모든 권리 보유.
+                </p>
+            </h4>
+            <nav>
+                <ul>
+                  <li><a href="#">개인정보 처리방침&nbsp;&nbsp;</a></li>  
+                  <li><a href="#">웹사이트 이용약관&nbsp;&nbsp;</a></li>  
+                  <li><a href="#">판매 및 환불&nbsp;&nbsp;</a></li>  
+                  <li><a href="#">법적 고지&nbsp;&nbsp;</a></li>  
+                  <li><a href="#">사이트맵&nbsp;&nbsp;</a></li>  
+                </ul>
+            </nav>
+            <h4 class="site_info">
+                <p>
+                    사업자등록번호 : 120-81-84429 | <br>
+                    통신판매업신고번호 : 제 2011-서울강남-00810호 | <br>
+                    대표이사 : PETER DENWOOD | <br>
+                    주소 : 서울 특별시 강남구 영동대로 517 | <br>
+                    대표전화 : 02-6712-6700 | 팩스 : 02-6928-0000
+                </p>
+            </h4>
+            
+        </div>
+        <!-- /footer Text -->
+    </footer>
+    <!-- / footer -->
+</body>
+<script src="./js/apple_moble.js"></script>
+</html>

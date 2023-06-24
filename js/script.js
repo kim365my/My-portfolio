@@ -1,7 +1,7 @@
 const navListBtn = document.querySelectorAll(".list a");
 const desTitle = document.querySelector(".des h2");
 const desLink = document.querySelector(".des p > a");
-const iframe = document.querySelector(".innerPage iframe");
+const iframe = document.querySelector(".innerPage object");
 
 // 함수실행
 printContent();
@@ -13,16 +13,11 @@ function printContent(){
         navListBtn[i].addEventListener("click", function(e){
             e.preventDefault();
 
-            let eText= e.target.text;
-            let eLink= e.target.getAttribute("href");
-
-            // e.target.text를 des의 h2에
-            desTitle.innerText = eText;
-            iframe.setAttribute("title", eText);
+            const eLink= e.target.getAttribute("href");
             
             // e.target.href를 des의 a와 iframe에
             desLink.setAttribute("href", eLink);
-            iframe.setAttribute("src", eLink);
+            iframe.setAttribute("data", eLink);
 
         })
     }
