@@ -5,6 +5,7 @@
 html, body{
     height: 100%;
     width: 100%;
+    min-width: 1440px;
     margin: 0 auto;
     font-size: 62.5%;
     font-family: 'NanumSquare', sans-serif;
@@ -26,7 +27,7 @@ html, body{
 /* ------------------------ */
 /* 공통적으로 사용하는 CSS */
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .alert{
@@ -467,11 +468,12 @@ main{
 /* ----------------- */
 /* 컨텐츠 1 */
 /* ----------------- */
-.about_us{
+#main_content2{
     padding-top: 20rem;
-    margin-bottom: 23rem;
+    padding-bottom: 23rem;
 }
-.about_us article{
+
+.about_us{
     background: url(../images/tea_field.png) no-repeat 35rem bottom;
     background-size: 37rem;
 }
@@ -583,10 +585,10 @@ main{
 /* ----------------- */
 /* 컨텐츠 2 */
 /* ----------------- */
-#main_content2{
+#main_content3{
     width: 100%;
     height: 100vh;
-    padding: 10rem 0;
+    /* padding: 10rem 0; */
 }
 /* -------------------- */
 /* 박스 슬라이드 커스텀 */
@@ -636,7 +638,7 @@ main{
     width: 90%;
     height: 2px;
     margin: 3rem 0;
-    background-color: #7f7f7f;
+    background-color: #DBDBDB;
 }
 .swiper-slide .info-box p{
     font-size: 1.8rem;
@@ -662,8 +664,9 @@ main{
 /* ----------------- */
 /* 컨텐츠 3 */
 /* ----------------- */
-#main_content3{
-    margin: 20rem 0;
+#main_content4{
+    padding: 20rem 0;
+    background: #82664F;
 }
 .since_img_wrap{
     width: 55%;
@@ -693,19 +696,24 @@ main{
 .since_text_wrap h2{
     font-size: 4.4rem;
     font-weight: 800;
-    color: #111;
+    color: #fff;
 }
 .since_text_wrap p{
     margin: 2rem 0;
     font-size: 1.8rem;
     line-height: 1.4;
-    color: #767676;
+    color: #DBDBDB;
 
 
 }
 /* 슬라이드 커스텀 */
 .since-swiper-scrollbar{
     height: 0.5rem;
+    border-radius: var(--swiper-scrollbar-border-radius,10px);
+    background-color: #0000002b;
+}
+.since-swiper-scrollbar div{
+    background-color: #fff;
 }
 .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
     bottom: 0;
@@ -731,13 +739,13 @@ main{
 .since-slider .slide_text h3{
     font-size: 2rem;
     font-weight: 600;
-    color: #111;
+    color: #fff;
     margin-bottom: 0.8rem;
 }
 .since-slider .slide_text p {
     font-size: 1.6rem;
     line-height: 1.4;
-    color: #767676;
+    color: #DBDBDB;
 }
 
 /* ----------------- */
@@ -762,9 +770,9 @@ main{
 
     margin-bottom: 8rem;
 }
-/* 슬라이드 커스텀 */
+/* 이미지 */
 .dada-img-wrap .dada-img{
-    width: calc(100%/3 - 4rem);
+    width: calc(100%/3 - (4rem / 3));
     height: 60rem;
     margin-bottom: 2rem;
     /* 플롯 */
@@ -855,17 +863,17 @@ footer{
     font-size: 1.4rem;
     color: #767676;
     background-color: #F5F5F5;
-    padding: 40px 0;
+    padding: 5rem 0;
 }
 #footer_container{
-    padding: 50px 0 20px;
+    padding-bottom: 2rem;
     border-bottom: #c7c4c4 solid 1px;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 /* 푸터 기업소개 */
 .footer_logo{
-    width: 130px;
-    margin-right: 20px;
+    width: 13rem;
+    margin-right: 2rem;
     text-align: left;
     line-height: 1.3;
     /* 플롯 */
@@ -884,7 +892,7 @@ footer .footer_gnb li{
     color: #767676;
 }
 footer .footer_gnb_list{
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 footer .footer_gnb_list li:not(:last-child):after{
     content: "|";
@@ -916,10 +924,9 @@ footer .footer_gnb p {
 /* ======================= */
 /* top 버튼 */
 /* ======================= */
-.top a {
+.top {
     width: 50px;
     height: 50px;
-    text-align: center;
     border: 1px solid #ddd;
     border-radius: 50%;
     background-color: #fff;
@@ -934,9 +941,11 @@ footer .footer_gnb p {
     bottom: 40px;
     right: 35px;
     z-index: 999;
+
+    cursor: pointer;
 }
 
-.top a:hover{
+.top:hover{
     border: 1px solid #6d6d6d;
     background-color: #6d6d6d;
     color: #fff;

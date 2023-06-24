@@ -46,27 +46,19 @@ if(bannerItem === null) {
 }
 
 // --------------------------------
-// 스크롤 이벤트
-// --------------------------------
-const topBtnWrap = document.querySelector(".top");
-window.addEventListener("scroll", () => {
-    // 변수 선언
-    let scroll = window.scrollY;
-    if(scroll < 100) {
-        topBtnWrap.classList.add("hidden")
-    } else {
-        topBtnWrap.classList.remove("hidden");
-    }
-})
-
-// --------------------------------
 // 맨 위로 이동
 // --------------------------------
-const topBtn = document.querySelector(".top a");
-topBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    scrollToTop();
-});
+const topBtn = document.querySelector(".top");
+document.addEventListener("scroll", (e) => {
+    const scroll = window.scrollY; // 스크롤 정보
+    if(scroll < 100) {
+        topBtn.classList.add("hidden")
+    } else {
+        topBtn.classList.remove("hidden");
+    }
+})
+// 탑 버튼 클릭시 이동
+topBtn.addEventListener("click", () => {scrollToTop();});
 
 /** 위로 부드럽게 올라가는 메소드 */
 function scrollToTop() {

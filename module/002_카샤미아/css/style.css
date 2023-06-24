@@ -28,7 +28,7 @@ body{
 /* ------------------------ */
 /* 공통적으로 사용하는 CSS */
 .hidden {
-    display: none;
+    display: none !important;
 }
 .alert{
     background: #111;
@@ -991,7 +991,7 @@ footer{
 /* ======================= */
 /* top 버튼 */
 /* ======================= */
-.top a {
+.top{
     width: 5rem;
     height: 5rem;
     text-align: center;
@@ -1008,9 +1008,10 @@ footer{
     bottom: 4rem;
     right: 3.5rem;
     z-index: 999;
+    cursor: pointer;
 }
 
-.top a:hover{
+.top:hover{
     border: 1px solid #6d6d6d;
     background-color: #6d6d6d;
     color: #fff;

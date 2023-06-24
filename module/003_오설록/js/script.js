@@ -18,43 +18,38 @@ noLink.forEach((link) => {
         
     })
 });
-
 // --------------------------------
-// 탑버튼 보이게 하기
+// 헤더 고정 & 탑버튼 보이게 하기
 // --------------------------------
-const topBtnWrap = document.querySelector(".top");
-// showTopBtn();
+const header = document.querySelector("header");
+const topBtn = document.querySelector(".top");
+// 탑 버튼 클릭시 이동
+topBtn.addEventListener("click", () => {scrollToY(0,16);});
 
-window.addEventListener("scroll", () => showTopBtn());
-
-function showTopBtn() {
-    const scroll = window.scrollY;
+document.addEventListener("scroll", (e) => {
+    const scroll = window.scrollY; // 스크롤 정보
     if(scroll < 100) {
-        topBtnWrap.classList.add("hidden")
+        topBtn.classList.add("hidden")
+        header.classList.remove("fixed");
     } else {
-        topBtnWrap.classList.remove("hidden");
+        topBtn.classList.remove("hidden");
+        header.classList.add("fixed");
     }
-}
+})
 
-// --------------------------------
-// 맨 위로 이동
-// --------------------------------
-const topBtn = document.querySelector(".top a");
-topBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    scrollToY(0,16);
-});
+
 // --------------------------------
 // 페이지 다운 버튼 클릭하면 페이지 이동하기 
 // --------------------------------
 const playDown = document.querySelector(".playDown");
 playDown.addEventListener("click", () => {
-    scrollToY(document.querySelector("main").offsetTop, 40)
+    scrollToY(document.querySelector("#main_content").offsetHeight, 40)
+
 });
 
 
 // --------------------------------
-// 
+// 오설록의 차밭 정보 보여주기
 // --------------------------------
 const aboutBtn = document.querySelectorAll(".about_us .areaBtn li");
 const aboutLocation = document.querySelectorAll(".about_us .location li");
@@ -80,6 +75,7 @@ aboutBtn.forEach((e, index) => {
 // --------------------------------
 const startScrollSwiper = () => swiper.mousewheel.enable();
 const stopScrollSwiper = () => swiper.mousewheel.disable();
+const mainSlider = document.querySelector(".main-slider");
 const swiper = new Swiper(".main-slider", {
     direction: "vertical",
     slidesPerView: 1,
@@ -109,7 +105,7 @@ const swiper = new Swiper(".main-slider", {
             stopScrollSwiper();
             window.setTimeout(() => {
                 startScrollSwiper();
-            }, 2000)
+            }, 2000);
         },
         scroll:(swiper, e) => {
             thresholdTime = 500; // 마우스 휠 이벤트 시간 0.5초
@@ -119,43 +115,38 @@ const swiper = new Swiper(".main-slider", {
                 stopScrollSwiper();
             }
         },
-        
     },
-
 });
 
-// 스크롤링 이벤트
-// 현재 화면 요소가 보이는지 파악
-const mainSliderWrap = document.querySelector("#main_content2");
-let inter = new IntersectionObserver((e) => {
-    // 감시 중 박스가 화면에 등장하거나 퇴장할 때 여기에 코드를 실행
-    e.forEach((slide) => {
-        if(slide.isIntersecting) { // 등장했을 경우
-            scrollToY(mainSliderWrap.offsetTop, 30);
-            startScrollSwiper();
-        } else { // 퇴장했을 경우
-            stopScrollSwiper();
+
+// // 스크롤링 이벤트
+// // 현재 화면 요소가 보이는지 파악
+let ioIndex = 0;
+let boundingRect;
+const section = document.querySelectorAll("main > section");
+const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach((item, index) => {
+        if(item.isIntersecting) {
+            ioIndex = item.target.dataset.index;
+            boundingRect = item.boundingClientRect.top + window.screenY;
+            
+            if(item.target.id == "main_content3") {
+                scrollByY(boundingRect, 30);
+                startScrollSwiper();
+            }
+        } else{
+            if(item.target.id == "main_content3") {
+                stopScrollSwiper();
+            }
         }
     })
+}, {threshold : 0.2}) // 20%로 등장했을 경우
+section.forEach((item, index) => {
+    item.setAttribute("data-index", index);
+    io.observe(item);
+});
 
-}, {threshold: 0.3}); // 30% 등장했을 경우
-inter.observe(mainSliderWrap); // 감시해주는 코드, 배열로 저장됨
 
-// ---------------------------------
-
-const header = document.querySelector("header");
-let observe = new IntersectionObserver((e) => {
-    e.forEach((item) => {
-        if(!item.isIntersecting) {item.target.classList.add("fixed");}
-    })
-}, {threshold : 0})
-observe.observe(header);
-
-document.addEventListener("scroll", (e) => {
-    if(window.pageYOffset < 100) {
-        header.classList.remove("fixed");
-    } 
-})
 
 // --------------------------------
 // 콘텐츠 배너 슬라이더
@@ -165,13 +156,8 @@ const contentSwiper = new Swiper(".content-slider", {
     spaceBetween: 80,
     centeredSlides:true,
     grabCursor: true,
-    // effect: "fade",
     loop:true,
     loopedSlides: 2,
-    // pagination: {
-    //     el: ".swiper-pagination",
-    //     type : "fraction",
-    // },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -179,8 +165,6 @@ const contentSwiper = new Swiper(".content-slider", {
     },
 
 });
-
-
 // --------------------------------
 // 오설록의 역사 배너 슬라이더
 // --------------------------------
@@ -198,35 +182,79 @@ const sinceSwiper = new Swiper(".since-slider", {
 // --------------------------------
 // 사용하는 함수들
 // --------------------------------
-/** 윈하는 위치로 부드럽게 이동할 수 있게 해주는 함수로 이동할 위치(Number)와 몇ms마다 이동할 것인지에 대해 인수로 받음 */
-function scrollToY(tagetPos, between) {
-    if(tagetPos > window.scrollY) { // 이동할 위치가 현재 위치보다 큰 경우
+
+/** 윈하는 절대위치로 부드럽게 이동할 수 있게 해주는 함수로 
+ * 이동할 위치(Number)와 몇ms마다 이동할 것인지에 대해 인수로 받음 */
+function scrollToY(targetPos, between) {
+    if(targetPos > window.scrollY) { // 이동할 위치가 현재 위치보다 큰 경우
         const up = window.setInterval(() => {
             const pos = window.scrollY; // 현재 위치
             const step = 100 + pos; // 위치 이동
-            if(pos == tagetPos) { // 현재 위치가 목표로 설정한 위치와 동일한 경우 setinterval 해제
+            if(pos == targetPos) { // 현재 위치가 목표로 설정한 위치와 동일한 경우 setinterval 해제
                 window.clearInterval(up);
-            } else if(step > tagetPos) {
-                window.scrollTo(0, tagetPos);
+            } else if(step > targetPos) {
+                window.scrollTo(0, targetPos);
                 window.clearInterval(up);
             } else {
                 window.scrollTo(0, step);
             }
         }, between) 
         
-    } else if(tagetPos < window.scrollY) { // 이동할 위치가 현재 위치보다 작은 경우
+    } else if(targetPos < window.scrollY) { // 이동할 위치가 현재 위치보다 작은 경우
         const down = window.setInterval(() => {
             const pos = window.scrollY; // 현재 위치
             const step = pos - 100; // 위치 이동
 
-            if(pos == tagetPos) { // 현재 위치가 목표로 설정한 위치와 동일한 경우 setinterval 해제
+            if(pos == targetPos) { // 현재 위치가 목표로 설정한 위치와 동일한 경우 setinterval 해제
                 window.clearInterval(down);
-            } else if(step < tagetPos) {
-                window.scrollTo(0, tagetPos);
+            } else if(step < targetPos) {
+                window.scrollTo(0, targetPos);
                 window.clearInterval(down);
             } else {
                 window.scrollTo(0, step);
             }
         }, between) 
     }
+}
+/** 윈하는 상대위치로 부드럽게 이동할 수 있게 해주는 함수로 
+ * 이동할 위치(Number)와 몇ms마다 이동할 것인지에 대해 인수로 받음 */
+function scrollByY(targetPos, between) {
+    const step = 100;
+    if(targetPos > 0) {
+        const down = window.setInterval(() => {
+            if(targetPos > 0) {
+                targetPos -= step;
+                console.log(`내릴때 위치 : ${targetPos}`);
+                window.scrollBy({
+                    top : (targetPos >= 0)? step : 0,
+                    left : 0,
+                    behavior : "smooth"
+                });
+            } else{
+                window.clearInterval(down);
+            }
+        }, between)
+    } else if(targetPos <= 0){
+        const up = window.setInterval(() => {
+            targetPos += step;
+            console.log(targetPos);
+            if(targetPos == 0) {
+                window.clearInterval(up);
+            } else if(targetPos < 0) {
+                window.scrollBy({
+                    top : -step,
+                    left : 0,
+                    behavior : "smooth"
+                });
+            } else{
+                window.scrollBy({
+                    top : targetPos - step,
+                    left : 0,
+                    behavior : "smooth"
+                });
+                targetPos = -100;
+            }
+        }, between)
+
+    } 
 }

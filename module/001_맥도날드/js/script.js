@@ -66,29 +66,17 @@ gnb.addEventListener("mouseleave", () => {
 // --------------------------------
 // top버튼 클릭시 스크롤 이벤트
 // --------------------------------
-const topBtnWrap = document.querySelector(".top");
-scrollTop(); // 로딩시 실행
-window.addEventListener("scroll", (e) => {
-    scrollTop();
-});
-function scrollTop() {
-    // 변수 선언
-    let scroll = window.scrollY;
+const topBtn = document.querySelector(".top");
+document.addEventListener("scroll", (e) => {
+    const scroll = window.scrollY; // 스크롤 정보
     if(scroll < 100) {
-        topBtnWrap.classList.add("hidden")
+        topBtn.classList.add("hidden")
     } else {
-        topBtnWrap.classList.remove("hidden");
+        topBtn.classList.remove("hidden");
     }
-}
-
-// --------------------------------
-// 맨 위로 이동
-// --------------------------------
-const topBtn = document.querySelector(".top a");
-topBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    scrollToTop();
-});
+})
+// 탑 버튼 클릭시 이동
+topBtn.addEventListener("click", () => {scrollToTop();});
 
 /** 위로 부드럽게 올라가는 메소드 */
 function scrollToTop() {
@@ -177,3 +165,5 @@ const swiper = new Swiper(".main-slider", {
 
 playBtn.addEventListener("click", () => swiper.autoplay.resume())
 pauseBtn.addEventListener("click", () => swiper.autoplay.pause())
+
+
