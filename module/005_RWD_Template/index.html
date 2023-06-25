@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD포폴완성본</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/icon/favmc32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/icon/montblanc_fav144.png">    
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <!-- 코딩할때 웹킷 안써줘도 자동으로 브라우저에 인식하게 해줌 : 접두어 일일히 쓰는거 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 박스슬라이더 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- 스타일 -->
+    <link rel="preload" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+<body>
+    <div id="wrap">
+        <!-- 1. Header -->
+        <header class="fixed">
+            <!-- Logo -->
+            <h1 class="logo"><a href="#">WEBADD</a></h1>
+
+            <!-- 햄버거 토글 -->
+            <input type="checkbox" id="ham">
+            <label for="ham" class="hambager_btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+
+            <!-- gnb -->
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#we_are">WE&nbsp;ARE</a></li>
+                    <li><a href="#work">WORK</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="#contact_us">CONTACT&nbsp;US</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- /1. Header -->
+
+        <!-- 2.Slider -->
+        <article>
+            <div class="swiper main-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <picture>
+                                <img src="./images/main-banner01.png" alt="bg01">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="swiper-slide mbaner02">
+                        <a href="#">
+                            <div class="info-box">
+                                <h2>호텔감성을 담은 인테리어</h2>
+                                <h3>
+                                    우아하고 품격있는 침실
+                                </h3>
+                            </div>
+                            <picture>
+                                <img src="./images/main-banner02.png" alt="bg02">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <picture>
+                                <img src="./images/main-banner03.png" alt="bg03">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="swiper-slide mbaner04">
+                        <a href="#">
+                            <div class="info-box">
+                                <h2>오래된 추억이자, 새로운 경험</h2>
+                                <h3>
+                                    턴테이블, 아날로그를 듣다
+                                </h3>
+                            </div>
+                            <picture>
+                                <img src="./images/main-banner04.png" alt="bg04">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="swiper-slide mbaner05">
+                        <a href="#">
+                            <div class="info-box">
+                                <h2>GUUD CHANCE 추가쿠폰 3% 혜택</h2>
+                                <h3>
+                                    뉴트로 감성 디자인 가구 <br>장미맨숀
+                                </h3>
+                            </div>
+                            <picture>
+                                <img src="./images/main-banner05.png" alt="bg05">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="swiper-slide mbaner06">
+                        <a href="#">
+                            <div class="info-box">
+                                <h2>호텔감성을 담은 인테리어</h2>
+                                <h3>
+                                    더 있어보이는 홈술 · 홈바
+                                </h3>
+                            </div>
+                            <picture>
+                                <img src="./images/main-banner06.png" alt="bg06">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="swiper-slide mbaner07">
+                        <a href="#">
+                            <div class="info-box">
+                                <h2>스텐펜과 주물팬의 장점만 담아낸</h2>
+                                <h3>
+                                    NEW FACE 헤슬바흐
+                                </h3>
+                            </div>
+                            <picture>
+                                <img src="./images/main-banner07.png" alt="bg07">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-controll-wrap">                    
+                    <div class="autoplay-controll">
+                        <button class="play hidden"><i class="fa fa-play" aria-hidden="true"></i></button>
+                        <button class="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </article>
+        <!-- /2.Slider -->
+
+        <!-- 3. Contents -->
+        <main role="main">
+            <section class="content">
+                <!-- 3-1. Display -->
+                <section id="we_are" class="display_section container">
+                    <div>
+                        <h2 class="sec_title">WE ARE</h2>
+                        <p class="desc">
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a <br>
+                            piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </p>
+                    </div>
+                </section>
+                <!-- /3-1. Display -->
+    
+                <!-- 3-2. Promotion -->
+                <section class="promotion_section container">
+                    <h2>
+                        <ul class="promotion_list">
+                            <li>
+                                <a href="#">
+                                    <!-- <img src="http://placehold.it/52x52" alt="홈 아이콘"> -->
+                                    <i class="fa fa-home fa-4x" aria-hidden="true"></i>
+                                    <h3>HOME</h3>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting industry.
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <!-- <img src="http://placehold.it/52x52" alt="회원정보 아이콘"> -->
+                                    <i class="fa fa-user fa-4x" aria-hidden="true"></i>
+                                    <h3>WE&nbsp;ARE</h3>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting industry.
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <!-- <img src="http://placehold.it/52x52" alt="작업물 아이콘"> -->
+                                    <i class="fa fa-briefcase fa-4x" aria-hidden="true"></i>
+                                    <h3>WORK</h3>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting industry.
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <!-- <img src="http://placehold.it/52x52" alt="글쓰기 아이콘"> -->
+                                    <i class="fa fa-phone fa-4x" aria-hidden="true"></i>
+                                    <h3>CONTACT&nbsp;US</h3>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting industry.
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </h2>
+                </section>
+                <!-- /3-2. Promotion -->
+                
+                <hr class="m_divider">
+                    
+                <!-- 3-3. Work -->
+                <section id="work" class="work_section">
+                    <div>
+                        <h2 class="sec_title container">WORK</h2>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>Portfolio-1</h3>
+                                        <span>WEB/PRINT</span>
+                                    </div>
+                                    <img src="./images/fish_chips_01.jpg" alt="포트폴리오1">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>Portfolio-2</h3>
+                                        <span>WEB/PRINT</span>
+                                    </div>
+                                    <img src="./images/fish_chips_02.jpg" alt="포트폴리오2">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>Portfolio-3</h3>
+                                        <span>WEB/PRINT</span>
+                                    </div>
+                                    <img src="./images/fish_chips_06.jpg" alt="포트폴리오3">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>Portfolio-4</h3>
+                                        <span>WEB/PRINT</span>
+                                    </div>
+                                    <img src="./images/fish_chips_07.jpg" alt="포트폴리오4">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>Portfolio-5</h3>
+                                        <span>WEB/PRINT</span>
+                                    </div>
+                                    <img src="./images/fish_chips_08.jpg" alt="포트폴리오5">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>Portfolio-6</h3>
+                                        <span>WEB/PRINT</span>
+                                    </div>
+                                    <img src="./images/fish_chips_09.jpg" alt="포트폴리오6">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>Portfolio-7</h3>
+                                        <span>WEB/PRINT</span>
+                                    </div>
+                                    <img src="./images/fish_chips_10.jpg" alt="포트폴리오7">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h3>Portfolio-8</h3>
+                                        <span>WEB/PRINT</span>
+                                    </div>
+                                    <img src="./images/fish_chips_11.jpg" alt="포트폴리오8">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- /3-3. Work -->
+    
+                <hr class="m_divider">
+    
+                <!-- 3-4. Blog -->
+                <section id="blog" class="blog_section container">
+                    <div>
+                        <h2 class="sec_title">BLOG</h2>
+                        <ul class="blog_list">
+                            <li>
+                                <a href="#">
+                                    <img src="./images/flex-01.jpg" alt="블로그 이미지01">
+                                </a>
+                                <time datetime="1982-03-01">Mar 1, 1982</time>
+                                <a href="#">
+                                    <h3>
+                                        There are many variations of passages of Lorem Ipsum
+                                    </h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/flex-02.jpg" alt="블로그 이미지02">
+                                </a>
+                                <time datetime="1982-03-15">Mar 15, 1982</time>
+                                <a href="#">
+                                    <h3>
+                                        There are many variations of passages of Lorem Ipsum
+                                    </h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/flex-04.jpg" alt="블로그 이미지03">
+                                </a>
+                                <time datetime="1982-03-20">Mar 20, 1982</time>
+                                <a href="#">
+                                    <h3>
+                                        There are many variations of passages of Lorem Ipsum
+                                    </h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- /3-4. Blog -->
+    
+                <!-- 3-5. Contact -->
+                <section id="contact_us" class="contact_section container">
+                    <h2 class="sec_title">CONTACT</h2>
+                    <form action="#" class="form_box">
+                        <fieldset>
+                            <legend class="blind">CONTACT&nbsp;US</legend>
+                            <!-- Input Form -->
+                            <div class="form">
+                                <label for="name" class="blind">Name</label>
+                                <input type="text" id="name" placeholder="Name">
+                                <label for="phone" class="blind">Phone</label>
+                                <input type="tel" id="phone" placeholder="Phone">
+                                <label for="email" class="blind">E-Mail</label>
+                                <input type="email" id="email" placeholder="Email Address">
+                            </div>
+                            <!-- /Input Form -->
+                            <!-- Textarea Form -->
+                            <div class="txta">
+                                <label for="message" class="blind">Message</label>
+                                <textarea id="message" placeholder="Message"></textarea>
+                            </div>
+                            <!-- /Textarea Form -->
+                        </fieldset>
+                        <!-- Button -->
+                        <div class="send_btn">
+                            <button>SEND MESSAGE</button>
+                        </div>
+                        <!-- /Button -->
+                    </form>
+                </section>
+                <!-- /3-5. Contact -->
+            </section>
+        </main>
+        <!-- /3. Contents -->
+
+        <!-- 4.Footer -->
+        <footer class="footer">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118578.54765883452!2d126.93411172993378!3d37.576389930339644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3eb6da7589b%3A0x12a0299d6b91faf1!2zQXBwbGUg6rCA66Gc7IiY6ri4!5e1!3m2!1sko!2skr!4v1676943333173!5m2!1sko!2skr"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <p>
+                COPYRIGHT ALL RIGHTS RESERVED., WEBADD
+            </p>
+        </footer>
+        <!-- /4.Footer -->
+        <!-- top 버튼 -->
+        <div class="top hidden">
+            <a href="#" class="eventNone">
+                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+            </a>
+        </div>
+        <!-- /top 버튼 -->
+
+        <div class="alert hidden">죄송합니다. 해당페이지는 준비중입니다.</div>
+    </div>
+</body>
+<!-- 박스슬라이드 -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- 스크립트  -->
+<script src="./js/script.js"></script>
+</html>
