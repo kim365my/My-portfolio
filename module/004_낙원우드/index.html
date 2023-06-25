@@ -10,128 +10,102 @@
     <link rel="apple-touch-icon=precomposed" href="./images/favicon/montblanc_fav144.png">    
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
-
     <!-- 코딩할때 웹킷 안써줘도 자동으로 브라우저에 인식하게 해줌 : 접두어 일일히 쓰는거 -->
     <script src="./js/prefixfree.min.js"></script>
-
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/display_none_scrollbar.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<style>
-      html,body{ margin:0; padding:0; width:100%; height:100%;}
-  .box{ width:100%; height:100vh; position:relative; color:#ffffff; font-size:24pt;}
-</style>
-<script>
-    // 적용할 클래스명
-    //var className = "box";
-    // 지금의 스크롤 위치를 담을 변수
-    var currentScroll = 0;
-    // 에니메이션 효과를 주기위한 function 명 선언
-    var tim;
-    window.onload = function () {
-        /* Div Class 명 */
-        // box클래스 추출
-        var box = document.getElementsByClassName('box');
-        // box클래스 개수만큼 실행
-        for (var i = 0; i < box.length; i++) {
-            // box 에 각각 마우스 휠 감지
-            // 휠감지
-            box[i].addEventListener("mousewheel", MouseWheelHandler, false);
-            //box[i].onmousewheel = function(){MouseWheelHandler};
-            // firefox 용 휠처리
-            box[i].addEventListener("DOMMouseScroll", MouseWheelHandler, true);
-        }
-    }
-    function MouseWheelHandler(e) {
-        // 스크롤 취소시킴(이걸 안할경우 도중에 명령을 받아 화면이 덜덜 거릴수 있음)
-        e.preventDefault();
-        // 휠값처리
-        var delta = 0;
-        if (!event) {event = window.event;}
-        if (event.wheelDelta) {
-            delta = event.wheelDelta / 120;
-            if (window.opera) {delta = -delta;}
-        }
-        else if (event.detail){
-            delta = -event.detail / 3;
-        }
-
-        // 여러개일경우 다른 selector 을 확인하기위한 상위 dom 으로 이동
-        var p = e.target.parentElement;
-        // 몇번째 dom 인지 저장
-        var index = Array.prototype.indexOf.call(p.children, e.target);
-        // 같은 위치의 돔목록 을 저장
-        var boxArr = e.target.parentElement.children;
-        // 지금의 스크롤 위치 저장
-        currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-        // 다음위치의 좌표(기본이므로 현재의 Y 좌표 저장)
-        var NextTarget = currentScroll;
-        // 마우스휠 위로
-        if (delta > 0) {
-            // 맨처음 지점 제외
-            if (index > 0) {
-                // 이전 dom 의 index 번호
-                var no = (index - 1);
-                // 좌표위치 저장
-                NextTarget = boxArr[no].offsetTop;
-            }
-        }
-        // 마우스휠 아래로
-        else if (delta < 0)
-        {
-            // 맨마지막 지점 제외
-            if (index < boxArr.length - 1) {
-                // 다음 dom 의 index 번호
-                var no = (index + 1);
-                // 좌표위치 저장
-                NextTarget = boxArr[no].offsetTop;
-            }
-        }
-        // 애니메이션
-        // 필요없으면 바로 window.scrollTo(0, NextTarget);
-        // 에니메이션 초기화
-        clearInterval(tim);
-        // 애니메이션 실행
-        tim = setInterval(tran, 1);
-        // 애니메이션 function
-        function tran() {
-            // 이동속도 숫자가 작아질수록 느려짐
-            var speed = 5;
-            // 현재 스크롤과 이동후 스크롤이 같으면 정지시킨다 
-            if (currentScroll == NextTarget) {
-                clearInterval(tran);
-            } else {
-                // 스크롤을 위로 올릴 경우
-                if (currentScroll - speed > NextTarget)
-                {
-                    currentScroll -= speed;
-                }
-                // 스크롤을 내일 경우
-                else if (currentScroll + speed < NextTarget)
-                {
-                    currentScroll += speed;
-                }
-                // 스크롤이 속도로 지정된 변수보다 작을 경우 강제적으로 맞춰준다
-                else
-                {
-                    currentScroll = NextTarget;
-                }
-                // 스크롤위치 변경
-                window.scrollTo(0, currentScroll);
-            }
-        }
-
-    }
-</script>
 <body>
     <div id="wrap">
-        <div class="box" style="background-color:red;">1</div>
-        <div class="box" style="background-color:orange;">2</div>
-        <div class="box" style="background-color:yellow;">3</div>
-        <div class="box" style="background-color:green;">4</div>
-        <div class="box" style="background-color:blue;">5</div>
-        <div class="box" style="background-color:indigo;">6</div>
-        <div class="box" style="background-color:violet;">7</div>
+        <!-- 헤더 -->
+        <header>
+            <!-- logo -->
+            <h1 class="logo"><a href="./index.html"><img src="./images/logo.png" alt="logo"></a></h1>
+            <!-- 햄버거 토글 -->
+            <input type="checkbox" id="ham">
+            <label for="ham" class="hambager_btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <!-- gnb -->
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">
+                            樂원우드 ;
+                            <span>KNOCK ON WOOD</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            공간
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            예약안내
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+ 
+        </header>
+        
+        <!-- 메인 -->
+        <main>
+            <section class="main_page">
+                <picture>
+                    <img src="./images/main_text.png" alt="">
+                </picture>
+                <p>
+                    기본을 넘어 가치를 느낄 수 있는 <br>
+                    안동 최고의 <strong>고급 감성 한옥, 낙원우드</strong>
+                </p>
+            </section>
+            <section class="section02">
+                <article>
+                    <img src="./images/knockon_img.jpg" alt="">
+                    <p>
+                        한옥의 아쉬움. <br>
+                        누울 자리, 씻을 자리, 쉴 자리 숙소의 기본을 가장 먼저 생각했습니다. <br>
+                         <br>
+                        고급 호텔에서 사용되는 구스 침구,  <br>
+                        넓고 쾌적한 화장실,  <br>
+                        한옥과 잘 어우러지면서 편리하고 다양한 가전 및 비품들. <br>
+                        더욱 편안한, 더욱 만족스러운 쉼을 위해 노력합니다. <br>
+                         <br>
+                        樂원우드 ; KNOCK ON WOOD는 기존 한옥에 현대적인 편안함을 더한 <br>
+                        감성 한옥입니다.
+                    </p>
+                </article>
+            </section>
+
+        </main>
+
+        <!-- 푸터 -->
+        <footer>
+            <!-- 푸터 로고 -->
+            <h2>
+                <img src="./images/f_logo.png" alt="f_logo">
+            </h2>
+            <dl>
+                <dt>대표전화</dt>
+                <dd>010-3139-4700</dd>
+            </dl>
+            <ul>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">오시는 길</a></li>
+            </ul>
+            <p class="copy_right">
+                &copy; KONCK ON WOOD. ALL Rights Reserved.
+            </p>
+        </footer>
     </div>
 </body>
 <!-- 커스텀 js -->
-<script src="./js/rw_script.js"></script>
+<script src="./js/script.js"></script>
 </html>
