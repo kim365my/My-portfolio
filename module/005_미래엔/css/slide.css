@@ -54,17 +54,17 @@ article .swiper{
 /* 슬라이드 컨트롤 */
 .main-slider .swiper-button-next,
 .main-slider .swiper-button-prev{
-    color: #111;
-    font-size: 8rem;
-    padding: 4rem;
+    color: #fff;
 }
 .main-slider .swiper-button-prev:after{
     content: "\f104";
+    font-size: 8rem;
     font-family: "FontAwesome";
     font-weight: 400;
 }
 .main-slider .swiper-button-next:after{
     content: "\f105";
+    font-size: 8rem;
     font-family: "FontAwesome";
     font-weight: 400;
 }

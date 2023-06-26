@@ -47,11 +47,17 @@
 
 /* 이미지 정보 효과 */
 .work_section ul {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(1, auto);
     gap: 2rem;
 }
-
+.work_section li a  {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 .work_section li a::before{
     content: "";
     display: block;
@@ -68,6 +74,11 @@
 }
 .work_section li a:hover::before{
     opacity: 0.7;
+}
+.work_section li a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /* 정보텍스트 css */
 .work_section li .sec_img_txt{
@@ -96,15 +107,32 @@
     margin-bottom: 4rem;
     text-align: center;
 }
-.blog_list{
-    display: flex;
-}
+
 .blog_list li{
     width: 100%;
     margin-top: 4rem;
 }
 .blog_list li:first-child{
     margin-top: 0;
+}
+/* 이미지 가로세로비율 */
+.blog_list li a:first-child{
+    display: block;
+    width: 100%;
+    /* 포지션 기준값 */
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+.blog_list a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 포지션 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 .blog_list li img{
     object-fit: contain;
@@ -194,6 +222,9 @@ input:focus, textarea:focus{
     .blog_section{
         margin-top: 12rem;
     }
+    .blog_list{
+        display: flex;
+    }
     .blog_list li{
         width: 31.59722222222222%;
         height: min-content;
@@ -265,6 +296,7 @@ input:focus, textarea:focus{
     .work_section ul {
         grid-template-columns: repeat(3, auto);
     }
+
     /* -------3-4. blog_section------- */
     .blog_section{
         margin-top: 12rem;
@@ -303,8 +335,7 @@ input:focus, textarea:focus{
         text-align: left;
     }
     .form_box{
-        /* (844/1132)*100 = 74.55830388692578 */
-        width: 74.55830388692578%;
+        width: 100%;
     }
     /* 2단 플롯 구조 */
     .form_box .form{

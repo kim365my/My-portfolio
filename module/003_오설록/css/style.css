@@ -342,7 +342,7 @@ main{
     font-family: 'Gowun Dodum', sans-serif;
 }
 main section {
-    scroll-snap-align: end;
+    scroll-snap-align: center;
 }
 /* ----------------- */
 /* 메인 컨텐츠 */
