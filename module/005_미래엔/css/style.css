@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import url(./common.css);
+/* 모바일 퍼스트 = 모바일을 공통스타일 */
+@import url(./header.css);
+@import url(./slide.css);
+@import url(./content.css);
+@import url(./footer.css);
+
+
+/* ============================ */
+/* 태블릿 : 너비 768px 이상 */
+/* ============================ */
+@media screen and (min-width:768px){
+    .container{
+        max-width: 88.4375%;
+        /* min-width: 120rem; */
+        margin: 0 auto;
+    }
+}
+
+/* ============================ */
+/* pc : 너비 1132px 이상 */
+/* ============================ */
+@media screen and (min-width:1132px){
+
+}

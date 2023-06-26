@@ -1,0 +1,253 @@
+/* 1. header */
+header{
+    width: 100%;
+    height: 5rem;
+    padding: 0 5%;
+    border-bottom: 1px solid #fff;
+    background: rgba(0, 0, 0, 0.2);
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    /* 포지션 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+header:has(input[id="ham"]:checked)::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    /* 포지션 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 98;
+}
+
+header.fixed {
+    color: #111;
+    background: #fff;
+    border-bottom: 1px solid #DBDBDB;
+}
+header.fixed .logo a{
+    background-image: url(../images/img_logo_on.png);
+}
+header.fixed .hambager_btn div {
+    background: #000;
+}
+header.fixed .gnb li a{
+    color: #111;
+}
+/* ------logo------ */
+header .logo {
+    margin-right: 5%;
+}
+header .logo a{
+    display: inline-block;
+    width: 8rem;
+    height: 3rem;
+    color: transparent;
+    letter-spacing: -2px;
+    font-weight: 500;
+    background: url(../images/img_logo.png) no-repeat center;
+    background-size: contain;
+}
+/* -------gnb------- */
+header .gnb {
+    width: 0%;
+    height: 100vh;
+    font-size: 0;
+    padding: 0;
+    /* 포지션 */
+    position: absolute;
+    top: 0;
+    right: -100%;
+    z-index: 999;
+    transition: all 0.3s;
+    background: #fff;
+}
+header .gnb ul{
+    /* display: none; */
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #DBDBDB;
+    margin-bottom: 2rem;
+}
+header .gnb ul > li{
+    text-align: center;
+    /* 포지션 */
+    position: relative;
+}
+header .gnb li span{
+    display: inline-block;
+}
+header .gnb li a{
+    display: inline-block;
+    font-size: 1.8rem;
+    padding-top: 2.5rem;
+    color: #111;
+    transition: all 0.3s;
+}
+/* 호버시 */
+header .gnb li:hover::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+/* 투뎁스 */
+header .gnb ul ul {
+    display: none;
+}
+
+/* -------Hamberger Toggle-------- */
+input[id="ham"] {
+    display: none;
+}
+.hambager_btn{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    /* 포지션 */
+    position: relative;
+    z-index: 1000;
+}
+.hambager_btn div{
+    width: 100%;
+    height: 0.2rem;
+    background: #fff;
+    transition: transform 0.3s;
+}
+.hambager_btn div:nth-child(2) {
+    margin: 0.5rem 0;
+}
+/* 햄버거 메뉴 열릴 시 */
+input[id="ham"]:checked + .hambager_btn div {
+    background: #000;
+    /* 포지션 */
+    position: absolute;
+    top: 50%;
+}
+input[id="ham"]:checked + .hambager_btn div:nth-child(2) {
+    display: none;
+}
+input[id="ham"]:checked + .hambager_btn div:nth-child(1) {
+    transform: rotate(135deg);
+}
+input[id="ham"]:checked + .hambager_btn div:nth-child(3) {
+    transform: rotate(45deg);
+}
+
+input[id="ham"]:checked  ~ .gnb {
+    width: 80%;
+    padding: 0 2rem 0;
+    right: 0;
+    font-size:  1.2rem;
+}
+input[id="ham"]:checked  ~ .gnb > ul {
+    display: block;
+}
+
+/* ============================ */
+/* 태블릿 : 너비 768px 이상 */
+/* ============================ */
+@media screen and (min-width:768px){
+    header{
+        
+    }
+    header:has(input[id="ham"]:checked)::after{
+        background: none;
+    }
+    /* 호버시 */
+    .gnb_box:hover::before {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 80%;
+        background: rgba(255, 255, 255, 0.8);
+        /* 포지션 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    header:hover{
+        color: #111;
+        background: #fff;
+        border-bottom: 1px solid #DBDBDB;
+    }
+    header:hover .logo a{
+        background-image: url(../images/img_logo_on.png);
+    }
+    header:hover .hambager_btn div{
+        background: #000;
+    }
+    header:hover .gnb li a{
+        color: #111;
+    }
+    header .gnb {
+        /* 모바일 속성값 초기화 */
+        width: 100%;
+        height: auto;
+        background:none;
+        padding: 0;
+        /* 플렉스 */
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        /* 포지션 */
+        position: static;
+    }
+    header .gnb ul{
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    .gnb_box, .gnb_box ul,
+    .info_box,.info_box ul {
+        /* 플렉스 */
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+    }
+
+    input[id="ham"] ~ nav .gnb li {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+    header .gnb li{
+        border-bottom: none;
+    }
+    header .gnb li a{
+        display: inline-block;
+        padding-top: 0;
+        font-size:  1.6rem;
+        color: #fff;
+    }
+    /* 투뎁스 설정 */
+    header .gnb ul ul a{
+        font-size: 1.4rem;
+    }
+    header:hover .gnb .snb {
+        display: block;
+    }
+    /* 햄버거 메뉴 */
+    .gnb .moblie_gnb, 
+    .hambager_btn,
+    .menu_toggle_btn{
+        /* 태블릿, pc단에서부터는 안보이도록 */
+        display: none;
+    }
+    
+}

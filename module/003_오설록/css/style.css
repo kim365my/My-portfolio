@@ -338,7 +338,11 @@ header .lnb li:hover i{
 /* 메인 */
 /* ================ */
 main{
+    scroll-snap-type: y mandatory;
     font-family: 'Gowun Dodum', sans-serif;
+}
+main section {
+    scroll-snap-align: end;
 }
 /* ----------------- */
 /* 메인 컨텐츠 */

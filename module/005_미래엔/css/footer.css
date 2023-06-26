@@ -1,0 +1,15 @@
+/* ------------------- */
+/* footer */
+.footer{
+    margin-top: 100px;
+}
+.footer iframe{
+    width: 100%;
+    height: 320px;
+}
+.footer p{
+    margin: 20px 0;
+    color: darkgray;
+    text-align: center;
+    font-size: 0.75rem;
+}

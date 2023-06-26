@@ -1,0 +1,140 @@
+/* -------------------------- */
+/* 박스 슬라이더 커스텀 작업 */
+article .swiper{
+    width: 100%;
+    min-height: 30rem;
+    height: 80rem;
+    overflow: hidden;
+}
+
+.main-slider {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* 플렉스 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-slider .swiper-slide :is(video, img){
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 슬라이드 텍스트 */
+.slide_text{
+    color: #fff;
+    /* 포지션 */
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: showTxt 2s;
+    line-height: 1.6;
+}
+.slide_text h2 {
+    font-size: 4rem;
+}
+.slide_text a{
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid #fff;
+}
+@keyframes showTxt {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* 슬라이드 컨트롤 */
+.main-slider .swiper-button-next,
+.main-slider .swiper-button-prev{
+    color: #111;
+    font-size: 8rem;
+    padding: 4rem;
+}
+.main-slider .swiper-button-prev:after{
+    content: "\f104";
+    font-family: "FontAwesome";
+    font-weight: 400;
+}
+.main-slider .swiper-button-next:after{
+    content: "\f105";
+    font-family: "FontAwesome";
+    font-weight: 400;
+}
+/* 호버시 */
+.main-slider .swiper-button-next:hover,
+.main-slider .swiper-button-prev:hover {
+    color: #616161;
+}
+/* swiper-controll-wrap 컨트롤 박스 스타일링 */
+.main-slider .swiper-controll-wrap{
+    width: 100%;
+    /* 플랙스 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 포지션 */
+    position: absolute;
+    bottom: 3rem;
+    z-index: 10;
+}
+
+/* 오토 제어버튼 */
+.autoplay-controll{
+    width: auto;
+    height: auto;
+    /* 포지션 */
+    position: relative;
+    z-index: 10;
+}
+.main-slider .autoplay-controll button{
+    height: 2rem;
+    margin-right: 1rem;
+    text-align: center;
+    /* 커서 */
+    cursor: pointer;
+}
+.main-slider .autoplay-controll i{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* 현재위치  */
+.main-slider .swiper-pagination {
+    width: auto;
+    position: static;
+}
+.main-slider .swiper-pagination-bullet{
+    width: 10rem;
+    height: 1rem;
+    border-radius: 0;
+    opacity: 1;
+    background: transparent;
+}
+.main-slider .swiper-pagination-bullet::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.3rem;
+    background: #9b9b9b;
+}
+.main-slider .swiper-pagination-bullet-active::after{
+    background: #fff;
+}
+
+
+/* ============================ */
+/* 태블릿 : 너비 768px 이상 */
+/* ============================ */
+@media screen and (min-width:768px){
+    .main-slider .swiper-pagination-bullet{
+        width: 16rem;
+    }
+}

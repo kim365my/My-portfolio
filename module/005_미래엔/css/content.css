@@ -1,0 +1,321 @@
+/* --------------------------------------- */
+/* Contents */
+/* ------3-1. display영역------- */
+.display_section{
+    margin-top: 68px;
+    text-align: center;
+}
+.display_section .sec_title{
+    margin-bottom: 32px;
+}
+.display_section .desc{
+    color: #616161;
+    line-height: 2;
+}
+/* -----3-2.promotion_section-------- */
+.promotion_section{
+    margin-top: 68px;
+}
+
+.promotion_list li{
+    margin-top: 48px;
+    text-align: center;
+}
+.promotion_list li:nth-child(1){
+    margin-top: 0;
+}
+.promotion_list li i{
+    width: 5.2rem;
+    height: 5.2rem;
+}
+.promotion_list li h3{
+    margin: 3rem 0 2rem;
+    color: #111;
+}
+.promotion_list li p{
+    /* 14/16 = 0.875 */
+    font-size: 1.4rem;
+}
+/* -----3-3. Work ------*/
+.work_section{
+    margin-top: 8rem;
+}
+.work_section .sec_title{
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+/* 이미지 정보 효과 */
+.work_section ul {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;
+}
+
+.work_section li a::before{
+    content: "";
+    display: block;
+    /* 포지션 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    transition: all 0.1s;
+}
+.work_section li a:hover::before{
+    opacity: 0.7;
+}
+/* 정보텍스트 css */
+.work_section li .sec_img_txt{
+    opacity: 0;
+    color: #fff;
+    /* 포지션 */
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    z-index: 200;
+    transition: all 0.3s;
+}
+/* a를 호버하면 div를 */
+.work_section li a:hover .sec_img_txt{
+    opacity: 1;
+}
+.work_section li .sec_img_txt h3{
+    font-size: 2.4rem;
+}
+
+/* -------3-4. blog_section------- */
+.blog_section{
+    margin-top: 8rem;
+}
+.blog_section .sec_title{
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.blog_list{
+    display: flex;
+}
+.blog_list li{
+    width: 100%;
+    margin-top: 4rem;
+}
+.blog_list li:first-child{
+    margin-top: 0;
+}
+.blog_list li img{
+    object-fit: contain;
+}
+.blog_list time{
+    display: block;
+    font-size: 12px;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin: 1rem 0;
+}
+.blog_list h3{
+    color: #616161;
+    line-height: 1.6;
+}
+
+/* -------3-5. contact_section----------- */
+.contact_section{
+    margin-top: 10rem;
+}
+.contact_section .sec_title{
+    margin-bottom: 48px;
+    text-align: center;
+}
+input, textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #111;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #111;
+    transition: all 0.5s ease-in;
+}
+input:focus, textarea:focus{
+    outline: none;
+    border-bottom: 1px solid violet;
+}
+/* input form */
+.form_box .form input{
+    padding-bottom: 14px;
+    margin-bottom: 48px;
+}
+.form_box .form input:last-child{
+    margin-bottom: 0;
+}
+/* textarea form */
+.form_box textarea{
+    height: 100%;
+}
+.send_btn{
+    margin-top: 3rem;
+    text-align: right;
+}
+.send_btn button{
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #111;
+    border-radius: 5%;
+    padding: 15px;
+    cursor: pointer;
+}
+
+/* ============================ */
+/* 태블릿 : 너비 768px 이상 */
+/* ============================ */
+@media screen and (min-width:768px){
+    .display_section{
+        margin-top: 10rem;
+    }
+    .promotion_list {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .promotion_list li{
+        /* (177/768)*100 = 23.046875 */
+        width: 23.046875%;
+        /* (20/768)*100 = 2.604166666666667 */
+        margin-left: 2.604166666666667%;
+        /* 속성값 수정 */
+        margin-top: 0;
+    }
+    .promotion_list li:nth-child(1){
+        margin-left: 0;
+    }
+
+    /* -------3-4. blog_section------- */
+    .blog_section{
+        margin-top: 12rem;
+    }
+    .blog_list li{
+        width: 31.59722222222222%;
+        height: min-content;
+        margin-top: 0;
+    }
+    .blog_list li:nth-child(even){
+        margin: 0 2.604166666666667%;
+    }
+    /* -------3-5. contact_section----------- */
+    .contact_section{
+        /* 속성값 수정 */
+        margin-top: 18rem;
+    }
+    .contact_section .sec_title{
+        margin-bottom: 8rem;
+    }
+    /* 2단 플롯 구조 */
+    .form_box fieldset {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .form_box .form{
+        /* (768-20)/2 = 374 */
+        /* (374/768)*100 = 48.69791666666667 */
+        width: 48.69791666666667%;
+        /* (20/768)*100 = 2.604166666666667 */
+        margin-right: 2.604166666666667%;
+    }
+    .form_box .txta{
+        width: 48.69791666666667%;
+    }
+}
+
+/* ============================ */
+/* pc : 너비 1132px 이상 */
+/* ============================ */
+@media screen and (min-width:1132px){
+    .display_section{
+        display: flex;
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+        /* 픽셀 값 수정 */
+        text-align:left;
+    }
+    .display_section .sec_title{
+        margin-top: 0;
+    }
+    /* 3-2.promotion_section */
+    .promotion_section{
+        margin-top: 8rem;
+    }
+
+    .promotion_list li{
+        width: 23.674911660777383%;
+        margin-left: 1.76678445229682%;
+        margin-top: 0;
+        text-align: center;
+    }
+    .promotion_list li:nth-child(1){
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    /* -----3-3. Work ------*/
+    .work_section .sec_title{
+        text-align: left;
+    }
+    .work_section ul {
+        grid-template-columns: repeat(3, auto);
+    }
+    /* -------3-4. blog_section------- */
+    .blog_section{
+        margin-top: 12rem;
+    }
+
+    .blog_section .sec_title{
+        margin-top: 0;
+        margin-bottom: 4rem;
+        text-align: left;
+    }
+    .blog_list{
+        /* (844/1132)*100 = 74.55830388692578 */
+        width: 74.55830388692578%;
+    }
+    .blog_list li{
+        /* (844-40)/3 = 268 */
+        /* (268/844)*100 = 31.753554502369667 */
+        width: 31.7535545023696675%;
+        margin-top: 0;
+    }
+    .blog_list li:nth-child(even){
+        /* (20/844)*100 = 2.3696682464454977 */
+        margin: 0 2.3696682464454977%;
+    }
+
+    /* -------3-5. contact_section----------- */
+    .contact_section{
+        /* 속성값 수정 */
+        margin-top: 18rem;
+    }
+    /* 3단 플롯 */
+    .contact_section .sec_title{
+        /* 속성값 수정 */
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    .form_box{
+        /* (844/1132)*100 = 74.55830388692578 */
+        width: 74.55830388692578%;
+    }
+    /* 2단 플롯 구조 */
+    .form_box .form{
+        /* (844-20)/2 = 412 */
+        /* (412/844)*100 = 48.81516587677725 */
+        width: 48.81516587677725%;
+        /* (20/844)*100 = 2.3696682464454977 */
+        margin-right: 2.3696682464454977%;
+    }
+    .form_box .txta{
+        width: 48.81516587677725%;
+    }
+
+}
