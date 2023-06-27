@@ -1,4 +1,4 @@
-/* -------- */
+/* - */
 /* Contents */
 main > section {
     padding: 8rem 0;
@@ -11,29 +11,43 @@ main > section {
     margin-bottom: 4.8rem;
     text-align: center;
 }
-/* ------3-1. display영역------- */
+/* 1. now */
 #now {
     background: #F8F8FA;
 }
-
-/* -----3-2.promotion_section-------- */
-
-/* -----3-3. Work ------*/
-
+/* 2. works */
 /* 이미지 정보 효과 */
-.now_section ul {
+.now_list {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
 }
-.now_section li a  {
+.now_list li {
+    width: 100%;
+}
+.now_list a  {
     display: inline-block;
     width: 100%;
-    height: 100%;
+}
+.now_list a picture {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    /* 포지션 */
     position: relative;
 }
-.now_section li a::before{
+.now_list a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+.now_list a picture:hover img{
+    transform: scale(1.2);
+}
+
+.now_list a picture::before{
     content: "";
     display: block;
     /* 포지션 */
@@ -47,34 +61,58 @@ main > section {
     z-index: 100;
     transition: all 0.1s;
 }
-.now_section li a:hover::before{
+.now_list a picture:hover::before{
     opacity: 0.7;
 }
-.now_section li a img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 /* 정보텍스트 css */
 .now_section li .sec_img_txt{
     opacity: 0;
     color: #fff;
+    padding: 1rem 2rem;
+    border: 1px solid #fff;
     /* 포지션 */
     position: absolute;
-    left: 5%;
-    top: 5%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 200;
     transition: all 0.3s;
 }
+.sec_img_txt::after{
+    content: "more";
+    font-size: 2.4rem;
+    
+}
 /* a를 호버하면 div를 */
-.now_section li a:hover .sec_img_txt{
+.now_list a picture:hover .sec_img_txt{
     opacity: 1;
 }
-.now_section li .sec_img_txt h3{
-    font-size: 2.4rem;
+/* 텍스트 */
+.sec_info_txt {
+    margin: 2rem 0;
+}
+.sec_info_txt h3 {
+    height: 4rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #111;
+}
+.sec_info_txt p{
+    max-width: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: #767676;
+
+    
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
-/* -------3-4. blog_section------- */
+/* 3-4. blog_section */
 /* 슬라이드 커스텀 */
 .now-slider {
     width: 100%;
@@ -86,7 +124,7 @@ main > section {
 }
 .now-slider .swiper-slide a{
     display: inline-block;
-    width: 30rem;
+    width: 100%;
 }
 
 
@@ -94,7 +132,7 @@ main > section {
 .now-swiper-scrollbar{
     width: 100%;
     height: 0.5rem;
-    border-radius: var(--swiper-scrollbar-border-radius,10px);
+    border-radius: var(swiper-scrollbar-border-radius,10px);
     background-color: #0000002b;
 }
 .now-slider-scrollbar div{
@@ -108,7 +146,7 @@ main > section {
     cursor: grab;
 }
 
-/* -------3-5. contact_section----------- */
+/* 3-5. contact_section- */
 input, textarea{
     width: 100%;
     border: none;
@@ -151,7 +189,9 @@ input:focus, textarea:focus{
 /* 태블릿 : 너비 768px 이상 */
 /* ============================ */
 @media screen and (min-width:768px){
+    /* 모바일 속성값 초기화 */
 
+    /* -------------------- */
     .promotion_list {
         display: flex;
         flex-flow: row wrap;
@@ -167,13 +207,9 @@ input:focus, textarea:focus{
     .promotion_list li:nth-child(1){
         margin-left: 0;
     }
-    /* -----3-3. Work ------*/
-    .now_section ul {
-        grid-template-columns: repeat(2, auto);
-    }
-    /* -------3-4. blog_section------- */
 
-    /* -------3-5. contact_section----------- */
+
+
     /* 2단 플롯 구조 */
     .form_box fieldset {
         display: flex;
@@ -199,27 +235,19 @@ input:focus, textarea:focus{
     .sec_title {
         text-align: left;
     }
-    /* -----3-3. Work ------*/
-    .now_section .sec_title{
-        text-align: left;
-    }
+    /* 3-3. Work -*/
     .now_section ul {
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    /* -------3-4. blog_section------- */
-    .blog_section{
-        margin-top: 12rem;
-    }
-
+    /* 3-4. blog_section */
     .blog_section .sec_title{
         margin-top: 0;
         margin-bottom: 4rem;
         text-align: left;
     }
 
-
-    /* -------3-5. contact_section----------- */
+    /* 3-5. contact_section */
     /* 3단 플롯 */
     .form_box{
         width: 100%;

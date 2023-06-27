@@ -1,13 +1,14 @@
 /* 1. header */
 header{
     width: 100%;
-    height: 5rem;
+    height: 6rem;
     padding: 0 5%;
     border-bottom: 1px solid #fff;
     background: rgba(0, 0, 0, 0.2);
-    /* 플렉스 */
-    display: flex;
-    flex-flow: row nowrap;
+    /* 그리드 */
+    display: grid;
+    grid-template-columns: 8rem auto;
+    grid-gap: 3vw;
     justify-content: space-between;
     /* 포지션 */
     position: fixed;
@@ -27,7 +28,6 @@ header:has(input[id="ham"]:checked)::after{
     left: 0;
     z-index: 98;
 }
-
 header.fixed {
     color: #111;
     background: #fff;
@@ -42,21 +42,18 @@ header.fixed .hambager_btn div {
 header.fixed .gnb li a{
     color: #111;
 }
-/* ------logo------ */
-header .logo {
-    margin-right: 5%;
-}
+/* logo */
 header .logo a{
     display: inline-block;
     width: 8rem;
-    height: 5rem;
+    height: 6rem;
     color: transparent;
     letter-spacing: -2px;
     font-weight: 500;
     background: url(../images/img_logo.png) no-repeat center;
     background-size: contain;
 }
-/* -------gnb------- */
+/* gnb */
 header .gnb {
     width: 0%;
     height: 100vh;
@@ -73,15 +70,6 @@ header .gnb {
 header .gnb ul{
     border-bottom: 1px solid #DBDBDB;
 }
-header .gnb ul > li{
-    margin: 0 0.5rem;
-    line-height: 5rem;
-    text-align: center;
-
-}
-header .gnb li span{
-    display: inline-block;
-}
 header .gnb li a{
     display: inline-block;
     width: 100%;
@@ -90,23 +78,46 @@ header .gnb li a{
     /* 포지션 */
     position: relative;
 }
-/* 호버시 */
-header .gnb li:hover > a::after {
-    content: "";
+/* 첫번째 li */
+header .gnb > div > ul > li > a{
+    line-height: 6rem;
+}
+header .gnb > div > ul > li > a::after{
+    content: "\f105";
+    display: inline-block;
+    font-family: "FontAwesome";
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #767676;
+    /* 포지션 */
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+header .moblie_gnb a::before{
+    content: "\f2c0";
+    font-family: "FontAwesome";
+    margin-right: 1rem;
+}
+header .moblie_gnb a {
     display: inline-block;
     width: 100%;
-    height: 1px;
-    background: red;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    font-size: 1.6rem;
+    line-height: 6rem;
+    font-weight: 500;
+    border-bottom: 1px solid #DBDBDB;
 }
 /* 투뎁스 */
 header .gnb ul ul {
     display: none;
 }
+header .gnb ul ul a {
+    text-align: center;
+}
 
-/* -------Hamberger Toggle-------- */
+/* -Hamberger Toggle-- */
 input[id="ham"] {
     display: none;
 }
@@ -162,9 +173,57 @@ input[id="ham"]:checked  ~ .gnb > ul {
 /* pc : 너비 1132px 이상 */
 /* ============================ */
 @media screen and (min-width:1132px){
+    /* 모바일 속성값 초기화 */
     header:has(input[id="ham"]:checked)::after{
         background: none;
     }
+    header .gnb {
+        width: 100%;
+        height: 6rem;
+        background:none;
+        padding: 0;
+        /* 포지션 */
+        position: static;
+    }
+    input[id="ham"] ~ nav .gnb li {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+    header .gnb li{
+        border-bottom: none;
+    }
+    /* 햄버거 메뉴 */
+    .gnb .moblie_gnb, 
+    .hambager_btn,
+    .menu_toggle_btn{
+        /* 태블릿, pc단에서부터는 안보이도록 */
+        display: none;
+    }
+    header .gnb li a::after{
+        content: "";
+        font-family: inherit;
+        font-weight: inherit;
+        color: inherit;
+        top: auto;
+        right: auto;
+        transform: none;
+    }
+    header .gnb ul {
+        border-bottom: none;
+    }
+    header .gnb > div > ul > li > a::after{
+        content: "";
+        color: inherit;
+        top: auto;
+        right: auto;
+        transform: none;
+    }
+    /* -------------- */
+    header{
+        grid-template-columns: 8rem minmax(0, 1fr);
+    }
+    /* 호버시 */
     header:hover{
         color: #111;
         background: #fff;
@@ -179,82 +238,94 @@ input[id="ham"]:checked  ~ .gnb > ul {
     header:hover .gnb li a{
         color: #111;
     }
-    /* 호버시 */
     header:has(.gnb_box:hover)::after {
         content: "";
         display: inline-block;
         width: 100%;
-        height: 60rem;
+        height: 50rem;
         background: rgba(255, 255, 255, 1);
         border-bottom: 1px solid #000;
         /* 포지션 */
         position: fixed;
-        top: 5rem;
+        top: 6rem;
         left: 0;
         z-index: 0;
     }
+    /* gnb */
     header .gnb {
-        /* 모바일 속성값 초기화 */
-        width: 100%;
-        height: auto;
-        background:none;
-        padding: 0;
-        /* 플렉스 */
-        display: flex;
-        justify-content: space-between;
-        flex-flow: row nowrap;
-        /* 포지션 */
-        position: static;
-    }
-
-    header .gnb ul{
-        /* 플렉스 */
-        display: flex;
-        border-bottom: none;
+        /* 그리드 */
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        justify-content: end;
+        gap: 2%;
     }
     .gnb_box {
-        width: 50%;
         height: max-content;
-        /* 플렉스 */    
-        display: flex;
-        justify-content: space-between;
-        flex-flow: row nowrap;
+        /* 그리드 */    
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        gap: 2%;
     }
-    .info_box {
-        /* 플렉스 */
-        display: flex;
-        flex-flow: row nowrap;
+    .gnb_box > ul:first-child{
+        border-right: 1px solid #DBDBDB;
+        /* 그리드 */    
+        display: grid;
+        grid-template-columns: repeat(3, 10rem);
+    }
+    .gnb_box > ul:last-child{
+        
+        /* 그리드 */    
+        display: grid;
+        grid-template-columns: repeat(2, 10rem);
     }
 
-    input[id="ham"] ~ nav .gnb li {
-        padding-bottom: 0;
-        margin-bottom: 0;
-        border-bottom: none;
+    .info_box {
+        border-left: 1px solid #DBDBDB;
+        /* 그리드 */
+        display: grid;
     }
-    header .gnb li{
-        border-bottom: none;
+    .info_box > ul {
+        /* 그리드 */    
+        display: grid;
+        grid-template-columns: repeat(3, 10rem);
     }
-    header .gnb li a{
-        font-size:  1.6rem;
+    /* gnb 메뉴 호버시 */
+    header .gnb li:hover > a::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background: #111;
+        /* 포지션 */
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        transition: all 0.3s;
+        animation: gnb_hover 0.5s;
+    }
+    @keyframes gnb_hover {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+    /* 첫번째 li */
+    header .gnb > div > ul > li > a{
+        line-height: 6rem;
         color: #fff;
+        font-weight: 600;
+        text-align: center;
     }
-    header .gnb_box > ul > li > a{
-        min-width: 12rem;
-        padding: 0 2rem;
-    }
+
     /* 투뎁스 설정 */
     header .gnb ul ul a{
         font-size: 1.4rem;
+        line-height: 5rem;
     }
     header:has(.gnb_box:hover) .snb {
         display: block;
     }
-    /* 햄버거 메뉴 */
-    .gnb .moblie_gnb, 
-    .hambager_btn,
-    .menu_toggle_btn{
-        /* 태블릿, pc단에서부터는 안보이도록 */
-        display: none;
-    }
-    
 }

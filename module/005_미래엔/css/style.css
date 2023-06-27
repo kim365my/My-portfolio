@@ -83,6 +83,7 @@ body{
     .container{
         max-width: 88.4375%;
         margin: 0 auto;
+        padding: 0;
     }
 }
 

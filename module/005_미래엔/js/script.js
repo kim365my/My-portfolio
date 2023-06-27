@@ -100,5 +100,15 @@ const sinceSwiper = new Swiper(".now-slider", {
     scrollbar: {
         el: '.now-swiper-scrollbar',
         draggable: true,
-      },
+    },
+    breakpoints: { // 반응형
+        768 : {
+            slidesPerView:3,
+            spaceBetween: 10,
+        },
+        1024 : {
+            slidesPerView:4,
+            spaceBetween: 10,
+        }
+    },
 });
