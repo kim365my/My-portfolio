@@ -57,21 +57,10 @@ article .swiper{
     color: #fff;
 }
 .main-slider .swiper-button-prev:after{
-    content: "\f104";
-    font-size: 8rem;
-    font-family: "FontAwesome";
-    font-weight: 400;
+    content: "";
 }
 .main-slider .swiper-button-next:after{
-    content: "\f105";
-    font-size: 8rem;
-    font-family: "FontAwesome";
-    font-weight: 400;
-}
-/* 호버시 */
-.main-slider .swiper-button-next:hover,
-.main-slider .swiper-button-prev:hover {
-    color: #616161;
+    content: "";
 }
 /* swiper-controll-wrap 컨트롤 박스 스타일링 */
 .main-slider .swiper-controll-wrap{
@@ -136,5 +125,27 @@ article .swiper{
 @media screen and (min-width:768px){
     .main-slider .swiper-pagination-bullet{
         width: 16rem;
+    }
+    /* 슬라이드 컨트롤 */
+    .main-slider .swiper-button-next,
+    .main-slider .swiper-button-prev{
+        color: #fff;
+    }
+    .main-slider .swiper-button-prev:after{
+        content: "\f104";
+        font-size: 8rem;
+        font-family: "FontAwesome";
+        font-weight: 400;
+    }
+    .main-slider .swiper-button-next:after{
+        content: "\f105";
+        font-size: 8rem;
+        font-family: "FontAwesome";
+        font-weight: 400;
+    }
+    /* 호버시 */
+    .main-slider .swiper-button-next:hover,
+    .main-slider .swiper-button-prev:hover {
+        color: #616161;
     }
 }

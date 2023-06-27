@@ -1,64 +1,39 @@
-/* --------------------------------------- */
+/* -------- */
 /* Contents */
-/* ------3-1. display영역------- */
-.display_section{
-    margin-top: 68px;
+main > section {
+    padding: 8rem 0;
+}
+/* 각 타이틀 스타일 */
+.sec_title{
+    font-weight: 600;
+    font-size: 4.2rem;
+    color: #111;
+    margin-bottom: 4.8rem;
     text-align: center;
 }
-.display_section .sec_title{
-    margin-bottom: 32px;
-}
-.display_section .desc{
-    color: #616161;
-    line-height: 2;
-}
-/* -----3-2.promotion_section-------- */
-.promotion_section{
-    margin-top: 68px;
+/* ------3-1. display영역------- */
+#now {
+    background: #F8F8FA;
 }
 
-.promotion_list li{
-    margin-top: 48px;
-    text-align: center;
-}
-.promotion_list li:nth-child(1){
-    margin-top: 0;
-}
-.promotion_list li i{
-    width: 5.2rem;
-    height: 5.2rem;
-}
-.promotion_list li h3{
-    margin: 3rem 0 2rem;
-    color: #111;
-}
-.promotion_list li p{
-    /* 14/16 = 0.875 */
-    font-size: 1.4rem;
-}
+/* -----3-2.promotion_section-------- */
+
 /* -----3-3. Work ------*/
-.work_section{
-    margin-top: 8rem;
-}
-.work_section .sec_title{
-    text-align: center;
-    margin-bottom: 48px;
-}
 
 /* 이미지 정보 효과 */
-.work_section ul {
+.now_section ul {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, auto);
     gap: 2rem;
 }
-.work_section li a  {
+.now_section li a  {
     display: inline-block;
     width: 100%;
     height: 100%;
     position: relative;
 }
-.work_section li a::before{
+.now_section li a::before{
     content: "";
     display: block;
     /* 포지션 */
@@ -72,16 +47,16 @@
     z-index: 100;
     transition: all 0.1s;
 }
-.work_section li a:hover::before{
+.now_section li a:hover::before{
     opacity: 0.7;
 }
-.work_section li a img {
+.now_section li a img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 /* 정보텍스트 css */
-.work_section li .sec_img_txt{
+.now_section li .sec_img_txt{
     opacity: 0;
     color: #fff;
     /* 포지션 */
@@ -92,71 +67,48 @@
     transition: all 0.3s;
 }
 /* a를 호버하면 div를 */
-.work_section li a:hover .sec_img_txt{
+.now_section li a:hover .sec_img_txt{
     opacity: 1;
 }
-.work_section li .sec_img_txt h3{
+.now_section li .sec_img_txt h3{
     font-size: 2.4rem;
 }
 
 /* -------3-4. blog_section------- */
-.blog_section{
-    margin-top: 8rem;
-}
-.blog_section .sec_title{
-    margin-bottom: 4rem;
-    text-align: center;
-}
-
-.blog_list li{
+/* 슬라이드 커스텀 */
+.now-slider {
     width: 100%;
-    margin-top: 4rem;
 }
-.blog_list li:first-child{
-    margin-top: 0;
-}
-/* 이미지 가로세로비율 */
-.blog_list li a:first-child{
-    display: block;
-    width: 100%;
-    /* 포지션 기준값 */
-    position: relative;
-    padding-top: 100%;
-    overflow: hidden;
-}
-.blog_list a img{
+.now-slider img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* 포지션 */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
 }
-.blog_list li img{
-    object-fit: contain;
+.now-slider .swiper-slide a{
+    display: inline-block;
+    width: 30rem;
 }
-.blog_list time{
-    display: block;
-    font-size: 12px;
-    font-size: 1.2rem;
-    color: #e0e0e0;
-    margin: 1rem 0;
+
+
+/* 스크롤바 커스텀 */
+.now-swiper-scrollbar{
+    width: 100%;
+    height: 0.5rem;
+    border-radius: var(--swiper-scrollbar-border-radius,10px);
+    background-color: #0000002b;
 }
-.blog_list h3{
-    color: #616161;
-    line-height: 1.6;
+.now-slider-scrollbar div{
+    background-color: #fff;
+}
+.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+    bottom: 0;
+}
+.swiper-scrollbar-drag{
+    background-color: #000000;
+    cursor: grab;
 }
 
 /* -------3-5. contact_section----------- */
-.contact_section{
-    margin-top: 10rem;
-}
-.contact_section .sec_title{
-    margin-bottom: 48px;
-    text-align: center;
-}
 input, textarea{
     width: 100%;
     border: none;
@@ -168,7 +120,7 @@ input, textarea{
 }
 input:focus, textarea:focus{
     outline: none;
-    border-bottom: 1px solid violet;
+    border-bottom: 1px solid #DBDBDB;
 }
 /* input form */
 .form_box .form input{
@@ -199,9 +151,7 @@ input:focus, textarea:focus{
 /* 태블릿 : 너비 768px 이상 */
 /* ============================ */
 @media screen and (min-width:768px){
-    .display_section{
-        margin-top: 10rem;
-    }
+
     .promotion_list {
         display: flex;
         flex-flow: row wrap;
@@ -217,30 +167,13 @@ input:focus, textarea:focus{
     .promotion_list li:nth-child(1){
         margin-left: 0;
     }
-
+    /* -----3-3. Work ------*/
+    .now_section ul {
+        grid-template-columns: repeat(2, auto);
+    }
     /* -------3-4. blog_section------- */
-    .blog_section{
-        margin-top: 12rem;
-    }
-    .blog_list{
-        display: flex;
-    }
-    .blog_list li{
-        width: 31.59722222222222%;
-        height: min-content;
-        margin-top: 0;
-    }
-    .blog_list li:nth-child(even){
-        margin: 0 2.604166666666667%;
-    }
+
     /* -------3-5. contact_section----------- */
-    .contact_section{
-        /* 속성값 수정 */
-        margin-top: 18rem;
-    }
-    .contact_section .sec_title{
-        margin-bottom: 8rem;
-    }
     /* 2단 플롯 구조 */
     .form_box fieldset {
         display: flex;
@@ -262,38 +195,15 @@ input:focus, textarea:focus{
 /* pc : 너비 1132px 이상 */
 /* ============================ */
 @media screen and (min-width:1132px){
-    .display_section{
-        display: flex;
+    /* 공통 css */
+    .sec_title {
         text-align: left;
-        justify-content: space-between;
-        align-items: center;
-        /* 픽셀 값 수정 */
-        text-align:left;
     }
-    .display_section .sec_title{
-        margin-top: 0;
-    }
-    /* 3-2.promotion_section */
-    .promotion_section{
-        margin-top: 8rem;
-    }
-
-    .promotion_list li{
-        width: 23.674911660777383%;
-        margin-left: 1.76678445229682%;
-        margin-top: 0;
-        text-align: center;
-    }
-    .promotion_list li:nth-child(1){
-        margin-top: 0;
-        margin-left: 0;
-    }
-
     /* -----3-3. Work ------*/
-    .work_section .sec_title{
+    .now_section .sec_title{
         text-align: left;
     }
-    .work_section ul {
+    .now_section ul {
         grid-template-columns: repeat(3, auto);
     }
 
@@ -307,33 +217,10 @@ input:focus, textarea:focus{
         margin-bottom: 4rem;
         text-align: left;
     }
-    .blog_list{
-        /* (844/1132)*100 = 74.55830388692578 */
-        width: 74.55830388692578%;
-    }
-    .blog_list li{
-        /* (844-40)/3 = 268 */
-        /* (268/844)*100 = 31.753554502369667 */
-        width: 31.7535545023696675%;
-        margin-top: 0;
-    }
-    .blog_list li:nth-child(even){
-        /* (20/844)*100 = 2.3696682464454977 */
-        margin: 0 2.3696682464454977%;
-    }
+
 
     /* -------3-5. contact_section----------- */
-    .contact_section{
-        /* 속성값 수정 */
-        margin-top: 18rem;
-    }
     /* 3단 플롯 */
-    .contact_section .sec_title{
-        /* 속성값 수정 */
-        margin-top: 0;
-        margin-bottom: 0;
-        text-align: left;
-    }
     .form_box{
         width: 100%;
     }

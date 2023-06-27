@@ -87,3 +87,18 @@ const swiper = new Swiper(".main-slider", {
 
 playBtn.addEventListener("click", () => swiper.autoplay.resume())
 pauseBtn.addEventListener("click", () => swiper.autoplay.pause())
+
+
+// --------------------------------
+// work 배너 슬라이드
+// --------------------------------
+const sinceSwiper = new Swiper(".now-slider", {
+    slidesPerView:2,
+    spaceBetween: 10,
+    grabCursor: true,
+    loopedSlides: 2,
+    scrollbar: {
+        el: '.now-swiper-scrollbar',
+        draggable: true,
+      },
+});

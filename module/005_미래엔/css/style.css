@@ -7,10 +7,11 @@ body{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 62.5%;
 }
-/* safe area */
 
-/* ------------------------ */
 /* 공통적으로 사용하는 CSS */
+.container {
+    padding: 0 2rem;
+}
 .hidden {
     display: none !important;
 }
@@ -43,22 +44,6 @@ body{
     }
 }
 
-/* 각 타이틀 스타일 */
-.sec_title{
-    font-weight: 600;
-    font-size: 4.2rem;
-    color: #111;
-    margin-top: 80px;
-}
-
-/* 구분선 스타일 */
-.m_divider{
-    width: 20px;
-    height: 2px;
-    margin: 0 auto;
-    background-color: #111;
-    margin-top: 80px;
-}
 
 /* ======================= */
 /* top 버튼 */
@@ -94,9 +79,9 @@ body{
 /* 태블릿 : 너비 768px 이상 */
 /* ============================ */
 @media screen and (min-width:768px){
+    /* safe area */
     .container{
         max-width: 88.4375%;
-        /* min-width: 120rem; */
         margin: 0 auto;
     }
 }
