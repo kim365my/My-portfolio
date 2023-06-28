@@ -5,16 +5,23 @@ const alertMeg = document.querySelector(".alert");
 const noLink = document.querySelectorAll("a[href='#']");
 noLink.forEach((link) => {
     link.addEventListener("click", (e) => {
-        if(!link.classList.contains("eventNone")) {
+        if(!link.classList.contains("eventNone") && !linkTest(link, "snb")) {
             e.preventDefault();
             alertMeg.classList.add("showAlert");
             window.setTimeout(() => {
                 alertMeg.classList.remove("showAlert");
             }, 2000);
         }
-        
     })
 });
+function linkTest(e, className) {
+    if(e.nextElementSibling != null) {
+        if(e.nextElementSibling.classList.contains(className)) {
+            return true
+        }
+    }
+    return false
+}
 
 // --------------------------------
 // 헤더 고정 & 탑버튼 보이게 하기
@@ -48,6 +55,26 @@ function scrollToTop() {
         }
     }, between);
 }
+
+// 모바일 헤더
+const mobileTwoBtn = document.querySelectorAll("header .gnb > div > ul > li > a");
+const mobileTwo = document.querySelectorAll("header .gnb > div > ul > li > a + ul");
+mobileTwoBtn.forEach((item, index) => {
+    item.addEventListener("click", (e) => {
+        if(window.innerWidth < 1132) { // 모바일 화면에서만 구동하도록
+            e.preventDefault();
+            if(linkTest(item, "snb")) { // snb가 있으면 
+                if(item.nextElementSibling.style.display == "block") {
+                    item.nextElementSibling.style.display = "none";
+                } else {
+                    mobileTwo.forEach((i) => i.style.display = "none");
+                    item.nextElementSibling.style.display = "block";
+                }
+            }
+        }
+    })
+})
+
 
 // --------------------------------
 // 박스 슬라이더
@@ -135,6 +162,8 @@ const pickSwiper = new Swiper(".pick-slider", {
         }
     },
 });
+
+// pick 배너 클릭한 부분만 보이게
 const HIDDEN = "hidden";
 const CHECK = "check";
 
@@ -172,3 +201,26 @@ const giveSwiper = new Swiper(".give-slider", {
 
     },
 });
+
+
+
+function searchNextSiblings(ele, q, fn) {
+    let flag = false;
+    const nodeIterator = document.createNodeIterator(
+  ele.parentNode, 
+  NodeFilter.SHOW_ELEMENT, 
+  function(node) {
+        if (ele.isSameNode(node)) flag = true;
+        if (!flag) return NodeFilter.FILTER_REJECT;
+        else {
+            if (node.matches(q)) {
+                flag = false;
+                return NodeFilter.FILTER_ACCEPT
+            };
+        }
+    });
+    let currentNode;
+    while (currentNode = nodeIterator.nextNode()) {
+        fn(currentNode);
+    }
+}

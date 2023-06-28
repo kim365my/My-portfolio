@@ -77,6 +77,7 @@ header .gnb li a{
     width: 100%;
     font-size: 1.6rem;
     color: #111;
+    padding: 0 2rem;
     /* 포지션 */
     position: relative;
 }
@@ -106,6 +107,7 @@ header .moblie_gnb a::before{
 header .moblie_gnb a {
     display: inline-block;
     width: 100%;
+    padding: 0 2rem;
     font-size: 1.6rem;
     line-height: 6rem;
     font-weight: 500;
@@ -114,9 +116,12 @@ header .moblie_gnb a {
 /* 투뎁스 */
 header .gnb ul ul {
     display: none;
+    background: #f5f5f5;
 }
 header .gnb ul ul a {
-    text-align: center;
+    font-size: 1.4rem;
+    line-height: 5rem;
+    border-top: 1px solid #DBDBDB;
 }
 
 /* -Hamberger Toggle-- */
@@ -163,7 +168,6 @@ input[id="ham"]:checked + .hambager_btn div:nth-child(3) {
 
 input[id="ham"]:checked  ~ .gnb {
     width: 80%;
-    padding: 0 2rem 0;
     right: 0;
     font-size:  1.2rem;
 }
@@ -202,6 +206,9 @@ input[id="ham"]:checked  ~ .gnb > ul {
         /* 태블릿, pc단에서부터는 안보이도록 */
         display: none;
     }
+    header .gnb li a{
+        padding: 0;
+    }
     header .gnb li a::after{
         content: "";
         font-family: inherit;
@@ -220,6 +227,12 @@ input[id="ham"]:checked  ~ .gnb > ul {
         top: auto;
         right: auto;
         transform: none;
+    }
+    header .gnb ul ul{
+        background: none;
+    }
+    header .gnb ul ul a {
+        border-top: none;
     }
     /* -------------- */
     header{
@@ -324,8 +337,8 @@ input[id="ham"]:checked  ~ .gnb > ul {
 
     /* 투뎁스 설정 */
     header .gnb ul ul a{
-        font-size: 1.4rem;
-        line-height: 5rem;
+
+        text-align: center;
     }
     header:has(.gnb_box:hover) .snb {
         display: block;
