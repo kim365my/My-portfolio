@@ -39,16 +39,20 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, minmax(min-content, auto));
     grid-template-rows: repeat(3, auto);
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     gap: 2rem;
+    row-gap: 4rem;
     justify-content: space-between;
 }
 /* 모바일 그리드 설정 */
-.flnb {order: 2;}
+.flnb {order: 3;}
 .ftel {order:4;}
-.fsns {order: 5;}
+.fsns {order: 4;}
 .flogo {order: 1;}
-.footer_wrap div:last-child {order: 3;}
+.footer_wrap div:last-child {
+    order: 2;
+    text-align: end;
+}
 
 /* flogo */
 .flogo {
@@ -128,9 +132,12 @@ footer {
     }
     .flogo {order: 1;}
     .flnb {order: 2;}
-    .ftel {order:5;}
+    .ftel {order:3;}
     .fsns {order: 4;}
-    .footer_wrap div:last-child {order: 3;}
+    .footer_wrap div:last-child {
+        order: 5;
+        text-align: start;
+    }
     
 }
 
