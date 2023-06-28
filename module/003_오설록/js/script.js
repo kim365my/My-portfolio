@@ -11,7 +11,6 @@ noLink.forEach((link) => {
         if(!link.classList.contains("eventNone")) {
             e.preventDefault();
             alertMeg.classList.add("showAlert");
-            alertMeg.classList.remove("hidden");
             window.setTimeout(() => {
                 alertMeg.classList.remove("showAlert");
             }, 2000);

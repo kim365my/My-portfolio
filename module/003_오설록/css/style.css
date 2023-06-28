@@ -48,7 +48,15 @@ html, body{
 }
 .showAlert{
     display: block;
-    animation: showAni 2s;
+    animation: showAlert 2s;
+}
+@keyframes showAlert {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .showAni{
@@ -497,7 +505,7 @@ main section {
 .areaBtn ul{
     text-align: center;
     border-bottom: 1px solid #cfcfcf;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     background-color: #fff;
     /* 플렉스 */
     display: flex;

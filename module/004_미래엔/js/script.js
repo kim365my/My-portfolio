@@ -125,8 +125,8 @@ pauseBtn.addEventListener("click", () => swiper.autoplay.pause())
 // work 배너 슬라이드
 // --------------------------------
 const workSwiper = new Swiper(".work-slider", {
-    slidesPerView:5,
-    spaceBetween: 40,
+    slidesPerView:3,
+    spaceBetween: 20,
     grabCursor: true,
     loopedSlides: 2,
     scrollbar: {
@@ -191,6 +191,9 @@ const giveSwiper = new Swiper(".give-slider", {
     loop:true,
     loopedSlides: 1,
     effect : "fade",
+    fadeEffect: {
+        crossFade: true
+    },
     autoplay: {
         delay: 10000, // 오토플레이 시간
         disableOnInteraction: false,

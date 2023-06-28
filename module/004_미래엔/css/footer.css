@@ -6,7 +6,8 @@ footer {
 }
 /* fnb */
 .fnb {
-    padding: 4rem 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     font-size: 1.4rem;
     line-height: 2.5;
     color: #767676;
@@ -30,7 +31,8 @@ footer {
 
 /* footer_container */
 .footer_container{
-    padding: 4rem 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     background: #F8F8FA;
 }
 .footer_wrap {

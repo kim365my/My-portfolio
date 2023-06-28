@@ -19,8 +19,10 @@ article .swiper{
 }
 /* 슬라이드 텍스트 */
 .slide_text{
+    width: 100%;
     color: #fff;
     font-size: 2rem;
+    text-shadow: 0 0 6px #616161;
     /* 포지션 */
     position: absolute;
     bottom: 20%;
@@ -30,7 +32,7 @@ article .swiper{
     line-height: 1.6;
 }
 .slide_text h2 {
-    font-size: 2rem;
+    font-size: 2.8rem;
     font-weight: 600;
 }
 .slide_text a{
@@ -99,7 +101,7 @@ article .swiper{
     position: static;
 }
 .main-slider .swiper-pagination-bullet{
-    width: 10rem;
+    width: 15vw;
     height: 1rem;
     border-radius: 0;
     background: transparent;
@@ -140,14 +142,14 @@ article .swiper{
     }
     .main-slider .swiper-button-prev:after{
         content: "\f104";
-        font-size: 7rem;
+        font-size: 5rem;
         font-family: "FontAwesome";
         font-weight: 400;
         margin-left: 1rem;
     }
     .main-slider .swiper-button-next:after{
         content: "\f105";
-        font-size: 7rem;
+        font-size: 5rem;
         font-family: "FontAwesome";
         font-weight: 400;
         margin-right: 1rem;
@@ -172,3 +174,9 @@ article .swiper{
     }
 }
 
+/* ============================ */
+/* pc : 너비 1132px 이상 */
+/* ============================ */
+@media screen and (min-width:1132px){
+
+}

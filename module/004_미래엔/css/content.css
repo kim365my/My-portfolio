@@ -6,7 +6,7 @@ main > section {
 /* 각 타이틀 스타일 */
 .sec_title{
     font-weight: 600;
-    font-size: 4.2rem;
+    font-size: 2.8rem;
     color: #111;
     margin-bottom: 4.8rem;
     text-align: center;
@@ -21,7 +21,7 @@ main > section {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
+    gap: 1.6rem;
 }
 .now_list li {
     width: 100%;
@@ -143,9 +143,6 @@ main > section {
 }
 /* ----------------- */
 /* work */
-.work_section {
-    margin-bottom: 8rem;
-}
 /* 슬라이드 커스텀 */
 .work-slider picture {
     display: flex;
@@ -236,8 +233,8 @@ main > section {
 }
 
 /* 슬라이드 커스텀 */
-.pick-slider {
-    margin-bottom: 8rem;
+.pick-slider + h3 {
+    margin-top: 8rem;
 }
 .pick-slider.hidden {
     display: block !important;
@@ -282,7 +279,7 @@ main > section {
 }
 .give_slide_txt {
     width: 100%;
-    padding: 5rem 5% 0;
+    padding: 5rem 8% 0;
     color: #fff;
     background: linear-gradient(transparent, #11111196 70%);
     /* 포지션 */
@@ -336,7 +333,7 @@ main > section {
 }
 .give-slider .swiper-button-next:after, 
 .give-slider .swiper-button-prev:after {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .give-slider .swiper-button-next {
     right: auto;
@@ -390,7 +387,11 @@ input:focus, textarea:focus{
 /* ============================ */
 @media screen and (min-width:768px){
     /* 모바일 속성값 초기화 */
-
+    .give_slide_txt{
+        padding: 0;
+        position: static;
+        background: none;
+    }
     /* -------------------- */
     .promotion_list {
         display: flex;
@@ -438,21 +439,20 @@ input:focus, textarea:focus{
         z-index: 99;
     }
     .slide-content {
-        /* 플렉스 */
-        display: flex;
-        flex-flow: row nowrap;
+        /* 그리드 */
+        display: grid;
+        grid-template-columns: repeat(2, auto);
         justify-content: space-between;
         align-items: center;
+        column-gap: 2rem;
     }
     .give_slide_txt{
-        width: 50%;
-        height: 20rem;
-        padding: 0;
-        padding-right: 1rem;
-        background: #F8F8FA;
-        position: static;
         color: #111;
     }
+    .give-slider picture {
+        width: 100%;
+    }
+    /* 슬라이드 커스텀 */
     .give-slider .swiper-btn-wrap{
         width: 12rem;
         bottom: 0;
@@ -501,6 +501,7 @@ input:focus, textarea:focus{
 @media screen and (min-width:1132px){
     /* 공통 css */
     .sec_title {
+        font-size: 4.2rem;
         text-align: left;
     }
     /* 3-3. Work -*/
@@ -518,9 +519,7 @@ input:focus, textarea:focus{
 
 
 
-    .give-slider picture {
-        width: 70%;
-    }
+
     /* 스와이퍼 버튼 커스텀 */
     .give-slider .swiper-btn-wrap{
         transform: translateY(-250%);

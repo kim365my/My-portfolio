@@ -2,7 +2,6 @@
 header{
     width: 100%;
     height: 6rem;
-    padding: 0 5%;
     border-bottom: 1px solid #fff;
     background: rgba(0, 0, 0, 0.2);
     /* 포지션 */
@@ -85,7 +84,7 @@ header .gnb li a{
 header .gnb > div > ul > li > a{
     line-height: 6rem;
 }
-header .gnb > div > ul > li > a::after{
+header .gnb > div > ul > li:has(.snb) > a::after{
     content: "\f105";
     display: inline-block;
     font-family: "FontAwesome";
@@ -95,10 +94,13 @@ header .gnb > div > ul > li > a::after{
     /* 포지션 */
     position: absolute;
     top: 50%;
-    right: 5%;
+    right: 2rem;
     transform: translateY(-50%);
 }
-
+header .moblie_gnb  {
+    width: 100%;
+    border-bottom: 1px solid #DBDBDB;
+}
 header .moblie_gnb a::before{
     content: "\f2c0";
     font-family: "FontAwesome";
@@ -106,12 +108,10 @@ header .moblie_gnb a::before{
 }
 header .moblie_gnb a {
     display: inline-block;
-    width: 100%;
     padding: 0 2rem;
     font-size: 1.6rem;
     line-height: 6rem;
     font-weight: 500;
-    border-bottom: 1px solid #DBDBDB;
 }
 /* 투뎁스 */
 header .gnb ul ul {
@@ -221,12 +221,12 @@ input[id="ham"]:checked  ~ .gnb > ul {
     header .gnb ul {
         border-bottom: none;
     }
-    header .gnb > div > ul > li > a::after{
+    header .gnb > div > ul > li:has(.snb) > a::after{
         content: "";
         color: inherit;
         top: auto;
         right: auto;
-        transform: none;
+        transform: translateX(-50%);
     }
     header .gnb ul ul{
         background: none;
@@ -285,13 +285,13 @@ input[id="ham"]:checked  ~ .gnb > ul {
         border-right: 1px solid #DBDBDB;
         /* 그리드 */    
         display: grid;
-        grid-template-columns: repeat(3, 10rem);
+        grid-template-columns: repeat(3, 12rem);
     }
     .gnb_box > ul:last-child{
         
         /* 그리드 */    
         display: grid;
-        grid-template-columns: repeat(2, 10rem);
+        grid-template-columns: repeat(2, 12rem);
     }
 
     .info_box {
@@ -302,7 +302,7 @@ input[id="ham"]:checked  ~ .gnb > ul {
     .info_box > ul {
         /* 그리드 */    
         display: grid;
-        grid-template-columns: repeat(3, 10rem);
+        grid-template-columns: repeat(3, 12rem);
     }
     /* gnb 메뉴 호버시 */
     header .gnb li:hover > a::after {
@@ -337,10 +337,9 @@ input[id="ham"]:checked  ~ .gnb > ul {
 
     /* 투뎁스 설정 */
     header .gnb ul ul a{
-
         text-align: center;
     }
-    header:has(.gnb_box:hover) .snb {
+    header .gnb_box:hover .snb {
         display: block;
         padding-bottom: 5rem;
     }
