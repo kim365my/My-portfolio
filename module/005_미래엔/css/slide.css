@@ -1,5 +1,6 @@
 /* -------------------------- */
 /* 박스 슬라이더 커스텀 작업 */
+/* 메인 슬라이드 */
 article .swiper{
     width: 100%;
     height: 70vh;
@@ -30,6 +31,7 @@ article .swiper{
 }
 .slide_text h2 {
     font-size: 2rem;
+    font-weight: 600;
 }
 .slide_text a{
     display: inline-block;
@@ -46,6 +48,7 @@ article .swiper{
         opacity: 1;
     }
 }
+
 /* 슬라이드 컨트롤 */
 .main-slider .swiper-button-next,
 .main-slider .swiper-button-prev{
@@ -99,7 +102,6 @@ article .swiper{
     width: 10rem;
     height: 1rem;
     border-radius: 0;
-    opacity: 1;
     background: transparent;
 }
 .main-slider .swiper-pagination-bullet::after{
@@ -107,7 +109,7 @@ article .swiper{
     display: block;
     width: 100%;
     height: 0.3rem;
-    background: #9b9b9b;
+    background: #ffffff;
 }
 .main-slider .swiper-pagination-bullet-active::after{
     background: #fff;
@@ -156,14 +158,17 @@ article .swiper{
         color: #616161;
     }
     /* 슬라이드 텍스트 */
+    .main-slider .slide_padding {
+        padding: 0 5%;
+        position: relative;
+        top: 50%;
+    }
     .slide_text {
         text-align: left;
-        /* 포지션 */
-        top: 50%;
-        left: 10rem;
         transform: translateY(-50%);
     }
     .slide_text h2 {
         font-size: 5rem;
     }
 }
+

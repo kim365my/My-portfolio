@@ -5,16 +5,18 @@ header{
     padding: 0 5%;
     border-bottom: 1px solid #fff;
     background: rgba(0, 0, 0, 0.2);
-    /* 그리드 */
-    display: grid;
-    grid-template-columns: 8rem auto;
-    grid-gap: 3vw;
-    justify-content: space-between;
     /* 포지션 */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
+}
+header > .container {
+    /* 그리드 */
+    display: grid;
+    grid-template-columns: 8rem auto;
+    grid-gap: 3vw;
+    justify-content: space-between;
 }
 header:has(input[id="ham"]:checked)::after{
     content: "";
@@ -242,7 +244,7 @@ input[id="ham"]:checked  ~ .gnb > ul {
         content: "";
         display: inline-block;
         width: 100%;
-        height: 50rem;
+        height: 55rem;
         background: rgba(255, 255, 255, 1);
         border-bottom: 1px solid #000;
         /* 포지션 */
@@ -316,7 +318,7 @@ input[id="ham"]:checked  ~ .gnb > ul {
     header .gnb > div > ul > li > a{
         line-height: 6rem;
         color: #fff;
-        font-weight: 600;
+        font-weight: 500;
         text-align: center;
     }
 
@@ -327,5 +329,6 @@ input[id="ham"]:checked  ~ .gnb > ul {
     }
     header:has(.gnb_box:hover) .snb {
         display: block;
+        padding-bottom: 5rem;
     }
 }

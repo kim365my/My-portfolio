@@ -92,13 +92,36 @@ pauseBtn.addEventListener("click", () => swiper.autoplay.pause())
 // --------------------------------
 // work 배너 슬라이드
 // --------------------------------
-const sinceSwiper = new Swiper(".now-slider", {
+const workSwiper = new Swiper(".work-slider", {
+    slidesPerView:5,
+    spaceBetween: 40,
+    grabCursor: true,
+    loopedSlides: 2,
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    },
+    breakpoints: { // 반응형
+        768 : {
+            slidesPerView:5,
+            spaceBetween: 40,
+        },
+        1024 : {
+            slidesPerView:7,
+            spaceBetween: 40,
+        }
+    },
+});
+// --------------------------------
+// pick 배너 슬라이드
+// --------------------------------
+const pickSwiper = new Swiper(".pick-slider", {
     slidesPerView:2,
     spaceBetween: 10,
     grabCursor: true,
     loopedSlides: 2,
     scrollbar: {
-        el: '.now-swiper-scrollbar',
+        el: '.swiper-scrollbar',
         draggable: true,
     },
     breakpoints: { // 반응형
@@ -110,5 +133,42 @@ const sinceSwiper = new Swiper(".now-slider", {
             slidesPerView:4,
             spaceBetween: 10,
         }
+    },
+});
+const HIDDEN = "hidden";
+const CHECK = "check";
+
+const pickSlider = document.querySelectorAll(".pick-slider");
+const pickBtn = document.querySelectorAll(".sec_title_wrap li");
+pickBtn.forEach((item, index) => {
+    item.addEventListener("click", (e) => {
+        pickBtn.forEach((i) => i.classList.remove(CHECK));
+        item.classList.add(CHECK);
+        pickSlider.forEach((i) => i.classList.add(HIDDEN));
+        pickSlider[index].classList.remove(HIDDEN);
+    })
+});
+
+
+// --------------------------------
+// 사회공헌 슬라이더
+// --------------------------------
+const giveSwiper = new Swiper(".give-slider", {
+    loop:true,
+    loopedSlides: 1,
+    effect : "fade",
+    autoplay: {
+        delay: 10000, // 오토플레이 시간
+        disableOnInteraction: false,
+        // pauseOnMouseEnter :true
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+
     },
 });
