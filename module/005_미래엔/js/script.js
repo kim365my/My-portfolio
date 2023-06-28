@@ -61,8 +61,8 @@ const mobileTwoBtn = document.querySelectorAll("header .gnb > div > ul > li > a"
 const mobileTwo = document.querySelectorAll("header .gnb > div > ul > li > a + ul");
 mobileTwoBtn.forEach((item, index) => {
     item.addEventListener("click", (e) => {
+        e.preventDefault();
         if(window.innerWidth < 1132) { // 모바일 화면에서만 구동하도록
-            e.preventDefault();
             if(linkTest(item, "snb")) { // snb가 있으면 
                 if(item.nextElementSibling.style.display == "block") {
                     item.nextElementSibling.style.display = "none";
@@ -71,6 +71,11 @@ mobileTwoBtn.forEach((item, index) => {
                     item.nextElementSibling.style.display = "block";
                 }
             }
+        } else {
+            alertMeg.classList.add("showAlert");
+            window.setTimeout(() => {
+                alertMeg.classList.remove("showAlert");
+            }, 2000);
         }
     })
 })
