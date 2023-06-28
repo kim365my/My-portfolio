@@ -190,8 +190,6 @@ aside.close {
 /* gnb_all .gnb */
 .global .gnb > li{
     display: inline-block;
-    font-weight: 700;
-    letter-spacing: -1px;
     /* 포지션 */
     position: relative;
 }
@@ -211,12 +209,14 @@ aside.close {
 .global .snb > li {
     display: inline-block;
     font-size: 1.4rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 .global a {
     display: inline-block;
     padding: 0 1rem;
     line-height: 5rem;
+    font-weight: 600;
+    letter-spacing: -1px;
     border-bottom: 3px solid transparent;
 }
 /* ---------------- */
@@ -256,7 +256,7 @@ aside.close {
 /* ------------- */
 /* 전체 메뉴 확인하기 */
 .total_gnb_wrap span {
-    font-weight: 800;
+    font-weight: 600;
     margin-left: 1rem;
 }
 .total_gnb_wrap a{
@@ -302,7 +302,7 @@ aside.close {
 .total_gnb_ul li a{
     line-height: 36px;
     font-weight: 600;
-    color: #aaaaaa;
+    color: #aaa;
 }
 /* ------------- */
 /* 선택할 시 표시되는 메뉴 스타일 */
@@ -503,7 +503,7 @@ section h2 {
     width: 8rem;
 }
 .section_lnb p {
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     font-size: 2rem;
     text-align: center;
 }
@@ -641,7 +641,7 @@ section h2 {
     color: #ff3434;
 }
 .item_text_price del{
-    color: #DBDBDB;
+    color: #999;
     font-size: 1.4rem;
 }
 
@@ -817,13 +817,12 @@ section h2 {
     font-size: 1.6rem;
 }
 .event_sns ul{
-    /* 플렉스 */
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    /* 그리드 */
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 1.5rem;
 }
 .event_sns li{
-    width: calc(100%/2 - 0.5rem);
     /* 오버플로 */
     overflow: hidden;
 }
@@ -840,24 +839,8 @@ section h2 {
     object-fit: cover;
     transition: all 0.3s;
 }
-/* .event_sns ul:nth-child(1) li a{width: 50rem; height: 30rem;}
-.event_sns ul:nth-child(2) li a{width: 100%; height: 60.5rem;}
-.event_sns ul:nth-child(2) li img{
-    object-position: left;
-}
-.event_sns ul:first-child li a{
-    margin-left: 0;
-}
-.event_sns li:nth-child(odd) a{
-    margin-bottom: 0.5rem;
-}
-.event_sns ul:last-child{
-    width: 100%;
-    height: 38rem;
-    display: flex;
-    flex-flow: column wrap;
-} */
-.event_sns ul:last-child a{
+.event_sns ul a{
+    display: inline-block;
     width: 100%;
 }
 /* 호버시 이미지 스케일 키우기 */

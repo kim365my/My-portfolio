@@ -32,6 +32,7 @@ body{
     font-size: 1.8rem;
     border-radius: 25px;
     white-space: nowrap;
+    opacity: 0;
     /* 포지션 */
     position: fixed;
     top: 50%;
@@ -51,16 +52,7 @@ body{
         opacity: 0;
     }
 }
-a.moreBtn{
-    display: inline-block;
-    padding: 20px 100px;
-    border: 1px solid #999;
-    border-radius: 30px;
-    font-size: 1.5rem;
-}
-a.moreBtn > i {
-    color: #111;
-}
+
 /* =================== */
 /* 탑 배너 */
 /* =================== */
@@ -119,12 +111,9 @@ header{
 }
 .root_lnb .lnb li a {
     display: inline-block;
-    background-color: red;
     padding: 10px 15px;
-    color: #fff;
-}
-.root_lnb .lnb li:first-child a {
-    background-color: #ffbc0d;
+    font-weight: 500;
+    color: #111;
 }
 /* --------------------- */
 /* gnb 메뉴 스타일 */
@@ -154,7 +143,7 @@ header{
     display: inline-block;
     margin: 0 1rem;
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 600;
     /* 포지션 */
     position: relative;
 }
@@ -374,7 +363,7 @@ main > section{
 }
 section h2 {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 /* --------------- */
 /* section 01 */
@@ -407,6 +396,7 @@ section h2 {
     font-size: 2.4rem;
     font-weight: 500;
     padding-left: 5rem;
+    line-height: 1.4;
 }
 .md_pick_area_detail{
     margin-top: 35px;
@@ -460,6 +450,13 @@ section h2 {
 .md_pick_area_detail + p{
     text-align: right;
 }
+.md_pick_area_detail + p a{
+    display: inline-block;
+    padding: 20px 100px;
+    border: 1px solid #999;
+    border-radius: 30px;
+    font-size: 1.5rem;
+}
 /* --------------- */
 /* section 02 */
 .real_title{
@@ -495,14 +492,22 @@ section h2 {
     margin-bottom: 14px;
 }
 .real_title .real_time li:first-child{
-    font-weight: 700;
+    font-weight: 600;
     padding-bottom: 30px;
     border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
 }
 
 .real_title .real_time li:last-child{
-    margin-top: 25px;
+    margin-top: 60px;
     margin-bottom: 0;
+}
+.real_title .real_time li a.moreBtn{
+    display: inline-block;
+    padding: 20px 15px;
+    border: 1px solid #999;
+    border-radius: 30px;
+    font-size: 1.5rem;
 }
 
 .real_title .real_time a{
@@ -518,9 +523,6 @@ section h2 {
     background-color: #ffbc0d;
 }
 
-.real_title .real_time a.moreBtn{
-    padding: 20px 15px;
-}
 
 /* --------------- */
 /* section 03 */
@@ -584,7 +586,14 @@ section h2 {
 /* 더보기 링크 */
 .caxa_sns + p{
     text-align: center;
-    margin-top: 28px;
+    margin-top: 38px;
+}
+.caxa_sns + p a.moreBtn {
+    display: inline-block;
+    padding: 20px 90px;
+    border: 1px solid #999;
+    border-radius: 30px;
+    font-size: 1.5rem;
 }
 /* ======================= */
 /* footer */
@@ -600,7 +609,7 @@ footer{
 /* footer_company */
 .footer_company{
     background-color: #e7e7e7;
-    border-top: 2px solid #929294;
+    border-top: 1px solid #929294;
     border-bottom: 1px solid #ddd;
 }
 .footer_company nav{
@@ -611,7 +620,7 @@ footer{
 .footer_company ul{
     color: #464646;
     font-size: 1.2rem;
-    padding: 2rem 0;
+    padding: 0.8rem 0;
     /* 플렉스 */
     display: flex;
     align-items: center;
