@@ -1,0 +1,20 @@
+#wrap{
+    background: black;
+}
+.ticket{
+    /* 포지션 */
+    position: absolute;
+    right: 5%;
+    top: 14px;
+    z-index: 1;
+    padding-right: 10px;
+}
+.ticket button{
+    width: 114px;
+    height: 37px;
+    background-color: #fff;
+}
+.youtube{
+    margin: 0 10px;
+    transform: translateY(-100%);
+}

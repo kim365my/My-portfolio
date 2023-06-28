@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/favicon/favmc32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/montblanc_fav144.png">    
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <!-- 스타일 -->
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/display_none_scrollbar.css">
+    <!-- <link rel="stylesheet" href="./css/jquery.bxslider.css"> -->
+    <!-- 커스텀 css -->
+    <link rel="stylesheet" href="./css/style2.css">
+    <!-- 제이쿼리 코어파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- 코딩할때 웹킷 안써줘도 자동으로 브라우저에 인식하게 해줌 : 접두어 일일히 쓰는거 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 제이쿼리 플러그인 -->
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.bxslider.js"></script>
+    <script src="./js/jquery.scrollTo.min.js"></script>
+    <!-- 커스텀 js -->
+    <script src="./js/calHeight.js"></script>
+    <script src="./js/ticket.js"></script>
+    <style>
+        #more{
+            display: none;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header class="header">
+            <!-- 햄버거 메뉴 그리기 -->
+            <input type="checkbox" id="hambuger">
+            <label for="hambuger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- /햄버거 메뉴 그리기 -->
+            <!-- 햄버거 메뉴 클릭시 보이는 gnb -->
+            <nav class="mobile_gnb">
+                <ul class="gnb">
+                    <li><a href="./parasite.html">HOME</a></li>
+                    <li><a href="./ticket.html">TICKET</a></li>
+                    <li><a href="./video.html">VIDEO</a></li>
+                    <li><a href="./synopsis.html">SYNOPSIS</a></li>
+                    <li><a href="./iessicalingle.html">IESSICALINGLE</a></li>
+                    <li><a href="#">SHARE</a></li>
+                </ul>
+                <ul class="sns">
+                    <li><a href="#" class="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+            <!-- /햄버거 메뉴 클릭시 보이는 gnb -->
+            <!-- aside -->
+            <aside class="banner">
+                <img src="./images/top_banner2.png" alt="배너">
+            </aside>
+            <!-- /aside -->
+        </header>
+        <!-- /header -->
+        <!-- content -->
+        <main role="main" id="contents">
+            <!-- search form : hover 검색창 -->
+            <form action="#">
+                <fieldset>
+                    <div class="box">
+                        <div class="search_container">
+                            <span class="icon"><i class="fa fa-search"></i></span>
+                            <input id="search" type="search" placeholder="search"  autocomplete="off">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <!-- /search form -->
+            <!-- content section -->
+            <section class="promotion">
+                <p>
+                    IT LOOKS LIKE YOU’RE IN SEONGDONG-GU <br>
+                    AND THIS PAGE IS FOR USERS IN USA! <br>
+                    WOULD YOU LIKE TO SEARCH A LOCATION IN USA?
+                </p>
+                <p>
+                    OR WATCH THE TRAILER BELOW
+                </p>
+            </section>
+            <!-- /content section -->
+            <!-- youtube section -->
+            <section class="youtube">
+                <iframe
+                        src="https://www.youtube.com/embed/PhPROyE0OaM"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen="allowfullscreen">
+                </iframe>
+            </section>
+            <!-- /youtube section -->
+            <!-- area script section -->
+            <section class="area">
+                <h3>MORE SHOWTIMES FOUND IN THE CITIES BELOW</h3>
+                <p>
+                    <button>hoxdox01</button>
+                    <button>hoxdox02</button>
+                    <button>hoxdox03</button>
+                    <button>hoxdox04</button>
+                    <button>hoxdox05</button>
+                    <button>hoxdox06</button>
+                    <button>hoxdox07</button>
+                    <button>hoxdox08</button>
+                    <button>hoxdox09</button>
+                    <button>hoxdox10</button>
+
+                    <button id="dots">...</button>
+                    <span id="more">
+                        <button>hoxdox01</button>
+                        <button>hoxdox02</button>
+                        <button>hoxdox03</button>
+                        <button>hoxdox04</button>
+                        <button>hoxdox05</button>
+                        <button>hoxdox06</button>
+                        <button>hoxdox07</button>
+                        <button>hoxdox08</button>
+                        <button>hoxdox09</button>
+                        <button>hoxdox10</button>
+                    </span>
+                    <button id="mybtn">+MORE</button>
+                </p>
+            </section>
+            <!-- /area script section -->
+
+        </main>
+        <!-- /content -->
+        <!-- footer -->
+        <footer>
+            <p>
+                <img src="./images/legal-logos.png" alt="제작사 로고">
+            </p>
+            <div class="copyright">
+                <p>
+                    MOVIE PLATFORM &copy; 1982 POWSTER
+                </p>
+                <p>
+                    &copy; 2018 NEON RATED, LLC
+                </p>    
+            </div>
+        </footer>
+        <!-- /footer -->
+    </div>
+</body>
+</html>

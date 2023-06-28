@@ -1,0 +1,48 @@
+@charset "utf-8";
+#wrap {
+    background: none;
+}
+/* 배경 동영상 */
+video {
+    /* 포지션 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+/* contents */
+#contents {
+    padding: 0 16px;
+    margin-bottom: 64px;
+}
+#contents .videoback {
+    font-family: 'Lato',sans-serif;
+    font-size: 0.867rem;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 28px 24px;
+    background-color: rgba(25,87,48,0.5);
+}
+#contents .videoback img {
+    width: 100%;
+}
+#contents .videoback h3 {
+    margin-bottom: 24px;
+}
+#contents .videoback p {
+    font-size: 0.6875rem;
+}
+#contents .videoback p:nth-child(2) {
+    margin-bottom: 44px;
+}
+#contents .videoback p:nth-child(3) {
+    margin-bottom: 40px;
+}
+#contents .videoback p:nth-child(4) {
+    margin-bottom: 40px;
+}
+#contents .videoback strong {
+    font-weight: 900;
+    text-shadow: 1px 1px 0 #000;
+}

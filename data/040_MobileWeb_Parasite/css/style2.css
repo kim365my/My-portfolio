@@ -1,0 +1,438 @@
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
+#wrap{
+    width: 100%;
+    /* height: 100vh; */
+    border: 1px solid #000;
+}
+#wrap{
+    background-image: url(../images/poster_mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-size: 100% 100%; */
+}
+
+.header{
+    padding: 24px;
+}
+/* ==================================== */
+/* 모바일 햄버거 메뉴 효과 */
+/* ==================================== */
+/* 햄버거 메뉴 그리기 */
+.header input[type="checkbox"]{
+    display: none;
+}
+.header input[type="checkbox"]+label{
+    display: block;
+    width: 24px;
+    height: 14px;
+    cursor: pointer;
+    /* 포지션 위치기준값 */
+    position: fixed;
+    z-index: 100;
+}
+.header input[type="checkbox"]+label span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ccc;
+    /* 포지션 */
+    position: absolute;
+    z-index: 100;
+    transition: all 0.1s;
+}
+.header input[type="checkbox"]+label span:nth-child(3){top: 0;}
+.header input[type="checkbox"]+label span:nth-child(2){top: 50%; transform: translateY(-50%);}
+.header input[type="checkbox"]+label span:nth-child(1){bottom: 0;}
+/* 호버시 */
+.header input[type="checkbox"]:checked+label span:nth-child(3){top: 50%; transform: translateY(-50%) rotate(45deg);}
+.header input[type="checkbox"]:checked+label span:nth-child(2){display: none;}
+.header input[type="checkbox"]:checked+label span:nth-child(1){top: 50%; transform: translateY(-50%) rotate(-45deg);}
+/* -------------------------- */
+/* gnb 슬라이더 효과 */
+.header nav.mobile_gnb{
+    width: 250px;
+    height: 100%;
+    background-color: #195730;
+    /* 포지션 */
+    position: absolute;
+    left: -250px;
+    top: 0;
+    z-index: 90;
+    transition: all 0.3s;
+}
+.header input[type="checkbox"]:checked~.mobile_gnb{
+    left: 0;
+}
+.header nav.mobile_gnb .gnb{
+    padding: 64px 0 0 0;
+    font-family: 'Late', sans-serif;
+    font-size: 0.8rem;
+}
+.header nav.mobile_gnb .gnb li{
+    height: 42px;
+    line-height: 42px;
+    padding-left: 24px;
+}
+.header nav.mobile_gnb .gnb li:hover:not(:last-child){
+    background-color: #ccc;
+}
+.header nav.mobile_gnb .gnb li a{
+    display: block;
+    color: #ccc;
+}
+.header nav.mobile_gnb .gnb li:hover:not(:last-child) a{
+    color: #000;
+    font-weight: 700;
+}
+.header nav.mobile_gnb .gnb li:last-child a{
+    cursor: default;
+}
+/* -------------- */
+/* sns */
+.header nav.mobile_gnb .sns{
+    width: 234px;
+    /* 플렉스 */
+    display: flex;
+    padding-left: 24px;
+}
+.header nav.mobile_gnb .sns li{
+    width: 70px;
+}
+.header nav.mobile_gnb .sns li a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 11px 0;
+}
+.header nav.mobile_gnb .sns i{
+    font-size: 1.2rem;
+    color: #ccc;
+}
+.sns li > .facebook{background-color: #3c5a98;}
+.sns li:hover > .facebook{background-color: #2b4b8e;}
+.sns li > .twitter{background-color: #56acef;}
+.sns li:hover > .twitter{background-color: #1f93ec;}
+.sns li > .instagram{background-color: #5cbf4a;}
+.sns li:hover > .instagram{background-color: #2eb116;}
+
+/* ----------------- */
+/* contents */
+/* ----------------- */
+.banner{
+    height: 68px;
+}
+.header .banner{
+    /* 포지션 */
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 50;
+}
+.box{
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.search_container{
+    width: 100%;
+    vertical-align: top;
+}
+.search_container .icon{
+    color: #4f5664;
+    /* 포지션 */
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    margin-top: 50px;
+    margin-left: 17px;
+}
+/* input form */
+.search_container input#serach{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    margin-left: 4px;
+    border: none;
+    outline: none;
+    float: left;
+}
+/* 호버효과 */
+.search_container input#search:hover,
+.search_container input#search:focus,
+.search_container input#search:active {
+    background: #2b303b;
+}
+
+/* promotion */
+
+/* youtube */
+.youtube{
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.youtube iframe{
+    width: 100%;
+}
+/* area setting */
+.area{
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.area h3{
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 800;
+    line-height: 1.6;
+    text-align: center;
+    text-shadow: 0 0 3px rgba(0,0,0,0.7);
+}
+.area a{
+    margin-top: 20px;
+}
+.area p{
+    margin-top: 28px;
+}
+.area p button{
+    display: inline-block;
+    padding: 14px 10px;
+    background-color: #00f374;
+    border:none;
+    border-radius: 4px;
+    margin: 0 4px 6px 0;
+    font-size: 0.6875rem;
+    color: #fff;
+}
+/* -------------- */
+/* footer */
+/* -------------- */
+footer{
+    background-color: #000;
+    padding-top: 30px;
+    text-align: center;
+    /* 포지션 */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+}
+footer > p{
+    margin-bottom: 56px;
+}
+footer .copyright{
+    padding-bottom: 24px;
+}
+footer .copyright p{
+    color: #4c4c4c;
+    margin-bottom: 24px;
+}
+footer .copyright p:last-child{
+    font-size: 0.75rem;
+}
+
+@charset "utf-8";
+#wrap {
+    width: 100%;
+    border: none;
+}
+/* ========================================================
+    FIXED 모바일 햄버거 메뉴 효과
+======================================================== */
+/* A. 햄버거 메뉴 그리기 */
+input[id="menuicon"] {
+    display: none;
+}
+input[id="menuicon"]+label {
+    display: block;
+    width: 56px;
+    height: 60px;
+    cursor: pointer;
+    /* 포지션 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 90;
+    background: #195730;
+}
+input[id="menuicon"]+label span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    /* 포지션 */
+    position: fixed;
+    z-index: 90;
+    transition: all 0.3s;
+}
+input[id="menuicon"]+label span:nth-child(1) {
+    left: 16px;
+    top: 24px;
+}
+input[id="menuicon"]+label span:nth-child(2) {
+    left: 16px;
+    top: 30px;
+}
+input[id="menuicon"]+label span:nth-child(3) {
+    left: 16px;
+    top: 34px;
+}
+
+/* B. 클릭시 X버튼 만들기 */
+input[id="menuicon"]:checked +label span:nth-child(1) {
+    top: 34px;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked +label span:nth-child(2) {
+    opacity: 0;
+}
+input[id="menuicon"]:checked +label span:nth-child(3) {
+    top: 32px;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+/* C. GNB 메뉴 슬라이딩 효과 */
+.header nav[class="mobile_gnb"] {
+    width: 250px;
+    height: 100%;
+    background: #195730;
+    /* 포지션 */
+    position: fixed;
+    left: -258px;
+    top: 0;
+    z-index: 89;
+    transition: all 0.3s;
+}
+input[id="menuicon"]:checked + label + nav {
+    left: 0;
+}
+
+/* Banner */
+.header {
+    height: 60px;
+}
+.header .banner {
+    /* 포지션 */
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+.header .banner img {
+    width: 100%;
+}
+
+/* Contents */
+/* Search From */
+#contents form {
+    margin-top: 20px;
+}
+.box {
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.search_container {
+    width: 100%;
+    vertical-align: top;
+    /* 포지션 위치기준값 */
+    position: relative;
+}
+/* ::placeholder 접두어 */
+.search_container input#search::placeholder {
+    color: #fff;
+}
+
+/* 폰트어썸 아이콘 */
+.search_container .icon {
+    color: #4f5b66;
+    /* 포지션 */
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    margin-top: 17px;
+    margin-left: 17px;
+}
+
+/* input Form */
+.search_container input#search {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    padding-left: 45px;
+    border: none;
+    outline: none;
+    float: left;
+}
+/* 호버효과 */
+.search_container input#search:hover,
+.search_container input#search:focus,
+.search_container input#search:active {
+    background: #2b303b;
+}
+
+/* Contents Section */
+.promotion {
+    margin-top: 16px;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-align: center;
+}
+.promotion p {
+    font-weight: 500;
+}
+.promotion p:last-child {
+    margin-top: 16px;
+}
+
+/* Youtube Section */
+.youtube {
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.youtube iframe {
+    width: 100%;
+}
+
+/* Area Script Section */
+.area {
+    margin-top: 16px;
+    padding: 0 10px;
+}
+.area h3 {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 0 0 3px rgba(0,0,0,0.7);
+    margin-bottom: 24px;
+}
+.area p {
+    margin-top: 20px;
+}
+.area p button {
+    display: inline-block;
+    padding: 14px 10px;
+    background: #003f37;
+    border: none;
+    border-radius: 4px;
+    margin: 0 4px 8px 0;
+    font-size: 0.6875rem;
+    color: #fff;
+}
+#myBtn {
+    cursor: pointer;
+}
