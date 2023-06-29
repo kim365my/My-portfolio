@@ -219,9 +219,10 @@ main{
 /* --------------- */
 /* 다다일상 타이틀 */
 .dada_title{
+    min-width: 1440px;
     background: url(../images/main_banner_pc.png) no-repeat top;
-    background-size: 100%;
-    padding: 15rem 0;
+    background-size: cover;
+    padding: 24rem 0 4rem;
 }
 .dada_title h3{
     font-size: 3rem;

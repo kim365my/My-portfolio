@@ -97,15 +97,12 @@ const swiper = new Swiper(".main-slider", {
         // 첫번째나 마지막 슬라이드로 이동하게 되면 마우스휠 비활성화
         reachBeginning:() => {
             stopScrollSwiper();
-            window.setTimeout(() => {
-                startScrollSwiper();
-            }, 2000)
         },
         reachEnd:() => {
             stopScrollSwiper();
-            window.setTimeout(() => {
-                startScrollSwiper();
-            }, 2000);
+            // window.setTimeout(() => {
+            //     startScrollSwiper();
+            // }, 2000);
         },
         scroll:(swiper, e) => {
             thresholdTime = 500; // 마우스 휠 이벤트 시간 0.5초
@@ -121,30 +118,22 @@ const swiper = new Swiper(".main-slider", {
 
 // // 스크롤링 이벤트
 // // 현재 화면 요소가 보이는지 파악
-let ioIndex = 0;
-let boundingRect;
-const section = document.querySelectorAll("main > section");
+const section = document.querySelector("#main_content3");
 const io = new IntersectionObserver((entries, observer) => {
     entries.forEach((item, index) => {
         if(item.isIntersecting) {
-            ioIndex = item.target.dataset.index;
-            boundingRect = item.boundingClientRect.top + window.screenY;
-            
-            if(item.target.id == "main_content3") {
-                scrollByY(boundingRect, 30);
-                startScrollSwiper();
-            }
+            scrollBy({
+                top:item.boundingClientRect.top,
+                left:0,
+                behavior:"smooth"
+            })
+            startScrollSwiper();
         } else{
-            if(item.target.id == "main_content3") {
-                stopScrollSwiper();
-            }
+            stopScrollSwiper();
         }
     })
-}, {threshold : 0.2}) // 20%로 등장했을 경우
-section.forEach((item, index) => {
-    item.setAttribute("data-index", index);
-    io.observe(item);
-});
+}, {threshold : 0.8}) // 80%로 등장했을 경우
+io.observe(section);
 
 
 
@@ -169,8 +158,8 @@ const contentSwiper = new Swiper(".content-slider", {
 // 오설록의 역사 배너 슬라이더
 // --------------------------------
 const sinceSwiper = new Swiper(".since-slider", {
-    slidesPerView:4.5,
-    spaceBetween: 10,
+    slidesPerView:4,
+    spaceBetween: 20,
     grabCursor: true,
     loopedSlides: 2,
     scrollbar: {
