@@ -125,7 +125,7 @@ pauseBtn.addEventListener("click", () => swiper.autoplay.pause())
 // work 배너 슬라이드
 // --------------------------------
 const workSwiper = new Swiper(".work-slider", {
-    slidesPerView:3,
+    slidesPerView:2,
     spaceBetween: 20,
     grabCursor: true,
     // loopedSlides: 2,
@@ -139,9 +139,8 @@ const workSwiper = new Swiper(".work-slider", {
     breakpoints: { // 반응형
         768 : {
             slidesPerView:5,
-            spaceBetween: 40,
         },
-        1024 : {
+        1132 : {
             slidesPerView:7,
             spaceBetween: 40,
             grid: {
@@ -167,7 +166,7 @@ const pickSwiper = new Swiper(".pick-slider", {
             slidesPerView:3,
             spaceBetween: 10,
         },
-        1024 : {
+        1132 : {
             slidesPerView:4,
             spaceBetween: 10,
         }

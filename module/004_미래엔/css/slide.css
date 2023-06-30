@@ -3,7 +3,7 @@
 /* 메인 슬라이드 */
 article .swiper{
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     overflow: hidden;
 }
 
@@ -129,16 +129,13 @@ article .swiper{
         transform: none;
     }
     /* ------------------ */
-    article .swiper{
-        height: 90vh;
-    }
     .main-slider .swiper-pagination-bullet{
         width: 16rem;
     }
     /* 슬라이드 컨트롤 */
     .main-slider .swiper-button-next,
     .main-slider .swiper-button-prev{
-        color: #fff;
+        color: rgba(255, 255, 255, 0.5);
     }
     .main-slider .swiper-button-prev:after{
         content: "\f104";
@@ -157,7 +154,7 @@ article .swiper{
     /* 호버시 */
     .main-slider .swiper-button-next:hover,
     .main-slider .swiper-button-prev:hover {
-        color: #616161;
+        color: #fff;
     }
     /* 슬라이드 텍스트 */
     .main-slider .slide_padding {
