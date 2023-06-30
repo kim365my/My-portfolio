@@ -225,12 +225,14 @@ header .lnb > li > a{
     font-size: 24px;
     color: #fff;
 }
+header .lnb > li > a.moreBtn {
+    height: 6.7rem;
+}
 header .lnb li .snb{
     /* 포지션 */
     position: absolute;
     left: auto;
     right: 0;
-    transform: translateY(110%);
 }
 header .lnb li:hover i{
     color: #608106;

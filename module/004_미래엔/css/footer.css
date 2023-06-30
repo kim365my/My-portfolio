@@ -134,7 +134,7 @@ footer {
         gap: 3rem;
         grid-template-areas: 
         "flogo fmark fmark"
-        "flnb fsns fsns"
+        "flnb ftel fsns"
         ;
     }
     

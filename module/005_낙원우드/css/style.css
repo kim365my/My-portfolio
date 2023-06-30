@@ -1,0 +1,424 @@
+@charset "UTF-8";
+
+/* 공통 css */
+html,
+body{
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    font-family: 'Noto Serif KR', serif;
+    background-color: #faf8f7;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* ------------- */
+/* 헤더 */
+/* ------------- */
+header{
+    width: 100%;
+    padding: 3rem 0 1.6rem;
+    /* 포지션 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+header .container {
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo a{
+    display: inline-block;
+    width: 12rem;
+    height: 12rem;
+    background: url(../images/logo.png) no-repeat left;
+    background-size: contain;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+header nav {
+    width: 40rem;
+}
+.gnb{
+    text-align: end;
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.gnb li {
+    /* 포지션 */
+    position: relative;
+}
+.gnb a{
+    display: inline-block;
+    height: 5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 1.6;
+}
+.gnb a.dot {
+    width: 2rem;
+    background: url(../images/nav_dot01.png) no-repeat center;
+    background-size: 100%;
+}
+.gnb a span{
+    display: block;
+    font-size: 1.2rem;
+}
+/* 호버시 */
+.gnb li .hover span:nth-child(1){
+    width: 1px;
+    height: 6rem;
+    background: #fff;
+    /* 포지션 */
+    position: absolute;
+    top: -7rem;
+    right: 0.4rem;
+    transform: translateY(-100%);
+}
+.gnb li:hover .hover span:nth-child(1){
+    animation: gnbHoverAni 1s;
+    animation-fill-mode: both;
+}
+@keyframes gnbHoverAni {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+.gnb li .hover span:nth-child(2){
+    width: 0;
+    height: 1px;
+    background: #fff;
+    /* 포지션 */
+    position: absolute;
+    top: -1rem;
+    right: 0;
+}
+.gnb li:hover .hover span:nth-child(2) {
+    width: 0.5rem;
+    animation: gnbHoverAni2 0.5s 1s;
+    animation-fill-mode: both;
+    transform-origin: left;
+}
+@keyframes gnbHoverAni2 {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+.gnb li .hover span:nth-child(3){
+    width: 1px;
+    height: 0;
+    background: #fff;
+    /* 포지션 */
+    position: absolute;
+    top: -1rem;
+    right: 0rem;
+    transform: translateY(-100%);
+}
+.gnb li:hover .hover span:nth-child(3){
+    animation: gnbHoverAni3 1s 1.5s;
+    animation-fill-mode: both;
+}
+@keyframes gnbHoverAni3 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 6rem;
+    }
+}
+/* 헤더 고정시 */
+header.fixed{
+    height: 9rem;
+    background: #fff;
+    padding: 1.6rem 0;
+}
+header.fixed .logo a{
+    width: 8rem;
+    height: 6rem;
+    background: url(../images/f_logo.png) no-repeat left;
+    background-size: contain;
+}
+header.fixed .gnb a{
+    color: #8d6248;
+}
+header.fixed .gnb a.dot{
+    background: url(../images/nav_dot02.png) no-repeat center;
+    background-size: 100%;  
+}
+header.fixed .gnb li:hover .hover span{
+    background: #8d6248;
+}
+
+/* 햄버거 메뉴, 모바일에서만 보이게 */
+.hambager_btn,
+input[id="ham"] {
+    display: none;
+}
+
+/* ------------- */
+/* 메인 배너 */
+/* ------------- */
+.main_page{
+    width: 100%;
+    height: 100vh;
+    text-align: right;
+    padding-top: 30rem;
+    /* 배경 이미지 */
+    background: url(../images/main_visual01.jpg) no-repeat right;
+    background-size: cover;
+    animation: bgImg 60s 0s infinite linear;
+}
+@keyframes bgImg {
+    0% {
+        background-position: 60% top;
+    }
+    50% {
+        background-position: 100% top;
+    }
+    100% {
+        background-position: 60% top;
+    }
+}
+.main_page .main_txt {
+    animation: showTitle 3s;
+}
+@keyframes showTitle {
+    0% {
+        transform: translateY(10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.main_page p{
+    margin-top: 4rem;
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+.main_page p strong{
+    font-weight: 600;
+}
+
+
+/* ------------- */
+/* 메인 */
+/* ------------- */
+main > section {
+    width: 100%;
+    height: 100vh;
+}
+main > section .container {
+    padding-top: 9rem;
+}
+.sec_title {
+    font-size: 3rem;
+    color: #865b41;
+    margin-bottom: 3rem;
+}
+
+/* 메인 콘텐츠 */
+#info{
+    /* 플렉스 */
+    display: flex;
+    align-items: center;
+}
+#info p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #b59c8a;
+}
+
+
+
+
+/* 슬라이드 커스텀 */
+.content-slider{
+    padding: 0 8rem;
+}
+.swiper-slide{
+    text-align: center;
+}
+.swiper-button-next, .swiper-button-prev{
+    color: #DBDBDB;
+    top: 15rem;
+}
+.swiper-button-prev:after{
+    content: "\f104";
+    font-family: "FontAwesome";
+    font-weight: 400;
+}
+.swiper-button-next:after{
+    content: "\f105";
+    font-family: "FontAwesome";
+    font-weight: 400;
+}
+/* 호버시 */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #111;
+}
+
+/* ------------- */
+/* 푸터 */
+/* ------------- */
+footer {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2;
+    color: #865b41;
+    background-color: #faf8f7;
+    padding: 4rem;
+}
+footer dt {
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-right: 2rem;
+}
+footer dd {
+    display: inline-block;
+    font-size: 1.8rem;
+}
+footer li {
+    display: inline-block;
+}
+footer li:nth-child(2) {
+    margin: 0 2rem;
+}
+.copy_right{
+    font-size: 1.4rem;
+}
+
+
+/* ============================ */
+/* 태블릿 : 너비 768px 이상 */
+/* ============================ */
+@media screen and (max-width:768px){
+    /* PC 속성 초기화 */
+    .gnb {
+        text-align: center;
+    }
+    .gnb li .hover {
+        display: none;
+    }
+    header.fixed .gnb a {
+        color: #fff;
+        height: 5rem;
+    }
+    header.fixed .gnb a.dot {
+        height: 5rem;
+        background: url(../images/nav_dot01.png) no-repeat center;
+    }
+    header.fixed .logo a{
+        height: 5rem;
+    }
+    /* ------------- */
+    /* 헤더 */
+    /* ------------- */
+    .hambager_btn{
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        /* 포지션 */
+        position: relative;
+        z-index: 100;
+    }
+    .hambager_btn div{
+        width: 100%;
+        height: 0.2rem;
+        background: #fff;
+        transition: all 0.3s;
+    }
+    
+    .hambager_btn div:nth-child(2) {
+        margin: 1rem;
+    }
+    /* 햄버거 메뉴 열릴 시 */
+    input[id="ham"]:checked + .hambager_btn div {
+        /* 포지션 */
+        position: absolute;
+        top: 50%;
+    }
+    input[id="ham"]:checked + .hambager_btn div:nth-child(2) {
+        display: none;
+    }
+    input[id="ham"]:checked + .hambager_btn div:nth-child(1) {
+        transform: rotate(135deg);
+        background: #fff;
+    }
+    input[id="ham"]:checked + .hambager_btn div:nth-child(3) {
+        transform: rotate(45deg);
+        background: #fff;
+    }    
+    input[id="ham"]  ~ nav {
+        width: 100%;
+        height: 100vh;
+        padding: 20rem;
+        background: rgba(0, 0, 0, 0.8);
+        /* 포지션 */
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 99;
+        transition: all 0.3s;
+    }
+    input[id="ham"]:checked  ~ nav {
+        left: 0;
+    }
+    input[id="ham"]  ~ nav .gnb{
+        flex-flow: column wrap;
+    }
+    input[id="ham"]  ~ nav .gnb li{
+        width: 100%;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 2rem;
+    }
+    input[id="ham"]  ~ nav .gnb li span{
+        display: inline-block;
+    }
+    /* 헤더 픽스 시 */
+    header.fixed .hambager_btn div{
+        background: #865b41;
+    }
+
+    /* ------------- */
+    /* 메인페이지 */
+    /* ------------- */
+    .main_page{
+        background-position: center;
+    }
+    .main_page picture{
+
+    }
+}
+
+/* ============================ */
+/* 모바일 : 너비 360px 이상 */
+/* ============================ */
+@media screen and (max-width:360px){
+
+}

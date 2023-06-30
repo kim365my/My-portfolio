@@ -473,6 +473,9 @@ main > section {
     .give_slide_txt{
         margin-top: 10rem;
     }
+    .give-slider .swiper-btn-wrap {
+        bottom: 28%;
+    }
     /* 스와이퍼 버튼 커스텀 */
     .give-slider :is(.swiper-button-next, .swiper-button-prev) {
         position: static;
