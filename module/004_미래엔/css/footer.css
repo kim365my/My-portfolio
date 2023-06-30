@@ -40,14 +40,14 @@ footer {
     /* 그리드 */
     display: grid;
     grid-template-columns: repeat(2, minmax(min-content, auto));
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(3, auto-fit);
     grid-auto-flow: row;
     gap: 2rem;
     row-gap: 4rem;
     justify-content: space-between;
 }
 /* 모바일 그리드 설정 */
-.flnb {order: 3;}
+.flnb {order: 5;}
 .ftel {order:4;}
 .fsns {order: 4;}
 .flogo {order: 1;}

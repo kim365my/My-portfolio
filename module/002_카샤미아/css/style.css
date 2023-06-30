@@ -62,37 +62,26 @@ body{
 /* =================== */
 /* 탑 배너 */
 /* =================== */
-aside{
-    color: white;
+aside.top_banner{
     background: #111;
 }
-aside .top_sub{
-    display: block;
+aside a{
+    display: flex;
+    justify-content: center;
     line-height: 1.6rem;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 400;
     padding: 1rem 0;
+    color: #fff;
     /* 포지션 */
     position: relative;
 }
-aside .top_sub i{
+aside a span::before {
+    content: "|";
     font-size: 1.2rem;
-}
-aside .close_btn{
-    font-size: 1.2rem;
-    position: absolute;
-    right: 0;
-}
-aside.close {
-    animation: closeTobBanner 0.3s;
-}
-@keyframes closeTobBanner {
-    0% {
-        height: 50px;
-    }
-    100% {
-        height: 0;
-    }
+    margin: 0.8rem;
+    color: #999;
 }
 /* =================== */
 /* header */
@@ -166,7 +155,6 @@ aside.close {
     width: 100%;
     background-color: #fff;
     border-bottom: 1px solid #DBDBDB;
-    font-size: 1.6rem;
     /* 포지션 */
     position: sticky;
     top: 0;
@@ -193,7 +181,7 @@ aside.close {
     /* 포지션 */
     position: relative;
 }
-.gnb > li a.point::after{
+.global .gnb > li a.point::after{
     content: "";
     display: inline-block;
     width: 0.3em;
@@ -211,14 +199,16 @@ aside.close {
     font-size: 1.4rem;
     font-weight: 600;
 }
-.global a {
+.global .gnb > li a, 
+.global .snb > li a {
     display: inline-block;
     padding: 0 1rem;
     line-height: 5rem;
+    font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: -1px;
-    border-bottom: 3px solid transparent;
 }
+
 /* ---------------- */
 /* 전체메뉴 뒤에 색 추가 */
 .gnb_all::after{
@@ -226,7 +216,6 @@ aside.close {
     display: none;
     width: 100%;
     height: 480px;
-    border-top: 1px solid #DBDBDB;
     background: #fff;
     border-bottom: 1px solid #111;
     /* 포지션 */
@@ -254,17 +243,47 @@ aside.close {
 }
 
 /* ------------- */
-/* 전체 메뉴 확인하기 */
-.total_gnb_wrap span {
+/* 전체 메뉴 확인하기 버튼 스타일 */
+.total_gnb_wrap {
+    width: 20rem;
+}
+.total_gnb_wrap > a {
+    display: inline-block;
+    width: 100%;
+    padding: 0 2rem 0 1rem;
+    line-height: 5rem;
+    font-size: 1.6rem;
     font-weight: 600;
+    /* 포지션 */
+    position: relative;
+}
+/* 호버시 */
+.total_gnb_wrap:hover > a::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background: #111;
+    /* 포지션 */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+    animation: gnb_hover 0.5s;
+}
+@keyframes gnb_hover {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.total_gnb_wrap > a span {
     margin-left: 1rem;
-}
-.total_gnb_wrap a{
-    min-width: 20rem;
-    
-}
-.total_gnb_wrap:hover > a {
-    border-bottom: 3px solid #111;
+    font-weight: 600;
 }
 /* 전체메뉴 스타일 */
 .total_gnb{
@@ -285,25 +304,40 @@ aside.close {
     display: block;
     animation: showSnbBg 0.8s;
 }
+.total_gnb a{
+    display: inline-block;
+    min-width: 20rem;
+    padding: 0 1rem;
+    line-height: 3.6rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #999;
+    /* 포지션  */
+    position: relative;
+}
 
 .total_gnb_ul {
     height: 100%;
     /* 포지션 */
     position: relative;
 }
-.total_gnb_ul > li{
-    width: 100%;
-}
-.total_gnb_ul > li > a{
-    width: 20rem;
-    color: #111;
+.total_gnb_ul li:has(ul) > a::before {
+    /* content: "\f105"; */
+    font-family: "FontAwesome";
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #ccc;
+    /* 포지션 */
+    position: absolute;
+    right: 1rem;
 }
 
-.total_gnb_ul li a{
-    line-height: 36px;
-    font-weight: 600;
-    color: #aaa;
+.total_gnb_ul > li.check > a,
+.total_gnb_ul > li.check > a:hover{
+    color: #111;
+    font-weight: 700;
 }
+
 /* ------------- */
 /* 선택할 시 표시되는 메뉴 스타일 */
 .select_list {
@@ -315,8 +349,13 @@ aside.close {
     top: 0;
     left: 200px;
 }
-.select_list > li > a{
-    width: 20rem;
+.select_list > li > a {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.select_list .check > a,
+.select_list > li.check > a {
+    color: #202020;
 }
 .total_gnb_ul li:not(.check) .select_list,
 .select_list li:not(.check) .select_box{
@@ -332,16 +371,41 @@ aside.close {
     top: 0;
     left: 200px;
 }
+.select_box a {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.select_box a:hover{
+    color: #767676;
+}
 /* ------------- */
 /* 호버효과 */
-.total_gnb_ul .check > a,
-.select_list .check > a,
-.total_gnb_ul .check a:hover{
-    color: #111;
-    border-bottom: 1px solid #393939;
+.total_gnb_ul .check > a::after,
+.select_list .check > a::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: #111;
+    /* 포지션 */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
 }
-.total_gnb_ul li:hover > a{
-    border-bottom: 1px solid #393939;
+.total_gnb a:hover::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: #111;
+    /* 포지션 */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+    animation: gnb_hover 0.5s;
 }
 
 /* ======================= */
@@ -379,24 +443,26 @@ article .swiper{
 
 .main-slider .swiper-button-next,
 .main-slider .swiper-button-prev{
-    color: #F8F8FA;
-    font-size: 8rem;
     padding: 40px;
-    text-shadow: 0 0 2rem #8f8f8f;
 }
-.main-slider .swiper-button-prev:after{
+.main-slider .swiper-button-prev::after{
     content: "\f104";
-    font-family: "FontAwesome";
-    font-weight: 400;
 }
-.main-slider .swiper-button-next:after{
+.main-slider .swiper-button-next::after{
     content: "\f105";
+}
+.main-slider .swiper-button-prev::after,
+.main-slider .swiper-button-next::after{
     font-family: "FontAwesome";
     font-weight: 400;
+    font-size: 8rem;
+    color: rgba(133, 133, 133, 0.4);
+    transition: all 0.3s;
 }
+
 /* 호버시 */
-.main-slider .swiper-button-next:hover,
-.main-slider .swiper-button-prev:hover {
+.main-slider .swiper-button-next:hover::after,
+.main-slider .swiper-button-prev:hover::after {
     color: #fff;
 }
 /* swiper-controll-wrap 컨트롤 박스 스타일링 */
@@ -503,7 +569,7 @@ section h2 {
     width: 8rem;
 }
 .section_lnb p {
-    margin-top: 2.5rem;
+    margin-top: 3.2rem;
     font-size: 2rem;
     text-align: center;
 }
@@ -527,7 +593,7 @@ section h2 {
     height: 100%;
     font-size: 1.4rem;
     margin-right: 1rem;
-    border: 1px solid #adadad;
+    border: 1px solid #ccc;
     padding: 1rem 1.5rem;
     border-radius: 2.5rem;
     cursor: pointer;
@@ -605,8 +671,12 @@ section h2 {
     /* 커서 */
     cursor: pointer;
 }
+.item_heart i {
+    font-weight: 500;
+}
 .item_heart:hover{
     color: #ff3434;
+    text-shadow: none;
 }
 
 /* 텍스트 스타일 */
@@ -706,7 +776,8 @@ section h2 {
 /* 제목 */
 .real_time h2{
     font-weight: 700;
-    padding-bottom: 30px;
+    padding-bottom: 1.6rem;
+    margin-bottom: 1.6rem;
     border-bottom: 1px solid #DBDBDB;
 }
 /* 초이스 버튼 */
@@ -722,14 +793,14 @@ section h2 {
 /* 호버효과 */
 .real_time_btn.check,
 .real_time_btn:hover{
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid #999;
 }
 
 /* 더보기 버튼 */
 .real_time li:last-child{
     margin-top: 2.5rem;
     text-align: center;
-    border: 1px solid #111;
+    border: 1px solid #999;
 }
 .real_time li:last-child a{
     display: inline-block;
@@ -822,19 +893,9 @@ section h2 {
     grid-template-columns: repeat(3, auto);
     gap: 1.5rem;
 }
-.event_sns li{
-    /* 오버플로 */
-    overflow: hidden;
-}
-.event_sns li{
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-}
-.event_sns li:nth-child(2n){
-    margin-right: 0;
-}
+
 .event_sns img{
-    width: 100%;
+    width: 140%;
     height: 100%;
     object-fit: cover;
     transition: all 0.3s;
@@ -842,6 +903,7 @@ section h2 {
 .event_sns ul a{
     display: inline-block;
     width: 100%;
+    overflow: hidden;
 }
 /* 호버시 이미지 스케일 키우기 */
 .event_sns li a:hover::before{
@@ -894,7 +956,7 @@ section h2 {
 /* footer */
 /* ======================= */
 footer{
-    border-top: 1px solid #111;
+    border-top: 1px solid #999;
     padding-bottom: 5rem;
 
 }
@@ -919,7 +981,6 @@ footer{
     margin-bottom: 1.8rem;
 }
 .footer_info_list{
-    margin-left: 5.5rem;
     font-size: 1.2rem;
 }
 .footer_gnb{
@@ -938,7 +999,7 @@ footer{
     margin-right: 1.5rem;
 }
 .footer_info_list p:not(:last-child){
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
 }
 
 /* ---------------- */

@@ -58,15 +58,15 @@ body{
 /* 탑 배너 */
 /* =================== */
 aside{
-    color: white;
-    background: #1d1c2e;
+    background: #000;
 }
 aside .top_sub{
     display: block;
-    line-height: 2rem;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     font-size: 1.6rem;
-    padding: 2rem 0;
+    color: #fff;
     /* 포지션 */
     position: relative;
 }
@@ -115,6 +115,12 @@ header{
     padding: 10px 15px;
     font-weight: 500;
     color: #111;
+}
+.root_lnb .lnb li:not(:last-child):after {
+    content: "|";
+    font-size: 12px;
+    color: #999;
+
 }
 /* --------------------- */
 /* gnb 메뉴 스타일 */
@@ -603,7 +609,7 @@ footer{
     margin-top: 100px;
     background-color: #1d1c2e;
     
-    padding-bottom: 54px;
+    padding-bottom: 40px;
     line-height: 1.5;
 }
 /* ---------------- */
@@ -638,7 +644,7 @@ footer{
 /* ---------------- */
 /* footer_Info */
 .footer_Info{
-    margin-top: 5.7rem;
+    margin-top: 40px;
     color: #929294;
     /* 플렉스 */
     display: flex;

@@ -150,7 +150,6 @@ const contentSwiper = new Swiper(".content-slider", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-
     },
 
 });
@@ -158,14 +157,18 @@ const contentSwiper = new Swiper(".content-slider", {
 // 오설록의 역사 배너 슬라이더
 // --------------------------------
 const sinceSwiper = new Swiper(".since-slider", {
-    slidesPerView:4,
+    slidesPerView:4.2,
     spaceBetween: 20,
     grabCursor: true,
     loopedSlides: 2,
     scrollbar: {
         el: '.since-swiper-scrollbar',
         draggable: true,
-      },
+    },
+    navigation: {
+        nextEl: ".since-swiper-button-next",
+        prevEl: ".since-swiper-button-prev",
+    },
 });
 
 // --------------------------------

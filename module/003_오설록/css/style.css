@@ -230,6 +230,7 @@ header .lnb li .snb{
     position: absolute;
     left: auto;
     right: 0;
+    transform: translateY(110%);
 }
 header .lnb li:hover i{
     color: #608106;
@@ -683,6 +684,10 @@ main section {
     padding: 20rem 0;
     background: #82664F;
 }
+.since {
+    /* 포지션 */
+    position: relative;
+}
 .since_img_wrap{
     width: 55%;
     height: 100%;
@@ -736,6 +741,33 @@ main section {
 .swiper-scrollbar-drag{
     cursor: grab;
 }
+/* 슬라이드 버튼 */
+.since-swiper-button-prev::after {
+    content: "\f104";
+    transform: translateX(-200%);
+}
+.since-swiper-button-next::after {
+    content: "\f105";
+    right: 0;
+    transform: translateX(200%);
+}
+.since-swiper-button-prev::after,
+.since-swiper-button-next::after{
+    font-family: "FontAwesome";
+    font-weight: 400;
+    font-size: 10rem;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    /* 포지션 */
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+}
+.since-swiper-button-prev:hover::after,
+.since-swiper-button-next:hover::after{
+    color: #fff;
+}
+/* 슬라이드 콘텐츠 */
 .since-slider picture{
     display: block;
     width: 100%;

@@ -17,35 +17,6 @@ noLink.forEach((link) => {
 });
 
 // --------------------------------
-// 탑배너 닫기 이벤트
-// --------------------------------
-const closeBtn = document.querySelector(".close_btn");
-const topBanner = document.querySelector(".top_banner");
-
-// 로컬스토리지
-const bannerItem = localStorage.getItem("closeBanner");
-if(bannerItem === null) {
-    closeBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        topBanner.classList.add("close");
-        window.setTimeout(() => {
-            topBanner.classList.add("hidden");
-            // 로컬스토리지 시간 추가
-            localStorage.setItem("closeBanner", Date.now().toString());
-        }, 300)
-        
-    });
-} else {
-    const date = Date.parse(bannerItem);
-    if(Date.now() > date){
-        localStorage.removeItem("closeBanner");
-        topBanner.classList.remove("hidden, close");
-    } else {
-        topBanner.classList.add("hidden");
-    }
-}
-
-// --------------------------------
 // 맨 위로 이동
 // --------------------------------
 const topBtn = document.querySelector(".top");

@@ -128,10 +128,13 @@ const workSwiper = new Swiper(".work-slider", {
     slidesPerView:3,
     spaceBetween: 20,
     grabCursor: true,
-    loopedSlides: 2,
+    // loopedSlides: 2,
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
+    },
+    grid: {
+        rows: 2,
     },
     breakpoints: { // 반응형
         768 : {
@@ -141,6 +144,9 @@ const workSwiper = new Swiper(".work-slider", {
         1024 : {
             slidesPerView:7,
             spaceBetween: 40,
+            grid: {
+                rows: 1,
+            },
         }
     },
 });
