@@ -86,6 +86,7 @@ header .gnb > div > ul > li > a{
 }
 header .gnb > div > ul > li:has(.snb) > a::after{
     content: "\f105";
+    width: 2rem;
     display: inline-block;
     font-family: "FontAwesome";
     font-weight: 400;
@@ -94,7 +95,7 @@ header .gnb > div > ul > li:has(.snb) > a::after{
     /* 포지션 */
     position: absolute;
     top: 50%;
-    right: 2rem;
+    right: 5%;
     transform: translateY(-50%);
 }
 header .moblie_gnb  {
