@@ -44,7 +44,7 @@ document.addEventListener("scroll", (e) => {
 const playDown = document.querySelector(".playDown");
 playDown.addEventListener("click", () => {
     scrollToY(document.querySelector("#main_content").offsetHeight, 40)
-
+    console.log(document.querySelector("#main_content").offsetHeight);
 });
 
 
@@ -132,7 +132,7 @@ const io = new IntersectionObserver((entries, observer) => {
             stopScrollSwiper();
         }
     })
-}, {threshold : 0.8}) // 80%로 등장했을 경우
+}, {threshold : 0.7}) // 70%로 등장했을 경우
 io.observe(section);
 
 

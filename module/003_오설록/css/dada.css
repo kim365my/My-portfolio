@@ -3,15 +3,10 @@
 
 /* 전역설정 */
 html, body{
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
     font-size: 62.5%;
     font-family: 'NanumSquare', sans-serif;
 }
-#wrap{
-    margin: 0 auto;
-}
+
 .w1440{
     width: 1440px;
     min-width: 1440px;
@@ -74,10 +69,11 @@ html, body{
 /* ======================= */
 header {
     width: 100%;
+    min-width: 1440px;
     height: 70px;
     padding: 10px 0;
     /* 포지션 */
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 100;
     background: #fff;
@@ -209,13 +205,10 @@ header .lnb li .snb{
 header .lnb li:hover i{
     color: #608106;
 }
-
-/* ==================== */
-/* 메인 */
-/* ==================== */
-main{
-    font-family: 'Gowun Dodum', sans-serif;
+header .lnb > li > a.moreBtn {
+    height: 6.7rem;
 }
+
 /* --------------- */
 /* 다다일상 타이틀 */
 .dada_title{
@@ -240,14 +233,31 @@ main{
     color: #767676;
     line-height: 1.6;
 }
-
-
+/* ==================== */
+/* 메인 */
+/* ==================== */
+main{
+    font-family: 'Gowun Dodum', sans-serif;
+}
+main > section {
+    margin: 18rem 0;
+}
+.sec_title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+.sec_title + p {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #767676;
+    line-height: 1.6;
+}
 /* --------------- */
 /* 이달의 다다일상 */
-.dada_today{
-    border: 1px solid #767676;
-    margin: 20rem 0;
-}
 .card_text{
     width: 45%;
     padding-top: 3rem;
@@ -267,23 +277,10 @@ main{
     height: 100%;
     object-fit: cover;
 }
-.dada_today h3{
-    font-size: 3rem;
-    font-weight: 600;
-    color: #111;
-    line-height: 1.2;
-    margin-bottom: 2rem;
-}
-.dada_today p {
-    font-size: 1.6rem;
-    color: #767676;
-    line-height: 1.6;
-}
 
 
 /* FAQ */
 .dada_faq{
-    height: 50rem;
     margin-top: 16rem;
     margin-bottom: 16rem;
 }
@@ -296,14 +293,8 @@ main{
 }
 
 .faq_list{
-    width: calc(50% - 1rem);
+    width: 100%;
     line-height: 1.6;
-    /* 플롯 */
-    float: left;
-}
-.faq_list:last-child{
-    /* 플롯 */
-    float: right;
 }
 .faq_list dt{
     font-size: 1.8rem;
@@ -317,11 +308,20 @@ main{
 .faq_list dt:first-child{
     border-top: 1px solid #ccc;
 }
+.faq_list dt::before {
+    content: "Q";
+    color: #c7c4c4;
+    margin-right: 1rem;
+}
+
 .faq_list dt::after{
     content: "+";
     /* 포지션 */
     position: absolute;
     right: 1rem;
+}
+.faq_list  dt.check::before {
+    color: #111;
 }
 .faq_list dt.check::after{
     content: "-";
@@ -340,13 +340,20 @@ main{
     /* 오버플로 */
     overflow: hidden;
 }
+.faq_list dd::before {
+    content: "A";
+    color: #5A7E62;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-right: 1rem;
+}
 @keyframes showFaq {
     0%{
         height: 0;
         opacity: 0;
     }
     100% {
-        height: 16rem;
+        height: 100%;
         opacity: 1;
     }
 }
@@ -359,25 +366,23 @@ footer{
     font-size: 1.4rem;
     color: #767676;
     background-color: #F5F5F5;
-    padding: 40px 0;
+    padding: 5rem 0;
 }
 #footer_container{
-    padding: 50px 0 20px;
-    border-bottom: #c7c4c4 solid 1px;
-    margin-bottom: 20px;
+    padding-bottom: 2rem;
+    border-bottom: #ddd solid 1px;
+    margin-bottom: 2rem;
 }
 /* 푸터 기업소개 */
 .footer_logo{
-    width: 130px;
-    margin-right: 20px;
+    width: 13rem;
+    margin-right: 2rem;
     text-align: left;
     line-height: 1.3;
     /* 플롯 */
     float: left;
 }
-
 footer .footer_gnb{
-
     /* 플롯 */
     float: left;
 }
@@ -388,7 +393,7 @@ footer .footer_gnb li{
     color: #767676;
 }
 footer .footer_gnb_list{
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 footer .footer_gnb_list li:not(:last-child):after{
     content: "|";
@@ -402,15 +407,13 @@ footer .footer_gnb li:hover{
 footer .footer_gnb p {
     line-height: 1.4;
 }
-
 .footer_sns{
     /* 플롯 */
     float: right;
-
 }
 .footer_sns li{
     display: inline-block;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: #767676;
     margin-left: 20px;
 }
