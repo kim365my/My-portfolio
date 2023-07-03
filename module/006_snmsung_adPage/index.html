@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼성 이벤트 페이지</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/icon/favmc32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/icon/montblanc_fav144.png">    
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <!-- 코딩할때 웹킷 안써줘도 자동으로 브라우저에 인식하게 해줌 : 접두어 일일히 쓰는거 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="wrap">
+        <!-- background video -->
+        <div class="bgImg">
+            <div class="playVideo">
+                <div id="player"></div>
+            </div>
+            <!-- btn -->
+            <div class="video_btn">
+                <!-- play btn -->
+                <button class="hidden">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                </button>
+                <!-- pause btn -->
+                <button>
+                    <i class="fa fa-pause-circle" aria-hidden="true"></i>
+                </button>
+                <!-- stop btn -->
+                <button>
+                    <i class="fa fa-stop-circle" aria-hidden="true"></i>
+                </button>
+                
+                <button class="unMuteBtn">
+                    <i class="fa fa-volume-off" aria-hidden="true"></i>
+                </button>
+    
+                <button class="muteBtn hidden">
+                    <i class="fa fa-volume-up" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /background video -->
+
+        <!-- video 왼쪽 메뉴 -->
+        <header>
+            <h1><a href="#"><img src="./images/logo.png" alt="logo"></a></h1>
+            <nav>
+                <ul id="gnb">
+                    <li>
+                        <a href="#"><em>매장안내</em></a>
+                        <ul class="snb">
+                            <li><a href="#"><em>오픈매장안내</em></a></li>
+                            <li><a href="#"><em>매장찾기</em></a></li>
+                            <li><a href="#"><em>VR-스토어</em></a></li>
+                            <li><a href="#"><em>언택트쇼핑</em></a></li>
+                            <li><a href="#"><em>BESPOKE 홈 메타</em></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><em>상담예약</em></a>
+                        <ul class="snb">
+                            <li><a href="#"><em>매장상담예약</em></a></li>
+                            <li><a href="#"><em>비대면 상담예약</em></a></li>
+                            <li><a href="#"><em>수어상담예약</em></a></li>
+                            <li><a href="#"><em>시스템에어컨 상담</em></a></li>
+                            <li><a href="#"><em>진열할인제품</em></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><em>행사안내</em></a>
+                        <ul class="snb">
+                            <li><a href="#"><em>이달의 혜택</em></a></li>
+                            <li><a href="#"><em>혼수가전혜택</em></a></li>
+                            <li><a href="#"><em>입주가전혜택</em></a></li>
+                            <li><a href="#"><em>카드혜택</em></a></li>
+                            <li><a href="#"><em>멤버십혜택</em></a></li>
+                            <li><a href="#"><em>삼성스토어몰</em></a></li>
+                            <li><a href="#"><em>스마트싱스 파트너</em></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><em>고객지원</em></a>
+                        <ul class="snb">
+                            <li><a href="#"><em>고객의 말씀</em></a></li>
+                            <li><a href="#"><em>공지사항</em></a></li>
+                            <li><a href="#"><em>현금영수증 미발행 신고</em></a></li>
+                            <li><a href="#"><em>사용설명서</em></a></li>
+                            <li><a href="#"><em>서비스센터찾기</em></a></li>
+                            <li><a href="#"><em>삼성케어플러스</em></a></li>
+                            <li><a href="#"><em>갤럭시 컨설턴트</em></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><em>회사소개</em></a>
+                        <ul class="snb">
+                            <li><a href="#"><em>기업소개</em></a></li>
+                            <li><a href="#"><em>CEO인사말</em></a></li>
+                            <li><a href="#"><em>브랜드소개</em></a></li>
+                            <li><a href="#"><em>연혁</em></a></li>
+                            <li><a href="#"><em>경영이념</em></a></li>
+                            <li><a href="#"><em>정도경영</em></a></li>
+                            <li><a href="#"><em>안전환경</em></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- /video 왼쪽 메뉴 -->
+
+        <!-- 우측상단 SNS -->
+        <nav>
+            <ul id="sns">
+                <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+        <!-- /우측상단 SNS -->
+
+        <!-- 우측하단 호버버튼 -->
+        <aside>
+            <!-- image btn -->
+            <h3 class="inner">
+                <p>
+                    <em>
+                        세상의 색을 새롭게 보는 <br>
+                        OLED
+                    </em>
+                    <a href="#"><img src="./images/mtv_buying_KQ55SC95AFXKR_pc.webp" alt=""></a>
+                </p>
+                <p>
+                    <em>
+                        디테일까지 압도적인 초고화질 4K TV <br>
+                        Neo QLED
+                    </em>
+                    <a href="#"><img src="./images/mtv_buying_KQ75QB65AFXKR_pc.webp" alt=""></a>
+                </p>
+                <p>
+                    <em>
+                        지구를 생각한 에너지 소비 효율 1등급 TV <br>
+                        QLED
+                    </em>
+                    <a href="#"><img src="./images/mtv_buying_KQ75QNC83AFXKR_pc.webp" alt=""></a>
+                </p>
+            </h3>
+
+            <!-- Animation btn -->
+            <h3 class="artBtn">
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+            </h3>
+        </aside>
+        <!-- /우측하단 호버버튼 -->
+
+    </div>
+</body>
+<script src="./js/script.js"></script>
+</html>

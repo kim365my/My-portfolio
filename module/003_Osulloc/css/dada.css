@@ -206,6 +206,7 @@ header .lnb li:hover i{
     color: #608106;
 }
 header .lnb > li > a.moreBtn {
+    display: inline-block;
     height: 6.7rem;
 }
 

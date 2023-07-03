@@ -1,0 +1,287 @@
+/* 공통 css */
+.hidden {
+    display: none;
+}
+/* 백그라운드 동영상 css */
+.bgImg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* 포지션 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.playVideo{
+    height: 0;
+    /* 포지션 */
+    position: relative;
+    padding-bottom:56.25%;
+}
+.playVideo iframe{
+    height: 160vh;
+    /* 포지션 */
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 배경 동영상 컨트롤 버튼 */
+.video_btn{
+    /* 포지션 */
+    position: absolute;
+    right: 480px;
+    top: 50px;
+    z-index: 999;
+}
+.video_btn button{
+    background: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 10px;
+}
+.video_btn button i{
+    font-size: 30px;
+    color: #fff;
+}
+
+/* 프로모션 사이트 sns 링크 */
+#sns{
+    /* 포지션 */
+    position: fixed;
+    right: 40px;
+    top: 50px;
+}
+
+#sns li{
+    display: inline-block;
+    padding-left: 20px;
+    /* 30/16 = 1.875 */
+    font-size: 1.875rem;
+    color: #fff;
+    opacity: 0.8;
+    transition: all 0.5s;
+    transform: scale(1);
+}
+#sns li:hover i{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* 헤더영역 */
+header{
+    width: 650px;
+    height: 100vh;
+    background-color: #fff;
+    /* background: linear-gradient(45deg, #b9fb05, #8a20ff); */
+    transform: skewX(-40deg);
+    /* 포지션 */
+    position: fixed;
+    top: 0;
+    left: -520px;
+    z-index: 2;
+}
+
+header > h1{
+    /* 포지션 */
+    position: absolute;
+    right: 200px;
+    top: 40px;
+    transform: skewX(40deg);
+}
+header > h1 img {
+    width: 250px;
+}
+header > nav{
+    text-align: center;
+    /* 포지션 */
+    position: absolute;
+    right: 0;
+    top: 160px;
+    z-index: 10;
+}
+
+
+header ul li a{
+    display: block;
+    width: 200px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 3;
+}
+header ul li a em{
+    display: inline-block;
+    transform: skewX(40deg);
+
+}
+
+/* gnb */
+#gnb > li{
+    position: relative;
+}
+#gnb > li:hover a{
+    background-color: #222;
+    color: #fff;
+}
+#gnb > li:hover > .snb{
+    display: block;
+    left: 180px;
+}
+/* .snb */
+.snb{
+    display: none;
+    /* 포지션 */
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    transform: translate(100%);
+}
+#gnb .snb a{
+    display: block;
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    font: 16px/2.5 "Arial", sans-serif;
+    border-bottom: 1px solid #fff;
+}
+#gnb .snb li:hover a{
+    background-color: #fff;
+    color: #222;
+}
+
+/* 우측하단 호버버튼 */
+aside{
+    width: 800px;
+    height: 90%;
+    background: #111;
+    /* 포지션 */
+    position: fixed;
+    bottom: 0;
+    right: -965px;
+    z-index: 1;
+    transform: skewX(-40deg);
+
+    opacity: 0.8;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+/* 호버 영역 */
+aside:hover{
+    right: -600px;
+    opacity: 1;
+}
+aside:hover .inner{
+    left: 50px;
+}
+aside:hover .inner p{
+    transform: translateX(0);
+}
+aside:hover .inner p a {
+    opacity: 0.7;
+}
+aside:hover .inner p a:hover {
+    opacity: 1;
+}
+aside:hover .artBtn{
+    opacity: 0;
+}
+
+
+aside .inner{
+    width: 400px;
+    height: 100%;
+    background: #000;
+    /* 포지션 */
+    position: absolute;
+    left: 150px;
+    top: 0;
+}
+
+/* 버튼 */
+.inner p{
+    position: absolute;
+    left: -50px;
+    transform: translateX(200px);
+}
+.inner p a {
+    display: inline-block;
+    width: 300px;
+    height: 80px;
+    overflow: hidden;
+    background: #fff;
+    opacity: 0.3;
+}
+.inner p img{
+    width: 110%;
+    height: 100%;
+    object-fit: contain;
+    transform: skewX(40deg) translateX(-10%);
+}
+
+.inner p:nth-child(1){
+    bottom: 330px;
+    transition: all 0.4s;
+}
+
+.inner p:nth-child(2){
+    bottom: 187px;
+    transition: all 0.8s;
+}
+
+.inner p:nth-child(3){
+    bottom: 50px;
+    transition: all 1.2s;
+}
+
+.inner p em{
+    display: block;
+    transform: skewX(40deg);
+    font: bold 16px/1.6 "Arial", sans-serif;
+    margin-left: 25px;
+    color: #fff;
+}
+
+
+/* Arrow Btn */
+aside .artBtn{
+    position: absolute;
+    left: 20%;
+    bottom: 40px;
+    z-index: 999;
+    transform: skewX(40deg);
+}
+aside .artBtn i{
+    font-size: 60px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+/* 애니메이션 효과 */
+aside .artBtn i:nth-child(1) {
+    animation: arrowAni linear 1.5s 0s infinite;
+}
+aside .artBtn i:nth-child(2) {
+    animation: arrowAni linear 1.5s 0.5s infinite;
+}
+aside .artBtn i:nth-child(3) {
+    animation: arrowAni linear 1.5s 1s infinite;
+}
+/* 애니메이션 키프레임 */
+@keyframes arrowAni {
+    from {
+        opacity: 1;
+        transform: scale(1);
+        right: 0;
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.2);
+        right: 100px;
+    }
+}

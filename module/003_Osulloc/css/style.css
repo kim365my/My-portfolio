@@ -218,6 +218,7 @@ header .lnb > li > a{
     color: #fff;
 }
 header .lnb > li > a.moreBtn {
+    display: inline-block;
     height: 6.7rem;
 }
 header .lnb li .snb{
@@ -748,7 +749,7 @@ main section {
     font-family: "FontAwesome";
     font-weight: 400;
     font-size: 10rem;
-    color: rgba(0, 0, 0, 0.4);
+    color: #0000002b;
     cursor: pointer;
     /* 포지션 */
     position: absolute;

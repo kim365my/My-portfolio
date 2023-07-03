@@ -208,7 +208,9 @@ aside a span::before {
     font-weight: 600;
     letter-spacing: -1px;
 }
-
+.global .gnb > li a {
+    font-size: 1.8rem;
+}
 /* ---------------- */
 /* 전체메뉴 뒤에 색 추가 */
 .gnb_all::after{
