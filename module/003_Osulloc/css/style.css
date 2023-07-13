@@ -129,7 +129,7 @@ header .gnb > li {
     /* 포지션 */
     position: relative;
 }
-header .gnb li a{
+header .gnb > li > a{
     display: inline-block;
     width: 100%;
     height: 50px;

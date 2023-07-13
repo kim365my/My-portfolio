@@ -122,12 +122,12 @@ const section = document.querySelector("#main_content3");
 const io = new IntersectionObserver((entries, observer) => {
     entries.forEach((item, index) => {
         if(item.isIntersecting) {
+            startScrollSwiper();
             scrollBy({
                 top:item.boundingClientRect.top,
                 left:0,
                 behavior:"smooth"
             })
-            startScrollSwiper();
         } else{
             stopScrollSwiper();
         }

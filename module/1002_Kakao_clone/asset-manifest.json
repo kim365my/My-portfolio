@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "./static/css/main.f29f9907.css",
+    "main.js": "./static/js/main.3ae31afe.js",
+    "static/js/787.bf377cf2.chunk.js": "./static/js/787.bf377cf2.chunk.js",
+    "static/media/짱구브금.mp3": "./static/media/짱구브금.fb95d9dac87a5da1b356.mp3",
+    "index.html": "./index.html",
+    "main.f29f9907.css.map": "./static/css/main.f29f9907.css.map",
+    "main.3ae31afe.js.map": "./static/js/main.3ae31afe.js.map",
+    "787.bf377cf2.chunk.js.map": "./static/js/787.bf377cf2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f29f9907.css",
+    "static/js/main.3ae31afe.js"
+  ]
+}

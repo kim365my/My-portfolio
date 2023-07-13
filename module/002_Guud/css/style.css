@@ -585,7 +585,7 @@ section h2 {
 /* --------------- */
 /* md_pick 제목 */
 .md_pick_title{
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 .md_pick_select{
     margin-bottom: 2rem;
@@ -958,9 +958,7 @@ section h2 {
 /* footer */
 /* ======================= */
 footer{
-    border-top: 1px solid #999;
     padding-bottom: 5rem;
-
 }
 /* ---------------- */
 /* footer_Info */
