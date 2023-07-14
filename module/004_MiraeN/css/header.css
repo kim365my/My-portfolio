@@ -319,6 +319,7 @@ input[id="ham"]:checked  ~ .gnb > ul {
         transform: translateX(-50%);
         transition: all 0.3s;
         animation: gnb_hover 0.5s;
+        animation-fill-mode: forwards;
     }
     @keyframes gnb_hover {
         0% {
