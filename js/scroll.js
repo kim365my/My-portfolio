@@ -9,19 +9,15 @@ const CHECK_CLASS = "check";
 
 // 함수실행
 gnbAndList();
-scrollEvent();
+// scrollEvent();
 
 /** check가 붙으면 해당 gnb 리스트 스타일을 변경하고 해당 요소를 보이게 해주는 함수  */
 function gnbAndList(){
     gnb.forEach((e, i)=> {
         e.addEventListener("click", () => { // 클릭되었을 경우
-            gnb.forEach((element, index) => {
-                if(element.classList.contains(CHECK_CLASS)){ 
-                    // 클릭된 요소외에 클래스 명이 있을 경우, 해당 클래스명을 지우기
-                    element.classList.remove(CHECK_CLASS);
-                    section[index].classList.remove(CHECK_CLASS);
-                }
-            });
+            // 클릭된 요소외에 클래스 명이 있을 경우, 해당 클래스명을 지우기
+            gnb.forEach((e) => e.classList.remove(CHECK_CLASS));
+            section.forEach((e) => e.classList.remove(CHECK_CLASS))
             // 클릭된 요소에 클래스명 추가
             e.classList.add(CHECK_CLASS);
             section[i].classList.add(CHECK_CLASS);
@@ -54,11 +50,3 @@ function scrollEvent() {
 }
 
 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });

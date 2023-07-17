@@ -10,229 +10,99 @@
 html, body {
     font-family: 'Noto sans KR',sans-serif;
     font-size: 62.5%;
+    background: linear-gradient(to right, #c2fbe6 0%, #a6c1ee 100%);
 }
+
 
 #wrap{
+    width: 95%;
+    max-width: 1300px;
+    height: 100%;
+    padding: 8rem 0;
+    margin: 0 auto;
     /* 포지션 */
     position: relative;
 }
 
-.w1200{
-    max-width: 100%;
-    width: 100%;
-    padding: 0 20px;
-}
-.old::before{
-    content: "old";
-    font-size: 0.8rem;
-    margin-right: 5px;
-    padding: 0 5px;
-    border-radius: 5px;
-    background-color: #ccc;
-}
-
-
 /* ------------------- */
-/* header */
+/* nav */
 /* ------------------- */
-header{
-    padding: 20px 10px;
-    margin-right: 5%;
+nav {
+    border-radius: 0 2rem 2rem 0;
+    overflow: hidden;
     /* 포지션 */
-    position: fixed;
-    bottom: 2.5rem;
-    left: 10vw;
-    z-index: 99;
+    position: absolute;
+    right: 0;
+    transform: translateX(90%);
+    z-index: 0;
+}
+nav li {
+    padding: 2rem 3rem;
+    font-size: 1.4rem;
+    background: #c1ecda;
+    cursor: pointer;
+}
+nav li.check {
+    background: #9bafa7;
 }
 
-header .gnb li{
-    padding-right: 20px;
-    margin-bottom: 20px;
-    /* 포지션 */
-    position: relative;
-}
-
-header .gnb li a{
-    display: inline-block;
-    width: 100%;
-    padding: 1rem 0;
-    font-size: 1.6rem;
-    color: #fff;
-    border-bottom: 3px solid transparent;
-    
-}
-header .gnb li.check a,
-header .gnb li:hover a{
-    color: #0046ff;
-    border-bottom: 3px solid #0046ff;
-}
 /* ------------------- */
 /* main */
 /* ------------------- */
-main{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
-
-.main_bg {
-    width: 20vw;
-    height: 100vh;
-    background: linear-gradient(transparent 10%, #000 90%), url(../images/ben-kolde-bs2Ba7t69mM-unsplash.jpg) no-repeat center;
-    background-size: cover;
-    position: sticky;
-    top: 0;
+main {
+    height: 100%;
+    padding: 5rem 4rem;
+    border-radius: 2rem;
+    background: #fff;
+    box-shadow: rgb(137 137 137 / 51%) 6px 10px 20px 0px;
+    /* 포지션 */
+    position: relative;
+    z-index: 1;
 }
 main section{
     display: none;
-    width: 80vw;
-    height: 100vh;
-    padding: 2.5rem 2rem;
+    height: 100%;
 }
-
-main section.check {
+main section.check{
     display: block;
 }
-
 main section > h2 {
-    font-size: 2.2rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 3px solid #0046ff;
-}
-
-/* #about_me */
-#about_me .content {
-    height: 80vh;
-    /* 오버플로 */
-    overflow: hidden;
-    /* 포지션 */
-    position: relative;
-}
-#about_me .img_wrap {
-    width: 80%;
-    height: 150%;
-    /* 변형 */
-    transform: rotate(10deg);
-    /* 포지션 */
-    position: absolute;
-    top: -10%;
-    right: -10%;
-}
-#about_me img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-
-/*  */
-#Portfolio .swiper-slide{
-    border: 1px solid #000;
-    padding: 20px;
-}
-#Portfolio a{
-    display: block;
-    font-size: 20px;
+    font-size: 3.5rem;
     font-weight: 800;
-    margin-bottom: 20px;
-}
-
-#Portfolio dl{
-    display: flex;
-}
-#Portfolio dt{
-    font-weight: 600;
-    margin-right: 10px;
+    margin-bottom: 4rem;
 }
 
 
-
-/* ------------- */
-/* #project 영역 */
-#project nav{
-    width: 20vw;
-    overflow-y: scroll;
-    border-right: none;
-    border-left: none;
-}
-/* main nav ul */
-#project .project_list {
-    height: 90%;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row nowrap;
-}
-#project .list{
+.Portfolio_list {
     display: grid;
-    /* 간격 */
-    row-gap: 10px;
-    column-gap: 5px;
-}
-#project .list > li{
-    width: 100%;
-    border: 1px solid var(--border-color);
-    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    height: calc(100% - 8rem);
+    overflow-y: auto;
 }
 
-#project .list a{
-    display: inline-block;
-    width: 100%;
-    padding: 10px;
-}
-#project .list a:hover{
-    background-color:#0046ff;
-    color: white;
-}
-#project .list ul > li:nth-child(even){
-    border-top: 1px dotted var(--border-color);
-}
-#project .list dl{
-
-}
-#project .contents{
+.Portfolio_list a {
+    display: block;
     width: 100%;
     height: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-flow: column nowrap;
-    
+    padding: 2rem 1.5rem;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
 }
-#project .contents > .des{
-    background-color:rgb(243, 243, 243);
-    padding: 30px;
-    border-bottom: 3px solid var(--border-color);
-    /* 플랙스 */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#project .contents > .des h2{
-    font-size: 1.2rem;
+.Portfolio_list h3{
+    font-size: 1.8rem;
     font-weight: 600;
 }
-#project .contents > .des h2 + p{
-    margin-top: 10px;
-    font-size: 0.8rem;
-}
-#project .pageLink{
-    color: #0046ff;
-    font: 600 0.8rem/1.6 "Raleway", sans-serif;
-}
-#project .innerPage {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
 
-#project .innerPage object{
-    width: 100%;
-    height: 100%;
-
-    /* 포지션 */
-    position: absolute;
+.Portfolio_list dl {
+    display: flex;
+    font-size: 1.6rem;
+    color: #767676;
+}
+.Portfolio_list dt{
+    font-weight: 500;
+    margin-right: 1rem;
+    color: #000;
 }
 
 
@@ -240,5 +110,7 @@ main section > h2 {
 /* 780px 이하 기기 적용 */
 /* ------------------------------------- */
 @media screen and (max-width:780px) {
-
+    .Portfolio_list {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
