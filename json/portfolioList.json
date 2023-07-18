@@ -1,6 +1,6 @@
 [
     {
-        "title" : "맥도날드 사이트 리뉴얼",
+        "title" : "맥도날드 딜리버리 사이트 리뉴얼",
         "startDate" : "2023.06.14",
         "endDate" : "2023.06.16",
         "useLibery" : [
@@ -10,7 +10,8 @@
             "개별작업", "PC"
         ],
         "siteLink" : "./module/001_McDelivery/index.html",
-        "imgLink" : "./images/01_맥도날드.png"
+        "imgLink" : "./images/01_맥도날드.png",
+        "directory" : "제가 참 좋아하는 맥도날드 딜리버리 사이트를 새롭게 구현해보았습니다. 여기서 가장 공들인 부분은 Gnb 부분인데요. 제이쿼리를 쓰지 않고, 순수하게 JS와 CSS로 구현했습니다. 부드럽게 투뎁스 메뉴가 나오는 것을 보면 뿌듯해요!"
     }, 
     {
         "title" : "까사미아 사이트 리뉴얼",
@@ -23,11 +24,12 @@
             "개별작업", "PC"
         ],
         "siteLink" : "./module/002_Guud/index.html",
-        "imgLink" : "./images/02_까사미아.png"
+        "imgLink" : "./images/02_까사미아.png",
+        "directory" : "까사미아 사이트를 살짝 리뉴얼 해보았습니다. 원래 사이트의 이미지가 굉장히 좋았기에 저도 작업할 때 굉장히 즐거웠어요."
     }, 
     {
-        "title" : "오설록 사이트 리뉴얼",
-        "startDate" : "22023.06.19",
+        "title" : "오설록 기업소개 사이트 리뉴얼",
+        "startDate" : "2023.06.19",
         "endDate" : "2023.06.23",
         "useLibery" : [
             "Swiper 슬라이드"
@@ -36,7 +38,8 @@
             "개별작업", "PC"
         ],
         "siteLink" : "./module/003_Osulloc/index.html",
-        "imgLink" : "./images/03_오설록.png"
+        "imgLink" : "./images/03_오설록.png",
+        "directory" : "오설록의 기업소개 사이트를 리뉴얼 해보았는데요. 작업하면서 굉장히 어려웠던 부분은 역시 스크롤 이벤트 부분이었습니다. 유저가 빠르게 스크롤을 하면 이벤트가 발생을 전혀 안해서 굉장히 난감했는데요."
     }, 
     {
         "title" : "미래엔 클론코딩",
@@ -49,7 +52,8 @@
             "개별작업", "PC", "반응형"
         ],
         "siteLink" : "./module/004_MiraeN/index.html",
-        "imgLink" : "./images/04_미래엔.png"
+        "imgLink" : "./images/04_미래엔.png",
+        "directory" : ""
     }, 
     {
         "title" : "낙원우드 클론코딩",
@@ -62,7 +66,8 @@
             "개별작업", "PC", "반응형"
         ],
         "siteLink" : "./module/005_KNOCK_ON_WOOD/index.html",
-        "imgLink" : "./images/05_낙원우드.png"
+        "imgLink" : "./images/05_낙원우드.png",
+        "directory" : ""
     }, 
     {
         "title" : "삼성 이벤트 페이지",
@@ -75,7 +80,8 @@
             "개별작업", "PC", "이벤트 페이지"
         ],
         "siteLink" : "./module/006_snmsung_adPage/index.html",
-        "imgLink" : "./images/06_삼성.png"
+        "imgLink" : "./images/06_삼성.png",
+        "directory" : ""
     }, 
     {
         "title" : "카카오톡 클론코딩",
@@ -88,7 +94,8 @@
             "개별작업", "모바일", "반응형"
         ],
         "siteLink" : "./module/1002_Kakao_clone/index.html",
-        "imgLink" : "./images/07_카카오톡클론.png"
+        "imgLink" : "./images/07_카카오톡클론.png",
+        "directory" : "카카오톡을 리액트로 구현해보았습니다. 이 작업을 하고 난 뒤로 리액트와 라우터에 대한 개념이 확실히 머리에 들어왔습니다! 중첩 라우터를 구현하는 것도 어렵지 않게 해낼 수 있게 되더라고요. 개인적으로 리액트 작업을 다시 해보고 싶네요."
     }, 
     {
         "title" : "신한투자증권 리마스터",
@@ -98,22 +105,24 @@
             "jQuery", "highchart", "Swiper 슬라이드"
         ],
         "tag" : [
-            "조별작업", "PC"
+            "조별작업", "PC", "프론트엔드"
         ],
         "siteLink" : "https://kim365my.github.io/Shinhan-Investment-Corp_citeRemake/",
-        "imgLink" : "./images/group_01_신한투자증권.png"
+        "imgLink" : "./images/group_01_신한투자증권.png",
+        "directory" : "조별활동으로 신한투자증권을 리마스터를 진행하였습니다. 저는 메인 인덱스 페이지를 맡아서 조원분과 함께 진행했는데요. 처음 배우는 과정에서 완성된 결과물이다보니 여러가지를 배웠고, 재미를 느꼈던 순간이었습니다."
     }, 
     {
         "title" : "캠박 클론코딩",
         "startDate" : "2023.05.30",
         "endDate" : "2023.06.09",
         "useLibery" : [
-            "제이쿼리", "Apache Commons FileUpload", "Part API", "네이버 스마트 에디터"
+            "제이쿼리", "Java", "JSP&Servelt", "Apache Commons FileUpload", "Part API", "네이버 스마트 에디터"
         ],
         "tag" : [
-            "조별작업", "PC"
+            "조별작업", "PC", "백엔드"
         ],
         "siteLink" : "https://github.com/kim365my/Project_cambak",
-        "imgLink" : "./images/캠박.png"
+        "imgLink" : "./images/캠박.png",
+        "directory" : "조별활동으로 캠박이라는 사이트를 클론코딩하였습니다. 저는 백엔드 부분을 맡아서 Part API와 네이버 스마트 에디터를 활용한 이미지 서버 업로드 기능 구현과 CRUD를 구현했습니다."
     }
 ]

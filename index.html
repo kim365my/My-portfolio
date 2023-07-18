@@ -85,7 +85,7 @@
                             <td><progress value="40" max="100"></progress></td>
                         </tr>
                     </table>
-                    <div class="hidden">
+                    <div>
                         기술 스택 점수에 대한 기준을 저는 이렇게 나눴습니다.
                         <table>
                             <tr>
@@ -107,11 +107,19 @@
 
             <!-- Portfolio -->
             <section id="Portfolio">
-                <h2>Project</h2>
-                <ul class="Portfolio_list"></ul>
+                <div class="header_container">
+                    <h2>Project</h2>
+                    <ul class="Portfolio_Sort">
+                        <li><button class="check">인기순</button></li>
+                        <li><button>최신순</button></li>
+                        <li><button>과거순</button></li>
+                    </ul>
+                </div>
+                <ul class="Portfolio_list content"></ul>
             </section>
         </main>
     </div>
 </body>
 <script src="./js/script.js"></script>
+<script src="./js/portfolioList.js"></script>
 </html>
