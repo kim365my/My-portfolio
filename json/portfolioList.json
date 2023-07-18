@@ -1,0 +1,119 @@
+[
+    {
+        "title" : "맥도날드 사이트 리뉴얼",
+        "startDate" : "2023.06.14",
+        "endDate" : "2023.06.16",
+        "useLibery" : [
+            "Swiper 슬라이드"
+        ],
+        "tag" : [
+            "개별작업", "PC"
+        ],
+        "siteLink" : "./module/001_McDelivery/index.html",
+        "imgLink" : "./images/01_맥도날드.png"
+    }, 
+    {
+        "title" : "까사미아 사이트 리뉴얼",
+        "startDate" : "2023.06.17",
+        "endDate" : "2023.06.19",
+        "useLibery" : [
+            "Swiper 슬라이드"
+        ],
+        "tag" : [
+            "개별작업", "PC"
+        ],
+        "siteLink" : "./module/002_Guud/index.html",
+        "imgLink" : "./images/02_까사미아.png"
+    }, 
+    {
+        "title" : "오설록 사이트 리뉴얼",
+        "startDate" : "22023.06.19",
+        "endDate" : "2023.06.23",
+        "useLibery" : [
+            "Swiper 슬라이드"
+        ],
+        "tag" : [
+            "개별작업", "PC"
+        ],
+        "siteLink" : "./module/003_Osulloc/index.html",
+        "imgLink" : "./images/03_오설록.png"
+    }, 
+    {
+        "title" : "미래엔 클론코딩",
+        "startDate" : "2023.06.24",
+        "endDate" : "2023.06.28",
+        "useLibery" : [
+            "Swiper 슬라이드"
+        ],
+        "tag" : [
+            "개별작업", "PC", "반응형"
+        ],
+        "siteLink" : "./module/004_MiraeN/index.html",
+        "imgLink" : "./images/04_미래엔.png"
+    }, 
+    {
+        "title" : "낙원우드 클론코딩",
+        "startDate" : "2023.06.24",
+        "endDate" : "2023.06.28",
+        "useLibery" : [
+            "Swiper 슬라이드"
+        ],
+        "tag" : [
+            "개별작업", "PC", "반응형"
+        ],
+        "siteLink" : "./module/005_KNOCK_ON_WOOD/index.html",
+        "imgLink" : "./images/05_낙원우드.png"
+    }, 
+    {
+        "title" : "삼성 이벤트 페이지",
+        "startDate" : "2023.06.29",
+        "endDate" : "2023.06.29",
+        "useLibery" : [
+            "유튜브 API"
+        ],
+        "tag" : [
+            "개별작업", "PC", "이벤트 페이지"
+        ],
+        "siteLink" : "./module/006_snmsung_adPage/index.html",
+        "imgLink" : "./images/06_삼성.png"
+    }, 
+    {
+        "title" : "카카오톡 클론코딩",
+        "startDate" : "2023.06.30",
+        "endDate" : "2023.07.07",
+        "useLibery" : [
+            "React"
+        ],
+        "tag" : [
+            "개별작업", "모바일", "반응형"
+        ],
+        "siteLink" : "./module/1002_Kakao_clone/index.html",
+        "imgLink" : "./images/07_카카오톡클론.png"
+    }, 
+    {
+        "title" : "신한투자증권 리마스터",
+        "startDate" : "2023.02.29",
+        "endDate" : "2023.03.29",
+        "useLibery" : [
+            "jQuery", "highchart", "Swiper 슬라이드"
+        ],
+        "tag" : [
+            "조별작업", "PC"
+        ],
+        "siteLink" : "https://kim365my.github.io/Shinhan-Investment-Corp_citeRemake/",
+        "imgLink" : "./images/group_01_신한투자증권.png"
+    }, 
+    {
+        "title" : "캠박 클론코딩",
+        "startDate" : "2023.05.30",
+        "endDate" : "2023.06.09",
+        "useLibery" : [
+            "제이쿼리", "Apache Commons FileUpload", "Part API", "네이버 스마트 에디터"
+        ],
+        "tag" : [
+            "조별작업", "PC"
+        ],
+        "siteLink" : "https://github.com/kim365my/Project_cambak",
+        "imgLink" : "./images/캠박.png"
+    }
+]
