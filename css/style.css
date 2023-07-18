@@ -10,7 +10,7 @@
 html, body {
     font-family: 'Noto sans KR',sans-serif;
     font-size: 62.5%;
-    background: linear-gradient(to right, #c2fbe6 0%, #a6c1ee 100%);
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
 }
 
 
@@ -20,39 +20,43 @@ html, body {
     height: 100%;
     padding: 8rem 0;
     margin: 0 auto;
-    /* 포지션 */
-    position: relative;
 }
 
 /* ------------------- */
 /* nav */
 /* ------------------- */
 nav {
-    border-radius: 0 2rem 2rem 0;
+    border-radius: 2rem 2rem 0 0;
     overflow: hidden;
     /* 포지션 */
     position: absolute;
     right: 0;
-    transform: translateX(90%);
-    z-index: 0;
+    top: 0;
+    transform: translateY(255%) rotate(90deg);
+    transform-origin: bottom right;
+}
+nav ul{
+    display: flex;
 }
 nav li {
-    padding: 2rem 3rem;
+    padding: 2rem 1.8rem;
     font-size: 1.4rem;
-    background: #c1ecda;
+    color: #fff;
+    background: #111;
     cursor: pointer;
 }
 nav li.check {
-    background: #9bafa7;
+    background: #b465da;
 }
 
 /* ------------------- */
 /* main */
 /* ------------------- */
 main {
+    width: calc(100% - 5.4rem);
     height: 100%;
     padding: 5rem 4rem;
-    border-radius: 2rem;
+    border-radius: 2rem 0 2rem 2rem;
     background: #fff;
     box-shadow: rgb(137 137 137 / 51%) 6px 10px 20px 0px;
     /* 포지션 */
@@ -67,15 +71,18 @@ main section.check{
     display: block;
 }
 main section > h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 800;
     margin-bottom: 4rem;
 }
 
+#about_me img {
+    width: inherit;
+}
 
 .Portfolio_list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(40%, auto));
     gap: 1.5rem;
     height: calc(100% - 8rem);
     overflow-y: auto;
@@ -98,6 +105,7 @@ main section > h2 {
     display: flex;
     font-size: 1.6rem;
     color: #767676;
+    margin-bottom: 1rem;
 }
 .Portfolio_list dt{
     font-weight: 500;
@@ -113,4 +121,15 @@ main section > h2 {
     .Portfolio_list {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    #wrap {
+        flex-direction: column-reverse;
+    }
+    nav {
+        transform: translateY(-100%) rotate(0);
+    }
+    main {
+        width: 100%;
+    }
+
 }
