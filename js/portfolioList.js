@@ -40,6 +40,7 @@ function print(obj) {
                                     useLibery(e.useLibery), useLibery(e.tag), e.siteLink, e.directory)
         pList.appendChild(dataWrap);
     });
+    pList.scrollTop = 0;
 }
 
 
