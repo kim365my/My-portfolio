@@ -55,36 +55,7 @@
                 <h2>Skill</h2>
                 <div class="content">
                     <!-- 기술 스택 -->
-                    <table>
-                        <tr>
-                            <th>HTML</th>
-                            <td><progress value="100" max="100"></progress></td>
-                        </tr>
-                        <tr>
-                            <th>CSS</th>
-                            <td><progress value="100" max="100"></progress></td>
-                        </tr>
-                        <tr>
-                            <th>JavaScript</th>
-                            <td><progress value="40" max="100"></progress></td>
-                        </tr>
-                        <tr>
-                            <th>jQuery</th>
-                            <td><progress value="60" max="100"></progress></td>
-                        </tr>
-                        <tr>
-                            <th>React</th>
-                            <td><progress value="40" max="100"></progress></td>
-                        </tr>
-                        <tr>
-                            <th>Oracle</th>
-                            <td><progress value="40" max="100"></progress></td>
-                        </tr>
-                        <tr>
-                            <th>Java</th>
-                            <td><progress value="40" max="100"></progress></td>
-                        </tr>
-                    </table>
+                    <table class="skill_list"></table>
                     <div>
                         기술 스택 점수에 대한 기준을 저는 이렇게 나눴습니다.
                         <table>
@@ -107,19 +78,23 @@
 
             <!-- Portfolio -->
             <section id="Portfolio">
-                <div class="header_container">
-                    <h2>Project</h2>
+                <div class="snb">
+                    <h2>Project
+                        <span></span>
+                    </h2>
                     <ul class="Portfolio_Sort">
                         <li><button class="check">인기순</button></li>
                         <li><button>최신순</button></li>
                         <li><button>과거순</button></li>
                     </ul>
                 </div>
+                <div class="filter tag"></div>
                 <ul class="Portfolio_list content"></ul>
             </section>
         </main>
     </div>
 </body>
 <script src="./js/script.js"></script>
+<script src="./js/skill.js"></script>
 <script src="./js/portfolioList.js"></script>
 </html>

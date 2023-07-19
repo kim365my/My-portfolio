@@ -53,7 +53,7 @@
         ],
         "siteLink" : "./module/004_MiraeN/index.html",
         "imgLink" : "./images/04_미래엔.png",
-        "directory" : ""
+        "directory" : "미래엔 사이트를 클론코딩해보았습니다."
     }, 
     {
         "title" : "낙원우드 클론코딩",
@@ -81,7 +81,7 @@
         ],
         "siteLink" : "./module/006_snmsung_adPage/index.html",
         "imgLink" : "./images/06_삼성.png",
-        "directory" : ""
+        "directory" : "간단하게 삼성 이벤트 페이지를 제작해보았습니다."
     }, 
     {
         "title" : "카카오톡 클론코딩",
@@ -119,7 +119,7 @@
             "제이쿼리", "Java", "JSP&Servelt", "Apache Commons FileUpload", "Part API", "네이버 스마트 에디터"
         ],
         "tag" : [
-            "조별작업", "PC", "백엔드"
+            "조별작업", "PC", "백엔드", "DB"
         ],
         "siteLink" : "https://github.com/kim365my/Project_cambak",
         "imgLink" : "./images/캠박.png",

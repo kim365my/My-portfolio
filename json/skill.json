@@ -1,0 +1,26 @@
+[
+    {
+        "name" : "HTML & CSS",
+        "score" : "100"
+    },
+    {
+        "name" : "JavaScript",
+        "score" : "50"
+    },
+    {
+        "name" : "jQuery",
+        "score" : "60"
+    },
+    {
+        "name" : "React",
+        "score" : "40"
+    },
+    {
+        "name" : "Oracle",
+        "score" : "40"
+    },
+    {
+        "name" : "Java",
+        "score" : "40"
+    }
+]
