@@ -49,7 +49,7 @@
             "Swiper 슬라이드"
         ],
         "tag" : [
-            "개별작업", "PC", "반응형"
+            "개별작업", "반응형"
         ],
         "siteLink" : "./module/004_MiraeN/index.html",
         "imgLink" : "./images/04_미래엔.png",
@@ -63,7 +63,7 @@
             "Swiper 슬라이드"
         ],
         "tag" : [
-            "개별작업", "PC", "반응형"
+            "개별작업", "반응형"
         ],
         "siteLink" : "./module/005_KNOCK_ON_WOOD/index.html",
         "imgLink" : "./images/05_낙원우드.png",
@@ -91,7 +91,7 @@
             "React"
         ],
         "tag" : [
-            "개별작업", "모바일", "반응형"
+            "개별작업", "모바일"
         ],
         "siteLink" : "./module/1002_Kakao_clone/index.html",
         "imgLink" : "./images/07_카카오톡클론.png",

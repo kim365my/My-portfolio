@@ -1,26 +1,44 @@
 [
     {
-        "name" : "HTML & CSS",
-        "score" : "100"
+        "name" : "HTML",
+        "description" : "",
+        "score" : "100",
+        "imgSrc" : "HTML5-E34F26?style=flat&logo=html5&logoColor=white"
+    },
+    {
+        "name" : "CSS",
+        "description" : "",
+        "score" : "100",
+        "imgSrc" : "CSS3-1572B6?style=flat&logo=css3&logoColor=white"
     },
     {
         "name" : "JavaScript",
-        "score" : "50"
+        "description" : "",
+        "score" : "100",
+        "imgSrc" : "JavaScript-gray?style=flat&logo=JavaScript&logoColor=F7DF1E"
     },
     {
         "name" : "jQuery",
-        "score" : "60"
+        "description" : "",
+        "score" : "100",
+        "imgSrc" : "jQuery-0769AD?style=flat&logo=jQuery&logoColor=339933"
     },
     {
         "name" : "React",
-        "score" : "40"
+        "description" : "",
+        "score" : "100",
+        "imgSrc" : "React-white?style=flat&logo=React&logoColor=61DAFB"
     },
     {
-        "name" : "Oracle",
-        "score" : "40"
+        "name" : "Oracle DB",
+        "description" : "",
+        "score" : "100",
+        "imgSrc" : "Oracle-F80000?style=flat&logo=Oracle&logoColor=4479A1"
     },
     {
         "name" : "Java",
-        "score" : "40"
+        "description" : "",
+        "score" : "100",
+        "imgSrc" : "JAVA-8F0000?style=flat&logo&logoColor=4479A1"
     }
 ]
