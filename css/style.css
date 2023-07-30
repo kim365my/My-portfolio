@@ -6,15 +6,17 @@
 html, body {
     font-family: 'Noto sans KR',sans-serif;
     font-size: 62.5%;
-    /* background: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%); */
-    /* background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%); */
+}
+body {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23bbb3aa' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
 }
+
 #wrap{
-    width: 95%;
+    width: 100%;
     max-width: 1300px;
-    height: 100%;
     margin: 0 auto;
+    position: relative;
+    display: flex;
 }
 
 .hidden {
@@ -25,20 +27,25 @@ html, body {
 /* nav */
 /* ------------------- */
 nav {
-    border-radius: 2rem 2rem 0 0;
-    overflow: hidden;
-    /* 포지션 */
-    position: absolute;
-    right: 0;
-    top: 4rem;
-    transform: translateY(255%) rotate(90deg);
-    transform-origin: bottom right;
+    position: relative;
+    width: 5.4rem;
 }
 nav ul{
+    width: 20rem;
+    white-space: nowrap;
     display: flex;
+    overflow: hidden;
+    transform: rotate(90deg) translate(50%, 135%);
+    border-radius: 2rem 2rem 0 0;
+    /* 포지션 */
+    position: sticky;
+    right: 0;
+    top: 4rem;
+    z-index: 99999;
+    
 }
 nav li {
-    min-width: 10rem;
+    width: 100%;
     text-align: center;
     padding: 2rem 1.8rem;
     font-size: 1.4rem;
@@ -67,27 +74,33 @@ nav li:hover::after {
 /* ------------------- */
 main {
     width: calc(100% - 5.4rem);
-    height: 100%;
+    min-height: 100vh;
+    padding: 0 4rem 3.5rem;
     background: #fff;
-    /* box-shadow: rgb(137 137 137 / 51%) 6px 10px 20px 0px; */
     /* 포지션 */
     position: relative;
     z-index: 1;
 }
 main section{
     display: none;
-    height: 100%;
-    padding: 5rem 4rem 0;
-    overflow: hidden;
 }
 main section.check{
     display: block;
 }
-main section > h2 {
+
+.header {
+    padding: 3.5rem 0;
+    background: #fff;
+    /* 포지션 */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header h2 {
     font-size: 3rem;
     font-weight: 800;
-    margin-bottom: 3.5rem;
 }
+
 .content {
     /* 그리드 */
     display: grid;
@@ -129,7 +142,6 @@ main section > h2 {
 /* Portfolio */
 /* ------------------- */
 .snb {
-    margin-bottom: 3rem;
     /* 플렉스 */
     display: flex;
     justify-content: space-between;
@@ -172,10 +184,6 @@ main section > h2 {
     margin-left: 0.8rem;
 }
 /* 리스트 */
-.Portfolio_list {
-    height: calc(100% - 8rem);
-    overflow-y: auto;
-}
 .Portfolio_list > li {
     display: block;
     width: 100%;
@@ -293,29 +301,6 @@ main section > h2 {
     color: #fff;
 }
 
-/* ------------------------------------- */
-/* 다크 테마 적용 */
-/* ------------------------------------- */
-.mode {
-    width: 5rem;
-    height: 5rem;
-    background-color: #fff;
-    border-radius: 0 2rem 2rem 0;
-    /* 포지션 */
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(100%, -50%);
-    z-index: 1;
-}
-.mode:hover {
-
-}
-
-
-
-
-
 
 
 
@@ -325,30 +310,39 @@ main section > h2 {
 @media screen and (max-width:780px) {
     #wrap {
         width: 100%;
-        padding: 6rem 0 0;
+        height: 100%;
+        padding: 2rem 0 0;
+        align-items: flex-end;
+        flex-direction: column-reverse;
     }
     nav {
-        top: 0;
-        transform: translateY(-100%) rotate(0);
+        width: auto;
+    }
+    nav ul {
+        transform: rotate(0);
     }
     nav li {
         padding: 1.5rem 1.8rem 1rem;
     }
-    .mode {
-        top: 0;
-        right: auto;
-        border-radius: 2rem 2rem 0 0;
-        transform: translate(50%, -100%);
-    }
     main {
         width: 100%;
+        height: calc(100% - 4rem);
+        min-height: auto;
         border-radius: 2rem 0 0;
+        padding: 0;
     }
-    main section{
-        padding: 4rem 1.8rem;
+    main section {
+        height: 100%;
+    }
+    .header {
+        height: 9.5rem;
+        padding: 3.5rem 1.8rem 2rem;
     }
     .content {
+        height: calc(100% - 9.5rem);
+        overflow-y: auto;
         grid-template-columns: repeat(1, 1fr);
+        padding: 0rem 1.8rem 2rem;
     }
     .Portfolio_list dl{
         align-items: start;
@@ -359,4 +353,22 @@ main section > h2 {
         margin-bottom: 1rem;
     }
 
+}
+
+/* ------------------------------------- */
+/* 425px 이하 기기 적용 */
+/* ------------------------------------- */
+@media screen and (max-width:425px) {
+    .snb{
+        height: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: start;
+    }
+    .header {
+        height: 12rem;
+    }
+    .content {
+        height: calc(100% - 12rem);
+    }
 }

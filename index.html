@@ -17,15 +17,11 @@
 <body>
     <div id="wrap">
         <main role="main">
-            <nav class="gnb">
-                <ul>
-                    <li class="check">About Me</li>
-                    <li>Portfolio</li>
-                </ul>
-            </nav>
             <!-- About Me -->
             <section id="about_me" class="check">
-                <h2>About Me</h2>
+                <div class="header">
+                    <h2>About Me</h2>
+                </div>
                 <div class="content">
                     <div>
                         <p>
@@ -61,20 +57,28 @@
 
             <!-- Portfolio -->
             <section id="Portfolio">
-                <div class="snb">
-                    <h2>Project
-                        <span></span>
-                    </h2>
-                    <ul class="Portfolio_Sort">
-                        <li><button class="check">인기순</button></li>
-                        <li><button>최신순</button></li>
-                        <li><button>과거순</button></li>
-                    </ul>
+                <div class="header">
+                    <div class="snb">
+                        <h2>Project
+                            <span></span>
+                        </h2>
+                        <ul class="Portfolio_Sort">
+                            <li><button class="check">인기순</button></li>
+                            <li><button>최신순</button></li>
+                            <li><button>과거순</button></li>
+                        </ul>
+                    </div>
+                    <div class="filter tag"></div>
                 </div>
-                <div class="filter tag"></div>
                 <ul class="Portfolio_list content"></ul>
             </section>
         </main>
+        <nav class="gnb">
+            <ul>
+                <li class="check">About Me</li>
+                <li>Portfolio</li>
+            </ul>
+        </nav>
     </div>
 </body>
 <script src="./js/script.js"></script>
