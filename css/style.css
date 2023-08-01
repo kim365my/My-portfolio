@@ -89,6 +89,7 @@ main section.check{
 }
 
 .header {
+    line-height: 1;
     padding: 3.5rem 0;
     background: #fff;
     /* 포지션 */
@@ -114,7 +115,7 @@ main section.check{
     text-decoration: underline;
 }
 
-#about_me .content {
+#about_me {
     font-size: 1.6rem;
     line-height: 2;
 }

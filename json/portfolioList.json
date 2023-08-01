@@ -56,20 +56,6 @@
         "directory" : "미래엔 사이트를 클론코딩해보았습니다."
     }, 
     {
-        "title" : "낙원우드 클론코딩",
-        "startDate" : "2023.06.24",
-        "endDate" : "2023.06.28",
-        "useLibery" : [
-            "Swiper 슬라이드"
-        ],
-        "tag" : [
-            "개별작업", "반응형"
-        ],
-        "siteLink" : "./module/005_KNOCK_ON_WOOD/index.html",
-        "imgLink" : "./images/05_낙원우드.png",
-        "directory" : ""
-    }, 
-    {
         "title" : "삼성 이벤트 페이지",
         "startDate" : "2023.06.29",
         "endDate" : "2023.06.29",
